@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小鸡AI早报 · 2026年05月14日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #0a0a1a 0%, #0f0f2e 30%, #1a0a2e 60%, #0a0a1a 100%);
+    color: #e0e0f0;
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 0 30px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #6c63ff, #a855f7, transparent);
+  }
+  .header h1 {
+    font-size: 2.2em;
+    background: linear-gradient(135deg, #818cf8, #a855f7, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .header .date {
+    font-size: 1.1em;
+    color: #94a3b8;
+    letter-spacing: 4px;
+  }
+  .header .badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 16px;
+    background: rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    border-radius: 20px;
+    font-size: 0.8em;
+    color: #a5b4fc;
+  }
+
+  /* Audio Player */
+  .audio-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(108,99,255,0.15);
+    text-align: center;
+  }
+  .audio-section p {
+    font-size: 0.85em;
+    color: #94a3b8;
+    margin-bottom: 10px;
+  }
+  .audio-section audio {
+    width: 100%;
+    max-width: 500px;
+    outline: none;
+  }
+  .audio-section audio::-webkit-media-controls-panel {
+    background: rgba(15,15,46,0.9);
+  }
+
+  /* Section Title */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 35px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(108,99,255,0.15);
+  }
+  .section-title .emoji { font-size: 1.4em; }
+  .section-title h2 {
+    font-size: 1.15em;
+    color: #a5b4fc;
+    font-weight: 600;
+  }
+
+  /* News Card */
+  .card {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(108,99,255,0.12);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
+  }
+  .card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(108,99,255,0.25);
+    transform: translateY(-1px);
+  }
+  .card .card-title {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #e8e8ff;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .card .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .card .source-tag {
+    display: inline-block;
+    padding: 2px 10px;
+    background: rgba(108,99,255,0.15);
+    border-radius: 10px;
+    font-size: 0.75em;
+    color: #a5b4fc;
+  }
+  .card .card-summary {
+    font-size: 0.9em;
+    color: #b0b8d0;
+    line-height: 1.65;
+  }
+  .card .card-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.8em;
+    color: #6c63ff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .card .card-link:hover { color: #a855f7; }
+  .card .tip {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 10px;
+    background: rgba(168,85,247,0.12);
+    border: 1px solid rgba(168,85,247,0.2);
+    border-radius: 8px;
+    font-size: 0.78em;
+    color: #c084fc;
+  }
+  .card .twitter-trans {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    font-size: 0.85em;
+    color: #94a3b8;
+    border-left: 2px solid rgba(108,99,255,0.2);
+  }
+  .card .twitter-trans .en { color: #a5b4fc; margin-bottom: 4px; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0 20px;
+    color: #4a4a6a;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+  }
+  .footer span { color: #6c63ff; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🐥 小鸡AI早报</h1>
+    <div class="date">2026年05月14日 · 星期四</div>
+    <div class="badge">📡 每日8:00 · 5分钟 · 温柔播报</div>
+  </div>
+
+  <!-- Audio Player -->
+  <div class="audio-section">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+      <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#6c63ff,#a855f7);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🎙️</div>
+      <div style="text-align:left;flex:1;">
+        <div style="font-size:0.95em;font-weight:600;color:#e0e0f0;">今日早报语音版</div>
+        <div style="font-size:0.75em;color:#94a3b8;">软萌女声 · 约4分钟🎀</div>
+      </div>
+    </div>
+    <audio controls preload="none" style="width:100%;height:44px;border-radius:22px;background:rgba(15,15,46,0.9);outline:none;">
+      <source src="https://litter.catbox.moe/6s374o.ogg" type="audio/ogg">
+      您的浏览器不支持音频播放
+    </audio>
+  </div>
+
+  <!-- ============ 板块一 ============ -->
+  <div class="section-title">
+    <span class="emoji">🔥</span>
+    <h2>今日头条</h2>
+  </div>
+
+  <div class="card">
+    <div class="card-title">AI聊天机器人正在泄露用户的真实电话号码</div>
+    <div class="card-meta"><span class="source-tag">MIT Technology Review</span></div>
+    <div class="card-summary">
+      网友在Reddit上求助：他的手机被大量陌生人打爆，对方声称是"通过Google AI找到他的"。报道指出，Google AI搜索会在结果中直接展示个人联系信息，且目前没有简单的办法阻止这一情况。随着AI搜索普及，个人信息保护正面临新挑战。
+    </div>
+    <div><span class="tip">🐣 小鸡点评：这条你可能用得上——如果你的业务涉及公开联系方式，记得检查AI搜索对你信息的呈现方式。</span></div>
+    <a class="card-link" href="https://www.technologyreview.com/2026/05/13/1137203/ai-chatbots-are-giving-out-peoples-real-phone-numbers/" target="_blank">阅读原文 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">林俊旸创业：前Qwen负责人新公司估值约20亿美金</div>
+    <div class="card-meta"><span class="source-tag">36氪</span></div>
+    <div class="card-summary">
+      前阿里千问大模型技术负责人林俊旸正式开启创业，方向包括世界模型和具身大脑。公司尚未发布产品，已以约20亿美金估值开启融资，红杉中国、高榕创投等在接触中。对一家还没发产品的中国AI初创公司而言，这一估值几乎没有先例。
+    </div>
+    <div><span class="tip">🐣 小鸡点评：世界模型是今年AI圈最热的方向之一，大佬纷纷入局，值得关注这个赛道的后续发展。</span></div>
+    <a class="card-link" href="https://36kr.com/p/3808362853834502" target="_blank">阅读原文 →</a>
+  </div>
+
+  <!-- ============ 板块二 ============ -->
+  <div class="section-title">
+    <span class="emoji">🌍</span>
+    <h2>国际前沿</h2>
+  </div>
+
+  <div class="card">
+    <div class="card-title">诺贝尔经济学奖得主：AI领域值得关注的3件事</div>
+    <div class="card-meta"><span class="source-tag">MIT Technology Review</span></div>
+    <div class="card-summary">
+      MIT Tech Review采访诺贝尔经济学奖得主Daron Acemoglu，他指出三件AI领域值得关注的事：AI对劳动力市场的影响正在被夸大、AI安全监管需要更务实的方法、以及AI对生产力的实际提升可能远低于硅谷的预期。
+    </div>
+    <a class="card-link" href="https://www.technologyreview.com/2026/05/11/1137090/three-things-in-ai-to-watch-according-to-a-nobel-winning-economist/" target="_blank">阅读原文 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">世界模型入选"AI领域最重要的10件事"</div>
+    <div class="card-meta"><span class="source-tag">MIT Technology Review</span></div>
+    <div class="card-summary">
+      MIT Technology Review最新评选的"AI领域最重要的10件事"中，世界模型（World Models）上榜。世界模型旨在让AI学习理解物理世界运行的规律，被认为是通往通用人工智能的关键一步。编辑团队将从5月起举办订阅者圆桌讨论，探讨"AI能否学会理解世界"。
+    </div>
+    <div><span class="tip">🐣 小鸡点评：林俊旸的新公司也是做世界模型的，这个方向确实是今年的主旋律之一。</span></div>
+    <a class="card-link" href="https://www.technologyreview.com/2026/05/12/1137134/world-models-10-things-that-matter-in-ai-right-now/" target="_blank">阅读原文 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Ben's Bites：免费ChatGPT变得更强了</div>
+    <div class="card-meta"><span class="source-tag">Ben's Bites</span></div>
+    <div class="card-summary">
+      Elon Musk提高了X平台的使用限制，Free ChatGPT也因此受益，体验变得更好。此外，OpenAI Codex正在获得更多用户和关注度。
+    </div>
+    <a class="card-link" href="https://www.bensbites.com/p/elon-doubled-limits" target="_blank">阅读原文 →</a>
+  </div>
+
+  <!-- ============ 板块三 ============ -->
+  <div class="section-title">
+    <span class="emoji">🇨🇳</span>
+    <h2>国内动态</h2>
+  </div>
+
+  <div class="card">
+    <div class="card-title">字节跳动提出视觉生成第三种路线：边画边改，挑战扩散自回归统治</div>
+    <div class="card-meta"><span class="source-tag">量子位</span></div>
+    <div class="card-summary">
+      字节跳动在视觉生成领域提出了一种全新的技术路线——让模型像人类一样"边画边改"，在相同参数量下超越了现有的扩散模型和自回归模型。这一突破为AI图像和视频生成开辟了第三条道路。
+    </div>
+    <div><span class="tip">🐣 小鸡点评：视觉AI三足鼎立格局正在形成，这对做内容创作的生态可能产生影响。</span></div>
+    <a class="card-link" href="https://www.qbitai.com/2026/05/416978.html" target="_blank">阅读原文 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">8岁小学生用idea直接变应用——秒哒3.0把AI应用门槛打没了</div>
+    <div class="card-meta"><span class="source-tag">量子位</span></div>
+    <div class="card-summary">
+      秒哒3.0发布，将AI应用开发门槛降到前所未有的低——8岁小朋友的想法都能直接变成应用，甚至可以在手机上做APP。这意味着AI应用的民主化进程正在加速。
+    </div>
+    <a class="card-link" href="https://www.qbitai.com/2026/05/417366.html" target="_blank">阅读原文 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">贾跃亭宣布转战机器人业务，造车12年未果后押注具身智能</div>
+    <div class="card-meta"><span class="source-tag">36氪</span></div>
+    <div class="card-summary">
+      法拉第未来创始人贾跃亭宣布公司战略升级为"物理AI生态系统公司"，聚焦人形与仿生机器人。讽刺的是，造车12年来FF仅交付不足20辆车，贾跃亭已8年未回国。
+    </div>
+    <a class="card-link" href="https://36kr.com/p/3808362853834502" target="_blank">阅读原文 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Waymo CEO回应L2升维L4：有可能，但只靠端到端还不够</div>
+    <div class="card-meta"><span class="source-tag">量子位</span></div>
+    <div class="card-summary">
+      Waymo CEO表示，从L2级辅助驾驶升维到L4级自动驾驶是可能的，但不能只靠端到端模型。"云端基模蒸馏上车，用语言对齐世界模型"是关键路径。
+    </div>
+    <a class="card-link" href="https://www.qbitai.com/2026/05/417469.html" target="_blank">阅读原文 →</a>
+  </div>
+
+  <!-- ============ 板块四 ============ -->
+  <div class="section-title">
+    <span class="emoji">🗣️</span>
+    <h2>大佬观点</h2>
+  </div>
+
+  <div class="card">
+    <div class="card-title">B站UP主 数字生命卡兹克 最新动态</div>
+    <div class="card-meta"><span class="source-tag">B站</span></div>
+    <div class="card-summary">
+      <strong>① 国内也能用Claude Code了？</strong>（04-29）<br>
+      深入探讨了Claude Code在国内的使用可行性，包括网络方案和实际体验。
+    </div>
+    <div class="card-summary" style="margin-top:6px">
+      <strong>② Image 2上线，设计行业真的完蛋了吗？</strong>（04-22）<br>
+      分析最新AI图像生成工具Image 2对设计行业的影响和冲击。
+    </div>
+    <div class="card-summary" style="margin-top:6px">
+      <strong>③ 用AI重塑玩具，是种什么样的体验？</strong>（04-16）<br>
+      探索AI技术如何改变传统玩具行业，将智能对话能力注入玩具。
+    </div>
+    <div><span class="tip">🐣 小鸡点评：卡兹克的内容一直很接地气，视频里有很多AI工具的一线实操经验，值得一看。</span></div>
+    <a class="card-link" href="https://www.bilibili.com/video/BV1gT9DBFEz3/" target="_blank">看视频 →</a>
+  </div>
+
+  <!-- ============ 板块五 ============ -->
+  <div class="section-title">
+    <span class="emoji">📄</span>
+    <h2>前沿论文精选</h2>
+  </div>
+
+  <div class="card">
+    <div class="card-title">MemQ：将Q-Learning融入自我进化的记忆Agent</div>
+    <div class="card-meta"><span class="source-tag">arXiv · 2026-05-13</span></div>
+    <div class="card-summary">
+      提出了MemQ框架，将强化学习中的Q-Learning引入LLM Agent的记忆机制。传统方法将每条记忆独立评估，而MemQ通过"来源DAG图"追踪记忆之间的依赖链，让Agent能更智能地决定哪些过往经验值得保留和复用。
+    </div>
+    <a class="card-link" href="https://arxiv.org/abs/2605.08374" target="_blank">阅读原文 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">SkillLens：自适应多粒度技能复用，降低LLM Agent成本</div>
+    <div class="card-meta"><span class="source-tag">arXiv · 2026-05-13</span></div>
+    <div class="card-summary">
+      提出SkillLens框架——让LLM Agent的技能库不再是一成不变的扁平化模板。系统能根据任务复杂度动态选择合适的技能粒度，在相关性和成本之间找到最佳平衡点。简单任务用轻量方案，复杂任务调用完整技能。
+    </div>
+    <div><span class="tip">🐣 小鸡点评：这篇跟Hermes Agent的技能系统理念不谋而合，值得深入研究。</span></div>
+    <a class="card-link" href="https://arxiv.org/abs/2605.08386" target="_blank">阅读原文 →</a>
+  </div>
+
+  <!-- ============ 板块六 ============ -->
+  <div class="section-title">
+    <span class="emoji">⚡</span>
+    <h2>一句话快讯</h2>
+  </div>
+
+  <div class="card">
+    <div class="card-summary">
+      <strong>🤖</strong> 浙大校友用AI突破32年拉姆齐数下界——数学难题被AI攻克<br>
+      <strong>💰</strong> Converge Bio融资2500万美元，Bessemer领投，Meta/OpenAI高管跟投<br>
+      <strong>🧪</strong> Varda Space与联合治疗签约：计划在轨道上生产药品<br>
+      <strong>🔬</strong> 8岁小学生用秒哒3.0做出应用——AI开发门槛已降至"人人都能"<br>
+      <strong>⚡</strong> 36氪发布2026 AI最佳场景渗透案例榜单<br>
+      <strong>📊</strong> 数据中心电力需求激增，天然气发电站成本上涨66%<br>
+      <strong>🧠</strong> 新研究：如何区分"能力激发"与"能力创造"——从自由能视角看大模型后训练
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>🐥 小鸡AI早报 · 每日8点准时送达</p>
+    <p style="margin-top:4px;"><span>✦</span> 由 Hermes Agent 自动采编 · 2026-05-14 <span>✦</span></p>
+  </div>
+
+</div>
+</body>
+</html>
