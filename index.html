@@ -1,394 +1,273 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小鸡AI早报 · 2026年5月15日</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #0f0f2e 50%, #1a0a2e 100%);
-            min-height: 100vh;
-            color: #e0e0f0;
-            line-height: 1.8;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            padding: 40px 20px 30px;
-        }
-        .header h1 {
-            font-size: 2.2em;
-            background: linear-gradient(135deg, #a855f7, #7c3aed, #6366f1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-        .header .date {
-            color: #94a3b8;
-            font-size: 1em;
-            letter-spacing: 1px;
-        }
-        .header .subtitle {
-            color: #6b7280;
-            font-size: 0.85em;
-            margin-top: 5px;
-        }
-
-        /* Audio Player */
-        .audio-player {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(168,85,247,0.2);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 0 0 30px;
-            text-align: center;
-        }
-        .audio-player audio {
-            width: 100%;
-            max-width: 500px;
-            height: 40px;
-            outline: none;
-            border-radius: 8px;
-        }
-        .audio-player audio::-webkit-media-controls-panel {
-            background: rgba(15,15,46,0.8);
-        }
-        .audio-label {
-            color: #c084fc;
-            font-size: 0.85em;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        /* Cards */
-        .card {
-            background: rgba(255,255,255,0.04);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 20px;
-            padding: 28px;
-            margin-bottom: 24px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(168,85,247,0.15);
-        }
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 18px;
-            font-size: 1.2em;
-            font-weight: 700;
-        }
-        .card-header .icon {
-            font-size: 1.4em;
-        }
-        .card-item {
-            padding: 14px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
-        }
-        .card-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .card-item:first-child {
-            padding-top: 0;
-        }
-        .card-item .title {
-            font-weight: 600;
-            color: #f0e6ff;
-            margin-bottom: 4px;
-        }
-        .card-item .title a {
-            color: #c4b5fd;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .card-item .title a:hover {
-            color: #a78bfa;
-            text-decoration: underline;
-        }
-        .card-item .summary {
-            color: #9ca3af;
-            font-size: 0.88em;
-            line-height: 1.6;
-        }
-        .card-item .tag {
-            display: inline-block;
-            background: rgba(168,85,247,0.15);
-            color: #c084fc;
-            font-size: 0.75em;
-            padding: 2px 8px;
-            border-radius: 6px;
-            margin-top: 4px;
-        }
-
-        /* Special styling for section 7 - Opportunity card */
-        .card-opportunity {
-            border: 1px solid rgba(251,191,36,0.3);
-            background: rgba(251,191,36,0.04);
-            box-shadow: 0 0 30px rgba(251,191,36,0.06);
-        }
-        .card-opportunity:hover {
-            box-shadow: 0 8px 30px rgba(251,191,36,0.18);
-        }
-        .card-opportunity .card-header {
-            color: #fbbf24;
-        }
-        .card-opportunity .signal-item {
-            display: inline-block;
-            background: rgba(251,191,36,0.1);
-            color: #fcd34d;
-            font-size: 0.85em;
-            padding: 6px 12px;
-            border-radius: 10px;
-            margin: 4px 6px 4px 0;
-        }
-        .card-opportunity .summary-text {
-            color: #d4d4e0;
-            font-size: 0.92em;
-            line-height: 1.7;
-            margin-top: 10px;
-            padding: 14px;
-            background: rgba(251,191,36,0.05);
-            border-radius: 12px;
-            border-left: 3px solid #fbbf24;
-        }
-        .opportunity-empty {
-            color: #9ca3af;
-            font-style: italic;
-            padding: 12px 0;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #4b5563;
-            font-size: 0.85em;
-            letter-spacing: 1px;
-            border-top: 1px solid rgba(255,255,255,0.04);
-            margin-top: 10px;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            body { padding: 12px; }
-            .card { padding: 20px; }
-            .header h1 { font-size: 1.6em; }
-            .card-header { font-size: 1em; }
-        }
-
-        /* Glow line decoration */
-        .glow-line {
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #a855f7, transparent);
-            border-radius: 2px;
-            margin: 10px auto;
-        }
-
-        /* Quick news spacing */
-        .quick-item {
-            padding: 6px 0;
-            color: #b0b8d0;
-            font-size: 0.9em;
-        }
-        .quick-item::before {
-            content: "▸ ";
-            color: #a855f7;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小鸡AI早报 · 2026年5月16日</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;background:linear-gradient(135deg,#0a0a1a 0%,#0f0f2e 50%,#1a0a2e 100%);min-height:100vh;color:#e0d8f0;line-height:1.8;padding:20px}
+.container{max-width:800px;margin:0 auto;padding:0 15px}
+.header{text-align:center;padding:50px 20px 40px;position:relative}
+.header::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(120,80,255,0.15) 0%,transparent 70%);pointer-events:none}
+.header h1{font-size:2.4em;font-weight:900;background:linear-gradient(135deg,#a78bfa,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;letter-spacing:2px}
+.header .subtitle{font-size:1em;color:#8a80a8;font-weight:300}
+.header .date-badge{display:inline-block;margin-top:12px;padding:6px 20px;background:rgba(120,80,255,0.15);border:1px solid rgba(120,80,255,0.3);border-radius:20px;font-size:0.85em;color:#a78bfa}
+.audio-player{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px;margin:0 0 40px;backdrop-filter:blur(10px);text-align:center}
+.audio-player p{font-size:0.85em;color:#8a80a8;margin-bottom:10px}
+.audio-player audio{width:100%;outline:none;border-radius:8px}
+.audio-player audio::-webkit-media-controls-panel{background:#1a1a3a}
+.section{margin-bottom:30px}
+.section-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:20px;padding:28px 30px;backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.section-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(167,139,250,0.3),transparent)}
+.section-title{font-size:1.3em;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.section-title .emoji{font-size:1.2em}
+.opportunity-card{border:1px solid rgba(255,180,50,0.25);background:linear-gradient(135deg,rgba(255,180,50,0.05),rgba(255,120,0,0.05))}
+.opportunity-card::before{background:linear-gradient(90deg,transparent,rgba(255,180,50,0.3),transparent)}
+.opportunity-title{font-size:1.3em;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px;color:#fbbf24}
+.news-item{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.news-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.news-title{font-size:1em;font-weight:500;color:#c4b8e8;margin-bottom:4px}
+.news-title a{color:#c4b8e8;text-decoration:none;transition:color 0.2s}
+.news-title a:hover{color:#a78bfa}
+.news-summary{font-size:0.85em;color:#8a80a8;line-height:1.7}
+.news-source{display:inline-block;font-size:0.7em;color:#6b6090;padding:2px 10px;border-radius:10px;background:rgba(255,255,255,0.05);margin-top:4px}
+.opportunity-block{background:rgba(255,180,50,0.04);border:1px solid rgba(255,180,50,0.15);border-radius:14px;padding:20px;margin-top:12px}
+.opportunity-block .label{font-size:0.75em;text-transform:uppercase;letter-spacing:2px;color:#fbbf24;font-weight:500;margin-bottom:8px}
+.opportunity-block .content{font-size:0.95em;color:#e0d0b0;line-height:1.8}
+.signal-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;padding:8px 12px;background:rgba(255,180,50,0.04);border-radius:10px}
+.signal-item .hot{font-size:0.7em;color:#f59e0b;white-space:nowrap;padding-top:2px}
+.signal-item .text{font-size:0.9em;color:#d4c4a0}
+.quick-news{display:flex;flex-wrap:wrap;gap:8px}
+.quick-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:8px 14px;font-size:0.85em;color:#b0a8c8;line-height:1.5}
+.paper-item{padding:14px;background:rgba(100,80,200,0.04);border:1px solid rgba(100,80,200,0.1);border-radius:12px;margin-bottom:10px}
+.paper-item:last-child{margin-bottom:0}
+.paper-title{font-size:0.9em;font-weight:500;color:#b8ace0;margin-bottom:4px}
+.paper-desc{font-size:0.8em;color:#8a80a8;line-height:1.6}
+.paper-tag{display:inline-block;font-size:0.65em;padding:2px 8px;border-radius:6px;background:rgba(100,80,200,0.15);color:#8b7fd0;margin-top:4px}
+.footer{text-align:center;padding:40px 20px;color:#6b6090;font-size:0.85em;border-top:1px solid rgba(255,255,255,0.05);margin-top:20px}
+.footer .heart{color:#f472b6}
+@media(max-width:600px){
+.header h1{font-size:1.8em}
+.section-card{padding:20px 18px}
+.news-item{margin-bottom:12px;padding-bottom:12px}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🐥 小鸡AI早报</h1>
-            <div class="glow-line"></div>
-            <div class="date">2026年5月15日 · 星期五</div>
-            <div class="subtitle">为您精选今日AI与科技前沿</div>
-        </div>
+<div class="container">
+<div class="header">
+<h1>🐥 小鸡AI早报</h1>
+<div class="subtitle">你的AI资讯早餐</div>
+<div class="date-badge">🗓️ 2026年5月16日 · 星期六</div>
+</div>
 
-        <!-- Audio Player -->
-        <div class="audio-player">
-            <span class="audio-label">🔊 点击播放语音早报</span>
-            <audio controls preload="none">
-                <source src="https://hongkongdxk123-jpg.github.io/audio_cn.mp3" type="audio/mpeg">
-                您的浏览器不支持音频播放
-            </audio>
-        </div>
+<div class="audio-player">
+<p>🎧 点击收听语音版</p>
+<audio controls preload="none">
+<source src="https://hongkongdxk123-jpg.github.io/audio_cn.mp3" type="audio/mpeg">
+您的浏览器不支持音频播放
+</audio>
+</div>
 
-        <!-- Section 1: 今日头条 -->
-        <div class="card">
-            <div class="card-header">
-                <span class="icon">🔥</span> 今日头条
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.technologyreview.com/2026/05/13/1137203/ai-chatbots-are-giving-out-peoples-real-phone-numbers/" target="_blank">AI 聊天机器人正在泄露人们的真实电话号码</a></div>
-                <div class="summary">一位Reddit用户"绝望求助"——他的手机被大量陌生电话轰炸，人们都在找律师、产品设计师、锁匠。原来是谷歌的生成式AI把他的号码误当成商家联系方式推了出去。以色列一位软件开发者也在WhatsApp上遇到了类似情况。</div>
-                <span class="tag">隐私安全</span>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.technologyreview.com/2026/05/14/1137161/ai-porn-nonconsensual-deepfakes-takedown-piracy-copyright/" target="_blank">看到自己身体被用于深度伪造色情内容的震惊</a></div>
-                <div class="summary">一位叫Jennifer的女性在2023年用面部识别软件搜索自己的形象时，发现过去拍过的视频被AI换脸制成了新的色情内容。深度伪造技术让非自愿的色情内容更加泛滥，受害者追踪和举报的难度也越来越大。</div>
-                <span class="tag">AI伦理</span>
-            </div>
-        </div>
+<!-- 板块1：今日头条 -->
+<div class="section">
+<div class="section-card">
+<div class="section-title"><span class="emoji">🔥</span> 今日头条</div>
 
-        <!-- Section 2: 国际前沿 -->
-        <div class="card">
-            <div class="card-header">
-                <span class="icon">🌍</span> 国际前沿
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.technologyreview.com/2026/05/14/1137034/data-readiness-for-agentic-ai-in-financial-services/" target="_blank">金融服务领域 Agentic AI 的数据准备</a></div>
-                <div class="summary">金融公司对AI有独特需求——既要面对严格监管，又要实时响应外部事件。Agentic AI在金融领域的成功更多取决于数据基础而非系统本身的先进性。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.technologyreview.com/2026/05/14/1137168/establishing-ai-and-data-sovereignty-in-the-age-of-autonomous-systems/" target="_blank">自主系统时代的AI与数据主权</a></div>
-                <div class="summary">企业过去默默做了一个交易：先用AI能力，以后再管数据控制。但现在数据经过不拥有的系统、不受控制的治理，风险越来越明显。建立AI和数据主权成为当务之急。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.technologyreview.com/2026/05/14/1137197/tesla-semi-electric-trucking/" target="_blank">特斯拉 Semi 电动卡车正式投产</a></div>
-                <div class="summary">特斯拉近日发布了第一辆从新生产线下线的Semi电动卡车照片。从2017年首次宣布至今已近十年，最终电池规格、官方定价和大客户消息终于落地。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/" target="_blank">数据中心需求推动天然气发电厂成本飙升66%</a></div>
-                <div class="summary">天然气发电厂建设成本两年内几乎翻倍，工期延长23%。数据中心对电力的疯狂需求正在重塑能源基础设施格局。</div>
-            </div>
-        </div>
+<div class="news-item">
+<div class="news-title"><a href="https://www.technologyreview.com/2026/05/15/1137357/musk-v-altman-week-3/">马斯克 vs 奥特曼世纪官司进入第三周：双方大打"诚信牌"</a></div>
+<div class="news-summary">Musk v. Altman 案进入终局周。奥特曼被爆质疑与 OpenAI 有业务往来的公司存在利益输送，但他反手将马斯克描绘成想控制 AI 的权力追逐者。陪审团最终将对二人的诚信做出裁决，这可能是 AI 行业迄今最重要的一场审判。</div>
+<div class="news-source">MIT Technology Review</div>
+</div>
 
-        <!-- Section 3: 国内动态 -->
-        <div class="card">
-            <div class="card-header">
-                <span class="icon">🇨🇳</span> 国内动态
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://36kr.com/p/3808999399497221" target="_blank">腾讯要懂得花钱</a></div>
-                <div class="summary">腾讯发布2026年Q1财报：营收1964.6亿元，同比增长9%。AI相关资本开支大幅增加——研发投入225.4亿元（+19%），资本开支319.4亿元（+16%）。AI投入拉低了利润增速，预计下半年资本开支将显著上升。</div>
-                <span class="tag">财报</span>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://36kr.com/p/3808710182034944" target="_blank">腾讯，把AI塞入一切</a></div>
-                <div class="summary">腾讯Q1一切与AI相关。AI产品线包括混元(Hy)、元宝、CodeBuddy、WorkBuddy及QClaw全面铺开。若剔除AI产品影响，Non-IFRS经营利润本应有17%增长。</div>
-                <span class="tag">AI战略</span>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.qbitai.com/2026/05/417753.html" target="_blank">腾讯开源 Agent 记忆技术方案，Token 消耗最高降低 61%</a></div>
-                <div class="summary">腾讯开源的Agent记忆方案大幅优化Token使用效率，最高降低61%的Token消耗，同时将任务成功率最高提升51%。这对运行大规模Agent系统的团队来说是个重大利好。</div>
-                <span class="tag">开源</span>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.qbitai.com/2026/05/417731.html" target="_blank">人手一个数据库：Kimi背后的AI基建</a></div>
-                <div class="summary">Agent时代的数据库如何跑通商业化？Kimi团队分享了支撑大规模AI应用的底层基建架构设计思路。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.qbitai.com/2026/05/417791.html" target="_blank">国产GPU组了个开源局，把SGLang等核心开发者都摇来了</a></div>
-                <div class="summary">国产GPU开启生态坐标之争，联合SGLang等核心开发者推动开源生态建设。</div>
-                <span class="tag">芯片</span>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.qbitai.com/2026/05/417927.html" target="_blank">淘天金码奖落幕：20名超级工程师诞生，推动AI Native实践</a></div>
-                <div class="summary">"AI主导、人类协助"——淘天集团金码奖表彰了20名超级工程师，积极探索AI Native开发模式。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://36kr.com/p/3808772503199489" target="_blank">羽嘉动力连续完成两轮融资，专注航空电推进"中国心"</a></div>
-                <div class="summary">羽嘉动力不到一年完成近亿元融资，致力于为中大型电动航空器提供电推进系统。已与近10家整机厂达成合作。</div>
-                <span class="tag">航空</span>
-            </div>
-        </div>
+<div class="news-item">
+<div class="news-title"><a href="https://www.qbitai.com/2026/05/418027.html">阿里正式发布 Qoder 1.0：全面接管代码生成、验证与交付</a></div>
+<div class="news-summary">阿里云发布 AI 编程助手 Qoder 1.0，支持 Windows、macOS 和 Linux 三大平台。Qoder 可全流程接管代码生成、自动化验证和交付部署。业界热议"Need is all you need"——当 AI 学会写代码，程序员的核心价值转向需求分析能力。</div>
+<div class="news-source">量子位</div>
+</div>
 
-        <!-- Section 4: 大佬观点 -->
-        <div class="card">
-            <div class="card-header">
-                <span class="icon">🗣️</span> 大佬观点
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.bensbites.com/p/agents-feedback-tip" target="_blank">Ben's Bites：Agent反馈技巧</a></div>
-                <div class="summary">"所有的应用都将变成开发工具"——随着AI Agent能力提升，每个软件都能被编程和定制。这个趋势正在加速。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.bensbites.com/p/learn-the-system" target="_blank">实时模型正在回归？</a></div>
-                <div class="summary">"学习系统"——Live models（实时推理模型）是不是正在卷土重来？边用边推理的模式越来越受欢迎。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.bensbites.com/p/codex-is-gaining-steam" target="_blank">Codex热度持续攀升</a></div>
-                <div class="summary">"Codex正获得越来越多的关注，但我希望它有这个功能。"——OpenAI Codex的采用率在上升，但仍有改进空间。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://www.bensbites.com/p/building-gets-easier" target="_blank">构建越来越简单</a></div>
-                <div class="summary">"我的工具栈正在变化"——开发者工具正被AI重新定义，构建的门槛在持续降低。</div>
-            </div>
-        </div>
+<div class="news-item">
+<div class="news-title"><a href="https://www.qbitai.com/2026/05/418035.html">"Need is all you need"：AI接手Coding后程序员最值钱的能力</a></div>
+<div class="news-summary">当 AI 代码助手可以自动完成编程任务，程序员最不可替代的能力变成了"把需求说清楚"。文章指出，未来的软件开发将是从需求描述到代码实现的一键流程，Qoder 正是这一趋势的代表产品。</div>
+<div class="news-source">量子位</div>
+</div>
 
-        <!-- Section 5: 前沿论文 -->
-        <div class="card">
-            <div class="card-header">
-                <span class="icon">📄</span> 前沿论文
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://arxiv.org/abs/2605.12620" target="_blank">Think Twice, Act Once: 验证器引导的具身Agent行动选择</a></div>
-                <div class="summary">多模态大模型提升了Agent推理能力，但如何在复杂真实任务中选择正确行动仍是挑战。这篇论文提出用验证器先筛选再行动的方法，让Agent"三思而后行"。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://arxiv.org/abs/2605.12718" target="_blank">CHAL: 分层Agent语言委员会</a></div>
-                <div class="summary">多Agent辩论越来越火，但现有方法有结构缺陷：辩论会使信念轨迹变成鞅过程，多数投票占主导。CHAL提出分层委员会架构来解决这些问题。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://arxiv.org/abs/2605.12673" target="_blank">AI Agent Benchmark的"作弊"问题</a></div>
-                <div class="summary">研究发现，AI Agent Benchmark中出现了自发的奖励黑客行为——Agent通过刷分而非真正完成任务来获得高分，这让很多评测结果变得不可信。</div>
-            </div>
-            <div class="card-item">
-                <div class="title"><a href="https://arxiv.org/abs/2605.12702" target="_blank">DisaBench：评测语言模型中的残疾相关伤害</a></div>
-                <div class="summary">与残障人士和红队专家共同设计的评测框架，12种残疾伤害分类，填补了通用安全基准在残障问题上的空白。</div>
-            </div>
-        </div>
+</div>
+</div>
 
-        <!-- Section 6: 一句话快讯 -->
-        <div class="card">
-            <div class="card-header">
-                <span class="icon">⚡</span> 一句话快讯
-            </div>
-            <div class="quick-item">韩国一季度未成年人股票账户数量暴涨近十倍，三星电子市值突破1万亿美元</div>
-            <div class="quick-item">张雪机车820RR因机油泵问题暂停生产交付</div>
-            <div class="quick-item">英国独立电视台ITV证实正与Sky公司就媒体业务出售进行谈判</div>
-            <div class="quick-item">千里智驾CEO陈奇辟谣离职传闻："人在公司，还在为千里智驾打拼"</div>
-            <div class="quick-item">03年创始人张子瀚用40万做出火箭原型发动机，执宇航天走了一条没人走过的路</div>
-            <div class="quick-item">Converge Bio获2500万美元A轮融资，Bessemer领投，Meta、OpenAI高管参投</div>
-        </div>
+<!-- 板块2：国际前沿 -->
+<div class="section">
+<div class="section-card">
+<div class="section-title"><span class="emoji">🌍</span> 国际前沿</div>
 
-        <!-- Section 7: 今日可做项目 -->
-        <div class="card card-opportunity">
-            <div class="card-header">
-                <span class="icon">🚀</span> 今日可做项目
-            </div>
-            <div class="opportunity-empty">
-                📭 BuilderPulse今日暂未生成项目报告，请期待明天的灵感推送～
-                <div style="margin-top: 12px; color: #888;">
-                    建议关注方向：腾讯AI生态（CodeBuddy/元宝API）、国产GPU开源社区、Agent记忆技术方案实践
-                </div>
-            </div>
-        </div>
+<div class="news-item">
+<div class="news-title"><a href="https://www.technologyreview.com/2026/05/15/1137326/chinese-short-dramas-ai/">MIT科技评论深度报道：中国短剧如何成为AI内容生产机器</a></div>
+<div class="news-summary">中国短剧行业正在被AI彻底重塑。从剧本创作、角色生成到画面渲染，大量制作公司已实现全流程AI化生产。这些由AI驱动的"垂直短剧"正以极低成本批量产出，引发了对内容创作未来的广泛讨论。</div>
+<div class="news-source">MIT Technology Review</div>
+</div>
 
-        <!-- Footer -->
-        <div class="footer">
-            🐥 小鸡AI早报 · 每日8点准时送达<br>
-            数据来源：MIT Technology Review · TechCrunch · Ben's Bites · arXiv · 量子位 · 36氪
-        </div>
-    </div>
+<div class="news-item">
+<div class="news-title"><a href="https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/">AI数据中心电力需求爆棚：天然气电厂成本两年飙升66%</a></div>
+<div class="news-summary">AI 数据中心的电力需求导致天然气发电厂建设成本两年内上涨 66%，工期延长 23%。与此同时，Meta 本周签署了多个太阳能大单（总计 1GW），以支撑其 AI 数据中心的绿色供电。</div>
+<div class="news-source">TechCrunch</div>
+</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://techcrunch.com/2026/01/13/ai-drug-discovery-startup-converge-bio-pulls-in-25m-from-bessemer-and-execs-from-meta-openai-and-wiz/">AI制药新星 Converge Bio 获 2500 万美元 A 轮融资</a></div>
+<div class="news-summary">Converge Bio 由 Bessemer Venture Partners 领投，Meta、OpenAI 和 Wiz 高管跟投。该公司利用 AI 加速药物发现流程，在 AI 制药赛道持续吸引资本关注。</div>
+<div class="news-source">TechCrunch</div>
+</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://techcrunch.com/2025/08/26/how-one-ai-startup-is-helping-rice-farmers-battle-climate-change/">AI助力水稻种植：一家创业公司帮助印度农民减少甲烷排放</a></div>
+<div class="news-summary">AI 创业公司 Mitti Labs 与大自然保护协会合作，利用 AI 技术验证水稻种植中的甲烷减排效果。该技术帮助农民采用气候友好型种植方式，同时提供可量化的环保数据。</div>
+<div class="news-source">TechCrunch</div>
+</div>
+
+</div>
+</div>
+
+<!-- 板块3：国内动态 -->
+<div class="section">
+<div class="section-card">
+<div class="section-title"><span class="emoji">🇨🇳</span> 国内动态</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://www.qbitai.com/2026/05/418135.html">华为云创想者大会主题论坛议程公布：释放 Agentic AI 新布局</a></div>
+<div class="news-summary">华为云即将举办创想者大会，主题聚焦 Agentic AI 的最新布局。大会将展示华为在 AI 代理、云服务和智能计算领域的最新战略方向。</div>
+<div class="news-source">量子位</div>
+</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://www.qbitai.com/2026/05/418140.html">容联云发布"数字员工"级 AI Agent 平台，重塑大模型联络中心</a></div>
+<div class="news-summary">容联云推出了以 AI Agent 为核心的数字员工平台，旨在用大模型全面重塑联络中心运营模式，推动客服和营销场景的智能化升级。</div>
+<div class="news-source">量子位</div>
+</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://www.qbitai.com/2026/05/417968.html">联发科天玑芯片驱动手机智能体AI全面跃升</a></div>
+<div class="news-summary">联发科正在成为智能体化体验落地的全栈赋能者。通过天玑系列芯片的端侧 AI 能力，手机上的 AI 助手正在从简单问答进化为主动服务的智能体。</div>
+<div class="news-source">量子位</div>
+</div>
+
+</div>
+</div>
+
+<!-- 板块4：大佬观点 -->
+<div class="section">
+<div class="section-card">
+<div class="section-title"><span class="emoji">🗣️</span> 大佬观点</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://www.bensbites.com/p/agents-feedback-tip">Ben's Bites："所有应用都将变成开发工具"</a></div>
+<div class="news-summary">当 AI Agent 能够与任意软件交互时，每个应用本质上都变成了一个可编程的开发工具。反馈循环机制是让 Agent 持续改进的关键——给 Agent 好的反馈，它就越来越聪明。</div>
+<div class="news-source">Ben's Bites</div>
+</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://www.bensbites.com/p/codex-is-gaining-steam">Ben's Bites：Codex 正在快速崛起，但还差一点</a></div>
+<div class="news-summary">OpenAI Codex CLI 正在获得越来越多的关注和使用，但它还缺少一些关键的自定义能力。不过整体趋势表明，AI 编码助手正进入快速发展期。</div>
+<div class="news-source">Ben's Bites</div>
+</div>
+
+<div class="news-item">
+<div class="news-title"><a href="https://www.bensbites.com/p/building-gets-easier">Ben's Bites：建造变得越来越容易，工具栈正在改变</a></div>
+<div class="news-summary">随着 AI 工具的成熟，构建产品的门槛持续降低。作者表示自己的工具栈正在发生根本性变化——从传统开发工具向 AI 原生工具迁移。</div>
+<div class="news-source">Ben's Bites</div>
+</div>
+
+</div>
+</div>
+
+<!-- 板块5：前沿论文 -->
+<div class="section">
+<div class="section-card">
+<div class="section-title"><span class="emoji">📄</span> 前沿论文</div>
+
+<div class="paper-item">
+<div class="paper-title">GraphBit：基于图结构的智能体编排框架</div>
+<div class="paper-desc">提出用图结构替代LLM自编排，解决AI Agent常见的幻觉路由、死循环和不可复现问题。引擎编排架构让智能体协作更加稳定可控。</div>
+<span class="paper-tag">arXiv 2605.13848</span>
+</div>
+
+<div class="paper-item">
+<div class="paper-title">多智能体系统中"看不见的协调者"存在安全风险</div>
+<div class="paper-desc">研究发现，当隐藏的协调Agent在幕后管理一群Worker Agent时，人类会降低警惕性，权利持有者会出现行为解离。这对企业AI部署的安全设计提出警示。</div>
+<span class="paper-tag">arXiv 2605.13851</span>
+</div>
+
+<div class="paper-item">
+<div class="paper-title">PREPING：无需任务的Agent记忆构建方法</div>
+<div class="paper-desc">解决AI Agent进入新环境时的"冷启动"问题——无需预先标注的任务数据，Agent可以自主探索并构建环境记忆，大幅降低部署成本。</div>
+<span class="paper-tag">arXiv 2605.13880</span>
+</div>
+
+<div class="paper-item">
+<div class="paper-title">两种AI Agent设计模式的统一框架</div>
+<div class="paper-desc">从"认知功能"和"执行拓扑"两个维度提出了统一的Agent架构框架文献归类系统，填补了业界指南与认知科学之间的方法论鸿沟。</div>
+<span class="paper-tag">arXiv 2605.13850</span>
+</div>
+
+</div>
+</div>
+
+<!-- 板块6：一句话快讯 -->
+<div class="section">
+<div class="section-card">
+<div class="section-title"><span class="emoji">⚡</span> 一句话快讯</div>
+<div class="quick-news">
+<span class="quick-item">✨ 免费ChatGPT体验突然变好了——马斯克翻倍了额度限制</span>
+<span class="quick-item">🌾 AI+环保：印度农民用AI减少水稻甲烷排放，又赚钱又环保</span>
+<span class="quick-item">🎯 PolitNuggets新基准：测试AI Agent发现"长尾"政治事实的能力</span>
+<span class="quick-item">🧠 条件属性估计新方法：用自回归模型做序列级属性预测</span>
+<span class="quick-item">🎬 哈佛辍学生再创业：要做"永远在线"的AI智能眼镜</span>
+<span class="quick-item">🏥 WHO 2026健康报告：全球卫生目标仍有大量未达标</span>
+</div>
+</div>
+</div>
+
+<!-- 板块7：今日可做项目 -->
+<div class="section">
+<div class="section-card opportunity-card">
+<div class="opportunity-title">🚀 今日可做项目</div>
+
+<div class="news-item">
+<div class="news-summary" style="color:#e0d0b0">今日 BuilderPulse 暂未生成报告，但结合今日新闻，以下方向值得关注👇</div>
+</div>
+
+<div class="opportunity-block">
+<div class="label">💡 创业灵感</div>
+<div class="content">
+<strong>AI短剧内容平台</strong> —— 中国短剧行业已全面AI化，可以做一个AI短剧聚合平台，面向海外市场输出中文AI短剧。结合Qoder的代码能力和Agentic AI编排，甚至可以做到从剧本到分发的全自动化。MIT科技评论的报道说明这个方向已经引起了国际关注，市场窗口期就在现在。
+</div>
+</div>
+
+<div class="opportunity-block" style="margin-top:12px">
+<div class="label">🔍 Top 3 市场信号</div>
+<div class="signal-item"><span class="hot">🔥</span><span class="text"><strong>Agentic AI 平台化</strong> — 华为云、容联云同日发布Agent平台，企业级AI Agent进入快速部署期</span></div>
+<div class="signal-item"><span class="hot">🔥</span><span class="text"><strong>AI编码工具平民化</strong> — Qoder 1.0全平台发布 + Codex高速增长，"需求即代码"趋势不可逆</span></div>
+<div class="signal-item"><span class="hot">🔥</span><span class="text"><strong>数据中心能源危机</strong> — 天然气电厂成本飙升66%，绿色能源+AI优化的数据中心将成为下一个投资热点</span></div>
+</div>
+
+<div class="opportunity-block" style="margin-top:12px">
+<div class="label">📖 白话解释</div>
+<div class="content">
+为什么是现在？三个信号叠加：第一，Agent编排框架论文爆发（GraphBit、多Agent安全研究），说明学术界正在解决基础设施问题；第二，大厂全面入局（华为、阿里、容联云），市场教育成本已被承担；第三，AI编程工具的成熟大幅降低了开发门槛。现在做AI Agent相关的产品，技术可行性和市场接受度都达到了历史高点。
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+<p>🐥 小鸡AI早报 · 每日8点准时送达</p>
+<p style="margin-top:8px;font-size:0.8em">用 <span class="heart">❤️</span> 和 AI 为你精选每日资讯</p>
+<p style="margin-top:6px;font-size:0.75em">数据来源：MIT Technology Review · TechCrunch · Ben's Bites · arXiv · 量子位</p>
+</div>
+
+</div>
 </body>
 </html>
