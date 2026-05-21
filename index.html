@@ -2,73 +2,54 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>小鸡AI早报 · 2026年5月20日</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小鸡AI早报 · 2026年5月21日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;min-height:100vh;background-image:radial-gradient(ellipse at 20% 20%,rgba(88,28,200,0.12) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(37,99,235,0.1) 0%,transparent 50%);padding:24px 16px}
-.container{max-width:800px;margin:0 auto}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,#0a0a1a 70%)}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 60px}
 .header{text-align:center;padding:40px 0 32px}
-.header h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
-.header .date{color:#94a3b8;font-size:.95em}
-.header .subtitle{color:#64748b;font-size:.85em;margin-top:4px}
-
-/* Player */
-.player{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:20px;margin-bottom:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.player-icon{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.player-info{flex:1;min-width:140px}
-.player-info .title{font-size:1em;font-weight:600;color:#e2e8f0}
-.player-info .meta{font-size:.82em;color:#94a3b8;margin-top:2px}
-.player audio{width:100%;margin-top:10px;border-radius:22px;height:40px}
-.player audio::-webkit-media-controls-panel{background:#1a1a3a;border-radius:22px}
-.player audio::-webkit-media-controls-current-time-display,
-.player audio::-webkit-media-controls-time-remaining-display{color:#94a3b8}
-
-/* Cards */
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:20px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.card-title{font-size:1.15em;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.card-item{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.05)}
-.card-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.card-item h3{font-size:.95em;font-weight:600;margin-bottom:4px;color:#e2e8f0}
-.card-item p{font-size:.85em;color:#94a3b8;line-height:1.6}
-.tag{display:inline-block;padding:2px 10px;border-radius:100px;font-size:.72em;font-weight:600;margin-right:6px}
-.tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
+.header h1{font-size:32px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.header .date{color:#94a3b8;font-size:15px;letter-spacing:1px}
+.header .sub{color:#64748b;font-size:13px;margin-top:4px}
+/* player */
+.player-card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:20px 24px;margin-bottom:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.player-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.player-info{flex:1;min-width:150px}
+.player-info .title{font-size:15px;font-weight:600;color:#e2e8f0}
+.player-info .meta{font-size:12px;color:#94a3b8;margin-top:2px}
+.player-info audio{width:100%;margin-top:8px;border-radius:22px;height:40px}
+.card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:20px}
+.section-title{font-size:20px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-title .emoji{font-size:24px}
+.item{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.item-title{font-size:16px;font-weight:600;color:#f1f5f9;margin-bottom:6px;line-height:1.5}
+.item-summary{font-size:14px;line-height:1.7;color:#94a3b8;margin-bottom:8px}
+.tag{display:inline-block;font-size:11px;padding:2px 10px;border-radius:10px;font-weight:500;margin-right:6px;margin-bottom:4px}
+.tag-mit{background:rgba(59,130,246,0.15);color:#60a5fa}
 .tag-tc{background:rgba(34,197,94,0.15);color:#4ade80}
-.tag-bb{background:rgba(250,204,21,0.15);color:#facc15}
+.tag-bb{background:rgba(234,179,8,0.15);color:#facc15}
 .tag-qbit{background:rgba(236,72,153,0.15);color:#f472b6}
-.tag-36kr{background:rgba(139,92,246,0.15);color:#a78bfa}
-.tag-bili{background:rgba(14,165,233,0.15);color:#38bdf8}
-
-/* Comment Bubble */
-.comment{background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 10px 10px 0;padding:10px 14px;margin-top:8px;font-size:.82em;color:#c4b5fd;line-height:1.5}
-
-/* Expert Quote */
-.quote{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.05);padding:10px 14px;margin-top:8px;border-radius:0 10px 10px 0}
-.quote-zh{font-size:.85em;color:#93c5fd;line-height:1.5}
-.quote-en{font-size:.8em;color:#64748b;margin-top:4px;line-height:1.4}
-
-/* Quick Updates Grid */
-.quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
-.quick-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);border-radius:10px;padding:12px;font-size:.82em;color:#94a3b8;line-height:1.5}
-
-/* Opportunity Card */
-.opp-card{background:rgba(255,255,255,0.04);border:1px solid rgba(234,179,8,0.3);border-radius:16px;padding:24px;margin-bottom:20px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.opp-card .card-title{background:linear-gradient(135deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.opp-section{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(234,179,8,0.1)}
-.opp-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.opp-section h4{color:#fcd34d;font-size:.9em;font-weight:600;margin-bottom:8px}
-.opp-section p{font-size:.85em;color:#d1d5db;line-height:1.6}
-.opp-signal{margin-bottom:8px;padding:8px 12px;background:rgba(234,179,8,0.05);border-radius:8px;font-size:.82em;color:#d1d5db;line-height:1.5}
-
-.footer{text-align:center;padding:32px 0 16px;color:#475569;font-size:.82em}
-
-@media(max-width:640px){
-  body{padding:16px 10px}
-  .header h1{font-size:1.5em}
-  .card,.opp-card{padding:16px}
-  .player{padding:14px}
-  .quick-grid{grid-template-columns:1fr}
-}
+.tag-36kr{background:rgba(168,85,247,0.15);color:#a78bfa}
+.tag-bili{background:rgba(34,211,238,0.15);color:#22d3ee}
+.tag-arxiv{background:rgba(251,146,60,0.15);color:#fb923c}
+.comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);padding:10px 14px;border-radius:0 8px 8px 0;font-size:13px;color:#c4b5fd;margin-top:8px;line-height:1.6}
+.tweet{border-left:3px solid rgba(59,130,246,0.3);padding:10px 14px;border-radius:0 8px 8px 0;margin-top:8px}
+.tweet .en{font-size:13px;color:#94a3b8;line-height:1.6;margin-bottom:4px}
+.tweet .zh{font-size:13px;color:#e2e8f0;line-height:1.6}
+.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.flash-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:12px;font-size:13px;line-height:1.6;color:#cbd5e1}
+.flash-item .flash-tag{display:inline-block;font-size:10px;padding:1px 8px;border-radius:8px;background:rgba(148,163,184,0.15);color:#94a3b8;margin-bottom:4px}
+/* opportunity card */
+.opportunity-card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(251,146,60,0.2);border-radius:16px;padding:24px;margin-bottom:20px}
+.opportunity-card .section-title{color:#fb923c}
+.opportunity-empty{text-align:center;padding:24px;color:#64748b;font-size:14px;line-height:1.8}
+.opportunity-empty .big-emoji{font-size:40px;display:block;margin-bottom:12px}
+.footer{text-align:center;padding:24px 0;color:#475569;font-size:13px;line-height:1.8}
+.footer a{color:#60a5fa;text-decoration:none}
+.footer a:hover{text-decoration:underline}
+@media(max-width:640px){.container{padding:16px 12px 40px}.header h1{font-size:26px}.card{padding:16px}.player-card{padding:16px}.flash-grid{grid-template-columns:1fr}.opportunity-card{padding:16px}}
 </style>
 </head>
 <body>
@@ -76,199 +57,218 @@ body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFo
 
 <div class="header">
   <h1>🐥 小鸡AI早报</h1>
-  <div class="date">2026年5月20日 星期三</div>
-  <div class="subtitle">每日8点准时送达 · 今日7大板块</div>
+  <div class="date">2026年5月21日 星期四</div>
+  <div class="sub">每天8点 · 温柔播报</div>
 </div>
 
-<!-- Player -->
-<div class="player">
+<div class="player-card">
   <div class="player-icon">🎙️</div>
   <div class="player-info">
     <div class="title">今日早报语音版</div>
-    <div class="meta">软萌女声 · 约3分钟 🎀</div>
+    <div class="meta">软萌女声 · 约4分钟 🎀</div>
     <audio controls preload="none">
       <source src="https://hongkongdxk123-jpg.github.io/audio_cn.mp3" type="audio/mpeg">
     </audio>
   </div>
 </div>
 
-<!-- 🔥 今日头条 -->
+<!-- 板块一 -->
 <div class="card">
-  <div class="card-title">🔥 今日头条</div>
-
-  <div class="card-item">
-    <span class="tag tag-mit">MIT</span>
-    <h3>马斯克诉OpenAI案败诉：诉讼超过时效</h3>
-    <p>陪审团一致裁决马斯克起诉超法定诉讼时效，法官立即采纳。马斯克宣布将上诉。案件核心围绕OpenAI是否违背非营利创始承诺。MIT科技评论深度解析：法院认为马斯克等待太久才起诉，已无权追责。</p>
-    <div class="comment">🐣 小鸡点评：这场世纪官司终于有了阶段性结果，但上诉意味着还远没结束呢～</div>
+  <div class="section-title"><span class="emoji">🔥</span> 今日头条</div>
+  
+  <div class="item">
+    <span class="tag tag-36kr">英伟达财报</span>
+    <div class="item-title">英伟达第一财季净利润583亿美元，同比增长211%</div>
+    <div class="item-summary">英伟达发布2027财年第一季度财报，营收816.2亿美元，同比增长85%；净利润583.2亿美元，同比增长211%。AI算力需求持续爆发式增长。</div>
+    <div class="comment">🐤 小鸡点评：每季度赚五百多亿美金，这印钞速度也没谁了～</div>
   </div>
-
-  <div class="card-item">
-    <span class="tag tag-36kr">36氪</span>
-    <h3>Google I/O开幕：Gemini 3.5系列模型发布</h3>
-    <p>谷歌年度开发者大会今日开幕，推出Gemini 3.5系列模型。同时谷歌搜索宣布大改版，AI模式与代理助手全面嵌入。MIT评论指出，谷歌目前在大模型竞赛中位列第三，正在加速追赶。</p>
+  
+  <div class="item">
+    <span class="tag tag-bb">Ben's Bites</span>
+    <div class="item-title">Elon Musk lost his suit against OpenAI — Musk v. Altman Trial Ends</div>
+    <div class="item-summary">Elon Musk has lost his lawsuit against OpenAI, which centered on whether the company breached its founding contract as a nonprofit. A federal judge ruled against Musk, rejecting claims that OpenAI's shift to a for-profit structure violated its original mission.</div>
+    <div class="comment">🐤 小鸡点评：这场持续已久的AI行业大戏终于落幕了！</div>
   </div>
-
-  <div class="card-item">
-    <span class="tag tag-qbit">量子位</span>
-    <h3>DeepSeek回应"对话泄露"疑虑</h3>
-    <p>用户发现输入&lt;think&gt;字符后模型返回异常内容，产生数据泄露担忧。DeepSeek回应：属于特殊字符引发的模型幻觉，不涉及安全问题或隐私泄露，后续将通过针对性训练优化。</p>
+  
+  <div class="item">
+    <span class="tag tag-36kr">Google I/O</span>
+    <div class="item-title">Google CEO：Gemini月活跃用户达9亿</div>
+    <div class="item-summary">谷歌CEO皮查伊在2026年I/O开发者大会上表示，Gemini AI应用的月活跃用户达到9亿人次，日请求量增长超过7倍，公司每月处理超过3.2千兆个AI token。</div>
   </div>
 </div>
 
-<!-- 🌍 国际前沿 -->
+<!-- 板块二 -->
 <div class="card">
-  <div class="card-title">🌍 国际前沿</div>
-
-  <div class="card-item">
-    <span class="tag tag-mit">MIT</span>
-    <h3>世界模型重大突破：已支持多人联机玩FPS游戏</h3>
-    <p>量子位报道，最新世界模型已实现多人联机FPS游戏实时渲染，突破抢在李飞飞团队之前。引发热议："所谓的真实，真的重要吗？"</p>
+  <div class="section-title"><span class="emoji">🌍</span> 国际前沿</div>
+  
+  <div class="item">
+    <span class="tag tag-mit">MIT Tech Review</span>
+    <div class="item-title">Green steel startup Boston Metal is doubling down on critical metals</div>
+    <div class="item-summary">Boston Metal 完成7500万美元融资，从绿色钢铁延伸至关键金属提炼。钢铁行业占全球碳排放约8%，该公司的技术有望大幅降低这一比例。</div>
+    <div class="comment">🐤 小鸡点评：绿色钢铁+关键金属，一个赛道两个风口，投资人看了都心动吧～</div>
   </div>
-
-  <div class="card-item">
-    <span class="tag tag-mit">MIT</span>
-    <h3>Colossal Biosciences：3D打印人工蛋壳孵化小鸡</h3>
-    <p>生物科技公司宣布开发出"全人工蛋壳"，在3D打印塑料容器中成功孵化小鸡。这是复活已灭绝鸟类（如渡渡鸟）研究的关键一步。</p>
+  
+  <div class="item">
+    <span class="tag tag-mit">MIT Tech Review</span>
+    <div class="item-title">Colossal Biosciences is growing chickens in a 3D-printed artificial eggshell</div>
+    <div class="item-summary">Colossal Biosciences 宣布开发出"全人工鸡蛋"——小鸡在3D打印的透明塑料杯中孵化。这是他们复活灭绝鸟类计划的关键一步。</div>
+    <div class="comment">🐤 小鸡点评：以后小鸡出生没有蛋壳了！这技术要是成熟，以后复活渡渡鸟都不是梦～</div>
   </div>
-
-  <div class="card-item">
-    <span class="tag tag-tc">TC</span>
-    <h3>AI药物发现公司Converge Bio获2500万美元融资</h3>
-    <p>由Bessemer Venture Partners领投，Meta、OpenAI和Wiz高管跟投，致力于用AI加速新药发现。</p>
+  
+  <div class="item">
+    <span class="tag tag-tc">TechCrunch</span>
+    <div class="item-title">Data center demand drives 66% surge in natural gas power plant costs</div>
+    <div class="item-summary">天然气发电厂成本两年内上涨近一倍，工期延长23%。数据中心对电力的需求急剧攀升正在重塑能源市场格局。</div>
   </div>
-
-  <div class="card-item">
-    <span class="tag tag-bb">BB</span>
-    <h3>Ben's Bites：你希望Agent也能打电话吗？</h3>
-    <p>Ben's Bites主理人思考Agent的未来形态——"能让我的Agent帮我打电话吗？" 探讨语音Agent的应用场景扩展。</p>
+  
+  <div class="item">
+    <span class="tag tag-tc">TechCrunch</span>
+    <div class="item-title">Converge Bio raises $25M for AI drug discovery</div>
+    <div class="item-summary">AI药物发现初创公司 Converge Bio 完成2500万美元A轮融资，由Bessemer领投，Meta、OpenAI及Wiz高管跟投。</div>
+  </div>
+  
+  <div class="item">
+    <span class="tag tag-bb">Ben's Bites</span>
+    <div class="item-title">Can I get my agents on the phone?</div>
+    <div class="item-summary">Ben's Bites 创始人坦言已连续数周未使用 OpenClaw——"我已经好几个星期没用OpenClaw了"，感叹AI Agent的飞速进化。他预测："所有应用都将变成开发工具。"</div>
   </div>
 </div>
 
-<!-- 🇨🇳 国内动态 -->
+<!-- 板块三 -->
 <div class="card">
-  <div class="card-title">🇨🇳 国内动态</div>
-
-  <div class="card-item">
+  <div class="section-title"><span class="emoji">🇨🇳</span> 国内动态</div>
+  
+  <div class="item">
     <span class="tag tag-qbit">量子位</span>
-    <h3>苏姿丰上海开讲：AI正在重新定义计算的每一层</h3>
-    <p>AMD CEO苏姿丰在上海发表演讲，强调AI正在从芯片到应用层全面重构计算架构。AMD将持续加码中国开发者生态建设。</p>
+    <div class="item-title">智象未来超两千亿参数图像大模型 HiDream-O1-Image-Pro 发布</div>
+    <div class="item-summary">智象未来发布HiDream-O1-Image-Pro，参数规模超2000亿，定位从图像生成向世界模型演进。同时公司融资持续提速。</div>
+    <div class="comment">🐤 这条你可能用得上：2000亿参数的图像模型，做AI创作的小伙伴可以关注一下～</div>
   </div>
-
-  <div class="card-item">
-    <span class="tag tag-qbit">量子位</span>
-    <h3>国产GPU全栈具身智能仿真平台发布</h3>
-    <p>国内首个全栈具身智能仿真平台发布，搭载国产GPU。命名为MT Lambda，标志着国产GPU从"能用"走向"好用"。</p>
-  </div>
-
-  <div class="card-item">
+  
+  <div class="item">
     <span class="tag tag-36kr">36氪</span>
-    <h3>未来式智能完成Pre-A轮融资</h3>
-    <p>致力于企业级智能体搭建平台"灵搭"，专注电力、金融、制造等高合规行业。创始团队来自达摩院、腾讯、字节。本轮由凡创资本、中关村资本等投资。</p>
-    <div class="comment">🐣 小鸡点评：不做大模型做Agent，这个差异化定位很聪明呀～</div>
+    <div class="item-title">长鑫科技更新招股书：Q1营收508亿元，同比增长719%</div>
+    <div class="item-summary">长鑫科技计划登陆科创板，2026年Q1营收508亿元，同比增长719%；净利润247.62亿元，同比大增1688%。公司是中国最大、全球第四的DRAM芯片企业，部分机构估值高达2万亿元。</div>
+    <div class="comment">🐤 小鸡点评：一千六百倍的利润增长，国产存储芯片真的站起来了！</div>
   </div>
-
-  <div class="card-item">
-    <span class="tag tag-36kr">36氪</span>
-    <h3>Chance AI获美图数百万美元投资</h3>
-    <p>以摄像头为主要交互入口的视觉智能体创业公司Chance AI完成数百万美元天使轮融资。用户打开APP直接拍摄，系统即可理解视觉意图并提供判断和行动方案。创始人曾熙，字节豆包早期参与者。</p>
-  </div>
-
-  <div class="card-item">
+  
+  <div class="item">
     <span class="tag tag-qbit">量子位</span>
-    <h3>Cursor新模型：1/10成本、Opus 4.7级表现</h3>
-    <p>Coder工具Cursor推出新模型，以十分之一的成本达到接近Claude Opus 4级别的编码能力。有趣的是，模型与Kimi存在关联传闻。</p>
+    <div class="item-title">第四届中国AIGC产业峰会在京举办</div>
+    <div class="item-summary">峰会以"@所有人，马上AI起来"为主题，昆仑万维、商汤、百度、蚂蚁、MiniMax、亚马逊云科技等齐聚，围绕AI Agent商业化落地、多模态技术突破等核心议题展开探讨。量子位同时发布"2026年度值得关注AI企业"榜单。</div>
+  </div>
+  
+  <div class="item">
+    <span class="tag tag-36kr">36氪</span>
+    <div class="item-title">理想新L9上市72小时：老车主复购占大头</div>
+    <div class="item-summary">理想新L9标配72.7kWh电池，纯电续航420公里，综合续航超1600公里。自研马赫芯片首次上车（1280TOPS），配备线控转向与后轮转向，起售价45.98万元。</div>
+  </div>
+  
+  <div class="item">
+    <span class="tag tag-qbit">量子位</span>
+    <div class="item-title">VC、品牌顾问、编剧，正在批量把自己做成AI</div>
+    <div class="item-summary">"让你的经验24小时自动接单"——风险投资人、品牌顾问、编剧等知识工作者正在将自己的专业经验AI化，打造个人AI分身实现全天候接单。</div>
+    <div class="comment">🐤 这条你可能用得上：把你的经验做成AI，24小时帮你赚钱，这波风口可别错过哦～</div>
+  </div>
+  
+  <div class="item">
+    <span class="tag tag-36kr">36氪</span>
+    <div class="item-title">英伟达将在新加坡设立研发中心</div>
+    <div class="item-summary">新加坡加码AI布局，英伟达将在当地设立首个亚太地区研发中心，进一步扩展其在亚洲的AI与算力基础设施版图。</div>
   </div>
 </div>
 
-<!-- 🗣️ 大佬观点 -->
+<!-- 板块四 -->
 <div class="card">
-  <div class="card-title">🗣️ 大佬观点</div>
-
-  <div class="card-item">
-    <h3>Karpathy加入Anthropic</h3>
-    <p>前OpenAI/特斯拉AI负责人Andrej Karpathy宣布加入Anthropic，引发484条社区讨论。业界关注这一顶级AI人才的新去向。</p>
-  </div>
-
-  <div class="card-item">
-    <span class="tag tag-bb">BB</span>
-    <h3>Simon Willison：六个月LLM回顾</h3>
-    <div class="quote">
-      <div class="quote-en">"The real progress in the last six months isn't just the models — it's the tooling ecosystem being built around them."</div>
-      <div class="quote-zh">"过去六个月真正的进步不只是模型本身，而是围绕模型构建的工具系统生态。"</div>
+  <div class="section-title"><span class="emoji">🗣️</span> 大佬观点</div>
+  
+  <div class="item">
+    <span class="tag tag-bb">Ben's Bites</span>
+    <div class="tweet">
+      <div class="en">"I haven't used OpenClaw in weeks — all apps will become dev tools."</div>
+      <div class="zh">"我已经好几周没用OpenClaw了——未来所有的应用都会变成开发工具。"</div>
     </div>
-    <p>安全专家兼开发者Simon Willison的六个月回顾引发556条讨论，核心观点是Agent工具链和编码助手的成熟才是当前最大突破。</p>
+    <div class="comment">🐤 小鸡点评：这句话值得细品！以后每个App都能通过AI Agent被编程和定制，想想就刺激～</div>
   </div>
-
-  <div class="card-item">
-    <h3>Anthropic收购API工具公司Stainless</h3>
-    <p>Anthropic收购API开发工具公司Stainless，引发365条讨论。此举意在强化开发者工具链，为Agent生态铺路。</p>
+  
+  <div class="item">
+    <span class="tag tag-36kr">Google I/O</span>
+    <div class="item-title">Sundar Pichai 在I/O大会演讲</div>
+    <div class="tweet">
+      <div class="en">"Gemini monthly active users hit 900M, up 2x YoY. Daily token processing grew 7x to 3.2 quintillion tokens per month."</div>
+      <div class="zh">"Gemini月活跃用户达到9亿，同比翻倍。每日token处理量增长7倍，每月处理超过3.2千兆个AI token。"</div>
+    </div>
+    <div class="comment">🐤 小鸡点评：9亿月活、七倍增长，谷歌在AI赛道上真的追上来了！</div>
+  </div>
+  
+  <div class="item">
+    <span class="tag tag-36kr">AIGC峰会</span>
+    <div class="item-title">第四届AIGC产业峰会嘉宾观点</div>
+    <div class="item-summary">太初元碁洪源称"异构计算能力将成为未来AI算力基础设施的重要方向"；商汤大装置林海谈AIDC建设正从"通用标准"走向"适用高效"。</div>
+    <div class="comment">🐤 这条你可能用得上：异构计算和定制化数据中心，可能是AI基础设施的下一波投资方向～</div>
   </div>
 </div>
 
-<!-- 📄 前沿论文 -->
+<!-- 板块五 -->
 <div class="card">
-  <div class="card-title">📄 前沿论文</div>
-
-  <div class="card-item">
-    <h3>AgentWall：本地AI代理运行时安全层</h3>
-    <p>随着Agent从被动文本生成器转变为能执行命令、修改文件、调用API的活动角色，安全性成为关键问题。AgentWall提出运行时安全保护层，在执行系统命令时防止恶意操作。</p>
+  <div class="section-title"><span class="emoji">📄</span> 前沿论文</div>
+  
+  <div class="item">
+    <span class="tag tag-arxiv">arXiv</span>
+    <div class="item-title">Trustworthy Agent Network: Trust in Agent Networks Must Be Baked In, Not Bolted On</div>
+    <div class="item-summary">随着LLM驱动的AI Agent从独立运作走向协作生态，论文提出"可信代理网络"概念，强调代理之间的信任机制必须在系统设计之初就内建，而非事后补丁。</div>
+    <div class="comment">🐤 小鸡点评：这个观点太对了——当Agent们开始互相调用API、共享数据时，信任基础设施就是刚需！</div>
   </div>
-
-  <div class="card-item">
-    <h3>Skim：Web代理的投机执行框架</h3>
-    <p>利用目标网站的可预测结构实现投机执行，大幅降低Web Agent的推理成本。核心洞察：今日Web Agent的高成本并非任务本身所需，而是代理架构的低效导致的。</p>
+  
+  <div class="item">
+    <span class="tag tag-arxiv">arXiv</span>
+    <div class="item-title">AgentNLQ: A General-Purpose Agent for Natural Language to SQL</div>
+    <div class="item-summary">提出通用型自然语言转SQL Agent框架，利用LLM能力实现更灵活的数据库查询转换，面向企业和研究场景。</div>
   </div>
-
-  <div class="card-item">
-    <h3>TTE-Flash：先推理再嵌入的多模态表示</h3>
-    <p>提出"思考-然后-嵌入"范式，在生成多模态嵌入向量前先进行链式推理，显著提升检索和多模态理解任务的表现。</p>
-  </div>
-
-  <div class="card-item">
-    <h3>PRISMat：策略驱动的材料自动生成</h3>
-    <p>利用ML自动筛选具有目标性能的候选材料，替代传统物理模拟，更快更便宜地发现新材料。</p>
+  
+  <div class="item">
+    <span class="tag tag-arxiv">arXiv</span>
+    <div class="item-title">Position: Let's Develop Data Probes to Fundamentally Understand How Data Affects LLM Performance</div>
+    <div class="item-summary">论文呼吁开发"数据探针"工具来理解不同类型的数据在LLM训练、微调、对齐等不同阶段的作用机制——这是当前大模型研究中的一个核心开放问题。</div>
   </div>
 </div>
 
-<!-- ⚡ 一句话快讯 -->
+<!-- 板块六 -->
 <div class="card">
-  <div class="card-title">⚡ 一句话快讯</div>
-  <div class="quick-grid">
-    <div class="quick-item">📊 <span class="tag tag-36kr">36氪</span> B站一季度营收74.7亿元，日均活跃用户1.15亿，日均使用时长119分钟创历史新高</div>
-    <div class="quick-item">⚡ <span class="tag tag-tc">TC</span> 数据中心用电需求激增，天然气发电成本两年涨66%，建设周期延长23%</div>
-    <div class="quick-item">🌾 <span class="tag tag-tc">TC</span> AI初创公司Mitti Labs用AI帮助水稻农民应对气候变化，验证甲烷减排效果</div>
-    <div class="quick-item">🚀 <span class="tag tag-bb">BB</span> Codex正在获得越来越多用户，但社区反馈仍缺一些关键功能</div>
-    <div class="quick-item">🪙 <span class="tag tag-36kr">36氪</span> SpaceX即将成为马斯克旗下第二家上市公司</div>
-    <div class="quick-item">🥷 <span class="tag tag-qbit">量子位</span> 文远知行L2++自动驾驶获"五冠王"，号称"专治各种不服"</div>
+  <div class="section-title"><span class="emoji">⚡</span> 一句话快讯</div>
+  <div class="flash-grid">
+    <div class="flash-item"><span class="flash-tag">36氪</span>2026福布斯中国AI企业TOP50发布，中关村科金入选</div>
+    <div class="flash-item"><span class="flash-tag">36氪</span>三星劳资谈判破裂，明天起将举行大罢工，存储芯片或再掀涨价潮</div>
+    <div class="flash-item"><span class="flash-tag">量子位</span>海信激光电视探索X1 Pro发布，光路传播效率提升20%</div>
+    <div class="flash-item"><span class="flash-tag">量子位</span>智会心研PLUS版免费公测，开放高阶研发AI能力</div>
+    <div class="flash-item"><span class="flash-tag">量子位</span>太初元碁洪源：异构计算是未来AI算力重要方向</div>
+    <div class="flash-item"><span class="flash-tag">36氪</span>微信再度开放520大额红包，限时1天</div>
+    <div class="flash-item"><span class="flash-tag">36氪</span>网易520发布会公布40余款游戏及IP最新动态</div>
+    <div class="flash-item"><span class="flash-tag">MIT</span>AI聊天机器人泄露用户个人联系信息引关注</div>
   </div>
 </div>
 
-<!-- 🚀 今日可做项目 -->
-<div class="opp-card">
-  <div class="card-title">🚀 今日可做项目</div>
-
-  <div class="opp-section">
-    <h4>💡 Agent Hook Infection Check — AI编码工具安全审计</h4>
-    <p>面向使用编码助手团队，开发仓库与工作站审计工具。在npm"Mini Shai-Hulud"供应链攻击事件（涉及317个包，637个恶意版本）之后，AI编码工具已经成为软件供应链的一部分。新风险不是模型写坏代码，而是模型周围的工具可能在你注意到之前，悄悄运行了别人的代码。</p>
-    <div class="comment">🐣 小鸡点评：这个方向很适合独立开发者做，市场刚需且竞争还没起来哦～</div>
-  </div>
-
-  <div class="opp-section">
-    <h4>📊 Top 3 市场信号</h4>
-    <div class="opp-signal">🔴 Mini Shai-Hulud命中317个包，发布637个恶意版本，新增针对Claude Code、Codex、VS Code和GitHub workflows的持久化路径（277条讨论）</div>
-    <div class="opp-signal">🔵 Simon Willison六个月LLM回顾：市场正在争论"进步更快的是模型本身，还是模型周围的工具系统"（556条讨论）</div>
-    <div class="opp-signal">🟢 Forge项目宣称护栏让8B模型在Agent任务上从53%提升到99%（94条讨论）</div>
-  </div>
-
-  <div class="opp-section">
-    <h4>📝 白话解释：为什么是现在？</h4>
-    <p>新的AI供应链风险不是模型写了坏代码，而是模型周围的工具——编码助手的自动钩子、会话持久化、CI脚本——可能在用户注意到之前就悄悄执行了恶意代码。Mini Shai-Hulud事件已证明这个攻击面是真实的。如果你能开发一个扫描AI编码助手工件（会话钩子、编辑器自动任务、CI变更和凭据泄漏）的工具，市场大门正在敞开——今天的Product Hunt发布榜半壁江山都是运营和安全工具。</p>
+<!-- 板块七 -->
+<div class="opportunity-card">
+  <div class="section-title"><span class="emoji">🚀</span> 今日可做项目</div>
+  <div class="opportunity-empty">
+    <span class="big-emoji">📭</span>
+    BuilderPulse 今日暂无创业机会报告发布。
+    <br><br>
+    💡 不过以下方向依然值得关注：<br>
+    · AI Agent信任基础设施（受 arXiv 论文启发）<br>
+    · 个人知识经验AI化（VC/顾问都在做）<br>
+    · 异构计算与AI数据中心解决方案<br>
+    · AI驱动的绿色能源优化（波士顿金属模式借鉴）<br><br>
+    <span style="color:#94a3b8;font-size:12px;">更多灵感可查看往期报告 📚</span>
   </div>
 </div>
 
+<!-- footer -->
 <div class="footer">
-  🐥 小鸡AI早报 · 每日8点准时送达
+  小鸡AI早报 · 每日8点准时送达<br>
+  归档页面 · 2026年5月21日<br>
+  <a href="https://hongkongdxk123-jpg.github.io/">📖 查看往期</a>
 </div>
 
 </div>
