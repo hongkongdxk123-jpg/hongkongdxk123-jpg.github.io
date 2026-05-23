@@ -3,281 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年05月22日</title>
+<title>小鸡AI早报 · 2026年5月23日</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;line-height:1.7;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%),radial-gradient(ellipse at 80% 80%,rgba(59,130,246,0.08) 0%,transparent 50%)}
-.container{max-width:720px;margin:0 auto;padding:24px 16px 60px}
-.header{text-align:center;padding:40px 0 32px}
-.header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
-.header .date{color:#94a3b8;font-size:14px}
-.header .tagline{color:#64748b;font-size:12px;margin-top:4px}
-
-/* Audio Player */
-.audio-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:20px 24px;margin-bottom:32px;backdrop-filter:blur(12px);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.audio-info{flex:1;min-width:140px}
-.audio-info .title{font-size:14px;font-weight:600;color:#e2e8f0}
-.audio-info .subtitle{font-size:11px;color:#94a3b8;margin-top:2px}
-.audio-card audio{width:100%;margin-top:12px;border-radius:22px}
-
-/* Section */
-.section{margin-bottom:28px}
-.section-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.section-header .emoji{font-size:20px}
-.section-header h2{font-size:17px;font-weight:600;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-
-/* Card */
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:16px;margin-bottom:12px;backdrop-filter:blur(12px);transition:border-color 0.2s}
-.card:hover{border-color:rgba(139,92,246,0.2)}
-.card .source-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:8px;margin-bottom:8px;font-weight:600}
-.tag-mit{background:rgba(59,130,246,0.15);color:#60a5fa}
-.tag-tc{background:rgba(34,197,94,0.15);color:#4ade80}
-.tag-bb{background:rgba(234,179,8,0.15);color:#facc15}
-.tag-qbit{background:rgba(236,72,153,0.15);color:#f472b6}
-.tag-36kr{background:rgba(168,85,247,0.15);color:#c084fc}
-.tag-arxiv{background:rgba(251,146,60,0.15);color:#fb923c}
-.tag-hn{background:rgba(255,102,0,0.15);color:#ff6600}
-.tag-twitter{background:rgba(29,161,242,0.15);color:#1da1f2}
-.tag-bilibili{background:rgba(0,174,105,0.15);color:#00ae69}
-.tag-opportunity{background:rgba(234,179,8,0.15);color:#facc15}
-.card h3{font-size:15px;font-weight:600;color:#f1f5f9;margin-bottom:6px;line-height:1.5}
-.card p{font-size:13px;color:#94a3b8;line-height:1.7}
-.card .comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;padding:8px 12px;margin-top:8px;font-size:12px;color:#a78bfa;font-style:italic}
-
-/* Tweet style */
-.tweet-card{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.03)}
-.tweet-original{font-size:12px;color:#94a3b8;margin-bottom:4px;font-style:italic}
-.tweet-trans{font-size:13px;color:#cbd5e1}
-
-/* Quick news grid */
-.quick-grid{display:grid;grid-template-columns:1fr;gap:10px}
-@media(min-width:640px){.quick-grid{grid-template-columns:repeat(2,1fr)}}
-.quick-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:10px 14px}
-.quick-item .label{font-size:10px;padding:1px 6px;border-radius:6px;display:inline-block;margin-bottom:4px}
-.quick-item p{font-size:12px;color:#94a3b8;line-height:1.5}
-
-/* Opportunity card */
-.opportunity-card{background:rgba(234,179,8,0.04);border:1px solid rgba(234,179,8,0.15);border-radius:14px;padding:16px;margin-bottom:12px;backdrop-filter:blur(12px)}
-.opportunity-card h3{color:#facc15}
-.opportunity-card .signal{background:rgba(234,179,8,0.08);border-left:3px solid #facc15;border-radius:0 8px 8px 0;padding:8px 12px;margin-top:8px;font-size:12px;color:#e2e8f0}
-.opportunity-card .signal .label{display:inline-block;font-size:10px;padding:1px 6px;border-radius:4px;background:rgba(234,179,8,0.2);color:#facc15;margin-bottom:4px}
-
-/* Footer */
-.footer{text-align:center;padding:32px 0 16px;color:#64748b;font-size:12px;border-top:1px solid rgba(255,255,255,0.05);margin-top:32px}
-.footer a{color:#60a5fa;text-decoration:none}
-.footer a:hover{text-decoration:underline}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;line-height:1.7;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 65%),radial-gradient(ellipse at 80% 100%,rgba(15,23,42,0.4) 0%,transparent 50%)}
+  .container{max-width:780px;margin:0 auto;padding:40px 20px}
+  .header{text-align:center;padding:40px 0 30px}
+  .header h1{font-size:2em;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .header .date{color:#94a3b8;font-size:0.95em;margin-top:8px}
+  .header .sub{color:#64748b;font-size:0.85em;margin-top:4px}
+  
+  /* Audio Player */
+  .audio-player{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:24px;margin:0 0 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+  .audio-info{flex:1;min-width:150px}
+  .audio-info .title{font-size:0.95em;font-weight:600;color:#e2e8f0}
+  .audio-info .meta{font-size:0.8em;color:#94a3b8;margin-top:2px}
+  .audio-player audio{width:100%;margin-top:8px;border-radius:12px}
+  .audio-player audio::-webkit-media-controls-panel{background:#1e1b4b}
+  .audio-player audio::-webkit-media-controls-current-time-display,.audio-player audio::-webkit-media-controls-time-remaining-display{color:#e2e8f0}
+  
+  /* Card */
+  .card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px;margin-bottom:24px}
+  .card h2{font-size:1.25em;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .card h2 .emoji{font-size:1.2em}
+  .card h3{font-size:1em;color:#c4b5fd;margin:12px 0 6px}
+  .card p{color:#cbd5e1;font-size:0.92em;margin-bottom:10px;line-height:1.7}
+  .card .source-tag{display:inline-block;font-size:0.72em;padding:2px 8px;border-radius:4px;margin-right:6px;font-weight:600}
+  .tag-mit{background:rgba(59,130,246,0.2);color:#93c5fd}
+  .tag-tc{background:rgba(34,197,94,0.2);color:#86efac}
+  .tag-bb{background:rgba(234,179,8,0.2);color:#fde68a}
+  .tag-qbit{background:rgba(236,72,153,0.2);color:#f9a8d4}
+  .tag-36kr{background:rgba(168,85,247,0.2);color:#d8b4fe}
+  .tag-arxiv{background:rgba(20,184,166,0.2);color:#5eead4}
+  .tag-bilibili{background:rgba(0,173,114,0.2);color:#6ee7b7}
+  .comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:0.88em;color:#c4b5fd}
+  .comment::before{content:'🐤 '}
+  
+  /* Twitter quote */
+  .tweet{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.04);padding:10px 14px;border-radius:0 8px 8px 0;margin:8px 0}
+  .tweet .en{color:#94a3b8;font-size:0.85em;margin-bottom:4px}
+  .tweet .cn{color:#cbd5e1;font-size:0.9em}
+  
+  /* Flash Grid */
+  .flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .flash-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:12px 14px;font-size:0.85em;line-height:1.5}
+  .flash-item .flash-tag{display:inline-block;font-size:0.7em;padding:1px 6px;border-radius:3px;margin-bottom:4px;background:rgba(99,102,241,0.15);color:#a5b4fc}
+  
+  /* BuilderPulse Card (Opportunity) */
+  .opportunity-card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(251,191,36,0.2);border-radius:16px;padding:28px;margin-bottom:24px;box-shadow:0 0 20px rgba(251,191,36,0.05)}
+  .opportunity-card h2{font-size:1.25em;margin-bottom:16px;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .opportunity-card .empty-msg{color:#94a3b8;font-size:0.92em;text-align:center;padding:20px;border:1px dashed rgba(251,191,36,0.15);border-radius:12px}
+  
+  .item-link{color:#a78bfa;text-decoration:none;font-size:0.85em}
+  .item-link:hover{text-decoration:underline;color:#c4b5fd}
+  
+  .footer{text-align:center;color:#475569;font-size:0.8em;padding:40px 0 20px;border-top:1px solid rgba(255,255,255,0.04);margin-top:10px}
+  .footer a{color:#64748b;text-decoration:none}
+  
+  @media(max-width:640px){
+    .container{padding:20px 12px}
+    .card{padding:16px}
+    .opportunity-card{padding:16px}
+    .flash-grid{grid-template-columns:1fr}
+    .header h1{font-size:1.5em}
+  }
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <h1>🐥 小鸡AI早报</h1>
-    <div class="date">2026年05月22日 星期五</div>
-    <div class="tagline">每日8点准时送达 · 软萌女声播报</div>
-  </div>
 
-  <!-- Audio Player -->
-  <div class="audio-card">
-    <div class="audio-icon">🎙️</div>
-    <div class="audio-info">
-      <div class="title">今日早报语音版</div>
-      <div class="subtitle">软萌女声 · 约4分钟 🎀</div>
-    </div>
-    <audio controls style="width:100%">
+<!-- Header -->
+<div class="header">
+  <h1>🐥 小鸡AI早报</h1>
+  <div class="date">2026年5月23日 · 星期六</div>
+  <div class="sub">每日8点准时送达 · 软萌女声播报</div>
+</div>
+
+<!-- Audio Player -->
+<div class="audio-player">
+  <div class="audio-icon">🎙️</div>
+  <div class="audio-info">
+    <div class="title">今日早报语音版</div>
+    <div class="meta">软萌女声 · 约4分钟 🎀</div>
+    <audio controls preload="none">
       <source src="https://hongkongdxk123-jpg.github.io/audio_cn.mp3" type="audio/mpeg">
       您的浏览器不支持音频播放
     </audio>
   </div>
+</div>
 
-  <!-- Section 1: 今日头条 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🔥</span>
-      <h2>今日头条</h2>
-    </div>
+<!-- Section 1: 今日头条 -->
+<div class="card">
+  <h2><span class="emoji">🔥</span>今日头条</h2>
 
-    <div class="card">
-      <span class="source-tag tag-qbit">量子位</span>
-      <h3>菲尔兹奖得主都看懵了：OpenAI非数学模型首次自主突破80年未解数学难题</h3>
-      <p>OpenAI的推理模型用125页推演，攻克了数学家保罗·埃尔德什于1946年提出的平面单位距离猜想。连之前揭穿过OpenAI吹牛的那位匿名数学家也出来背书——这次是真的突破。这标志着AI从写代码、写文案正式迈入了自主数学研究的时代。</p>
-      <div class="comment">🐥 小鸡点评：GPT写诗不稀奇，GPT做数学天才才稀奇！这是AI自主推理能力的一次重大验证。</div>
-    </div>
+  <h3>Anthropic Code with Claude：AI编程的未来已来</h3>
+  <span class="source-tag tag-mit">MIT</span>
+  <p>Anthropic在伦敦举办了两天的Code with Claude开发者大会。现场开发者纷纷表示，过去一周提交的Pull Request全是Claude写的。这场活动恰好与Google I/O同一天，但Anthropic表示纯属巧合。AI编程从"辅助工具"正在变成"主力军"，开发者角色正在从写代码转向审查代码和管理AI。</p>
+  <div class="comment">这条你可能用得上：AI编程时代，学会"喂需求"比会写代码更值钱咯～</div>
 
-    <div class="card">
-      <span class="source-tag tag-mit">MIT Tech Review</span>
-      <h3>Anthropic's Code with Claude 展示编程未来——无论你喜欢与否</h3>
-      <p>Anthropic在伦敦举办为期两天的Code with Claude开发者大会（5月19-20日），恰与Google I/O同一天。MIT科技评论报道称，现场"vibe很强"，与会者展示了大量用Claude完成PR合并、全栈开发的实例。有开发者表示"过去一周提交的PR全部由AI完成"。</p>
-      <div class="comment">🐥 这条你可能用得上：如果你还没尝试Claude Code，现在是时候了——AI编程工具正在飞快进化。</div>
-    </div>
+  <h3>DeepSeek Code即将到来，ACM金牌大神崔添翼挂帅</h3>
+  <span class="source-tag tag-qbit">量子位</span>
+  <p>DeepSeek正式进军AI编程领域！公司已融资700亿人民币，由ACM世界总决赛金牌得主崔添翼带队开发DeepSeek Code。这意味着继OpenAI Codex、Anthropic Claude Code、Google Code Assist之后，中国AI巨头正式加入AI编程大战。DeepSeek在基础模型上展示了强大的代码能力，业界对其编程产品期待颇高。</p>
+  <div class="comment">小鸡点评：编程赛道越来越卷了，对开发者来说反而是好事，选择更多了呀～</div>
+</div>
+
+<!-- Section 2: 国际前沿 -->
+<div class="card">
+  <h2><span class="emoji">🌍</span>国际前沿</h2>
+
+  <h3>Google I/O：AI驱动科学的新路径</h3>
+  <span class="source-tag tag-mit">MIT</span>
+  <p>Google DeepMind CEO哈萨比斯在I/O主题演讲中表示，我们正"站在奇点的山脚下"。MIT评论指出，最引人注目的不是大模型的参数竞赛，而是AI正在从对话系统转向真正的科学发现——从药物分子设计到材料科学，AI正在改变科研方式。世界模型（World Models）成为新的讨论焦点，AI公司希望构建能够理解物理世界的系统，超越当前大语言模型的局限性。</p>
+  <div class="comment">这条你可能用得上：关注"世界模型"方向，这可能是AI的下一个重要突破点哦～</div>
+
+  <h3>AI初创公司Hark完成7亿美元融资</h3>
+  <span class="source-tag tag-36kr">36氪</span>
+  <p>AI基础设施初创公司Hark完成7亿美元融资，英伟达、AMD、英特尔三大芯片巨头均参与投资。这表明AI基础设施的军备竞赛仍在持续，芯片巨头们正在押注下一个AI基础设施独角兽。</p>
+</div>
+
+<!-- Section 3: 国内动态 -->
+<div class="card">
+  <h2><span class="emoji">🇨🇳</span>国内动态</h2>
+
+  <h3>李飞飞再出手：空间智能的ImageNet来了</h3>
+  <span class="source-tag tag-qbit">量子位</span>
+  <p>AI教母李飞飞团队推出了空间智能领域的新基准测试——专门用于评测具身AI在三维空间中的感知和推理能力。这就像是当年ImageNet推动计算机视觉革命一样，这个新基准有望推动机器人和空间智能的快速发展。机器人到底能不能"看懂"物理世界？有了这个标准答案就清晰了。</p>
+  <div class="comment">小鸡点评：李飞飞老师每次出手都是定义一个赛道，这次的空间智能值得关注～</div>
+
+  <h3>智谱AI代码生成飙至400 tokens/s</h3>
+  <span class="source-tag tag-qbit">量子位</span>
+  <p>智谱AI的代码生成速度达到每秒400 tokens，成为国内顶流中最快的模型。网友调侃"智谱，你是在喷代码吧"。在AI编程竞争白热化的当下，速度也是关键竞争力。</p>
+
+  <h3>小米YU7推标准版和GT版，23.35万起</h3>
+  <span class="source-tag tag-36kr">36氪</span>
+  <p>小米YU7系列新增两款车型：标准版23.35万元起，GT版38.99万元起。雷军坦言此前砍掉标准版是战略失误，这次重新加回。标准版直接对标特斯拉Model Y的入门版，GT版则瞄准BBA豪华市场。YU7车系已扩展至5款车型，覆盖23-39万元区间。</p>
+  <div class="comment">这条你可能用得上：想买电车的可以等等看标准版和Model Y的对决呀～</div>
+</div>
+
+<!-- Section 4: 大佬观点 -->
+<div class="card">
+  <h2><span class="emoji">🗣️</span>大佬观点</h2>
+
+  <div class="tweet">
+    <div class="en">Ben's Bites: "All apps will become dev tools."</div>
+    <div class="cn">所有App都会变成开发工具——每个产品最终都会有Agent的影子，用户不只是使用产品，而是在"配置"产品</div>
   </div>
 
-  <!-- Section 2: 国际前沿 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🌍</span>
-      <h2>国际前沿</h2>
-    </div>
-
-    <div class="card">
-      <span class="source-tag tag-mit">MIT Tech Review</span>
-      <h3>圆桌讨论：AI能否学会理解世界？世界模型走上前台</h3>
-      <p>MIT主编Mat Honan、资深AI编辑Will Douglas Heaven等展开对话，探讨AI公司如何构建能理解外部世界的系统，突破大语言模型仅处理文字的局限。世界模型（World Models）正成为AI研究的核心方向。</p>
-    </div>
-
-    <div class="card">
-      <span class="source-tag tag-mit">MIT Tech Review</span>
-      <h3>AI时代如何扩展创造力</h3>
-      <p>Storytelling是人类DNA里的本能。从远古岩画到相机再到AI，技术一直在改变讲故事的方式。MIT探讨了怎么用AI放大创意而非替代创意。</p>
-    </div>
-
-    <div class="card">
-      <span class="source-tag tag-bb">Ben's Bites</span>
-      <h3>谷歌对OpenClaw的态度——"天命所归"</h3>
-      <p>Ben's Bites发文评论谷歌如何看待OpenClaw热潮，标题直接引用"天命所归"。OpenClaw作为开源AI代理项目，热度持续攀升，连谷歌都坐不住了。</p>
-    </div>
-
-    <div class="card">
-      <span class="source-tag tag-tc">TechCrunch</span>
-      <h3>数据中心需求推动天然气发电厂成本飙升66%</h3>
-      <p>AI数据中心的电力需求暴增，天然气发电厂建设成本两年内上涨66%，工期延长23%。Meta本周新购1GW太阳能给AI数据中心供电。</p>
-    </div>
+  <div class="tweet">
+    <div class="en">"Agents feedback tip: the feedback loop is the most underrated capability right now."</div>
+    <div class="cn">Agent的反馈机制是当前最被低估的能力。给Agent一个好的反馈回路，效果比换更大的模型还明显</div>
   </div>
 
-  <!-- Section 3: 国内动态 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🇨🇳</span>
-      <h2>国内动态</h2>
-    </div>
+  <div class="tweet">
+    <div class="en">"Google's take on openclaw" — Google正在推出自己的OpenClaw版本</div>
+    <div class="cn">Google也在开发类似OpenClaw的AI编程代理，这个赛道越来越拥挤了</div>
+  </div>
+</div>
 
-    <div class="card">
-      <span class="source-tag tag-qbit">量子位</span>
-      <h3>千问3.7问鼎国产模型冠军，全球前五</h3>
-      <p>Artificial Analysis最新评测放榜，阿里通义千问Qwen3.7-Max拿下国产模型第一、全球前五。即将在阿里云百炼上开放API服务。评测显示其在代码Agent和长程自主执行方向有系统性强化。</p>
-    </div>
+<!-- Section 5: 前沿论文 -->
+<div class="card">
+  <h2><span class="emoji">📄</span>前沿论文</h2>
 
-    <div class="card">
-      <span class="source-tag tag-qbit">量子位</span>
-      <h3>腾讯混元开源Hy-MT2翻译模型，上线「腾讯Hy翻译」小程序</h3>
-      <p>最大提升体现在指令遵循能力，翻译更准确。同时上线的「腾讯Hy翻译」小程序让普通用户也能体验。</p>
-    </div>
+  <h3>SOLAR：能终身学习的自主AI Agent</h3>
+  <span class="source-tag tag-arxiv">arXiv</span>
+  <p>提出了一种自优化、开放式的AI Agent框架，能够在不重新训练的情况下持续学习和适应新环境。解决了大模型在动态真实环境中部署时面临的概念漂移和高成本微调问题。</p>
 
-    <div class="card">
-      <span class="source-tag tag-qbit">量子位</span>
-      <h3>AI首次实现中国风光发电普查——北大、阿里达摩院登上《自然》</h3>
-      <p>北大和阿里达摩院的联合研究，首次用AI完成了全国风力发电和光伏发电资源普查，成果登上《自然》杂志，将加快实现双碳目标。</p>
-    </div>
+  <h3>AgentCo-op：多Agent协作新范式</h3>
+  <span class="source-tag tag-arxiv">arXiv</span>
+  <p>提出基于检索的多Agent工作流合成方法，让不同工具和Agent在开放式科研场景中互相配合。在缺乏标注数据和无标准评估指标的复杂任务中表现出色。</p>
 
-    <div class="card">
-      <span class="source-tag tag-36kr">36氪</span>
-      <h3>新石器发布Neo Claw AI Agent：一句话管理1000台无人车</h3>
-      <p>新石器无人车在北京亦庄AI+产业大会上推出"Neo Claw"AI Agent，让用户像聊天一样指挥车队，单人管理效率从10台拉升到100台以上。自动驾驶"平权"后，真正的瓶颈从技术转向规模化运营。</p>
-      <div class="comment">🐥 这条你可能用得上：AI Agent在物理世界的落地正在加速——无人车运维从"专业操作"变成"说话就行"。</div>
+  <h3>AgentAtlas：超越结果排行榜</h3>
+  <span class="source-tag tag-arxiv">arXiv</span>
+  <p>提出新的Agent评测框架，不仅关注最终任务完成率，还分析中间的工具调用、推理过程和错误模式。这让Agent能力评估更加全面和可信。</p>
+</div>
+
+<!-- Section 6: 快讯 -->
+<div class="card">
+  <h2><span class="emoji">⚡</span>一句话快讯</h2>
+  <div class="flash-grid">
+    <div class="flash-item">
+      <div class="flash-tag">影视</div>
+      80集短剧3天拍完！AI Agent改变影视生产，提效数十倍，Token消耗直降70%
+    </div>
+    <div class="flash-item">
+      <div class="flash-tag">能源</div>
+      数据中心用电需求激增，天然气电厂成本飙升66%，建设周期延长23%
+    </div>
+    <div class="flash-item">
+      <div class="flash-tag">生物医药</div>
+      Converge Bio获2500万美元A轮融资，Bessemer领投，Meta/OpenAI/Wiz高管参投
+    </div>
+    <div class="flash-item">
+      <div class="flash-tag">物理AI</div>
+      江行智能：中国工业场景一个巡检任务要拆成100-200个子任务，AI稳定性是关键
+    </div>
+    <div class="flash-item">
+      <div class="flash-tag">AI+硬件</div>
+      GfK报告：AI渗透率在手机端从15%涨到40%，但仍只是"加分项"而非"决策项"
+    </div>
+    <div class="flash-item">
+      <div class="flash-tag">AI安全</div>
+      新论文提出开放世界评测方法：传统基准可能高估或低估AI的真实能力
     </div>
   </div>
+</div>
 
-  <!-- Section 4: 大佬观点 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🗣️</span>
-      <h2>大佬观点</h2>
-    </div>
-
-    <div class="card tweet-card">
-      <div class="tweet-original">🐦 Hacker News · jmchugh9</div>
-      <div class="tweet-trans">"我建了Super AI Markets来测试AI购物代理在对抗性电商环境中的表现。核心问题：代理浏览器从不表明身份。我提出AI Agent标识标准，类似HTTP User-Agent。"</div>
-      <p style="font-size:11px;color:#64748b;margin-top:6px">有人提议让AI浏览器代理像网页一样告诉网站自己的身份——Anthropic Claude、OpenAI ChatGPT、Perplexity等Agent都能被识别，便于安全分析和行为追踪。</p>
-    </div>
-
-    <div class="card tweet-card">
-      <div class="tweet-original">🐦 Yann LeCun</div>
-      <div class="tweet-trans">"今天的LLM或许有商业价值，但单纯预测文字不会通向人类级智能——语言只是人类理解世界的一小部分。"</div>
-      <p style="font-size:11px;color:#64748b;margin-top:6px">图灵奖得主杨立昆离开Meta成立AMI Labs，获35亿美元融资，押注世界模型路线。MIT圆桌也呼应了这一方向。</p>
-    </div>
-
-    <div class="card tweet-card">
-      <div class="tweet-original">🐦 Hacker News · slogansand</div>
-      <div class="tweet-trans">"我们构建了一个基于研究的多Agent系统用于自主开发——用多个专业Agent协同完成复杂软件开发任务。"</div>
-      <p style="font-size:11px;color:#64748b;margin-top:6px">多Agent协作开发成为新趋势，从单Agent写代码到多Agent团队协作。</p>
-    </div>
+<!-- Section 7: 今日可做项目 -->
+<div class="opportunity-card">
+  <h2><span class="emoji">🚀</span>今日可做项目</h2>
+  <div class="empty-msg">
+    📋 BuilderPulse 今日暂无报告<br>
+    <span style="font-size:0.85em;color:#64748b;margin-top:8px;display:block">
+      不过以下几件事值得关注：
+    </span>
   </div>
+  <p style="margin-top:16px;color:#cbd5e1;font-size:0.92em">
+    💡 <strong>关注AI编程赛道：</strong> DeepSeek Code即将发布，可以研究其API文档，提前准备集成方案。<br><br>
+    💡 <strong>空间智能方向：</strong> 李飞飞团队发布的新基准是理解3D空间AI的重要信号，相关创业方向值得关注。<br><br>
+    💡 <strong>Agent协作框架：</strong> AgentCo-op和SOLAR两篇论文展示了多Agent协作和自我优化的新思路，值得深入阅读。
+  </p>
+</div>
 
-  <!-- Section 5: 前沿论文 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">📄</span>
-      <h2>前沿论文</h2>
-    </div>
+<!-- Footer -->
+<div class="footer">
+  🐥 小鸡AI早报 · 每日8点准时送达<br>
+  数据源：MIT Technology Review · TechCrunch · Ben's Bites · 量子位 · 36氪 · arXiv<br>
+  <a href="https://hongkongdxk123-jpg.github.io/">📂 归档页面</a>
+</div>
 
-    <div class="card">
-      <span class="source-tag tag-arxiv">arXiv</span>
-      <h3>Position: Let's Develop Data Probes — 理解数据如何影响LLM性能</h3>
-      <p>数据是LLM的基础，但我们仍不清楚什么数据在训练、微调、对齐、上下文学习等不同阶段有用、为什么有用。该论文提出"数据探针"方法论，试图系统化理解数据对大模型的影响机制。</p>
-    </div>
-
-    <div class="card">
-      <span class="source-tag tag-arxiv">arXiv</span>
-      <h3>Trustworthy Agent Network: 可信Agent网络——信任必须内建，而非外挂</h3>
-      <p>随着LLM Agent从独立运行走向协作生态，Agent间信任问题成为关键。论文主张信任必须从架构层面内建，而非事后补充。对小鸡的Agent系统设计也有启发。</p>
-      <div class="comment">🐥 小鸡点评：Agent越来越多，信任不设计好，后面打补丁可不行。这篇文章很值得搞Agent开发的朋友读读。</div>
-    </div>
-  </div>
-
-  <!-- Section 6: 一句话快讯 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">⚡</span>
-      <h2>一句话快讯</h2>
-    </div>
-    <div class="quick-grid">
-      <div class="quick-item">
-        <span class="label" style="background:rgba(59,130,246,0.15);color:#60a5fa">融资</span>
-        <p>AI药物发现公司Converge Bio获2500万美元A轮融资，由Bessemer领投，Meta、OpenAI高管参投</p>
-      </div>
-      <div class="quick-item">
-        <span class="label" style="background:rgba(0,174,105,0.15);color:#00ae69">机器人</span>
-        <p>酷哇科技在50+城市落地环卫机器人、无人小巴，用万台规模反哺具身智能模型迭代</p>
-      </div>
-      <div class="quick-item">
-        <span class="label" style="background:rgba(255,102,0,0.15);color:#ff6600">标准</span>
-        <p>有开发者提议AI Agent标识标准（AI-Agent: Anthropic/Claude...），让浏览器Agent告知身份</p>
-      </div>
-      <div class="quick-item">
-        <span class="label" style="background:rgba(168,85,247,0.15);color:#c084fc">能源</span>
-        <p>马里兰州公民因AI数据中心面临20亿美元电网升级费用</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Section 7: 今日可做项目 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🚀</span>
-      <h2>今日可做项目</h2>
-    </div>
-
-    <div class="opportunity-card">
-      <h3>🧘 今日暂无BuilderPulse报告</h3>
-      <p style="font-size:13px;color:#94a3b8;margin-top:8px;line-height:1.7">BuilderPulse今日未返回新的创业灵感报告。不过从今天的热点中，有几个方向值得关注：</p>
-      <div style="margin-top:12px">
-        <div class="signal">
-          <span class="label">💡 方向一</span>
-          <p style="font-size:12px;color:#e2e8f0;margin-top:4px"><strong>AI Agent标识市场</strong> — 随着AI浏览器代理激增，Agent身份识别和安全分析将成为刚需。可以做一个类似"AI Agent防火墙"的服务。</p>
-        </div>
-        <div class="signal" style="margin-top:8px">
-          <span class="label">💡 方向二</span>
-          <p style="font-size:12px;color:#e2e8f0;margin-top:4px"><strong>AI编程工具本地化</strong> — Anthropic的Code with Claude热度高涨，国内开发者需要中文教程、模板和实践案例，可以做一个中文AI编程社区。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    🐥 小鸡AI早报 · 每日8点准时送达<br>
-    <a href="https://hongkongdxk123-jpg.github.io/">📖 归档页面</a>
-  </div>
 </div>
 </body>
 </html>
