@@ -19,16 +19,18 @@ body{
   overflow:hidden;
 }
 .watermark-img{
-  position:absolute;opacity:0.025;
+  position:absolute;opacity:0.035;
   background-size:contain;background-repeat:no-repeat;background-position:center;
 }
 .watermark-uni{
-  top:10%;left:-10%;width:60%;height:60%;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='180' fill='none' stroke='%23f5f5f7' stroke-width='2'/%3E%3Cpath d='M100 200 Q150 100 200 200 Q250 300 300 200' fill='none' stroke='%23f5f5f7' stroke-width='1.5'/%3E%3Cpath d='M60 200 Q130 140 200 200 Q270 260 340 200' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Cpath d='M140 200 Q160 120 200 200 Q240 280 260 200' fill='none' stroke='%23f5f5f7' stroke-width='0.8'/%3E%3Ctext x='200' y='130' text-anchor='middle' font-size='40' fill='%23f5f5f7' opacity='0.3' font-weight='200' letter-spacing='8'%3EUNIVERSAL%3C/text%3E%3C/svg%3E");
+  top:8%;left:-8%;width:55%;height:55%;
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Universal_Studios_Beijing_globe_square_%2820210907121340%29.jpg/800px-Universal_Studios_Beijing_globe_square_%2820210907121340%29.jpg');
+  background-size:contain;
 }
 .watermark-wall{
-  bottom:5%;right:-8%;width:50%;height:50%;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300'%3E%3Crect x='0' y='100' width='500' height='200' fill='none' stroke='%23f5f5f7' stroke-width='1.5' rx='2'/%3E%3Crect x='30' y='0' width='440' height='120' rx='3' fill='none' stroke='%23f5f5f7' stroke-width='2'/%3E%3Crect x='60' y='18' width='120' height='30' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Crect x='200' y='18' width='100' height='30' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Crect x='320' y='18' width='120' height='30' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Crect x='60' y='60' width='380' height='40' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Ctext x='250' y='240' text-anchor='middle' font-size='24' fill='%23f5f5f7' opacity='0.3' font-weight='200' letter-spacing='6'%3E万里长城%3C/text%3E%3C/svg%3E");
+  bottom:5%;right:-8%;width:50%;height:45%;
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Great_Wall_of_China_-_Badaling_%28built_in_1505_during_Ming_Dynasty%29_-_panoramio.jpg/800px-Great_Wall_of_China_-_Badaling_%28built_in_1505_during_Ming_Dynasty%29_-_panoramio.jpg');
+  background-size:contain;
 }
 @media(min-width:768px){
   .watermark-uni{top:5%;left:-5%;width:40%;height:50%}
@@ -107,7 +109,7 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
   overflow-x:auto;overflow-y:hidden;
   scroll-snap-type:x mandatory;
   -webkit-overflow-scrolling:touch;
-  scrollbar-width:none;padding:0 16px 8px;
+  scrollbar-width:none;padding:0 0 8px 12px;
 }
 .scroll-wrap::-webkit-scrollbar{display:none}
 .scroll-track{
@@ -116,7 +118,7 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 }
 .scroll-card{
   scroll-snap-align:start;
-  width:clamp(160px,40vw,220px);
+  width:clamp(65vw,280px,320px);
   aspect-ratio:3/4;
   border-radius:14px;overflow:hidden;
   background:#151515;
@@ -142,7 +144,7 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 /* ── Guides ── */
 .guides-scroll{padding:0;margin:0}
 .guides-scroll .scroll-card{
-  width:clamp(200px,50vw,260px);
+  width:clamp(65vw,280px,320px);
   aspect-ratio:auto;
   padding:22px 18px;
   justify-content:flex-start;align-items:flex-start;
@@ -181,7 +183,7 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 
 /* ── Reviews ── */
 .reviews-scroll .scroll-card{
-  width:clamp(240px,60vw,320px);
+  width:clamp(65vw,280px,320px);
   aspect-ratio:auto;
   padding:20px;
   justify-content:flex-start;align-items:flex-start;
@@ -192,13 +194,13 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 .reviews-scroll .scroll-card .author{font-size:11px;color:rgba(255,255,255,0.3);margin-top:8px}
 
 /* ── Video ── */
-.video-scroll .scroll-card{aspect-ratio:9/16;width:clamp(140px,35vw,200px)}
+.video-scroll .scroll-card{aspect-ratio:9/16;width:clamp(50vw,220px,260px)}
 .video-scroll .scroll-card .play-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:12px;margin-bottom:6px}
 
 /* ── Podcast ── */
 .podcast-scroll .scroll-card{
   aspect-ratio:auto;
-  width:clamp(220px,55vw,280px);
+  width:clamp(65vw,280px,320px);
   padding:16px;
   justify-content:flex-start;align-items:flex-start;
   gap:4px;
