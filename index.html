@@ -24,13 +24,15 @@ body{
 }
 .watermark-uni{
   top:8%;left:-8%;width:55%;height:55%;
-  background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Universal_Studios_Beijing_globe_square_%2820210907121340%29.jpg/800px-Universal_Studios_Beijing_globe_square_%2820210907121340%29.jpg');
+  background-image:url('images/universal.jpg');
   background-size:contain;
+  background-position:center;
 }
 .watermark-wall{
   bottom:5%;right:-8%;width:50%;height:45%;
-  background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Great_Wall_of_China_-_Badaling_%28built_in_1505_during_Ming_Dynasty%29_-_panoramio.jpg/800px-Great_Wall_of_China_-_Badaling_%28built_in_1505_during_Ming_Dynasty%29_-_panoramio.jpg');
+  background-image:url('images/greatwall.jpg');
   background-size:contain;
+  background-position:center;
 }
 @media(min-width:768px){
   .watermark-uni{top:5%;left:-5%;width:40%;height:50%}
@@ -80,9 +82,8 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 .hero .container{position:relative;text-align:center;padding:0 24px}
 .hero-logos{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:28px}
 .hero-logos .logo-item{display:flex;flex-direction:column;align-items:center;gap:4px}
-.hero-logos .uni-badge{width:44px;height:44px;border:2px solid rgba(255,255,255,0.15);border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center}
-.hero-logos .uni-badge::after{content:'';position:absolute;width:22px;height:1.5px;background:rgba(255,255,255,0.1);top:50%;left:50%;transform:translate(-50%,-50%)}
-.hero-logos .uni-badge .inner{position:absolute;inset:6px;border:1px solid rgba(255,255,255,0.06);border-radius:50%}
+.hero-logos .uni-badge{width:44px;height:44px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:rgba(255,255,255,0.05)}
+.hero-logos .uni-badge img{width:100%;height:100%;object-fit:contain;opacity:0.7}
 .hero-logos .logo-label{font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:0.08em;text-transform:uppercase}
 .hero-logos .divider{width:1px;height:32px;background:rgba(255,255,255,0.06)}
 .hero-logos .brand-logo{text-align:center}
@@ -259,7 +260,7 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 <div class="container">
   <div class="hero-logos">
     <div class="logo-item">
-      <div class="uni-badge"><div class="inner"></div></div>
+      <div class="uni-badge"><img src="images/universal-logo.png" alt="Universal"></div>
       <span class="logo-label">UNIVERSAL</span>
     </div>
     <div class="divider"></div>
