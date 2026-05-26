@@ -16,7 +16,7 @@ body{
 /* ── Watermarks ── */
 .watermark{display:none}
 :root{--watermark-y:0px}
-.section-block::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:url('images/universal.jpg') no-repeat 50% calc(0% - var(--watermark-y));background-size:90% auto;opacity:0.2}
+.section-block::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:url('images/universal.jpg') no-repeat 50% calc(0% - var(--watermark-y));background-size:100% auto;opacity:0.2}
 @media(min-width:768px){
   .watermark-uni{top:5%;left:-5%;width:40%;height:50%}
   .watermark-wall{bottom:5%;right:-5%;width:35%;height:40%}
