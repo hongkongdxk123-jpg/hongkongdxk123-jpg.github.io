@@ -3,146 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>北京环球影城 · 专属跟拍 | 环球旅拍</title>
+<title>北京环球影城旅拍 · 专属跟拍服务</title>
 <style>
 /* ── Reset & Base ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#070708;color:#f0ede8;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;
+  background:#f5f5f7;color:#1d1d1f;line-height:1.47059;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
 
 /* ── Colors ── */
 :root{
-  --bg:#070708;
-  --card:rgba(255,255,245,0.035);
-  --border:rgba(255,255,245,0.07);
-  --gold:#c9a84c;
-  --gold-light:#e8d5a3;
-  --gold-glow:rgba(201,168,76,0.15);
-  --text:#f0ede8;
-  --text-muted:#8a8680;
-  --radius:16px;
+  --bg:#f5f5f7;
+  --card:#ffffff;
+  --text:#1d1d1f;
+  --text-secondary:#86868b;
+  --text-tertiary:#6e6e73;
+  --link:#06c;
+  --border:rgba(0,0,0,0.08);
+  --radius:18px;
+  --gold:#bf8c2c;
+  --gold-light:#d4a843;
+  --gradient-start:#f5f5f7;
+  --gradient-end:#e8e8ed;
 }
 
-/* ── Typography ── */
-h1,h2,h3{font-weight:600;letter-spacing:-0.02em;line-height:1.2}
-h1{font-size:clamp(1.8rem,5vw,3.2rem)}
-h2{font-size:clamp(1.3rem,4vw,2rem);margin-bottom:0.5rem}
-h3{font-size:1.1rem}
-p{color:var(--text-muted);font-size:0.95rem;line-height:1.7}
-.section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold);margin-bottom:0.5rem;font-weight:500}
+/* ── Apple Typography ── */
+h1,h2,h3{font-weight:700;letter-spacing:-0.003em;color:var(--text)}
+h1{font-size:clamp(2rem,5.5vw,3.5rem);line-height:1.1;letter-spacing:-0.015em}
+h2{font-size:clamp(1.5rem,4vw,2.5rem);line-height:1.2;letter-spacing:-0.01em;margin-bottom:8px}
+h3{font-size:1.2rem;line-height:1.3;font-weight:600}
+p{font-size:1rem;line-height:1.6;color:var(--text-secondary)}
+.section-subtitle{font-size:0.9rem;color:var(--text-tertiary);max-width:480px;margin:0 auto}
 
 /* ── Layout ── */
 .container{max-width:480px;margin:0 auto;padding:0 20px}
-@media(min-width:768px){.container{max-width:720px;padding:0 32px}}
-@media(min-width:1024px){.container{max-width:960px}}
+@media(min-width:768px){.container{max-width:700px;padding:0 30px}}
+@media(min-width:1024px){.container{max-width:980px}}
 
-section{padding:60px 0}
-@media(min-width:768px){section{padding:80px 0}}
+section{padding:70px 0;text-align:center}
+@media(min-width:768px){section{padding:100px 0}}
+
+/* ── Section Header ── */
+.section-header{margin-bottom:40px}
+.section-header h2{margin-bottom:6px}
+.section-label{
+  font-size:0.75rem;font-weight:500;letter-spacing:0.08em;
+  color:var(--text-tertiary);text-transform:uppercase;margin-bottom:10px;
+}
+
+/* ── Nav ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(245,245,247,0.8);backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:480px;margin:0 auto;padding:0 20px;height:48px;
+}
+@media(min-width:768px){.nav-inner{max-width:700px}}
+@media(min-width:1024px){.nav-inner{max-width:980px}}
+.nav-logo{
+  font-size:0.9rem;font-weight:600;color:var(--text);
+  text-decoration:none;letter-spacing:-0.01em;
+}
+.nav-menu{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-menu::-webkit-scrollbar{display:none}
+.nav-menu a{
+  padding:6px 12px;border-radius:8px;
+  font-size:0.78rem;color:var(--text-tertiary);
+  text-decoration:none;white-space:nowrap;
+  font-weight:400;transition:color 0.2s;
+}
+.nav-menu a:active{color:var(--text)}
 
 /* ── Hero ── */
 .hero{
   min-height:100vh;min-height:100dvh;
   display:flex;flex-direction:column;justify-content:center;
   position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#ffffff 0%,#f5f5f7 50%,#e8e8ed 100%);
   padding:80px 0 60px;
 }
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 50% at 50% 20%, rgba(201,168,76,0.08) 0%, transparent 70%),
-              radial-gradient(ellipse 60% 40% at 80% 80%, rgba(120,80,200,0.06) 0%, transparent 60%);
+.hero-watermark{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+}
+.hero-watermark .globe{
+  position:absolute;top:5%;left:50%;transform:translateX(-50%);
+  width:clamp(200px,40vw,400px);height:auto;
+  opacity:0.06;font-size:clamp(200px,40vw,400px);
+  line-height:1;text-align:center;
+  color:#1d1d1f;
+  font-weight:800;
+}
+.hero-watermark .bg-image{
+  position:absolute;bottom:0;left:0;right:0;height:50%;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,0.02));
+}
+.hero-landmarks{
+  position:absolute;bottom:5%;left:0;right:0;
+  display:flex;justify-content:center;gap:clamp(30px,8vw,80px);
+  opacity:0.04;font-size:clamp(60px,12vw,120px);
   pointer-events:none;
 }
+.hero-content{position:relative;z-index:2}
 .hero-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:6px 14px;border-radius:100px;
-  border:1px solid var(--border);
-  font-size:0.75rem;color:var(--gold);margin-bottom:24px;
-  backdrop-filter:blur(8px);background:rgba(255,255,245,0.03);
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 16px;border-radius:100px;
+  background:rgba(0,0,0,0.04);
+  font-size:0.75rem;font-weight:500;color:var(--text-tertiary);
+  margin-bottom:24px;letter-spacing:0.03em;
 }
-.hero h1{margin-bottom:8px}
-.hero h1 .highlight{background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:clamp(0.95rem,2.5vw,1.15rem);margin-bottom:32px;max-width:420px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero h1{font-weight:700;margin-bottom:10px}
+.hero h1 .highlight{color:var(--gold)}
+.hero .subtitle{
+  font-size:clamp(1rem,2.5vw,1.25rem);
+  color:var(--text-secondary);font-weight:400;
+  max-width:460px;margin:0 auto 28px;line-height:1.6;
+}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-primary{
   display:inline-flex;align-items:center;gap:8px;
   padding:14px 28px;border-radius:100px;
-  background:var(--gold);color:#070708;
-  font-weight:600;font-size:0.95rem;
+  background:var(--text);color:#fff;
+  font-weight:500;font-size:0.9rem;
   text-decoration:none;border:none;cursor:pointer;
-  transition:transform 0.2s, box-shadow 0.2s;
+  transition:opacity 0.2s;
 }
-.btn-primary:active{transform:scale(0.96)}
+.btn-primary:active{opacity:0.8}
 .btn-secondary{
   display:inline-flex;align-items:center;gap:8px;
   padding:14px 28px;border-radius:100px;
   border:1px solid var(--border);color:var(--text);
-  font-weight:500;font-size:0.95rem;
+  font-weight:400;font-size:0.9rem;
   text-decoration:none;cursor:pointer;
-  backdrop-filter:blur(8px);background:var(--card);
   transition:border-color 0.2s;
 }
-.btn-secondary:active{border-color:var(--gold)}
-.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text-muted);font-size:0.7rem;letter-spacing:0.05em;opacity:0.5}
-.scroll-hint span{display:block;width:1px;height:32px;background:var(--text-muted);animation:scrollPulse 2s ease-in-out infinite}
-@keyframes scrollPulse{0%,100%{opacity:0.3}50%{opacity:1}}
+.btn-secondary:active{border-color:var(--text)}
+.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:var(--text-tertiary);font-size:0.7rem;letter-spacing:0.05em;opacity:0.4}
+.scroll-hint::after{content:'';display:block;width:1px;height:24px;background:var(--text-tertiary);margin:6px auto 0;opacity:0.4}
 
-/* ── Section Header ── */
-.section-header{margin-bottom:32px}
-.section-header h2 .gold{color:var(--gold)}
-.section-header p{font-size:0.9rem;max-width:400px}
+/* ── Universal Logo Watermark ── */
+.universal-logo{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  margin-bottom:20px;
+}
+.universal-logo .globe-icon{
+  width:40px;height:40px;
+  border:2px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;color:var(--gold);
+  position:relative;
+}
+.universal-logo .globe-icon::after{
+  content:'';position:absolute;
+  width:20px;height:1px;background:var(--gold);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.universal-logo span{
+  font-size:0.85rem;font-weight:500;color:var(--text-tertiary);
+  letter-spacing:0.1em;
+}
 
-/* ── Portfolio Grid ── */
-.portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(min-width:768px){.portfolio-grid{grid-template-columns:1fr 1fr 1fr;gap:12px}}
+/* ─── Portfolio Grid ─── */
+.portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:768px){.portfolio-grid{grid-template-columns:1fr 1fr 1fr;gap:14px}}
 .portfolio-card{
   position:relative;border-radius:var(--radius);overflow:hidden;
   aspect-ratio:3/4;background:var(--card);
   display:flex;align-items:center;justify-content:center;
   border:1px solid var(--border);
   cursor:pointer;transition:transform 0.3s;
+  box-shadow:0 1px 3px rgba(0,0,0,0.04);
 }
 .portfolio-card:active{transform:scale(0.97)}
 .portfolio-card .placeholder{
   display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:var(--text-muted);font-size:0.75rem;text-align:center;padding:16px;
+  color:var(--text-tertiary);font-size:0.75rem;text-align:center;padding:16px;
 }
-.portfolio-card .emoji{font-size:2rem;opacity:0.6}
+.portfolio-card .placeholder .emoji{font-size:2rem;opacity:0.5}
 .portfolio-card .tag{
   position:absolute;bottom:10px;left:10px;
   padding:4px 10px;border-radius:100px;
-  background:rgba(7,7,8,0.7);backdrop-filter:blur(8px);
-  font-size:0.7rem;color:var(--gold);
-  border:1px solid var(--border);
+  background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);
+  font-size:0.7rem;font-weight:500;color:var(--text);
 }
 
-/* ── Video Section ── */
-.video-grid{display:grid;gap:16px}
+/* ─── Guides Section ─── */
+.guides-grid{display:grid;gap:14px}
+@media(min-width:768px){.guides-grid{grid-template-columns:1fr 1fr;gap:16px}}
+.guide-card{
+  padding:24px;border-radius:var(--radius);
+  background:var(--card);border:1px solid var(--border);
+  text-align:left;position:relative;overflow:hidden;
+  box-shadow:0 1px 3px rgba(0,0,0,0.04);
+}
+.guide-card .icon{font-size:1.6rem;margin-bottom:8px;display:block}
+.guide-card h3{font-size:1rem;font-weight:600;margin-bottom:6px}
+.guide-card p{font-size:0.88rem;color:var(--text-tertiary)}
+.guide-card .tag{
+  display:inline-block;margin-top:12px;
+  padding:4px 10px;border-radius:100px;
+  background:rgba(191,140,44,0.08);color:var(--gold);
+  font-size:0.7rem;font-weight:500;
+}
+
+/* ─── Video Section ─── */
 .video-card{
   border-radius:var(--radius);overflow:hidden;
-  aspect-ratio:9/16;max-height:500px;
+  aspect-ratio:9/16;max-height:520px;
   background:var(--card);border:1px solid var(--border);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  color:var(--text-muted);font-size:0.85rem;gap:8px;
+  color:var(--text-tertiary);font-size:0.85rem;gap:8px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.04);
+  margin:0 auto;max-width:320px;
 }
 .video-card .play-icon{
   width:56px;height:56px;border-radius:50%;
-  border:2px solid var(--border);
+  background:var(--text);color:#fff;
   display:flex;align-items:center;justify-content:center;
-  font-size:1.4rem;margin-bottom:4px;
+  font-size:1.2rem;margin-bottom:4px;
 }
 
-/* ── Podcast Section ── */
-.podcast-list{display:grid;gap:12px}
+/* ─── Podcast ─── */
+.podcast-list{display:grid;gap:10px;max-width:480px;margin:0 auto}
 .podcast-item{
   padding:16px;border-radius:var(--radius);
   border:1px solid var(--border);background:var(--card);
   display:flex;align-items:center;gap:14px;
+  text-align:left;box-shadow:0 1px 3px rgba(0,0,0,0.04);
 }
 .podcast-cover{
-  width:52px;height:52px;border-radius:10px;
-  background:linear-gradient(135deg,var(--gold-glow),transparent);
+  width:48px;height:48px;border-radius:10px;
+  background:#f0f0f0;
   display:flex;align-items:center;justify-content:center;
-  font-size:1.3rem;flex-shrink:0;
+  font-size:1.2rem;flex-shrink:0;
 }
 .podcast-info{flex:1;min-width:0}
 .podcast-info h4{font-size:0.9rem;font-weight:500;margin-bottom:2px}
@@ -151,135 +250,100 @@ section{padding:60px 0}
   width:36px;height:36px;border-radius:50%;
   border:1px solid var(--border);background:transparent;
   display:flex;align-items:center;justify-content:center;
-  color:var(--gold);font-size:0.9rem;cursor:pointer;
-  flex-shrink:0;
+  color:var(--text);font-size:0.85rem;cursor:pointer;flex-shrink:0;
 }
 
-/* ── Pricing ── */
-.pricing-grid{display:grid;gap:12px}
+/* ─── Pricing ─── */
+.pricing-grid{display:grid;gap:14px;max-width:480px;margin:0 auto}
 .pricing-card{
-  padding:24px;border-radius:var(--radius);
+  padding:28px;border-radius:var(--radius);
   border:1px solid var(--border);background:var(--card);
-  position:relative;
+  text-align:left;box-shadow:0 1px 3px rgba(0,0,0,0.04);
 }
 .pricing-card.featured{
   border-color:var(--gold);
-  background:linear-gradient(135deg,rgba(201,168,76,0.06),transparent);
+  background:linear-gradient(135deg,#fffdf5,#ffffff);
 }
 .pricing-card.featured .badge{
-  position:absolute;top:-1px;right:20px;
-  padding:4px 12px;border-radius:0 0 8px 8px;
-  background:var(--gold);color:#070708;
-  font-size:0.7rem;font-weight:600;
+  display:inline-block;padding:4px 12px;border-radius:100px;
+  background:var(--gold);color:#fff;
+  font-size:0.7rem;font-weight:500;margin-bottom:12px;
 }
-.pricing-card h3{font-size:1.1rem;margin-bottom:4px}
-.pricing-card .desc{font-size:0.82rem;margin-bottom:16px}
+.pricing-card h3{font-size:1.15rem;margin-bottom:2px}
+.pricing-card .desc{font-size:0.83rem;color:var(--text-tertiary);margin-bottom:14px}
 .pricing-card .price{font-size:1.8rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:16px}
-.pricing-card .price small{font-size:0.8rem;font-weight:400;color:var(--text-muted)}
-.pricing-card ul{list-style:none;display:grid;gap:8px}
+.pricing-card .price small{font-size:0.8rem;font-weight:400;color:var(--text-tertiary)}
+.pricing-card ul{list-style:none;display:grid;gap:7px}
 .pricing-card ul li{font-size:0.85rem;display:flex;align-items:center;gap:8px;color:var(--text)}
 .pricing-card ul li::before{content:'✓';color:var(--gold);font-weight:600}
-.pricing-card .btn{display:block;text-align:center;padding:12px;border-radius:100px;margin-top:20px;font-weight:600;font-size:0.9rem;text-decoration:none;cursor:pointer;transition:transform 0.2s}
-.pricing-card .btn:active{transform:scale(0.97)}
-.pricing-card .btn-primary{background:var(--gold);color:#070708}
+.pricing-card .btn{display:block;text-align:center;padding:12px;border-radius:100px;margin-top:20px;font-weight:500;font-size:0.9rem;text-decoration:none;cursor:pointer;transition:opacity 0.2s}
+.pricing-card .btn:active{opacity:0.8}
+.pricing-card .btn-primary{background:var(--text);color:#fff}
 .pricing-card .btn-secondary{border:1px solid var(--border);color:var(--text)}
 
-/* ── Process Steps ── */
-.process-steps{display:grid;gap:0}
+/* ─── Process ─── */
+.process-steps{max-width:480px;margin:0 auto}
 .process-step{
-  display:flex;gap:16px;
-  padding:20px 0;
-  border-bottom:1px solid var(--border);
+  display:flex;gap:16px;padding:20px 0;
+  text-align:left;border-bottom:1px solid var(--border);
 }
 .process-step:last-child{border-bottom:none}
 .step-num{
   width:36px;height:36px;border-radius:50%;
-  border:1px solid var(--border);
+  background:var(--text);color:#fff;
   display:flex;align-items:center;justify-content:center;
-  font-size:0.8rem;font-weight:600;color:var(--gold);
-  flex-shrink:0;margin-top:2px;
+  font-size:0.75rem;font-weight:600;flex-shrink:0;margin-top:2px;
 }
 .step-info h3{font-size:0.95rem;margin-bottom:4px}
-.step-info p{font-size:0.82rem}
+.step-info p{font-size:0.83rem}
 
-/* ── Reviews ── */
-.reviews-grid{display:grid;gap:12px}
+/* ─── Reviews ─── */
+.reviews-grid{display:grid;gap:12px;max-width:480px;margin:0 auto}
 .review-card{
   padding:20px;border-radius:var(--radius);
   border:1px solid var(--border);background:var(--card);
+  text-align:left;box-shadow:0 1px 3px rgba(0,0,0,0.04);
 }
-.review-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.review-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .review-avatar{
   width:36px;height:36px;border-radius:50%;
-  background:linear-gradient(135deg,var(--gold-glow),rgba(120,80,200,0.15));
+  background:#f0f0f0;
   display:flex;align-items:center;justify-content:center;
   font-size:0.9rem;flex-shrink:0;
 }
 .review-name{font-size:0.85rem;font-weight:500}
-.review-name span{display:block;font-size:0.7rem;color:var(--text-muted);font-weight:400;margin-top:1px}
-.review-text{font-size:0.82rem;font-style:normal;line-height:1.7;color:var(--text)}
+.review-name span{display:block;font-size:0.7rem;color:var(--text-tertiary);font-weight:400;margin-top:1px}
+.review-text{font-size:0.83rem;line-height:1.7;color:var(--text-secondary)}
 .review-text .stars{color:var(--gold);font-size:0.8rem;margin-bottom:4px;display:block}
 
-/* ── Contact ── */
+/* ─── Contact ─── */
 .contact-section{
-  text-align:center;
-  padding:60px 20px;
-  position:relative;
-}
-.contact-section::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
-  pointer-events:none;
+  padding:70px 20px 60px;
+  background:linear-gradient(180deg,var(--bg),#ffffff);
 }
 .contact-section h2{margin-bottom:8px}
-.contact-section p{max-width:360px;margin:0 auto 28px}
+.contact-section p{max-width:360px;margin:0 auto 24px}
 .contact-card{
-  display:inline-flex;align-items:center;gap:12px;
-  padding:16px 24px;border-radius:100px;
-  border:1px solid var(--border);background:var(--card);
-  backdrop-filter:blur(12px);
-  font-size:0.95rem;color:var(--text);
-  text-decoration:none;margin-bottom:12px;
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 22px;border-radius:100px;
+  background:var(--card);border:1px solid var(--border);
+  font-size:0.9rem;color:var(--text);
+  text-decoration:none;margin-bottom:8px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.04);
 }
-.contact-card .icon{font-size:1.2rem}
-.contact-note{font-size:0.78rem;color:var(--text-muted);margin-top:16px}
+.contact-card .icon{font-size:1rem}
+.contact-note{font-size:0.75rem;color:var(--text-tertiary);margin-top:12px}
 
-/* ── Footer ── */
+/* ─── Footer ─── */
 footer{padding:40px 20px;text-align:center;border-top:1px solid var(--border)}
-footer p{font-size:0.75rem;color:var(--text-muted)}
-footer .social-links{display:flex;justify-content:center;gap:16px;margin-bottom:16px}
-footer .social-links a{color:var(--text-muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s}
-footer .social-links a:hover{color:var(--gold)}
+footer p{font-size:0.75rem;color:var(--text-tertiary);line-height:1.6}
+footer .social-links{display:flex;justify-content:center;gap:20px;margin-bottom:16px}
+footer .social-links a{color:var(--text-tertiary);text-decoration:none;font-size:0.85rem;transition:color 0.2s}
+footer .social-links a:active{color:var(--text)}
 
-/* ── Animation ── */
-.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+/* ─── Fade-in Animation ─── */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s cubic-bezier(0.25,0.1,0.25,1),transform 0.6s cubic-bezier(0.25,0.1,0.25,1)}
 .fade-in.visible{opacity:1;transform:translateY(0)}
-
-/* ── Nav ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  padding:14px 20px;
-  background:rgba(7,7,8,0.8);backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:480px;margin:0 auto}
-@media(min-width:768px){.nav-inner{max-width:720px}}
-@media(min-width:1024px){.nav-inner{max-width:960px}}
-.nav-logo{font-size:0.9rem;font-weight:600;color:var(--gold);text-decoration:none}
-.nav-menu{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
-.nav-menu::-webkit-scrollbar{display:none}
-.nav-menu a{
-  padding:6px 12px;border-radius:100px;
-  font-size:0.78rem;color:var(--text-muted);
-  text-decoration:none;white-space:nowrap;
-  transition:color 0.2s,background 0.2s;
-}
-.nav-menu a:active{color:var(--gold);background:rgba(201,168,76,0.08)}
-
-/* ── Placeholder Images ── */
-.img-placeholder{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.img-placeholder-bg{background:linear-gradient(135deg,#1a1a20,#2a2520)}
 </style>
 </head>
 <body>
@@ -287,36 +351,42 @@ nav{
 <!-- Nav -->
 <nav>
 <div class="nav-inner">
-  <a href="#" class="nav-logo">✦ 环球旅拍</a>
+  <a href="#" class="nav-logo">环球旅拍</a>
   <div class="nav-menu">
     <a href="#portfolio">客片</a>
-    <a href="#video">视频</a>
-    <a href="#podcast">播客</a>
+    <a href="#guides">攻略</a>
     <a href="#pricing">价格</a>
-    <a href="#process">流程</a>
     <a href="#reviews">好评</a>
+    <a href="#contact">联系</a>
   </div>
 </div>
 </nav>
 
 <!-- Hero -->
 <section class="hero" id="home">
-<div class="container">
-  <div class="hero-badge">✦ 北京环球影城 · 专属跟拍</div>
+<div class="hero-watermark">
+  <div class="globe">🌍</div>
+  <div class="hero-landmarks">
+    <span>🏛️</span>
+    <span>🎢</span>
+    <span>🏯</span>
+  </div>
+</div>
+<div class="container hero-content">
+  <div class="universal-logo">
+    <div class="globe-icon">🌐</div>
+    <span>UNIVERSAL</span>
+  </div>
   <h1>你的环球<br><span class="highlight">高光时刻</span></h1>
-  <p>
-    专业跟拍 + 带玩 + 出片一站式服务。<br>
-    不用自己找机位、不用排队等、不用修图。
+  <p class="subtitle">
+    北京环球影城专属跟拍·带玩·出片一站式服务。
   </p>
   <div class="hero-actions">
-    <a href="#pricing" class="btn-primary">查看套餐 →</a>
+    <a href="#pricing" class="btn-primary">查看套餐</a>
     <a href="#portfolio" class="btn-secondary">浏览作品</a>
   </div>
 </div>
-<div class="scroll-hint">
-  向下探索
-  <span></span>
-</div>
+<div class="scroll-hint">向下探索</div>
 </section>
 
 <!-- Portfolio -->
@@ -324,57 +394,70 @@ nav{
 <div class="container">
   <div class="section-header fade-in">
     <div class="section-label">Portfolio</div>
-    <h2>精选 <span class="gold">客片</span></h2>
-    <p>哈利波特、小黄人、好莱坞……每个主题都有专属机位</p>
+    <h2>精选客片</h2>
+    <p class="section-subtitle">每个主题都有专属机位，出片率100%</p>
   </div>
   <div class="portfolio-grid">
     <div class="portfolio-card fade-in">
-      <div class="img-placeholder-bg img-placeholder"></div>
-      <div class="placeholder">
-        <span class="emoji">🪄</span>
-        哈利·波特
-      </div>
+      <div class="placeholder"><span class="emoji">🪄</span>哈利·波特</div>
       <span class="tag">魔法世界</span>
     </div>
     <div class="portfolio-card fade-in">
-      <div class="img-placeholder-bg img-placeholder"></div>
-      <div class="placeholder">
-        <span class="emoji">🍌</span>
-        小黄人乐园
-      </div>
+      <div class="placeholder"><span class="emoji">🍌</span>小黄人乐园</div>
       <span class="tag">童趣</span>
     </div>
     <div class="portfolio-card fade-in">
-      <div class="img-placeholder-bg img-placeholder"></div>
-      <div class="placeholder">
-        <span class="emoji">🎬</span>
-        好莱坞
-      </div>
+      <div class="placeholder"><span class="emoji">🎬</span>好莱坞</div>
       <span class="tag">大片感</span>
     </div>
     <div class="portfolio-card fade-in">
-      <div class="img-placeholder-bg img-placeholder"></div>
-      <div class="placeholder">
-        <span class="emoji">🦖</span>
-        侏罗纪
-      </div>
+      <div class="placeholder"><span class="emoji">🦖</span>侏罗纪</div>
       <span class="tag">冒险</span>
     </div>
     <div class="portfolio-card fade-in">
-      <div class="img-placeholder-bg img-placeholder"></div>
-      <div class="placeholder">
-        <span class="emoji">🌊</span>
-        水世界
-      </div>
+      <div class="placeholder"><span class="emoji">🌊</span>水世界</div>
       <span class="tag">氛围感</span>
     </div>
     <div class="portfolio-card fade-in">
-      <div class="img-placeholder-bg img-placeholder"></div>
-      <div class="placeholder">
-        <span class="emoji">🌙</span>
-        夜间灯光秀
-      </div>
-      <span class="tag">压轴</span>
+      <div class="placeholder"><span class="emoji">🏮</span>功夫熊猫</div>
+      <span class="tag">中国风</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Guides -->
+<section id="guides">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Guides</div>
+    <h2>游玩攻略</h2>
+    <p class="section-subtitle">环球影城隐藏玩法、避雷指南、拍照机位全揭秘</p>
+  </div>
+  <div class="guides-grid">
+    <div class="guide-card fade-in">
+      <span class="icon">📸</span>
+      <h3>环球影城TOP10出片机位</h3>
+      <p>哈利波特城堡倒影、小黄人街区、好莱坞大道……犄角旮旯的隐藏机位大公开。</p>
+      <span class="tag">拍照攻略</span>
+    </div>
+    <div class="guide-card fade-in">
+      <span class="icon">💰</span>
+      <h3>环球影城省钱避雷指南</h3>
+      <p>哪些项目值得排队、哪些纪念品别买、怎么买票最划算——老玩家血泪总结。</p>
+      <span class="tag">省钱秘籍</span>
+    </div>
+    <div class="guide-card fade-in">
+      <span class="icon">🗺️</span>
+      <h3>一天刷完所有项目的路线</h3>
+      <p>从早到晚的最优路线规划，避开人流高峰，优速通要不要买一看就懂。</p>
+      <span class="tag">路线规划</span>
+    </div>
+    <div class="guide-card fade-in">
+      <span class="icon">👗</span>
+      <h3>环球影城穿搭指南</h3>
+      <p>穿什么颜色最出片？要不要租魔法袍？每个园区的最佳穿搭建议。</p>
+      <span class="tag">穿搭建议</span>
     </div>
   </div>
 </div>
@@ -385,15 +468,13 @@ nav{
 <div class="container">
   <div class="section-header fade-in">
     <div class="section-label">Video</div>
-    <h2>🎬 视频 <span class="gold">展示</span></h2>
-    <p>动态记录你的环球高光时刻</p>
+    <h2>视频展示</h2>
+    <p class="section-subtitle">跟拍花絮 · 客户出片集锦</p>
   </div>
-  <div class="video-grid">
-    <div class="video-card fade-in">
-      <div class="play-icon">▶</div>
-      <span>视频即将上线</span>
-      <span style="font-size:0.72rem">跟拍花絮 · 客户出片集锦</span>
-    </div>
+  <div class="video-card fade-in">
+    <div class="play-icon">▶</div>
+    <span>视频即将上线</span>
+    <span style="font-size:0.72rem">跟拍花絮 · 客户出片集锦</span>
   </div>
 </div>
 </section>
@@ -403,8 +484,8 @@ nav{
 <div class="container">
   <div class="section-header fade-in">
     <div class="section-label">Podcast</div>
-    <h2>🎙️ 旅拍 <span class="gold">播客</span></h2>
-    <p>环球影城隐藏玩法、拍照秘籍、幕后故事</p>
+    <h2>旅拍播客</h2>
+    <p class="section-subtitle">环球影城隐藏玩法、拍照秘籍、幕后故事</p>
   </div>
   <div class="podcast-list">
     <div class="podcast-item fade-in">
@@ -440,8 +521,8 @@ nav{
 <div class="container">
   <div class="section-header fade-in">
     <div class="section-label">Pricing</div>
-    <h2>💰 套餐 <span class="gold">价格</span></h2>
-    <p>透明定价，无隐形消费</p>
+    <h2>套餐价格</h2>
+    <p class="section-subtitle">透明定价，无隐形消费</p>
   </div>
   <div class="pricing-grid">
     <div class="pricing-card fade-in">
@@ -495,29 +576,29 @@ nav{
 <div class="container">
   <div class="section-header fade-in">
     <div class="section-label">How It Works</div>
-    <h2>📋 服务 <span class="gold">流程</span></h2>
-    <p>三步搞定你的环球大片</p>
+    <h2>服务流程</h2>
+    <p class="section-subtitle">三步搞定你的环球大片</p>
   </div>
   <div class="process-steps">
     <div class="process-step fade-in">
       <div class="step-num">01</div>
       <div class="step-info">
-        <h3>预约 & 沟通</h3>
-        <p>加微信沟通需求、选定主题、确认时间，提前了解你的喜好和风格</p>
+        <h3>预约沟通</h3>
+        <p>加微信沟通需求、选定主题、确认时间</p>
       </div>
     </div>
     <div class="process-step fade-in">
       <div class="step-num">02</div>
       <div class="step-info">
         <h3>当天拍摄</h3>
-        <p>指定地点集合，边玩边拍，告诉你最出片的机位和姿势，全程轻松愉快</p>
+        <p>边玩边拍，最出片的机位和姿势都安排好了</p>
       </div>
     </div>
     <div class="process-step fade-in">
       <div class="step-num">03</div>
       <div class="step-info">
         <h3>交付成片</h3>
-        <p>3个工作日内交付精修大片 + 原片，发朋友圈/小红书素材一步到位</p>
+        <p>3个工作日内交付精修大片 + 原片全送</p>
       </div>
     </div>
   </div>
@@ -529,48 +610,30 @@ nav{
 <div class="container">
   <div class="section-header fade-in">
     <div class="section-label">Testimonials</div>
-    <h2>⭐ 客户 <span class="gold">好评</span></h2>
-    <p>来看看大家怎么说</p>
+    <h2>客户好评</h2>
+    <p class="section-subtitle">来看看大家怎么说</p>
   </div>
   <div class="reviews-grid">
     <div class="review-card fade-in">
       <div class="review-header">
         <div class="review-avatar">👩</div>
-        <div class="review-name">
-          小鹿🦌
-          <span>情侣跟拍 · 畅玩套餐</span>
-        </div>
+        <div class="review-name">小鹿🦌<span>情侣跟拍 · 畅玩套餐</span></div>
       </div>
-      <p class="review-text">
-        <span class="stars">★★★★★</span>
-        "摄影师太会找机位了！哈利波特园区拍出来跟电影海报一样，发朋友圈被问了100遍在哪拍的😂 全程带着玩，不用自己操心路线，超值！"
-      </p>
+      <p class="review-text"><span class="stars">★★★★★</span>"哈利波特园区拍出来跟电影海报一样，发朋友圈被问了100遍在哪拍的<img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">😂</text></svg>' style="display:inline;width:1em;height:1em;vertical-align:middle" alt='laugh'>"</p>
     </div>
     <div class="review-card fade-in">
       <div class="review-header">
         <div class="review-avatar">👨‍👩‍👧</div>
-        <div class="review-name">
-          Sunny 一家
-          <span>家庭跟拍 · 管家服务</span>
-        </div>
+        <div class="review-name">Sunny 一家<span>家庭跟拍 · 管家服务</span></div>
       </div>
-      <p class="review-text">
-        <span class="stars">★★★★★</span>
-        "带孩子去环球最怕排队和拍照手忙脚乱，管家全程安排好，我们只管玩，照片出来惊艳全家！下次还约。"
-      </p>
+      <p class="review-text"><span class="stars">★★★★★</span>"管家全程安排好，我们只管玩，照片出来惊艳全家！"</p>
     </div>
     <div class="review-card fade-in">
       <div class="review-header">
         <div class="review-avatar">👩‍❤️‍👨</div>
-        <div class="review-name">
-          Anna & Jason
-          <span>情侣跟拍 · 轻量套餐</span>
-        </div>
+        <div class="review-name">Anna & Jason<span>情侣跟拍 · 轻量套餐</span></div>
       </div>
-      <p class="review-text">
-        <span class="stars">★★★★★</span>
-        "1小时出了30多张片，效率超高！摄影师很会引导姿势，我俩都不是很会拍照的人，出片效果却特别好。"
-      </p>
+      <p class="review-text"><span class="stars">★★★★★</span>"1小时出了30多张片，效率超高！摄影师很会引导姿势。"</p>
     </div>
   </div>
 </div>
@@ -579,9 +642,11 @@ nav{
 <!-- Contact -->
 <section class="contact-section" id="contact">
 <div class="container">
-  <div class="section-label fade-in" style="text-align:center">Contact</div>
-  <h2 class="fade-in">📞 联系我</h2>
-  <p class="fade-in">扫码加微信，聊聊你的环球计划</p>
+  <div class="section-header fade-in">
+    <div class="section-label">Contact</div>
+    <h2>联系我</h2>
+    <p>扫码加微信，聊聊你的环球计划</p>
+  </div>
   <div class="fade-in">
     <div class="contact-card">
       <span class="icon">💬</span>
@@ -604,7 +669,6 @@ nav{
 </footer>
 
 <script>
-// Intersection Observer for fade-in animations
 document.addEventListener('DOMContentLoaded', function(){
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -614,11 +678,9 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
-  
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 });
 
-// Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e){
     e.preventDefault();
