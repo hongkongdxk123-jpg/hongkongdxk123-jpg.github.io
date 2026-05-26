@@ -6,239 +6,258 @@
 <title>小鸡AI早报 · 2026年5月26日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%);line-height:1.8}
-.container{max-width:720px;margin:0 auto;padding:40px 20px 80px}
-.header{text-align:center;padding:60px 0 40px}
-.header h1{font-size:2.2rem;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
-.header .sub{color:#94a3b8;font-size:1rem}
-.header .sub span{color:#a78bfa}
-.date-badge{display:inline-block;background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:20px;padding:6px 18px;font-size:.85rem;color:#a78bfa;margin-top:12px}
-.player-section{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:28px 24px;margin:0 0 36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.player-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-.player-info{flex:1;min-width:200px}
-.player-info .title{font-size:1rem;font-weight:600;color:#e2e8f0}
-.player-info .desc{font-size:.8rem;color:#94a3b8;margin-top:2px}
-.player-info .desc span{color:#f472b6}
-audio{width:100%;margin-top:10px;border-radius:22px;outline:none}
-audio::-webkit-media-controls-panel{background:#1a1a2e}
-audio::-webkit-media-controls-current-time-display,audio::-webkit-media-controls-time-remaining-display{color:#e2e8f0}
-.section{margin-bottom:36px}
-.section-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.section-header .emoji{font-size:1.4rem}
-.section-header h2{font-size:1.15rem;font-weight:600;background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:20px;margin-bottom:14px}
-.card h3{font-size:1rem;font-weight:600;color:#f1f5f9;margin-bottom:8px}
-.card p{font-size:.9rem;color:#cbd5e1;line-height:1.7}
-.tag{display:inline-block;padding:2px 10px;border-radius:10px;font-size:.75rem;font-weight:500;margin-bottom:8px}
-.tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
-.tag-tc{background:rgba(16,185,129,0.15);color:#34d399}
-.tag-bb{background:rgba(234,179,8,0.15);color:#fbbf24}
-.tag-qbit{background:rgba(236,72,153,0.15);color:#f472b6}
-.tag-36kr{background:rgba(139,92,246,0.15);color:#a78bfa}
-.tag-arxiv{background:rgba(59,130,246,0.15);color:#93c5fd}
-.tag-bili{background:rgba(6,182,212,0.15);color:#22d3ee}
-.comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:10px;font-size:.85rem;color:#a78bfa;line-height:1.6}
-.tweet{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.04);border-radius:0 8px 8px 0;padding:12px 14px;margin-top:10px}
-.tweet .en{font-size:.8rem;color:#94a3b8;font-style:italic;margin-bottom:4px}
-.tweet .cn{font-size:.85rem;color:#e2e8f0}
-.fast-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
-.fast-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:14px}
-.fast-item .tag{font-size:.7rem;margin-bottom:4px}
-.fast-item p{font-size:.85rem;color:#cbd5e1}
-.source-link{color:#60a5fa;text-decoration:none;font-size:.8rem;margin-left:6px}
-.source-link:hover{text-decoration:underline}
-.footer{text-align:center;padding:40px 0;color:#64748b;font-size:.85rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:40px}
-.footer .heart{color:#f472b6}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
+.container{max-width:780px;margin:0 auto;padding:24px 20px}
+.header{text-align:center;padding:48px 0 32px}
+.header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.header .date{color:#94a3b8;font-size:14px;letter-spacing:1px}
+.header .subtitle{color:#64748b;font-size:12px;margin-top:4px}
+.player-wrap{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:22px;border:1px solid rgba(255,255,255,0.06);padding:20px;margin-bottom:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.player-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.player-info{flex:1;min-width:120px}
+.player-info .label{font-size:15px;font-weight:600;color:#e2e8f0}
+.player-info .desc{font-size:12px;color:#94a3b8;margin-top:2px}
+.player-info .desc span{background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.player-controls{width:100%;margin-top:4px}
+.player-controls audio{width:100%;border-radius:22px;height:44px}
+.player-controls audio::-webkit-media-controls-panel{background:#1a1a2e;border-radius:22px}
+.card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;border:1px solid rgba(255,255,255,0.06);padding:24px;margin-bottom:20px}
+.card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.card h2 .emoji{font-size:20px}
+.source-tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:600;margin-right:6px;vertical-align:middle}
+.source-mit{background:rgba(37,99,235,0.2);color:#93c5fd}
+.source-tc{background:rgba(16,185,129,0.2);color:#6ee7b7}
+.source-bb{background:rgba(234,179,8,0.2);color:#fde68a}
+.source-arxiv{background:rgba(139,92,246,0.2);color:#c4b5fd}
+.source-liangzi{background:rgba(236,72,153,0.2);color:#f9a8d4}
+.source-36kr{background:rgba(99,102,241,0.2);color:#a5b4fc}
+.source-bili{background:rgba(0,161,214,0.2);color:#7dd3fc}
+.item{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.item h3{font-size:15px;font-weight:600;color:#f1f5f9;margin-bottom:6px;line-height:1.5}
+.item p{font-size:13px;color:#94a3b8;line-height:1.7;margin-top:4px}
+.item .meta{font-size:11px;color:#64748b;margin-top:4px}
+.comment{margin-top:8px;padding:10px 14px;background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 8px 8px 0;font-size:13px;color:#c4b5fd;line-height:1.6}
+.tweet{border-left:3px solid rgba(59,130,246,0.3);padding:10px 14px;margin-top:8px;background:rgba(59,130,246,0.04);border-radius:0 8px 8px 0}
+.tweet .en{font-size:13px;color:#94a3b8;margin-bottom:4px}
+.tweet .zh{font-size:13px;color:#c4b5fd}
+.quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.quick-item{background:rgba(255,255,255,0.03);border-radius:10px;padding:12px;border:1px solid rgba(255,255,255,0.05)}
+.quick-item .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(99,102,241,0.2);color:#a5b4fc;margin-bottom:6px}
+.quick-item p{font-size:13px;color:#cbd5e1;line-height:1.5}
+.project-card{background:linear-gradient(135deg,rgba(88,28,200,0.1),rgba(59,130,246,0.05));border:1px solid rgba(139,92,246,0.15);border-radius:12px;padding:16px;margin-top:12px}
+.project-card h4{font-size:14px;color:#a78bfa;margin-bottom:8px}
+.project-card p{font-size:13px;color:#94a3b8;line-height:1.6}
+.project-card .signal{font-size:12px;color:#60a5fa;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.06)}
+.empty-section{color:#64748b;font-size:13px;text-align:center;padding:20px;font-style:italic}
+.footer{text-align:center;padding:32px 0 48px;color:#475569;font-size:12px;line-height:1.8}
 .footer a{color:#a78bfa;text-decoration:none}
 .footer a:hover{text-decoration:underline}
-@media(max-width:640px){.container{padding:20px 16px 60px}.header{padding:40px 0 24px}.header h1{font-size:1.6rem}.card{padding:16px}.player-section{padding:20px 16px}.fast-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.container{padding:16px}.header h1{font-size:22px}.card{padding:16px}.quick-grid{grid-template-columns:1fr}.player-wrap{padding:14px}}
 </style>
 </head>
 <body>
 <div class="container">
 
 <div class="header">
-  <h1>🐣 小鸡AI早报</h1>
-  <div class="sub"><span>每日</span> AI 资讯 · 五分钟速览</div>
-  <div class="date-badge">📅 2026年5月26日 · 星期二</div>
+  <h1>🐥 小鸡AI早报</h1>
+  <div class="date">2026年5月26日 · 星期二</div>
+  <div class="subtitle">AI圈新鲜事 · 五分钟看完</div>
 </div>
 
-<div class="player-section">
+<div class="player-wrap">
   <div class="player-icon">🎙️</div>
   <div class="player-info">
-    <div class="title">今日早报语音版</div>
+    <div class="label">今日早报语音版</div>
     <div class="desc">软萌女声 · 约4分钟 <span>🎀</span></div>
-    <audio controls preload="none">
+  </div>
+  <div class="player-controls">
+    <audio controls preload="metadata">
       <source src="https://hongkongdxk123-jpg.github.io/audio_cn.mp3" type="audio/mpeg">
+      您的浏览器不支持音频播放
     </audio>
   </div>
 </div>
 
-<!-- 🔥 板块一 -->
-<div class="section">
-  <div class="section-header"><span class="emoji">🔥</span><h2>今日头条</h2></div>
-  <div class="card">
-    <span class="tag tag-mit">MIT Tech Review</span>
-    <h3>Anthropic「Code with Claude」伦敦大会：编程的AI未来已来</h3>
-    <p>Anthropic在伦敦举办的Code with Claude开发者大会上，现场调查显示几乎所有参会者都在过去一周内用AI完成了完整的PR提交。这不仅是演示，而是编程方式正在被AI彻底重塑的真实写照。不管你是否准备好，AI编码的未来已经到来了。</p>
-    <div class="comment">🐤 小鸡点评：写代码不再是程序员的专利啦，以后人人都是"提示工程师"咯～</div>
+<div class="card">
+  <h2><span class="emoji">🔥</span> 板块一：今日头条</h2>
+  
+  <div class="item">
+    <h3>Anthropic Code with Claude 伦敦大会：AI 编程的未来已来</h3>
+    <span class="source-tag source-mit">MIT</span>
+    <p>Anthropic 在伦敦举办了两天的 Code with Claude 开发者大会，与 Google I/O 同期撞车。现场开发者纷纷分享"过去一周提交的PR完全是AI写的"。大会展示了 Claude Code 的全面能力——写代码、重构、测试一条龙。虽然不少人对AI取代程序员感到焦虑，但趋势已经锁定。</p>
+    <div class="comment">🐥 小鸡点评：以前写代码是开发者的护城河，现在变成AI的游乐场咯。不过会提问、懂架构的人，反而更值钱了呀。</div>
   </div>
-  <div class="card">
-    <span class="tag tag-mit">Google I/O</span>
-    <h3>Google I/O 2026：DeepMind CEO宣布「站在奇点的山脚下」</h3>
-    <p>Google I/O大会上，DeepMind CEO Demis Hassabis宣布我们正"站在奇点的山脚下"——AI即将超过人类智能并彻底改变世界。Google同时发布了"Gemini for Science"科学AI工具集，以及AI Agents、Gmail Bot和Android XR等多项重磅产品。</p>
-    <div class="tweet">
-      <div class="en">"We were standing in the foothills of the singularity." — Demis Hassabis, Google I/O 2026</div>
-      <div class="cn">"我们正站在奇点的山脚下。" —— 谷歌DeepMind CEO 哈萨比斯</div>
-    </div>
-    <div class="comment">🐤 小鸡点评：奇点这个词终于从科幻小说走进现实啦，感觉2026年真是AI的爆发年呀！</div>
+
+  <div class="item">
+    <h3>Google I/O 2026 发布 Gemini Omni：AI 进入全感官时代</h3>
+    <span class="source-tag source-mit">MIT</span>
+    <span class="source-tag source-bb">Ben's Bites</span>
+    <p>Google 在 I/O 大会上发布了全新的 Gemini Omni 模型家族，首个模型 Omni Flash 支持文本、图片、视频、音频多模态输入，还能直接生成视频。DeepMind CEO Demis Hassabis 在演讲中语出惊人：我们正站在技术奇点的山脚下。同时发布的还有 YouTube "Ask YouTube" AI 搜索、Android XR 等一系列产品。</p>
+    <div class="comment">🐥 小鸡点评：Gemini 从"读"变成了"看"和"听"，AI的基础模型能力又上了一个大台阶呢。</div>
   </div>
 </div>
 
-<!-- 🌍 板块二 -->
-<div class="section">
-  <div class="section-header"><span class="emoji">🌍</span><h2>国际前沿</h2></div>
-  <div class="card">
-    <span class="tag tag-bb">Ben's Bites</span>
-    <h3>谷歌版「OpenClaw」来了？开源AI编程工具引发巨头博弈</h3>
-    <p>谷歌正在推出自己的OpenClaw版本，而Ben's Bites评论说"现在轮到Anthropic接管天命了"。OpenClaw作为开源AI编程代理，正在成为巨头们争夺的新战场，每家都在打造自己的AI开发者工具生态。</p>
+<div class="card">
+  <h2><span class="emoji">🌍</span> 板块二：国际前沿</h2>
+
+  <div class="item">
+    <h3>MIT 圆桌：AI 能真正理解世界吗？</h3>
+    <span class="source-tag source-mit">MIT</span>
+    <p>MIT 组织专家圆桌讨论"世界模型"——AI 公司正在努力让系统超越大语言模型的局限，真正理解外部世界。编辑总监 Mat Honan 与资深 AI 编辑深入探讨了世界模型的前沿进展。</p>
   </div>
-  <div class="card">
-    <span class="tag tag-tc">TechCrunch</span>
-    <h3>AI制药新星 Converge Bio 获2500万美元融资</h3>
-    <p>AI药物发现初创公司Converge Bio完成2500万美元A轮融资，由顶级风投Bessemer领投，Meta、OpenAI和Wiz的高管们也参与了投资。AI正在以前所未有的速度加速新药研发流程。</p>
-    <div class="comment">🐤 小鸡点评：连AI公司的高管们都在投AI制药，这个赛道是真的热呀！</div>
+
+  <div class="item">
+    <h3>AI 数据中心需求推高天然气成本</h3>
+    <span class="source-tag source-tc">TechCrunch</span>
+    <p>由于 AI 数据中心的电力需求暴涨，天然气发电厂的建设成本两年内飙升了66%，建设周期也延长了23%。Meta 本周就签下了1GW的太阳能采购协议来应对数据中心能耗。</p>
+    <div class="comment">🐥 小鸡点评：AI 越火、电越贵，绿电和能源管理可能比 AI 本身更值得投资呢。</div>
   </div>
-  <div class="card">
-    <span class="tag tag-mit">MIT Tech Review</span>
-    <h3>"增强运动会"：拉斯维加斯首办鼓励使用兴奋剂的体育赛事</h3>
-    <p>42名运动员本周日将在拉斯维加斯参加第一届"Enhanced Games"——这个比赛反而鼓励使用增进成绩的药物，意图"突破人类表现的极限"。这一事件与2026年兴起的长寿科技热潮一脉相承，引发了对人类增强技术的广泛讨论。</p>
+
+  <div class="item">
+    <h3>AI 安全成为主流议题：Copilot Cowork 文件泄露</h3>
+    <span class="source-tag source-bb">BuilderPulse</span>
+    <p>安全研究公司 PromptArmor 披露，微软 Copilot Cowork 存在文件泄露漏洞，通过间接提示注入攻击可让 AI 同事读取机密文档并外发。同时，教皇方济各的新通谕《Magnifica Humanitas》围绕"技术从不中立"引发747条评论讨论，AI 治理已经从开发者社区走向大众视野。</p>
+    <div class="comment">🐥 小鸡点评：下次 AI 事故可能不是模型犯错，而是权限配置出错。检查一下你的 AI 同事能看到哪些文件吧！</div>
+  </div>
+
+  <div class="item">
+    <h3>Anthropic 在 AI 编程赛道上"天命所归"</h3>
+    <span class="source-tag source-bb">Ben's Bites</span>
+    <p>Ben's Bites 评论认为，本周是属于 Anthropic 的"天命"时刻。与此同时，OpenClaw 等开源AI编码工具也在快速发展，用户表示"已经好几周没用 OpenClaw 了"——因为 Claude Code 太好用了。</p>
   </div>
 </div>
 
-<!-- 🇨🇳 板块三 -->
-<div class="section">
-  <div class="section-header"><span class="emoji">🇨🇳</span><h2>国内动态</h2></div>
-  <div class="card">
-    <span class="tag tag-qbit">量子位</span>
-    <h3>DeepSeek V4缓存神器：命中率99.82%，成本直降至2折</h3>
-    <p>DeepSeek V4推出全新缓存工具，缓存命中率高达99.82%。原本4亿多token、61美元的账单，直降至12美元，相当于打了不到两折！这对于高频调用V4 API的开发者来说，简直是天大的好消息。</p>
-    <div class="comment">🐤 小鸡点评：这条你可能用得上！用V4的朋友赶紧去试试，省下来的钱干点别的多好呀～</div>
+<div class="card">
+  <h2><span class="emoji">🇨🇳</span> 板块三：国内动态</h2>
+
+  <div class="item">
+    <h3>京东 JoyInside 戴文军：AI 的终极形态是融入物品</h3>
+    <span class="source-tag source-liangzi">量子位</span>
+    <p>京东 JoyInside 负责人戴文军在 AIGC2026 大会上提出，硬件不该让人适应，它应该主动适应你。AI 的终极形态不是聊天机器人，而是融入每一件家用物品中。</p>
+    <div class="comment">🐥 小鸡点评：想想家里的冰箱、空调、马桶都自带 AI……感觉以后出门就跟告别一群智能朋友似的呀。</div>
   </div>
-  <div class="card">
-    <span class="tag tag-qbit">量子位</span>
-    <h3>Waymo大规模召回！无人车遇水则瘫，多城Robotaxi停运</h3>
-    <p>Waymo因无人驾驶出租车在涉水场景下失效，被迫大规模召回并叫停多个城市的Robotaxi服务。同时，媒体报道特斯拉学会了"躲避交警"的新操作，无人驾驶行业的监管与安全争议再度升温。</p>
+
+  <div class="item">
+    <h3>Waymo 大规模召回：近4000辆 Robotaxi 因水灾停运</h3>
+    <span class="source-tag source-liangzi">量子位</span>
+    <p>Waymo 正在召回约3800辆自动驾驶出租车，原因是车辆遇到积水路面无法判断能否通过。多城市 Robotaxi 服务叫停，特斯拉也展示了"躲避交警"的骚操作。自动驾驶面对极端天气仍然力不从心。</p>
   </div>
-  <div class="card">
-    <span class="tag tag-qbit">量子位</span>
-    <h3>蚂蚁灵波LingBot-VA论文被机器人顶会RSS 2026接收</h3>
-    <p>蚂蚁集团旗下灵波机器人团队的LingBot-VA研究获得国际机器人研究共同体的高度认可，论文被机器人顶级学术会议RSS 2026接收。该研究让机器人能够边推演、边行动，被视为"机器人时代的安卓系统"的重要一步。</p>
-    <div class="comment">🐤 小鸡点评：机器人界的"边想边做"，越来越像科幻片里的场景啦！</div>
+
+  <div class="item">
+    <h3>蚂蚁集团灵波机器人论文被 RSS 2026 接收</h3>
+    <span class="source-tag source-liangzi">量子位</span>
+    <p>蚂蚁集团旗下 Robbyant 灵波团队的 LingBot-VA 论文被机器人顶级会议 RSS 2026 接收。该技术让机器人能够边推理边行动，蚂蚁集团表示要做"机器人时代的安卓系统"。</p>
+    <div class="comment">🐥 小鸡点评：在 AI 机器人赛道，中国团队的实力越来越硬核了。</div>
   </div>
-  <div class="card">
-    <span class="tag tag-qbit">量子位</span>
-    <h3>京东JoyInside戴文军：AI终极形态是融入每一件物品</h3>
-    <p>京东JoyInside负责人在AIGC2026大会上提出，硬件不应该让人去适应，而是应该主动适应你。AI的终极形态不是聊天机器人，而是融入你家中的每一件物品——冰箱、沙发、台灯都变得智能且主动。</p>
+
+  <div class="item">
+    <h3>DeepSeek V4 新工具：缓存命中率99.82%，账单直降82%</h3>
+    <span class="source-tag source-liangzi">量子位</span>
+    <p>DeepSeek V4 生态又出新工具，缓存命中率高达99.82%。原本4万+ token、61美元的账单，直接降到12美元。对于高频调用 DeepSeek 的开发者来说，成本大幅降低。</p>
+    <div class="comment">🐥 小鸡点评：省钱的才是好工具！这条你可能用得上哦。</div>
   </div>
-  <div class="card">
-    <span class="tag tag-36kr">36氪</span>
-    <h3>AI竖屏短剧闯入戛纳！水母智能用纯AI制作征服国际电影节</h3>
-    <p>水母智能旗下公司用纯AI制作的竖屏短剧《摸金之天机入梦》和《饿塔》，从全球120个国家、超过1000件作品中脱颖而出，入围戛纳电影节Fantastic Pavilion单元的正式展映。这意味着AI内容已经从"电子榨菜"进化到了国际舞台。</p>
+
+  <div class="item">
+    <h3>两部 AI 剧集闯入戛纳电影节</h3>
+    <span class="source-tag source-36kr">36氪</span>
+    <p>水母智能旗下 AI 影视公司制作的《摸金之天机入梦》和《饿塔》两部纯 AI 竖屏剧从全球1000多部作品中脱颖而出，在戛纳电影节 Fantastic Pavilion 单元展映。AI 内容从"电子榨菜"进化到了国际电影殿堂。</p>
+    <div class="comment">🐥 小鸡点评：以前觉得 AI 拍电影是玩票，现在人家都去戛纳了呀～</div>
   </div>
-  <div class="card">
-    <span class="tag tag-36kr">36氪</span>
-    <h3>「AI味写作」出圈成梗：网友疯狂吐槽"豆包体"排比句</h3>
-    <p>最近"AI味"写作的调侃引爆社交媒体。网友纷纷晒出AI生成文章中大量使用"最"字和排比句的搞笑案例，"鉴AI雷达"全民觉醒。不过从另一个角度看，这说明真正有人情味的写作，AI暂时还替代不了。</p>
+
+  <div class="item">
+    <h3>B站数字生命卡兹克：做了个缓解信息焦虑的网站</h3>
+    <span class="source-tag source-bili">B站</span>
+    <p>AI 创作者"数字生命卡兹克"在B站发布了新视频——我做了个网站来缓解信息焦虑，播放量2.3万。此外他的"国内也能用 Claude Code 了？"也有7500+播放。小技巧：搜索时注意过滤 LOL 游戏视频哦。</p>
   </div>
 </div>
 
-<!-- 🗣️ 板块四 -->
-<div class="section">
-  <div class="section-header"><span class="emoji">🗣️</span><h2>大佬观点</h2></div>
-  <div class="card">
-    <span class="tag tag-mit">MIT Tech Review</span>
-    <h3>Demis Hassabis：奇点宣言引发学界激辩</h3>
-    <p>Hassabis在Google I/O上声称"站在奇点的山脚下"引发热议。但MIT Tech Review的编辑指出，真正落地的AI科学工具（如WeatherNext天气预报模型）与宏大宣言之间仍有差距——AI改变科学需要脚踏实地，而非停留在口号层面。</p>
-    <div class="tweet">
-      <div class="en">"The juxtaposition of Hassabis' lofty rhetoric with real-world results highlighted the tension between two approaches to AI for science." — MIT Technology Review</div>
-      <div class="cn">"哈萨比斯的高调宣言和实际落地成果之间的对比，揭示了AI科学化两条路径之间的张力。" —— 麻省理工科技评论</div>
-    </div>
+<div class="card">
+  <h2><span class="emoji">🗣️</span> 板块四：大佬观点</h2>
+
+  <div class="item">
+    <p>因网络限制，Twitter/X 及 HuggingFace Blog 数据今日暂未采集到。</p>
+    <p style="margin-top:8px">不过来自各个大会和采访中的观点已融入其他板块中：</p>
   </div>
-  <div class="card">
-    <span class="tag tag-bb">Hacker News</span>
-    <h3>AI编程代理：下一个十年才能真正成熟?</h3>
-    <p>Hacker News上关于AI编程代理的讨论持续升温。有观点认为，现阶段的AI代理还处在早期探索期，距真正成熟还需要数年时间。但无论如何，AI辅助编程已经成为不可逆转的趋势——"谁最近没用AI写过代码？"答案变得越来越少了。</p>
+
+  <div class="tweet">
+    <div class="en">Demis Hassabis (CEO, Google DeepMind): "We're standing in the foothills of the singularity." — Google I/O 2026 Keynote</div>
+    <div class="zh">DeepMind CEO 德米斯·哈撒比斯：我们正站在技术奇点的山脚下。AI 超出人类智能并改变世界的时刻，可能比想象中更近。</div>
+  </div>
+
+  <div class="tweet">
+    <div class="en">Ben's Bites: "I haven't used OpenClaw in weeks." — May 2026</div>
+    <div class="zh">科技资讯站 Ben's Bites 表示"已经好几周没用 OpenClaw 了"，因为 Claude Code 太香了。</div>
+  </div>
+
+  <div class="tweet">
+    <div class="en">New Oriental Education Founder Ma Yawei: "真正的AI转型，不是技术的堆砌，而是组织共识的构建。" — 2026 AI Partner 大会</div>
+    <div class="zh">新通教育创始人麻亚炜：传统企业拥抱AI，最难的不是技术，而是让战略从董事会走到一线。</div>
   </div>
 </div>
 
-<!-- 📄 板块五 -->
-<div class="section">
-  <div class="section-header"><span class="emoji">📄</span><h2>前沿论文</h2></div>
-  <div class="card">
-    <span class="tag tag-arxiv">arXiv</span>
-    <h3>RMA：面向研究级数学问题的智能代理框架</h3>
-    <p>与以往只会解奥数题的AI不同，这篇论文提出的"Research Math Agents"专注于真正的数学研究推理。AI不仅能做题，还能像研究员一样分析复杂数学问题，这是AI从"竞赛选手"到"科研助手"的重要跨越。</p>
-    <a class="source-link" href="https://arxiv.org/abs/2605.22875" target="_blank">📄 查看论文 →</a>
+<div class="card">
+  <h2><span class="emoji">📄</span> 板块五：前沿论文</h2>
+
+  <div class="item">
+    <h3>BOHM：给复合AI系统装上"CT机"</h3>
+    <span class="source-tag source-arxiv">arXiv</span>
+    <p>新的零成本归因方法 BOHM，可以精确定位复合 AI 系统中每个组件的贡献。之前只能用 Shapley 值算，成本高得吓人——BOHM 做到了几乎零开销。</p>
   </div>
-  <div class="card">
-    <span class="tag tag-arxiv">arXiv</span>
-    <h3>EVE-Agent：会自我验证的进化型AI代理</h3>
-    <p>这篇论文提出了一个关键原则：AI不能靠它无法解释的答案来学习。EVE-Agent让AI自己生成问题、自己回答问题、自己验证答案正确性，然后从经验中改进——就像一个能给自己当老师的学生。</p>
-    <a class="source-link" href="https://arxiv.org/abs/2605.22905" target="_blank">📄 查看论文 →</a>
+
+  <div class="item">
+    <h3>EVE-Agent：能自我进化的AI代理</h3>
+    <span class="source-tag source-arxiv">arXiv</span>
+    <p>自我进化的搜索代理——自己给自己出题、自己验证答案、自己进步。核心原则：不要训练在你无法验证的例子上。这可能是通往真正自主AI的关键一步。</p>
+  </div>
+
+  <div class="item">
+    <h3>RMA：研究级数学问题的AI推理框架</h3>
+    <span class="source-tag source-arxiv">arXiv</span>
+    <p>与竞赛数学或形式化定理证明不同，RMA 瞄准的是研究级数学问题——那些连人类也要花好几天甚至几周才能解决的难题。</p>
+  </div>
+
+  <div class="item">
+    <h3>SciAtlas：大规模自动化科研知识图谱</h3>
+    <span class="source-tag source-arxiv">arXiv</span>
+    <p>面对全球学术产出爆炸式增长，SciAtlas 构建了大规模知识图谱，帮助 AI 代理和研究人员进行跨学科深度整合。</p>
   </div>
 </div>
 
-<!-- ⚡ 板块六 -->
-<div class="section">
-  <div class="section-header"><span class="emoji">⚡</span><h2>一句话快讯</h2></div>
-  <div class="fast-grid">
-    <div class="fast-item">
-      <span class="tag tag-mit">MIT</span>
-      <p>🤖 AI能否学会理解世界？麻省理工科技评论举办圆桌讨论，专家认为世界模型正在成为AI研究的下一波浪潮</p>
-    </div>
-    <div class="fast-item">
-      <span class="tag tag-tc">TC</span>
-      <p>⚡ 数据中心电力需求暴涨，天然气发电厂建设成本飙升66%，工期延长23%——AI是真的"又香又费电"</p>
-    </div>
-    <div class="fast-item">
-      <span class="tag tag-bb">BB</span>
-      <p>🚀 埃隆·马斯克把ChatGPT免费版对话限制翻倍了，Ben's Bites说"免费的ChatGPT瞬间更好用了"</p>
-    </div>
-    <div class="fast-item">
-      <span class="tag tag-36kr">36氪</span>
-      <p>🏭 因特智能用AI视觉做工业质检，半导体光罩上的纳米级缺陷也无处遁形，助力中国高端制造</p>
-    </div>
-    <div class="fast-item">
-      <span class="tag tag-36kr">36氪</span>
-      <p>📚 新通教育宣布完成从数字化到AI Native的转型四阶段，AI已从"工具赋能"进化为"基因重塑"</p>
-    </div>
-    <div class="fast-item">
-      <span class="tag tag-36kr">36氪</span>
-      <p>🏪 胖东来投资65亿的"梦之城"开工，于东来称将公开所有建设成本，用合理利润卖房</p>
-    </div>
+<div class="card">
+  <h2><span class="emoji">⚡</span> 板块六：一句话快讯</h2>
+  <div class="quick-grid">
+    <div class="quick-item"><span class="tag">36氪</span><p>胖东来"梦之城"项目开工，投资65亿，还将为员工建小区</p></div>
+    <div class="quick-item"><span class="tag">36氪</span><p>宇树科技6月1日科创板IPO上会，一季度扣非净利润同比降52.55%</p></div>
+    <div class="quick-item"><span class="tag">36氪</span><p>寒武纪盘中涨超11%，总市值突破9000亿元创历史新高</p></div>
+    <div class="quick-item"><span class="tag">36氪</span><p>番茄小说5月已处置低质书籍超15万本，AI生成低质内容治理加严</p></div>
+    <div class="quick-item"><span class="tag">36氪</span><p>"去AI味写作"成社交媒体热门话题，"豆包体"引发全网调侃</p></div>
+    <div class="quick-item"><span class="tag">量子位</span><p>2026投资界SuperLink大会定档6月10-11日</p></div>
+    <div class="quick-item"><span class="tag">TC</span><p>AI药物发现初创Converge Bio获2500万美元A轮融资</p></div>
+    <div class="quick-item"><span class="tag">BuilderPulse</span><p>加州推动将Linux从年龄验证法案中豁免，开源影响力凸显</p></div>
   </div>
 </div>
 
-<!-- 🚀 板块七 -->
-<div class="section">
-  <div class="section-header"><span class="emoji">🚀</span><h2>今日可做项目</h2></div>
-  <div class="card">
-    <p>今日BuilderPulse暂无新鲜报告出炉～不过小鸡给你准备了几个可以动手的方向哦：</p>
-    <br>
-    <p>💡 <strong>试试DeepSeek V4缓存工具</strong> —— 如果你的项目在用V4 API，花半小时接入缓存，成本立马降到2折，省下来的钱请自己喝奶茶！</p>
-    <br>
-    <p>💡 <strong>探索AI短剧创作</strong> —— 水母智能都能用AI拍出戛纳入围作品了，你也试试用AI工具做个短视频？门槛比你想的低多了。</p>
-    <br>
-    <p>💡 <strong>给自己的写作加个"AI味检测器"</strong> —— 最近"豆包体"全民吐槽这么火，不如写个脚本检测自己的文章有没有AI味，避免写出被吐槽的排比句。</p>
-    <div class="comment">🐤 小鸡点评：选一个最感兴趣的今天试试看，动手总是最好的学习方式哦～</div>
+<div class="card">
+  <h2><span class="emoji">🚀</span> 板块七：今日可做项目</h2>
+  
+  <div class="project-card">
+    <h4>🔍 Copilot Boundary Receipt — AI 同事能看到你的哪些文件？</h4>
+    <p>基于 PromptArmor 披露的 Copilot Cowork 文件泄露事件，今天最值得做的事情是：检查你和团队在用 AI 工具时，私有文件的安全边界在哪里。AI 工具能访问哪些文档、仓库和提示词文件？</p>
+    <div class="signal">📊 趋势信号：关于 AI 代理数据访问权的搜索量飙升了450%，Product Hunt 上相关产品（Unabyss、Yansu、LLMTest等）也在涌现。</div>
+  </div>
+
+  <div class="project-card" style="margin-top:12px">
+    <h4>🇨🇳 国产AI观测</h4>
+    <p>今日 BuilderPulse 未提供具体报告（数据源自然为空）。但值得关注的方向：蚂蚁灵波机器人开源动态、DeepSeek V4 缓存工具的实际部署、国产GPU在AI推理场景的性能对比。</p>
   </div>
 </div>
 
 <div class="footer">
-  <p>🐣 小鸡AI早报 · 每日8点准时送达</p>
-  <p>数据来源：MIT TechReview · TechCrunch · Ben's Bites · arXiv · 量子位 · 36氪</p>
-  <p>❤️ 用 <span class="heart">♥</span> 生成 · <a href="https://hongkongdxk123-jpg.github.io/" target="_blank">归档页面</a></p>
+  🐥 小鸡AI早报 · 每日8点准时送达<br>
+  数据源：MIT Technology Review / TechCrunch / Ben's Bites / arXiv / 量子位 / 36氪 / BuilderPulse / B站<br>
+  归档页面：<a href="https://hongkongdxk123-jpg.github.io/">hongkongdxk123-jpg.github.io</a><br>
+  <span style="font-size:11px;color:#334155">© 2026 小鸡AI早报 · 你可能用上</span>
 </div>
 
 </div>
