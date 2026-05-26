@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>环球旅拍 · 北京环球影城专属跟拍</title>
 <style>
-/* ── Reset ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent;background:#000}
 body{
@@ -14,11 +13,33 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
+/* ── Watermarks ── */
+.watermark{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  overflow:hidden;
+}
+.watermark-img{
+  position:absolute;opacity:0.025;
+  background-size:contain;background-repeat:no-repeat;background-position:center;
+}
+.watermark-uni{
+  top:10%;left:-10%;width:60%;height:60%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='180' fill='none' stroke='%23f5f5f7' stroke-width='2'/%3E%3Cpath d='M100 200 Q150 100 200 200 Q250 300 300 200' fill='none' stroke='%23f5f5f7' stroke-width='1.5'/%3E%3Cpath d='M60 200 Q130 140 200 200 Q270 260 340 200' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Cpath d='M140 200 Q160 120 200 200 Q240 280 260 200' fill='none' stroke='%23f5f5f7' stroke-width='0.8'/%3E%3Ctext x='200' y='130' text-anchor='middle' font-size='40' fill='%23f5f5f7' opacity='0.3' font-weight='200' letter-spacing='8'%3EUNIVERSAL%3C/text%3E%3C/svg%3E");
+}
+.watermark-wall{
+  bottom:5%;right:-8%;width:50%;height:50%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300'%3E%3Crect x='0' y='100' width='500' height='200' fill='none' stroke='%23f5f5f7' stroke-width='1.5' rx='2'/%3E%3Crect x='30' y='0' width='440' height='120' rx='3' fill='none' stroke='%23f5f5f7' stroke-width='2'/%3E%3Crect x='60' y='18' width='120' height='30' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Crect x='200' y='18' width='100' height='30' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Crect x='320' y='18' width='120' height='30' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Crect x='60' y='60' width='380' height='40' rx='2' fill='none' stroke='%23f5f5f7' stroke-width='1'/%3E%3Ctext x='250' y='240' text-anchor='middle' font-size='24' fill='%23f5f5f7' opacity='0.3' font-weight='200' letter-spacing='6'%3E万里长城%3C/text%3E%3C/svg%3E");
+}
+@media(min-width:768px){
+  .watermark-uni{top:5%;left:-5%;width:40%;height:50%}
+  .watermark-wall{bottom:5%;right:-5%;width:35%;height:40%}
+}
+
 /* ── Nav ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   background:rgba(0,0,0,0.92);backdrop-filter:saturate(180%) blur(20px);
-  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  backdrop-filter:saturate(180%) blur(20px);
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 .nav-inner{
@@ -28,95 +49,95 @@ nav{
 .nav-logo{font-size:14px;font-weight:500;color:#f5f5f7;text-decoration:none;letter-spacing:-0.01em}
 .nav-menu{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
 .nav-menu::-webkit-scrollbar{display:none}
-.nav-menu a{
-  padding:6px 10px;font-size:12px;color:rgba(255,255,255,0.6);
-  text-decoration:none;white-space:nowrap;font-weight:400;
-  transition:color 0.2s;
-}
+.nav-menu a{padding:6px 10px;font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap;transition:color 0.2s}
 .nav-menu a:active{color:#f5f5f7}
 
 /* ── Typography ── */
 h1{font-size:clamp(36px,8vw,56px);font-weight:700;letter-spacing:-0.015em;line-height:1.05}
 h2{font-size:clamp(28px,6vw,40px);font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:6px}
-h3{font-size:clamp(18px,4vw,24px);font-weight:600;letter-spacing:-0.005em;line-height:1.2}
+h3{font-size:clamp(16px,3.5vw,22px);font-weight:600;letter-spacing:-0.005em;line-height:1.2}
 p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 .section-sub{font-size:14px;color:rgba(255,255,255,0.48);max-width:320px;margin:0 auto}
 
+/* ── Section ── */
+.section-block{padding:70px 0;position:relative;z-index:1}
+@media(min-width:768px){.section-block{padding:90px 0}}
+.section-block.gray{background:#0a0a0a}
+.section-label{font-size:12px;font-weight:500;letter-spacing:0.06em;color:rgba(255,255,255,0.32);text-transform:uppercase;margin-bottom:10px}
+.section-header{text-align:center;padding:0 24px;margin-bottom:32px}
+.section-header p{font-size:14px}
+
 /* ── Hero ── */
-.hero{position:relative;overflow:hidden;padding:100px 0 80px;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,#000 0%,#0a0a0a 50%,#000 100%)}
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 70% 50% at 50% 30%, rgba(255,255,255,0.03) 0%, transparent 70%);
-  pointer-events:none;
-}
-.hero .container{position:relative;z-index:2;text-align:center;padding:0 24px}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:4px 14px;border-radius:100px;
-  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);
-  font-size:11px;font-weight:500;color:rgba(255,255,255,0.6);letter-spacing:0.05em;
-  margin-bottom:28px;text-transform:uppercase;
-}
+.hero{position:relative;overflow:hidden;padding:100px 0 80px;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;z-index:1}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 30%, rgba(255,255,255,0.02) 0%, transparent 70%);pointer-events:none}
+.hero .container{position:relative;text-align:center;padding:0 24px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);font-size:11px;font-weight:500;color:rgba(255,255,255,0.6);letter-spacing:0.05em;margin-bottom:28px;text-transform:uppercase}
 .hero h1{font-weight:700;margin-bottom:12px}
 .hero h1 .gold{background:linear-gradient(135deg,#f5d68a,#d4a843);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p{font-size:clamp(15px,3.5vw,19px);color:rgba(255,255,255,0.52);max-width:400px;margin:0 auto 32px;line-height:1.6}
 .hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn-primary{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:12px 24px;border-radius:100px;
-  background:#f5f5f7;color:#000;
-  font-weight:500;font-size:14px;text-decoration:none;
-  transition:opacity 0.2s;
-}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;border-radius:100px;background:#f5f5f7;color:#000;font-weight:500;font-size:14px;text-decoration:none;transition:opacity 0.2s}
 .btn-primary:active{opacity:0.85}
-.btn-secondary{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:12px 24px;border-radius:100px;
-  border:1px solid rgba(255,255,255,0.2);color:#f5f5f7;
-  font-weight:400;font-size:14px;text-decoration:none;
-  transition:border-color 0.2s;
-}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;border-radius:100px;border:1px solid rgba(255,255,255,0.2);color:#f5f5f7;font-weight:400;font-size:14px;text-decoration:none;transition:border-color 0.2s}
 .btn-secondary:active{border-color:rgba(255,255,255,0.5)}
 
-/* ── Apple-style Section ── */
-.section-block{padding:80px 0;position:relative}
-@media(min-width:768px){.section-block{padding:100px 0}}
-.section-block.gray{background:#0a0a0a}
-.section-label{
-  font-size:12px;font-weight:500;letter-spacing:0.06em;
-  color:rgba(255,255,255,0.32);text-transform:uppercase;margin-bottom:10px;
+/* ── Horizontal Scroll Gallery ── */
+.gallery-category{margin-bottom:20px}
+.gallery-category:last-child{margin-bottom:0}
+.gallery-category .cat-header{display:flex;justify-content:space-between;align-items:center;padding:0 20px 12px}
+.gallery-category .cat-title{font-size:15px;font-weight:600;color:#f5f5f7}
+.gallery-category .cat-count{font-size:12px;color:rgba(255,255,255,0.35)}
+.scroll-wrap{
+  overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;padding:0 16px 8px;
 }
-.section-header{text-align:center;padding:0 24px;margin-bottom:40px}
-.section-header p{font-size:14px}
-
-/* ── Apple-style Image Card Grid ── */
-.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
-@media(min-width:768px){.gallery-grid{grid-template-columns:1fr 1fr 1fr;margin:0 24px;border-radius:24px}}
-.gallery-card{
-  position:relative;aspect-ratio:3/4;
-  background:#111;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;
+.scroll-wrap::-webkit-scrollbar{display:none}
+.scroll-track{
+  display:flex;gap:10px;
+  width:max-content;padding-bottom:4px;
 }
-.gallery-card .content{
-  text-align:center;padding:20px;
+.scroll-card{
+  scroll-snap-align:start;
+  width:clamp(160px,40vw,220px);
+  aspect-ratio:3/4;
+  border-radius:14px;overflow:hidden;
+  background:#151515;
+  border:1px solid rgba(255,255,255,0.06);
+  flex-shrink:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-decoration:none;color:#f5f5f7;cursor:pointer;
+  transition:transform 0.2s;
+  position:relative;
 }
-.gallery-card .icon{font-size:clamp(32px,8vw,48px);margin-bottom:8px;display:block;opacity:0.4}
-.gallery-card .name{font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)}
-.gallery-card .sub{font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px}
-.gallery-card:active{background:#1a1a1a}
+.scroll-card:active{transform:scale(0.97)}
+.scroll-card .icon{font-size:clamp(28px,6vw,40px);margin-bottom:6px;opacity:0.4}
+.scroll-card .label{font-size:13px;font-weight:500;color:rgba(255,255,255,0.6)}
+.scroll-card .sub{font-size:11px;color:rgba(255,255,255,0.25);margin-top:2px}
+/* More card */
+.scroll-card.more{
+  background:rgba(255,255,255,0.03);
+  border:1px dashed rgba(255,255,255,0.1);
+}
+.scroll-card.more .icon{opacity:0.25}
+.scroll-card.more .label{color:rgba(255,255,255,0.35)}
 
-/* ── Guides (Apple-style 2-col) ── */
-.guides-grid{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
-@media(min-width:768px){.guides-grid{grid-template-columns:1fr 1fr;border-radius:24px;margin:0 24px}}
-.guide-card{padding:28px 24px;background:#111;text-align:left;cursor:pointer}
-.guide-card:active{background:#1a1a1a}
-.guide-card .icon{font-size:28px;margin-bottom:10px;display:block}
-.guide-card h3{font-size:16px;font-weight:600;margin-bottom:6px;color:#f5f5f7}
-.guide-card p{font-size:13px;color:rgba(255,255,255,0.48);line-height:1.5}
-.guide-card .tag{display:inline-block;margin-top:10px;padding:3px 10px;border-radius:100px;background:rgba(212,168,67,0.12);color:#d4a843;font-size:11px}
+/* ── Guides ── */
+.guides-scroll{padding:0;margin:0}
+.guides-scroll .scroll-card{
+  width:clamp(200px,50vw,260px);
+  aspect-ratio:auto;
+  padding:22px 18px;
+  justify-content:flex-start;align-items:flex-start;
+  gap:6px;
+}
+.guides-scroll .scroll-card .icon{opacity:0.6;margin-bottom:4px;font-size:22px}
+.guides-scroll .scroll-card .label{font-size:14px;font-weight:600;color:#f5f5f7}
+.guides-scroll .scroll-card .sub{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5;margin-top:2px}
+.guides-scroll .scroll-card .guide-tag{display:inline-block;padding:3px 10px;border-radius:100px;background:rgba(212,168,67,0.12);color:#d4a843;font-size:11px;font-weight:500;margin-top:6px}
 
-/* ── Pricing (Apple-style) ── */
+/* ── Pricing ── */
 .pricing-grid{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
 @media(min-width:768px){.pricing-grid{grid-template-columns:1fr 1fr 1fr;border-radius:24px;margin:0 24px}}
 .pricing-card{padding:32px 24px;background:#111;text-align:left}
@@ -138,18 +159,38 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 .process-grid{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
 @media(min-width:768px){.process-grid{grid-template-columns:1fr 1fr 1fr;border-radius:24px;margin:0 24px}}
 .process-card{padding:32px 24px;background:#111;text-align:center}
-.process-card .num{font-size:32px;font-weight:700;color:rgba(255,255,255,0.1);margin-bottom:12px;font-variant-numeric:tabular-nums}
+.process-card .num{font-size:32px;font-weight:700;color:rgba(255,255,255,0.1);margin-bottom:12px}
 .process-card h3{font-size:16px;margin-bottom:6px}
 .process-card p{font-size:13px;color:rgba(255,255,255,0.48);max-width:200px;margin:0 auto}
 
 /* ── Reviews ── */
-.reviews-grid{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
-@media(min-width:768px){.reviews-grid{grid-template-columns:1fr 1fr 1fr;border-radius:24px;margin:0 24px}}
-.review-card{padding:24px;background:#111;text-align:left}
-.review-avatar{font-size:24px;margin-bottom:8px}
-.review-stars{color:#d4a843;font-size:12px;margin-bottom:6px;display:block}
-.review-text{font-size:14px;line-height:1.6;color:rgba(255,255,255,0.7);font-style:normal}
-.review-author{font-size:12px;color:rgba(255,255,255,0.35);margin-top:10px}
+.reviews-scroll .scroll-card{
+  width:clamp(240px,60vw,320px);
+  aspect-ratio:auto;
+  padding:20px;
+  justify-content:flex-start;align-items:flex-start;
+}
+.reviews-scroll .scroll-card .avatar{font-size:22px;margin-bottom:6px}
+.reviews-scroll .scroll-card .stars{color:#d4a843;font-size:12px;margin-bottom:6px}
+.reviews-scroll .scroll-card .sub{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6}
+.reviews-scroll .scroll-card .author{font-size:11px;color:rgba(255,255,255,0.3);margin-top:8px}
+
+/* ── Video ── */
+.video-scroll .scroll-card{aspect-ratio:9/16;width:clamp(140px,35vw,200px)}
+.video-scroll .scroll-card .play-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:12px;margin-bottom:6px}
+
+/* ── Podcast ── */
+.podcast-scroll .scroll-card{
+  aspect-ratio:auto;
+  width:clamp(220px,55vw,280px);
+  padding:16px;
+  justify-content:flex-start;align-items:flex-start;
+  gap:4px;
+}
+.podcast-scroll .scroll-card .icon{font-size:20px;margin-bottom:2px;opacity:0.5}
+.podcast-scroll .scroll-card .label{font-size:13px;font-weight:500;color:#f5f5f7}
+.podcast-scroll .scroll-card .sub{font-size:11px;color:rgba(255,255,255,0.35);margin-top:2px}
+.podcast-scroll .scroll-card .play-icon{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px}
 
 /* ── Contact ── */
 .contact-block{text-align:center;padding:60px 24px 50px}
@@ -158,22 +199,7 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 .contact-card{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;border:1px solid rgba(255,255,255,0.12);font-size:14px;color:#f5f5f7;text-decoration:none;background:rgba(255,255,255,0.04)}
 .contact-note{font-size:12px;color:rgba(255,255,255,0.32);margin-top:14px}
 
-/* ── Apple-style Video ── */
-.video-single{aspect-ratio:9/16;max-height:520px;margin:0 24px;border-radius:18px;overflow:hidden;background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(255,255,255,0.06)}
-.video-single .play{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.6)}
-.video-single span{font-size:13px;color:rgba(255,255,255,0.35)}
-
-/* ── Podcast ── */
-.podcast-list{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
-.podcast-item{padding:18px 20px;background:#111;display:flex;align-items:center;gap:14px;cursor:pointer}
-.podcast-item:active{background:#1a1a1a}
-.podcast-art{font-size:22px;flex-shrink:0;width:36px;text-align:center}
-.podcast-info{flex:1;min-width:0}
-.podcast-info h4{font-size:14px;font-weight:500;margin-bottom:2px;color:#f5f5f7}
-.podcast-info p{font-size:12px;color:rgba(255,255,255,0.4)}
-.podcast-btn{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,0.5);flex-shrink:0}
-
-/* ── Apple Footer ── */
+/* ── Footer ── */
 footer{background:#0a0a0a;border-top:1px solid rgba(255,255,255,0.06);padding:40px 24px 30px;text-align:center}
 footer .links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
 footer .links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:12px;transition:color 0.2s}
@@ -184,13 +210,15 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 /* ── Animation ── */
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
-
-/* ── Container ── */
-.section-block .container{padding:0}
-@media(min-width:768px){.container{max-width:980px;margin:0 auto}}
 </style>
 </head>
 <body>
+
+<!-- Watermarks -->
+<div class="watermark">
+  <div class="watermark-img watermark-uni"></div>
+  <div class="watermark-img watermark-wall"></div>
+</div>
 
 <!-- Nav -->
 <nav>
@@ -224,15 +252,67 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="section-header fade-in">
     <div class="section-label">Portfolio</div>
     <h2>精选客片</h2>
-    <p class="section-sub">每个主题都有专属机位，出片率100%</p>
+    <p class="section-sub">左右滑动浏览 · 每个主题都有专属机位</p>
   </div>
-  <div class="gallery-grid fade-in">
-    <div class="gallery-card"><div class="content"><span class="icon">🪄</span><div class="name">哈利·波特</div><div class="sub">魔法世界</div></div></div>
-    <div class="gallery-card"><div class="content"><span class="icon">🍌</span><div class="name">小黄人乐园</div><div class="sub">童趣可爱</div></div></div>
-    <div class="gallery-card"><div class="content"><span class="icon">🎬</span><div class="name">好莱坞</div><div class="sub">复古大片</div></div></div>
-    <div class="gallery-card"><div class="content"><span class="icon">🦖</span><div class="name">侏罗纪世界</div><div class="sub">冒险氛围</div></div></div>
-    <div class="gallery-card"><div class="content"><span class="icon">🌊</span><div class="name">未来水世界</div><div class="sub">震撼实景</div></div></div>
-    <div class="gallery-card"><div class="content"><span class="icon">🐼</span><div class="name">功夫熊猫</div><div class="sub">中国风</div></div></div>
+
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🪄 哈利·波特</span><span class="cat-count">魔法世界</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card"><div class="icon">🏰</div><div class="label">城堡全景</div></div>
+      <div class="scroll-card"><div class="icon">🧹</div><div class="label">飞天扫帚</div></div>
+      <div class="scroll-card"><div class="icon">⚡</div><div class="label">魔法互动</div></div>
+      <div class="scroll-card"><div class="icon">🧣</div><div class="label">学院风</div></div>
+      <div class="scroll-card"><div class="icon">🌙</div><div class="label">夜间灯光</div></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
+
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🍌 小黄人乐园</span><span class="cat-count">童趣可爱</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card"><div class="icon">🎉</div><div class="label">街区打卡</div></div>
+      <div class="scroll-card"><div class="icon">🎪</div><div class="label">游乐互动</div></div>
+      <div class="scroll-card"><div class="icon">📸</div><div class="label">搞怪合影</div></div>
+      <div class="scroll-card"><div class="icon">🍭</div><div class="label">色彩大片</div></div>
+      <div class="scroll-card"><div class="icon">🎨</div><div class="label">人像特写</div></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
+
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🎬 好莱坞</span><span class="cat-count">复古大片</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card"><div class="icon">🎥</div><div class="label">红毯街</div></div>
+      <div class="scroll-card"><div class="icon">🚗</div><div class="label">老爷车</div></div>
+      <div class="scroll-card"><div class="icon">🎞️</div><div class="label">电影片场</div></div>
+      <div class="scroll-card"><div class="icon">🌆</div><div class="label">夜景氛围</div></div>
+      <div class="scroll-card"><div class="icon">👠</div><div class="label">气质人像</div></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
+
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🦖 侏罗纪世界</span><span class="cat-count">冒险氛围</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card"><div class="icon">🌴</div><div class="label">丛林探险</div></div>
+      <div class="scroll-card"><div class="icon">🦕</div><div class="label">恐龙合影</div></div>
+      <div class="scroll-card"><div class="icon">🌋</div><div class="label">冒险主题</div></div>
+      <div class="scroll-card"><div class="icon">🧢</div><div class="label">户外风</div></div>
+      <div class="scroll-card"><div class="icon">🌊</div><div class="label">激流氛围</div></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
+
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🐼 功夫熊猫</span><span class="cat-count">中国风</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card"><div class="icon">🏮</div><div class="label">灯笼街</div></div>
+      <div class="scroll-card"><div class="icon">🐼</div><div class="label">熊猫阿宝</div></div>
+      <div class="scroll-card"><div class="icon">⛩️</div><div class="label">古风建筑</div></div>
+      <div class="scroll-card"><div class="icon">🎊</div><div class="label">节日氛围</div></div>
+      <div class="scroll-card"><div class="icon">🌸</div><div class="label">花海人像</div></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
   </div>
 </div>
 </section>
@@ -243,34 +323,35 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="section-header fade-in">
     <div class="section-label">Guides</div>
     <h2>游玩攻略</h2>
-    <p class="section-sub">隐藏玩法 · 避雷指南 · 出片机位全揭秘</p>
+    <p class="section-sub">左右滑动 · 隐藏玩法全揭秘</p>
   </div>
-  <div class="guides-grid fade-in">
-    <div class="guide-card">
-      <span class="icon">📸</span>
-      <h3>TOP10 出片机位</h3>
-      <p>哈利波特城堡倒影、小黄人街区、好莱坞大道……犄角旮旯的隐藏机位大公开。</p>
-      <span class="tag">拍照攻略</span>
+  <div class="scroll-wrap guides-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card">
+      <div class="icon">📸</div>
+      <div class="label">TOP10 出片机位</div>
+      <div class="sub">哈利波特城堡倒影、小黄人街区……犄角旮旯的隐藏机位大公开</div>
+      <span class="guide-tag">拍照攻略</span>
     </div>
-    <div class="guide-card">
-      <span class="icon">💰</span>
-      <h3>省钱避雷指南</h3>
-      <p>哪些项目值得排、哪些纪念品别买、怎么买票最划算——老玩家血泪总结。</p>
-      <span class="tag">省钱秘籍</span>
+    <div class="scroll-card">
+      <div class="icon">💰</div>
+      <div class="label">省钱避雷指南</div>
+      <div class="sub">哪些项目值得排、哪些纪念品别买、怎么买票最划算</div>
+      <span class="guide-tag">省钱秘籍</span>
     </div>
-    <div class="guide-card">
-      <span class="icon">🗺️</span>
-      <h3>最优路线规划</h3>
-      <p>从早到晚的路线，避开人流高峰，优速通要不要买一看就懂。</p>
-      <span class="tag">路线规划</span>
+    <div class="scroll-card">
+      <div class="icon">🗺️</div>
+      <div class="label">最优路线规划</div>
+      <div class="sub">从早到晚避开人流高峰，优速通要不要买一看就懂</div>
+      <span class="guide-tag">路线规划</span>
     </div>
-    <div class="guide-card">
-      <span class="icon">👗</span>
-      <h3>穿搭指南</h3>
-      <p>穿什么颜色最出片？要不要租魔法袍？每个园区的最佳穿搭建议。</p>
-      <span class="tag">穿搭建议</span>
+    <div class="scroll-card">
+      <div class="icon">👗</div>
+      <div class="label">穿搭指南</div>
+      <div class="sub">穿什么颜色最出片？要不要租魔法袍？每个园区的最佳穿搭</div>
+      <span class="guide-tag">穿搭建议</span>
     </div>
-  </div>
+    <a href="#" class="scroll-card more"><div class="icon">→</div><div class="label">全部攻略</div><div class="sub">查看全部 →</div></a>
+  </div></div>
 </div>
 </section>
 
@@ -280,12 +361,14 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="section-header fade-in">
     <div class="section-label">Video</div>
     <h2>视频展示</h2>
-    <p class="section-sub">跟拍花絮 · 客户出片集锦</p>
+    <p class="section-sub">左右滑动 · 跟拍花絮 · 客户出片集锦</p>
   </div>
-  <div class="video-single fade-in">
-    <div class="play">▶</div>
-    <span>视频即将上线</span>
-  </div>
+  <div class="scroll-wrap video-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card"><div class="play-icon">▶</div><div class="label">跟拍花絮</div><div class="sub">即将上线</div></div>
+    <div class="scroll-card"><div class="play-icon">▶</div><div class="label">客户出片集锦</div><div class="sub">即将上线</div></div>
+    <div class="scroll-card"><div class="play-icon">▶</div><div class="label">哈利波特特辑</div><div class="sub">即将上线</div></div>
+    <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多视频</div></a>
+  </div></div>
 </div>
 </section>
 
@@ -295,25 +378,35 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="section-header fade-in">
     <div class="section-label">Podcast</div>
     <h2>旅拍播客</h2>
-    <p class="section-sub">环球影城隐藏玩法、幕后故事</p>
+    <p class="section-sub">左右滑动 · 环球影城隐藏玩法、幕后故事</p>
   </div>
-  <div class="podcast-list fade-in">
-    <div class="podcast-item">
-      <div class="podcast-art">🎧</div>
-      <div class="podcast-info"><h4>环球影城最出片机位 TOP10</h4><p>15分钟 · 第一期</p></div>
-      <div class="podcast-btn">▶</div>
+  <div class="scroll-wrap podcast-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">TOP10 出片机位</div>
+      <div class="sub">15分钟 · 第一期</div>
+      <div class="play-icon">▶</div>
     </div>
-    <div class="podcast-item">
-      <div class="podcast-art">🎧</div>
-      <div class="podcast-info"><h4>哈利波特园区怎么拍不像游客</h4><p>12分钟 · 第二期</p></div>
-      <div class="podcast-btn">▶</div>
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">哈利波特拍摄秘籍</div>
+      <div class="sub">12分钟 · 第二期</div>
+      <div class="play-icon">▶</div>
     </div>
-    <div class="podcast-item">
-      <div class="podcast-art">🎧</div>
-      <div class="podcast-info"><h4>环球跟拍一天的真实记录</h4><p>20分钟 · 第三期</p></div>
-      <div class="podcast-btn">▶</div>
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">跟拍一天的真实记录</div>
+      <div class="sub">20分钟 · 第三期</div>
+      <div class="play-icon">▶</div>
     </div>
-  </div>
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">环球影城冷知识</div>
+      <div class="sub">10分钟 · 第四期</div>
+      <div class="play-icon">▶</div>
+    </div>
+    <a href="#" class="scroll-card more"><div class="icon">→</div><div class="label">全部播客</div></a>
+  </div></div>
 </div>
 </section>
 
@@ -371,39 +464,8 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 </div>
 </section>
 
-<!-- Reviews -->
-<section class="section-block" id="reviews">
-<div class="container">
-  <div class="section-header fade-in">
-    <div class="section-label">Testimonials</div>
-    <h2>客户好评</h2>
-    <p class="section-sub">来看看大家怎么说</p>
-  </div>
-  <div class="reviews-grid fade-in">
-    <div class="review-card">
-      <div class="review-avatar">👩</div>
-      <span class="review-stars">★★★★★</span>
-      <p class="review-text">"哈利波特园区拍出来跟电影海报一样，发朋友圈被问了100遍在哪拍的😂 全程带着玩，不用自己操心路线，超值！"</p>
-      <div class="review-author">小鹿 · 情侣跟拍</div>
-    </div>
-    <div class="review-card">
-      <div class="review-avatar">👨‍👩‍👧</div>
-      <span class="review-stars">★★★★★</span>
-      <p class="review-text">"带孩子去环球最怕排队和拍照手忙脚乱，管家全程安排好，我们只管玩，照片出来惊艳全家！"</p>
-      <div class="review-author">Sunny一家 · 家庭跟拍</div>
-    </div>
-    <div class="review-card">
-      <div class="review-avatar">👩‍❤️‍👨</div>
-      <span class="review-stars">★★★★★</span>
-      <p class="review-text">"1小时出了30多张，效率超高！摄影师很会引导姿势，我俩都不太会拍照，出片效果却特别好。"</p>
-      <div class="review-author">Anna & Jason · 情侣跟拍</div>
-    </div>
-  </div>
-</div>
-</section>
-
 <!-- Process -->
-<section class="section-block gray" id="process">
+<section class="section-block" id="process">
 <div class="container">
   <div class="section-header fade-in">
     <div class="section-label">How It Works</div>
@@ -427,6 +489,38 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
       <p>3个工作日内交付精修大片 + 原片全送</p>
     </div>
   </div>
+</div>
+</section>
+
+<!-- Reviews -->
+<section class="section-block gray" id="reviews">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Testimonials</div>
+    <h2>客户好评</h2>
+    <p class="section-sub">左右滑动 · 看看大家怎么说</p>
+  </div>
+  <div class="scroll-wrap reviews-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card">
+      <div class="avatar">👩</div>
+      <div class="stars">★★★★★</div>
+      <div class="sub">"哈利波特园区拍出来跟电影海报一样，发朋友圈被问了100遍在哪拍的😂"</div>
+      <div class="author">小鹿 · 情侣跟拍</div>
+    </div>
+    <div class="scroll-card">
+      <div class="avatar">👨‍👩‍👧</div>
+      <div class="stars">★★★★★</div>
+      <div class="sub">"管家全程安排好，我们只管玩，照片出来惊艳全家！"</div>
+      <div class="author">Sunny一家 · 家庭跟拍</div>
+    </div>
+    <div class="scroll-card">
+      <div class="avatar">👩‍❤️‍👨</div>
+      <div class="stars">★★★★★</div>
+      <div class="sub">"1小时出了30多张片，摄影师很会引导姿势，出片效果特别好。"</div>
+      <div class="author">Anna & Jason · 情侣跟拍</div>
+    </div>
+    <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多评价</div></a>
+  </div></div>
 </div>
 </section>
 
