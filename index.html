@@ -15,8 +15,9 @@ body{
 
 /* ── Watermarks ── */
 .watermark{display:none}
+:root{--watermark-y:0px}
 /* 每节背景水印 */
-.section-block::before,.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:url('images/universal.jpg') no-repeat 50% 50%;background-size:130% auto;opacity:0.3;filter:brightness(0.25);background-attachment:fixed}
+.section-block::before,.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:url('images/universal.jpg') no-repeat 50% calc(50% - var(--watermark-y));background-size:130% auto;opacity:0.3;filter:brightness(0.25)}
 @media(min-width:768px){
   .watermark-uni{top:5%;left:-5%;width:40%;height:50%}
   .watermark-wall{bottom:5%;right:-5%;width:35%;height:40%}
@@ -574,6 +575,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const t = document.querySelector(this.getAttribute('href'));
     if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
   });
+});
+
+// 水印微动
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty('--watermark-y', `${window.scrollY * 0.01}px`);
 });
 </script>
 </body>
