@@ -579,7 +579,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 // 视差水印 — 翻5节看完1张完整水印图
 window.addEventListener('scroll', () => {
-  const y = window.scrollY * 0.2;
+  const y = window.scrollY * 0.15;
   document.documentElement.style.setProperty('--watermark-y', `${y}px`);
 });
 </script>
