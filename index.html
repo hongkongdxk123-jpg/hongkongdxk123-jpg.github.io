@@ -17,7 +17,7 @@ body{
 .watermark{display:none}
 :root{--watermark-y:0px}
 /* 每节背景水印 */
-.section-block::before,.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:url('images/universal.jpg') no-repeat 50% calc(0% - var(--watermark-y));background-size:115% auto;opacity:0.3;filter:brightness(0.7)}
+.section-block::before,.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:url('images/universal.jpg') no-repeat 50% calc(0% - var(--watermark-y));background-size:115% auto;opacity:0.3;filter:brightness(0.5)}
 @media(min-width:768px){
   .watermark-uni{top:5%;left:-5%;width:40%;height:50%}
   .watermark-wall{bottom:5%;right:-5%;width:35%;height:40%}
