@@ -723,18 +723,33 @@ function openVideoGallery(type, title, urls) {
   document.getElementById('modalCounter').textContent = '1/' + urls.length;
   var track = document.getElementById('modalTrack');
   track.innerHTML = '';
+  var thumbs = ['images/jurassic_thumb1.jpg','images/jurassic_thumb2.jpg'];
   urls.forEach(function(url, i) {
     var slide = document.createElement('div');
     slide.className = 'modal-slide';
     slide.style.flexDirection = 'column';
     slide.style.gap = '12px';
-    slide.innerHTML = '<video controls autoplay playsinline style="width:100%;max-height:80vh;border-radius:12px" src="'+url+'"></video>';
+    slide.style.cursor = 'pointer';
+    var thumb = thumbs[i] || 'images/jurassic_video_cover.jpg';
+    slide.innerHTML = '<div class="img-wrap" style="width:100%;height:70%;border-radius:14px;overflow:hidden;position:relative" onclick="event.stopPropagation();playCurrentVideo('+i+')">'
+      + '<img src="'+thumb+'" style="width:100%;height:100%;object-fit:cover">'
+      + '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">'
+      + '<div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:22px;backdrop-filter:blur(4px)">▶</div></div>'
+      + '</div>'
+      + '<div style="font-size:13px;color:rgba(255,255,255,0.5);text-align:center">点击播放视频</div>';
     slide.dataset.index = i;
     track.appendChild(slide);
   });
   track.style.transform = 'translateX(0)';
   document.getElementById('galleryModal').classList.add('open');
   setupSwipe();
+}
+
+function playCurrentVideo(idx) {
+  var track = document.getElementById('modalTrack');
+  var slides = track.querySelectorAll('.modal-slide');
+  var url = galleryData[idx];
+  slides[idx].innerHTML = '<div style="width:100%;height:100%;display:flex;align-items:center"><video controls autoplay playsinline style="width:100%;max-height:85vh;border-radius:12px" src="'+url+'"></video></div>';
 }
 
 function playVideo(url, title) {
@@ -750,13 +765,11 @@ function playVideo(url, title) {
 function goToSlide(index) {
   if (index < 0) index = 0;
   if (index >= galleryData.length) index = galleryData.length - 1;
-  // Pause current video if any
   var track = document.getElementById('modalTrack');
   var oldVids = track.querySelectorAll('video');
   oldVids.forEach(function(v){ v.pause(); });
   currentIndex = index;
   track.style.transform = 'translateX(-' + (currentIndex * 100) + 'vw)';
-  // Play new video if any
   var slides = track.querySelectorAll('.modal-slide');
   if (slides[currentIndex]) {
     var vid = slides[currentIndex].querySelector('video');
