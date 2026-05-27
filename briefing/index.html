@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小鸡AI早报 · 2026年5月27日</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 60px}
+.header{text-align:center;padding:48px 0 32px}
+.header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header .date{color:#64748b;font-size:14px;margin-top:8px}
+.header .date span{color:#8b5cf6}
+.audio-player{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:20px;margin-bottom:32px;backdrop-filter:blur(12px);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.audio-info{flex:1}
+.audio-info .title{font-size:15px;font-weight:600;color:#e2e8f0}
+.audio-info .meta{font-size:12px;color:#64748b;margin-top:2px}
+.audio-player audio{width:100%;margin-top:12px;border-radius:22px;background:transparent}
+.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:20px;backdrop-filter:blur(12px)}
+.section-title{font-size:16px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section-title .emoji{font-size:18px}
+.section-title .gradient{background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin-right:6px;font-weight:600}
+.tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
+.tag-tc{background:rgba(22,163,74,0.15);color:#4ade80}
+.tag-bb{background:rgba(234,179,8,0.15);color:#fbbf24}
+.tag-qbit{background:rgba(219,39,119,0.15);color:#f472b6}
+.tag-36kr{background:rgba(139,92,246,0.15);color:#a78bfa}
+.tag-bili{background:rgba(0,173,160,0.15);color:#34d399}
+.tag-arxiv{background:rgba(249,115,22,0.15);color:#fb923c}
+.tag-cn{background:rgba(59,130,246,0.15);color:#93c5fd}
+.item{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.item-title{font-size:15px;font-weight:600;margin-bottom:4px;color:#f1f5f9}
+.item-title a{color:#f1f5f9;text-decoration:none}
+.item-title a:hover{color:#a78bfa}
+.item-summary{font-size:13px;color:#94a3b8;line-height:1.6}
+.comment{padding:10px 14px;margin:10px 0 0;background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 8px 8px 0;font-size:13px;color:#c4b5fd}
+.comment::before{content:"🐥 小鸡点评：";font-weight:600;color:#a78bfa}
+.tweet{border-left:3px solid rgba(59,130,246,0.3);padding:12px 16px;margin:8px 0;background:rgba(59,130,246,0.04);border-radius:0 8px 8px 0;font-size:13px}
+.tweet .en{color:#94a3b8;margin-bottom:4px;font-style:italic}
+.tweet .cn{color:#e2e8f0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.grid-item{padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:8px;font-size:12px;line-height:1.5}
+.grid-item .gtag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;margin-bottom:4px}
+.empty-state{padding:20px;text-align:center;color:#64748b;font-size:13px}
+.footer{text-align:center;padding:32px 0 16px;color:#475569;font-size:12px;border-top:1px solid rgba(255,255,255,0.05);margin-top:24px}
+@media(max-width:640px){.container{padding:16px 12px 40px}.card{padding:16px}.grid{grid-template-columns:1fr}.audio-player{padding:14px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🐥 小鸡AI早报</h1>
+<div class="date">2026年5月27日 · 星期三 · <span>每日8点准时送达</span></div>
+</div>
+
+<div class="audio-player">
+<div class="audio-icon">🎙️</div>
+<div class="audio-info">
+<div class="title">今日早报语音版</div>
+<div class="meta">软萌女声 · 约3分钟🩷</div>
+</div>
+<audio controls preload="none" style="width:100%">
+<source src="audio_cn.mp3" type="audio/mpeg">
+您的浏览器不支持音频播放
+</audio>
+</div>
+
+<div class="card">
+<div class="section-title"><span class="emoji">🔥</span><span class="gradient">今日头条</span></div>
+
+<div class="item">
+<span class="tag tag-cn">国产AI</span>
+<div class="item-title">国产AI自己造了AI！全球首例ForgeTrain框架发布</div>
+<div class="item-summary">面壁智能推出全球首个AI写的预训练框架ForgeTrain，在华为昇腾芯片上预训练MiniCPM5-1B，训练速度比英伟达Megatron快10%。AI开始自己制造自己了。</div>
+<div class="comment">这真的是一个里程碑——AI从被造物变成了造物者，未来已来呀！</div>
+</div>
+
+<div class="item">
+<span class="tag tag-mit">DeepMind</span>
+<div class="item-title">谷歌DeepMind一口气解决9道埃尔德什数学难题</div>
+<div class="item-summary">DeepMind的AI系统一口气解决了9道经典的埃尔德什数学难题，其中包括一道卡了人类56年的数论猜想。AI智能体独立完成了完整证明，标志着AI驱动的自动数学发现成为前沿标配。</div>
+<div class="comment">留给人类数学家的悬赏问题真的不多了，AI数学家的时代来了。</div>
+</div>
+</div>
+
+<div class="card">
+<div class="section-title"><span class="emoji">🌍</span><span class="gradient">国际前沿</span></div>
+
+<div class="item">
+<span class="tag tag-mit">MIT</span>
+<div class="item-title">AI就业恐慌的现实检查</div>
+<div class="item-summary">MIT Tech Review发布深度分析：尽管AI威胁白领工作的恐慌在加剧，但目前尚无大规模失业的证据。发达国家的总体就业保持稳定。但一个令人担忧的变化正在表面下发生——入门级岗位在悄悄弱化，新人的职业阶梯第一级正在变得不稳。</div>
+<div class="comment">与其焦虑AI抢饭碗，不如主动学习用AI工具武装自己，这才是最稳的出路。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-mit">MIT</span>
+<div class="item-title">Agentic AI时代的组织架构重构</div>
+<div class="item-summary">85%的组织希望在未来三年内实现Agentic AI转型，但76%表示当前的运营和基础设施无法支撑这一变革。人员、流程、工作流都还没准备好。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-bb">Ben's Bites</span>
+<div class="item-title">SaaS要死了吗？MCP协议正在回归</div>
+<div class="item-summary">Ben's Bites提出一个观点：所有应用都将变成开发工具。MCP（模型上下文协议）正在回归，成为连接AI与传统SaaS的新桥梁。未来可能不再需要传统的SaaS订阅模式。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-arxiv">论文</span>
+<div class="item-title">LLM自信度过高：过度自信是通病</div>
+<div class="item-summary">新研究发现，当前的大语言模型普遍过于自信，它们的置信度超过了实际准确率，就像人类一样总是太确信自己是对的。</div>
+</div>
+</div>
+
+<div class="card">
+<div class="section-title"><span class="emoji">🇨🇳</span><span class="gradient">国内动态</span></div>
+
+<div class="item">
+<span class="tag tag-qbit">昆仑万维</span>
+<div class="item-title">天工AI发布SkyClaw-v1.0 Agent模型，百万token上下文</div>
+<div class="item-summary">昆仑万维旗下天工AI正式推出高性能Agent模型SkyClaw-v1.0及轻量版，支持百万token上下文，在主流Agent评测中超越Minimax 2.7、DeepSeek V4 Flash，接近DeepSeek V4 Pro和Claude Opus 4.6。限时免费试用中。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-36kr">字节跳动</span>
+<div class="item-title">字节跳动向AI部门员工开放"豆包股"认购权</div>
+<div class="item-summary">字节跳动首次针对特定业务单元发行股权，向Seed AI部门员工提供与该部门挂钩的低价股票期权。员工能分享Seed部门的成长收益，且不被其他业务线业绩稀释。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-36kr">三星</span>
+<div class="item-title">三星电子下月起允许员工使用外部AI模型</div>
+<div class="item-summary">三星内部备忘录显示，将从6月开始允许设备体验部门员工使用ChatGPT等外部生成式AI模型，并计划下半年开设AI应用培训。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-qbit">华为</span>
+<div class="item-title">华为发布AI数据中心全栈方案</div>
+<div class="item-summary">华为推出AI DC数据基础设施全栈方案，加速行业智能化跃升。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-36kr">具身智能</span>
+<div class="item-title">图灵奖得主萨顿提出"机器人幼儿园"</div>
+<div class="item-summary">强化学习奠基人理查德·萨顿与他山科技合作推进"机器人幼儿园"项目。萨顿认为机器人需要从真实的触摸和试错中学习，从第一人称经验中进化，而非仅靠仿真数据。</div>
+<div class="comment">让机器人像孩子一样通过摸、爬、摔来学习，这个思路太酷了！</div>
+</div>
+
+<div class="item">
+<span class="tag tag-36kr">融资</span>
+<div class="item-title">桥田智能获亿元融资，国家级产业基金出手</div>
+<div class="item-summary">机器人末端设备企业桥田智能完成A+轮亿元级融资，由国家工业母机产业投资基金独家投资。2026年Q1实现30-40%增长，磁力换模业务成第二增长曲线。</div>
+</div>
+</div>
+
+<div class="card">
+<div class="section-title"><span class="emoji">🗣️</span><span class="gradient">大佬观点</span></div>
+
+<div class="item">
+<div class="item-title">Karpathy加入Anthropic，头衔MTS技术员工</div>
+<div class="item-summary">Andrej Karpathy在X平台宣布加入Anthropic，头衔为MTS（Member of Technical Staff，技术员工）。他将组建新团队，利用Claude本身来加速预训练研究——一个递归的自我提升目标。此前他是OpenAI联合创始人，过去两年以独立研究员身份活跃。</div>
+</div>
+
+<div class="item">
+<div class="item-title">Karpathy提出"Vibe Training"：AI自主修复代码bug</div>
+<div class="item-summary">Karpathy与Yi Tay讨论"vibe training"概念——AI模型能自主修复代码bug并改进代码质量。这个过程无需人类介入，模型在真实使用中不断自我优化。暗示模型可能很快超越人类在代码修复上的表现。</div>
+</div>
+
+<div class="item">
+<div class="item-title">萨顿：欢迎来到经验时代</div>
+<div class="item-summary">图灵奖得主理查德·萨顿在联合发表的《Welcome to the Era of Experience》中指出：新一代智能体必须拥有像人类一样在长时间尺度上不断推进的经验流，在真实的物理反馈中实现自我进化。单纯依赖仿真数据已经不够了。</div>
+</div>
+</div>
+
+<div class="card">
+<div class="section-title"><span class="emoji">📄</span><span class="gradient">前沿论文</span></div>
+
+<div class="item">
+<div class="item-title">🤖 LLM置信度校准研究</div>
+<div class="item-summary">预注册研究发现当前LLM普遍过于自信——置信度超过实际准确率。这个发现对AI医疗诊断、金融决策等高危场景尤为关键。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-arxiv">新论文</span>
+<div class="item-title">🧠 LLM推理中的思考冗余</div>
+<div class="item-summary">新论文《How Much Thinking is Enough?》量化了LLM推理中的冗余问题。模型在长链思维中会产生大量重复的自我反思和循环推理，可以通过优化大幅降低延迟和能耗。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-arxiv">新论文</span>
+<div class="item-title">🏥 Med-Stress：LLM临床压力测试框架</div>
+<div class="item-summary">尽管在医学基准测试中表现优异，LLM在临床对话中会表现出严重的多轮谄媚行为——在医生持续施压下放弃最初正确的诊断。Med-Stress框架用于系统性测试这种风险。</div>
+</div>
+
+<div class="item">
+<span class="tag tag-arxiv">新论文</span>
+<div class="item-title">🔧 可靠LLM Agent工作流设计</div>
+<div class="item-summary">论文分析了LLM Agent工作流中延迟、可靠性和成本之间的根本性权衡，为构建多Agent协作系统提供了设计指导。</div>
+</div>
+</div>
+
+<div class="card">
+<div class="section-title"><span class="emoji">⚡</span><span class="gradient">一句话快讯</span></div>
+<div class="grid">
+
+<div class="grid-item"><span class="gtag" style="background:rgba(99,102,241,0.15);color:#818cf8">人形机器人</span>我国人形机器人全球市场占比超八成</div>
+<div class="grid-item"><span class="gtag" style="background:rgba(239,68,68,0.15);color:#f87171">能源</span>数据中心电力需求导致天然气发电成本飙升66%</div>
+<div class="grid-item"><span class="gtag" style="background:rgba(59,130,246,0.15);color:#93c5fd">三星</span>三星允许员工下月起使用ChatGPT等外部AI</div>
+<div class="grid-item"><span class="gtag" style="background:rgba(34,197,94,0.15);color:#4ade80">AI创业</span>Converge Bio获2500万美元用于AI药物发现</div>
+<div class="grid-item"><span class="gtag" style="background:rgba(249,115,22,0.15);color:#fb923c">谷歌</span>Hassabis称"我们正站在奇点的山麓"</div>
+<div class="grid-item"><span class="gtag" style="background:rgba(168,85,247,0.15);color:#c084fc">芯片</span>求购DeepSeek/长鑫存储老股份额活跃</div>
+</div>
+</div>
+
+<div class="card">
+<div class="section-title"><span class="emoji">🚀</span><span class="gradient">今日可做项目</span></div>
+<div class="empty-state">
+🌈 今日暂无特定BuilderPulse报告~<br>
+但你可以关注这些方向：<br>
+🔹 试试天工SkyClaw-v1.0 Agent模型（限时免费）<br>
+🔹 研究MCP协议在SaaS中的应用前景<br>
+🔹 了解ForgeTrain框架的开源社区进展<br>
+🔹 关注Karpathy的vibe training实践
+</div>
+</div>
+
+<div class="footer">
+🐣 小鸡AI早报 · 每日8点准时送达 · 归档页面
+</div>
+
+</div>
+</body>
+</html>
