@@ -680,13 +680,17 @@ window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--watermark-y', `${window.scrollY * 0.05}px`);
 });
 
-// ── Gallery Modal ──
-let galleryData = [];
-let currentIndex = 0;
+function closeGallery() {
+  document.getElementById('galleryModal').classList.remove('open');
+  var target = document.getElementById(galleryScrollTarget);
+  if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
+}
 
 function openGallery(type, title, images) {
   galleryData = images;
   currentIndex = 0;
+  var sectionMap = {'guides':'guides','video':'video'};
+  galleryScrollTarget = sectionMap[type] || type;
   document.getElementById('modalTitle').textContent = title;
   
   const track = document.getElementById('modalTrack');
@@ -708,13 +712,9 @@ function openGallery(type, title, images) {
   setupSwipe();
 }
 
-function closeGallery() {
-  document.getElementById('galleryModal').classList.remove('open');
-}
-
-function updateCounter() {
-  document.getElementById('modalCounter').textContent = (currentIndex + 1) + '/' + galleryData.length;
-}
+var galleryScrollTarget = '';
+let galleryData = [];
+let currentIndex = 0;
 
 function goToSlide(index) {
   if (index < 0) index = 0;
