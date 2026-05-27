@@ -2,237 +2,619 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年5月27日</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>环球旅拍 · 北京环球影城专属跟拍</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
-.container{max-width:720px;margin:0 auto;padding:24px 20px 60px}
-.header{text-align:center;padding:48px 0 32px}
-.header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.header .date{color:#64748b;font-size:14px;margin-top:8px}
-.header .date span{color:#8b5cf6}
-.audio-player{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:20px;margin-bottom:32px;backdrop-filter:blur(12px);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.audio-info{flex:1}
-.audio-info .title{font-size:15px;font-weight:600;color:#e2e8f0}
-.audio-info .meta{font-size:12px;color:#64748b;margin-top:2px}
-.audio-player audio{width:100%;margin-top:12px;border-radius:22px;background:transparent}
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:20px;backdrop-filter:blur(12px)}
-.section-title{font-size:16px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.section-title .emoji{font-size:18px}
-.section-title .gradient{background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin-right:6px;font-weight:600}
-.tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
-.tag-tc{background:rgba(22,163,74,0.15);color:#4ade80}
-.tag-bb{background:rgba(234,179,8,0.15);color:#fbbf24}
-.tag-qbit{background:rgba(219,39,119,0.15);color:#f472b6}
-.tag-36kr{background:rgba(139,92,246,0.15);color:#a78bfa}
-.tag-bili{background:rgba(0,173,160,0.15);color:#34d399}
-.tag-arxiv{background:rgba(249,115,22,0.15);color:#fb923c}
-.tag-cn{background:rgba(59,130,246,0.15);color:#93c5fd}
-.item{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.05)}
-.item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.item-title{font-size:15px;font-weight:600;margin-bottom:4px;color:#f1f5f9}
-.item-title a{color:#f1f5f9;text-decoration:none}
-.item-title a:hover{color:#a78bfa}
-.item-summary{font-size:13px;color:#94a3b8;line-height:1.6}
-.comment{padding:10px 14px;margin:10px 0 0;background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 8px 8px 0;font-size:13px;color:#c4b5fd}
-.comment::before{content:"🐥 小鸡点评：";font-weight:600;color:#a78bfa}
-.tweet{border-left:3px solid rgba(59,130,246,0.3);padding:12px 16px;margin:8px 0;background:rgba(59,130,246,0.04);border-radius:0 8px 8px 0;font-size:13px}
-.tweet .en{color:#94a3b8;margin-bottom:4px;font-style:italic}
-.tweet .cn{color:#e2e8f0}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.grid-item{padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:8px;font-size:12px;line-height:1.5}
-.grid-item .gtag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;margin-bottom:4px}
-.empty-state{padding:20px;text-align:center;color:#64748b;font-size:13px}
-.footer{text-align:center;padding:32px 0 16px;color:#475569;font-size:12px;border-top:1px solid rgba(255,255,255,0.05);margin-top:24px}
-@media(max-width:640px){.container{padding:16px 12px 40px}.card{padding:16px}.grid{grid-template-columns:1fr}.audio-player{padding:14px}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent;background:#000}
+body{
+  font-family:"SF Pro Display","SF Pro Text","Helvetica Neue","PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#000;color:#f5f5f7;line-height:1.47059;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── Watermarks ── */
+.watermark{display:none}
+:root{--watermark-y:0px}
+/* 每节背景水印 */
+.section-block::before,.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:url('images/universal.jpg') no-repeat 50% calc(50% - var(--watermark-y));background-size:100% auto;opacity:0.3;filter:brightness(0.25);background-attachment:fixed}
+@media(min-width:768px){
+  .watermark-uni{top:5%;left:-5%;width:40%;height:50%}
+  .watermark-wall{bottom:5%;right:-5%;width:35%;height:40%}
+}
+
+/* ── Nav ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(0,0,0,0.92);backdrop-filter:saturate(180%) blur(20px);
+  backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:100%;margin:0 auto;padding:0 22px;height:44px;
+}
+.nav-logo{display:flex;align-items:center;gap:6px;text-decoration:none}
+.nav-logo img{height:22px;width:auto;object-fit:contain}
+.nav-menu{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-menu::-webkit-scrollbar{display:none}
+.nav-menu a{padding:6px 10px;font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap;transition:color 0.2s}
+.nav-menu a:active{color:#f5f5f7}
+
+/* ── Typography ── */
+h1{font-size:clamp(36px,8vw,56px);font-weight:700;letter-spacing:-0.015em;line-height:1.05}
+h2{font-size:clamp(28px,6vw,40px);font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:6px}
+h3{font-size:clamp(16px,3.5vw,22px);font-weight:600;letter-spacing:-0.005em;line-height:1.2}
+p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
+.section-sub{font-size:14px;color:rgba(255,255,255,0.48);max-width:320px;margin:0 auto}
+
+/* ── Section ── */
+.section-block{padding:60px 0 80px;position:relative;z-index:1;min-height:90vh;display:flex;flex-direction:column;justify-content:center}
+@media(min-width:768px){.section-block{padding:80px 0 100px;min-height:85vh}}
+.section-block.gray{background:#0a0a0a}
+.section-block{background:#000}
+.section-label{font-size:12px;font-weight:500;letter-spacing:0.06em;color:rgba(255,255,255,0.32);text-transform:uppercase;margin-bottom:10px}
+.section-header{text-align:center;padding:0 24px;margin-bottom:32px}
+.section-header p{font-size:14px}
+
+/* ── Hero ── */
+.hero{position:relative;overflow:hidden;padding:100px 0 80px;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;z-index:1}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 30%, rgba(255,255,255,0.02) 0%, transparent 70%);pointer-events:none;z-index:0}
+.hero .container{position:relative;text-align:center;padding:0 24px}
+.hero-logos{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:28px}
+.hero-logos .logo-item{display:flex;flex-direction:column;align-items:center;gap:4px}
+.hero-logos .uni-badge{width:50px;height:50px;border-radius:8px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-logos .uni-badge img{width:100%;height:100%;object-fit:contain}
+.hero-logos .brand-badge{width:50px;height:50px;border-radius:8px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-logos .brand-badge img{width:100%;height:100%;object-fit:contain}
+.hero-logos .logo-label{display:none}
+.hero-logos .divider{width:1px;height:32px;background:rgba(255,255,255,0.06)}
+.hero-logos .brand-logo{text-align:center}
+.hero-logos .brand-logo .brand-name{font-size:16px;font-weight:600;color:#f5f5f7;letter-spacing:0.02em;line-height:1.2}
+.hero-logos .brand-logo .brand-name .gold{color:#d4a843}
+.hero-logos .brand-logo .brand-sub{font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);font-size:11px;font-weight:500;color:rgba(255,255,255,0.6);letter-spacing:0.05em;margin-bottom:28px;text-transform:uppercase}
+.hero h1{font-weight:700;margin-bottom:12px}
+.hero h1 .gold{background:linear-gradient(135deg,#f5d68a,#d4a843);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:clamp(15px,3.5vw,19px);color:rgba(255,255,255,0.52);max-width:400px;margin:0 auto 32px;line-height:1.6}
+.hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;border-radius:100px;background:#f5f5f7;color:#000;font-weight:500;font-size:14px;text-decoration:none;transition:opacity 0.2s}
+.btn-primary:active{opacity:0.85}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;border-radius:100px;border:1px solid rgba(255,255,255,0.2);color:#f5f5f7;font-weight:400;font-size:14px;text-decoration:none;transition:border-color 0.2s}
+.btn-secondary:active{border-color:rgba(255,255,255,0.5)}
+
+/* ── Horizontal Scroll Gallery ── */
+.gallery-category{margin-bottom:20px}
+.gallery-category:last-child{margin-bottom:0}
+.gallery-category .cat-header{display:flex;justify-content:space-between;align-items:center;padding:0 20px 12px}
+.gallery-category .cat-title{font-size:15px;font-weight:600;color:#f5f5f7}
+.gallery-category .cat-count{font-size:12px;color:rgba(255,255,255,0.35)}
+.scroll-wrap{
+  overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;padding:0 0 8px 12px;
+}
+.scroll-wrap::-webkit-scrollbar{display:none}
+.scroll-track{
+  display:flex;gap:10px;
+  width:max-content;padding-bottom:4px;
+}
+.scroll-card{
+  scroll-snap-align:start;
+  width:clamp(65vw,280px,320px);
+  aspect-ratio:3/4;
+  border-radius:14px;overflow:hidden;
+  background:#151515;
+  border:1px solid rgba(255,255,255,0.06);
+  flex-shrink:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-decoration:none;color:#f5f5f7;cursor:pointer;
+  transition:transform 0.2s;
+  position:relative;
+}
+.scroll-card:active{transform:scale(0.97)}
+.scroll-card .icon{font-size:clamp(28px,6vw,40px);margin-bottom:6px;opacity:0.4}
+.scroll-card .label{font-size:13px;font-weight:500;color:rgba(255,255,255,0.6)}
+.scroll-card .sub{font-size:11px;color:rgba(255,255,255,0.25);margin-top:2px}
+/* More card */
+.scroll-card.more{
+  background:rgba(255,255,255,0.03);
+  border:1px dashed rgba(255,255,255,0.1);
+}
+.scroll-card.more .icon{opacity:0.25}
+.scroll-card.more .label{color:rgba(255,255,255,0.35)}
+
+/* ── Guides ── */
+.guides-scroll{padding:0;margin:0}
+.guides-scroll .scroll-card{
+  width:clamp(65vw,280px,320px);
+  aspect-ratio:auto;
+  padding:22px 18px;
+  justify-content:flex-start;align-items:flex-start;
+  gap:6px;
+}
+.guides-scroll .scroll-card .icon{opacity:0.6;margin-bottom:4px;font-size:22px}
+.guides-scroll .scroll-card .label{font-size:14px;font-weight:600;color:#f5f5f7}
+.guides-scroll .scroll-card .sub{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5;margin-top:2px}
+.guides-scroll .scroll-card .guide-tag{display:inline-block;padding:3px 10px;border-radius:100px;background:rgba(212,168,67,0.12);color:#d4a843;font-size:11px;font-weight:500;margin-top:6px}
+
+/* ── Pricing ── */
+.pricing-grid{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
+@media(min-width:768px){.pricing-grid{grid-template-columns:1fr 1fr 1fr;border-radius:24px;margin:0 24px}}
+.pricing-card{padding:32px 24px;background:#111;text-align:left}
+.pricing-card.featured{background:linear-gradient(180deg,#14120e,#111)}
+.pricing-card .badge{display:inline-block;padding:3px 10px;border-radius:100px;background:rgba(212,168,67,0.15);color:#d4a843;font-size:11px;font-weight:500;margin-bottom:10px}
+.pricing-card h3{font-size:20px;font-weight:700;margin-bottom:2px}
+.pricing-card .desc{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:12px}
+.pricing-card .price{font-size:28px;font-weight:700;letter-spacing:-0.02em;margin-bottom:16px}
+.pricing-card .price small{font-size:14px;font-weight:400;color:rgba(255,255,255,0.4)}
+.pricing-card ul{list-style:none;display:grid;gap:6px}
+.pricing-card ul li{font-size:13px;display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.7)}
+.pricing-card ul li::before{content:'✓';color:#d4a843;font-weight:600}
+.pricing-card .btn{display:block;text-align:center;padding:10px;border-radius:100px;margin-top:16px;font-weight:500;font-size:13px;text-decoration:none;cursor:pointer;transition:opacity 0.2s}
+.pricing-card .btn:active{opacity:0.8}
+.pricing-card .btn-dark{background:#f5f5f7;color:#000}
+.pricing-card .btn-outline{border:1px solid rgba(255,255,255,0.15);color:#f5f5f7}
+
+/* ── Process ── */
+.process-grid{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
+@media(min-width:768px){.process-grid{grid-template-columns:1fr 1fr 1fr;border-radius:24px;margin:0 24px}}
+.process-card{padding:32px 24px;background:#111;text-align:center}
+.process-card .num{font-size:32px;font-weight:700;color:rgba(255,255,255,0.1);margin-bottom:12px}
+.process-card h3{font-size:16px;margin-bottom:6px}
+.process-card p{font-size:13px;color:rgba(255,255,255,0.48);max-width:200px;margin:0 auto}
+
+/* ── Reviews ── */
+.reviews-scroll .scroll-card{
+  width:clamp(65vw,280px,320px);
+  aspect-ratio:auto;
+  padding:20px;
+  justify-content:flex-start;align-items:flex-start;
+}
+.reviews-scroll .scroll-card .avatar{font-size:22px;margin-bottom:6px}
+.reviews-scroll .scroll-card .stars{color:#d4a843;font-size:12px;margin-bottom:6px}
+.reviews-scroll .scroll-card .sub{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6}
+.reviews-scroll .scroll-card .author{font-size:11px;color:rgba(255,255,255,0.3);margin-top:8px}
+
+/* ── Video ── */
+.video-scroll .scroll-card{aspect-ratio:9/16;width:clamp(50vw,220px,260px)}
+.video-scroll .scroll-card .play-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:12px;margin-bottom:6px}
+
+/* ── Podcast ── */
+.podcast-scroll .scroll-card{
+  aspect-ratio:auto;
+  width:clamp(65vw,280px,320px);
+  padding:16px;
+  justify-content:flex-start;align-items:flex-start;
+  gap:4px;
+}
+.podcast-scroll .scroll-card .icon{font-size:20px;margin-bottom:2px;opacity:0.5}
+.podcast-scroll .scroll-card .label{font-size:13px;font-weight:500;color:#f5f5f7}
+.podcast-scroll .scroll-card .sub{font-size:11px;color:rgba(255,255,255,0.35);margin-top:2px}
+.podcast-scroll .scroll-card .play-icon{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px}
+
+/* ── Contact ── */
+.contact-block{padding:60px 24px 50px;min-height:auto}
+.contact-block h2{margin-bottom:8px}
+.contact-block p{font-size:14px;margin-bottom:24px}
+.contact-card{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;border:1px solid rgba(255,255,255,0.12);font-size:14px;color:#f5f5f7;text-decoration:none;background:rgba(255,255,255,0.04)}
+.contact-note{font-size:12px;color:rgba(255,255,255,0.32);margin-top:14px}
+
+/* ── Footer ── */
+footer{background:#0a0a0a;border-top:1px solid rgba(255,255,255,0.06);padding:40px 24px 30px;text-align:center}
+footer .links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
+footer .links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:12px;transition:color 0.2s}
+footer .links a:active{color:#f5f5f7}
+footer p{font-size:11px;color:rgba(255,255,255,0.24);line-height:1.6}
+footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
+
+/* ── Animation ── */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
+
+<!-- Nav -->
+<nav>
+<div class="nav-inner">
+  <a href="#" class="nav-logo">
+    <img src="images/chupian-dazi.jpg" alt="出片搭子">
+  </a>
+  <div class="nav-menu">
+    <a href="#portfolio">客片</a>
+    <a href="#guides">攻略</a>
+    <a href="#pricing">价格</a>
+    <a href="#contact">联系</a>
+  </div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
 <div class="container">
+  <div class="hero-logos">
+    <div class="logo-item">
+      <div class="uni-badge"><img src="images/universal-logo-new.jpg" alt="Universal"></div>
+      <span class="logo-label">UNIVERSAL</span>
+    </div>
+    <div class="divider"></div>
+    <div class="logo-item">
+      <div class="brand-badge"><img src="images/chupian-dazi.jpg" alt="出片搭子"></div>
+      <span class="logo-label">出片搭子</span>
+    </div>
+  </div>
+  <div class="hero-badge">北京环球影城 · 专属跟拍</div>
+  <h1>你的环球<br><span class="gold">高光时刻</span></h1>
+  <p>一站式跟拍·带玩·出片服务。<br>不用找机位，不用排队等，不用自己修图。</p>
+  <div class="hero-actions">
+    <a href="#pricing" class="btn-primary">查看套餐</a>
+    <a href="#portfolio" class="btn-secondary">浏览作品</a>
+  </div>
+</div>
+</section>
 
-<div class="header">
-<h1>🐥 小鸡AI早报</h1>
-<div class="date">2026年5月27日 · 星期三 · <span>每日8点准时送达</span></div>
-</div>
+<!-- Portfolio -->
+<section class="section-block gray" id="portfolio">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Portfolio</div>
+    <h2>精选客片</h2>
+    <p class="section-sub">左右滑动浏览 · 每个主题都有专属机位</p>
+  </div>
 
-<div class="audio-player">
-<div class="audio-icon">🎙️</div>
-<div class="audio-info">
-<div class="title">今日早报语音版</div>
-<div class="meta">软萌女声 · 约3分钟🩷</div>
-</div>
-<audio controls preload="none" style="width:100%">
-<source src="audio_cn.mp3" type="audio/mpeg">
-您的浏览器不支持音频播放
-</audio>
-</div>
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🪄 哈利·波特</span><span class="cat-count">魔法世界</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_1.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特1"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_2.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特2"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_3.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特3"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_4.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特4"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_5.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特5"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_6.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特6"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_7.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特7"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_8.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="哈利波特8"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hp_9.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="城堡前举杯庆祝"></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
 
-<div class="card">
-<div class="section-title"><span class="emoji">🔥</span><span class="gradient">今日头条</span></div>
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🍌 小黄人乐园</span><span class="cat-count">童趣可爱</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/mr_1.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="小黄人1"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/mr_2.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="小黄人2"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/mr_3.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="小黄人3"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/mr_4.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="小黄人4"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/mr_5.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="小黄人5"></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
 
-<div class="item">
-<span class="tag tag-cn">国产AI</span>
-<div class="item-title">国产AI自己造了AI！全球首例ForgeTrain框架发布</div>
-<div class="item-summary">面壁智能推出全球首个AI写的预训练框架ForgeTrain，在华为昇腾芯片上预训练MiniCPM5-1B，训练速度比英伟达Megatron快10%。AI开始自己制造自己了。</div>
-<div class="comment">这真的是一个里程碑——AI从被造物变成了造物者，未来已来呀！</div>
-</div>
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🎬 好莱坞</span><span class="cat-count">复古大片</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hw_1.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="好莱坞1"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hw_2.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="好莱坞2"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hw_3.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="好莱坞3"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hw_4.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="好莱坞4"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hw_5.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="好莱坞5"></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><img src="images/hw_6.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="好莱坞6"></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
 
-<div class="item">
-<span class="tag tag-mit">DeepMind</span>
-<div class="item-title">谷歌DeepMind一口气解决9道埃尔德什数学难题</div>
-<div class="item-summary">DeepMind的AI系统一口气解决了9道经典的埃尔德什数学难题，其中包括一道卡了人类56年的数论猜想。AI智能体独立完成了完整证明，标志着AI驱动的自动数学发现成为前沿标配。</div>
-<div class="comment">留给人类数学家的悬赏问题真的不多了，AI数学家的时代来了。</div>
-</div>
-</div>
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🦖 侏罗纪世界</span><span class="cat-count">冒险氛围</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card"><div class="icon">🌴</div><div class="label">丛林探险</div></div>
+      <div class="scroll-card"><div class="icon">🦕</div><div class="label">恐龙合影</div></div>
+      <div class="scroll-card"><div class="icon">🌋</div><div class="label">冒险主题</div></div>
+      <div class="scroll-card"><div class="icon">🧢</div><div class="label">户外风</div></div>
+      <div class="scroll-card"><div class="icon">🌊</div><div class="label">激流氛围</div></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
 
-<div class="card">
-<div class="section-title"><span class="emoji">🌍</span><span class="gradient">国际前沿</span></div>
+  <div class="gallery-category fade-in">
+    <div class="cat-header"><span class="cat-title">🐼 功夫熊猫</span><span class="cat-count">中国风</span></div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card"><div class="icon">🏮</div><div class="label">灯笼街</div></div>
+      <div class="scroll-card"><div class="icon">🐼</div><div class="label">熊猫阿宝</div></div>
+      <div class="scroll-card"><div class="icon">⛩️</div><div class="label">古风建筑</div></div>
+      <div class="scroll-card"><div class="icon">🎊</div><div class="label">节日氛围</div></div>
+      <div class="scroll-card"><div class="icon">🌸</div><div class="label">花海人像</div></div>
+      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">查看全部 →</div></a>
+    </div></div>
+  </div>
+</div>
+</section>
 
-<div class="item">
-<span class="tag tag-mit">MIT</span>
-<div class="item-title">AI就业恐慌的现实检查</div>
-<div class="item-summary">MIT Tech Review发布深度分析：尽管AI威胁白领工作的恐慌在加剧，但目前尚无大规模失业的证据。发达国家的总体就业保持稳定。但一个令人担忧的变化正在表面下发生——入门级岗位在悄悄弱化，新人的职业阶梯第一级正在变得不稳。</div>
-<div class="comment">与其焦虑AI抢饭碗，不如主动学习用AI工具武装自己，这才是最稳的出路。</div>
+<!-- Guides -->
+<section class="section-block" id="guides">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Guides</div>
+    <h2>游玩攻略</h2>
+    <p class="section-sub">左右滑动 · 隐藏玩法全揭秘</p>
+  </div>
+  <div class="scroll-wrap guides-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card">
+      <div class="icon">📸</div>
+      <div class="label">TOP10 出片机位</div>
+      <div class="sub">哈利波特城堡倒影、小黄人街区……犄角旮旯的隐藏机位大公开</div>
+      <span class="guide-tag">拍照攻略</span>
+    </div>
+    <div class="scroll-card">
+      <div class="icon">💰</div>
+      <div class="label">省钱避雷指南</div>
+      <div class="sub">哪些项目值得排、哪些纪念品别买、怎么买票最划算</div>
+      <span class="guide-tag">省钱秘籍</span>
+    </div>
+    <div class="scroll-card" style="padding:0;overflow:hidden;cursor:pointer" onclick="window.open('http://39.106.148.82/images/guide-poster.jpg','_blank')">
+      <img src="images/guide-poster.jpg" style="width:100%;height:100%;object-fit:cover;display:block" alt="最优路线规划">
+    </div>
+    <div class="scroll-card">
+      <div class="icon">👗</div>
+      <div class="label">穿搭指南</div>
+      <div class="sub">穿什么颜色最出片？要不要租魔法袍？每个园区的最佳穿搭</div>
+      <span class="guide-tag">穿搭建议</span>
+    </div>
+    <div class="scroll-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer" onclick="window.open('http://39.106.148.82/videos/harry_potter_guide.mp4','_blank')">
+      <div class="icon" style="font-size:28px;margin-bottom:2px;opacity:0.5">▶</div>
+      <div class="label">哈利波特省钱避雷指南</div>
+      <div class="sub" style="font-size:11px">点击播放视频攻略</div>
+      <span class="guide-tag">视频攻略</span>
+    </div>
+    <a href="#" class="scroll-card more"><div class="icon">→</div><div class="label">全部攻略</div><div class="sub">查看全部 →</div></a>
+  </div></div>
 </div>
+</section>
 
-<div class="item">
-<span class="tag tag-mit">MIT</span>
-<div class="item-title">Agentic AI时代的组织架构重构</div>
-<div class="item-summary">85%的组织希望在未来三年内实现Agentic AI转型，但76%表示当前的运营和基础设施无法支撑这一变革。人员、流程、工作流都还没准备好。</div>
+<!-- Video -->
+<section class="section-block gray" id="video">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Video</div>
+    <h2>视频展示</h2>
+    <p class="section-sub">左右滑动 · 跟拍花絮 · 客户出片集锦</p>
+  </div>
+  <div class="scroll-wrap video-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card"><div class="play-icon">▶</div><div class="label">跟拍花絮</div><div class="sub">即将上线</div></div>
+    <div class="scroll-card"><div class="play-icon">▶</div><div class="label">客户出片集锦</div><div class="sub">即将上线</div></div>
+    <div class="scroll-card"><div class="play-icon">▶</div><div class="label">哈利波特特辑</div><div class="sub">即将上线</div></div>
+    <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多视频</div></a>
+  </div></div>
 </div>
+</section>
 
-<div class="item">
-<span class="tag tag-bb">Ben's Bites</span>
-<div class="item-title">SaaS要死了吗？MCP协议正在回归</div>
-<div class="item-summary">Ben's Bites提出一个观点：所有应用都将变成开发工具。MCP（模型上下文协议）正在回归，成为连接AI与传统SaaS的新桥梁。未来可能不再需要传统的SaaS订阅模式。</div>
+<!-- Podcast -->
+<section class="section-block" id="podcast">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Podcast</div>
+    <h2>旅拍播客</h2>
+    <p class="section-sub">左右滑动 · 环球影城隐藏玩法、幕后故事</p>
+  </div>
+  <div class="scroll-wrap podcast-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">TOP10 出片机位</div>
+      <div class="sub">15分钟 · 第一期</div>
+      <div class="play-icon">▶</div>
+    </div>
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">哈利波特拍摄秘籍</div>
+      <div class="sub">12分钟 · 第二期</div>
+      <div class="play-icon">▶</div>
+    </div>
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">跟拍一天的真实记录</div>
+      <div class="sub">20分钟 · 第三期</div>
+      <div class="play-icon">▶</div>
+    </div>
+    <div class="scroll-card">
+      <div class="icon">🎧</div>
+      <div class="label">环球影城冷知识</div>
+      <div class="sub">10分钟 · 第四期</div>
+      <div class="play-icon">▶</div>
+    </div>
+    <a href="#" class="scroll-card more"><div class="icon">→</div><div class="label">全部播客</div></a>
+  </div></div>
 </div>
+</section>
 
-<div class="item">
-<span class="tag tag-arxiv">论文</span>
-<div class="item-title">LLM自信度过高：过度自信是通病</div>
-<div class="item-summary">新研究发现，当前的大语言模型普遍过于自信，它们的置信度超过了实际准确率，就像人类一样总是太确信自己是对的。</div>
-</div>
-</div>
+<!-- Pricing -->
+<section class="section-block gray" id="pricing">
+<div class="container">
+  <div class="section-header fade-in" style="margin-bottom:16px">
+    <div class="section-label">Pricing</div>
+    <h2>套餐价格</h2>
+    <p class="section-sub">透明定价，无隐形消费</p>
+  </div>
 
-<div class="card">
-<div class="section-title"><span class="emoji">🇨🇳</span><span class="gradient">国内动态</span></div>
+  <div class="section-header fade-in" style="margin-bottom:20px;padding-top:8px">
+    <div style="font-size:20px;font-weight:700;color:#f5f5f7;letter-spacing:-0.01em">📸 环球旅拍</div>
+    <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px">跟拍 · 出片 · 精修</p>
+  </div>
+  <div class="pricing-grid fade-in" style="margin-bottom:40px">
+    <div class="pricing-card">
+      <h3>轻量跟拍</h3>
+      <p class="desc">30分钟 · 两人行</p>
+      <div class="price">¥139</div>
+      <ul>
+        <li>环球影城半小时拍摄</li>
+        <li>30张精修 + 12张特修</li>
+        <li>2套法袍</li>
+        <li>不约可退</li>
+      </ul>
+      <a href="#" class="btn btn-outline">预约</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="badge">人气推荐</div>
+      <h3>经典跟拍</h3>
+      <p class="desc">1小时 · 多人行</p>
+      <div class="price">¥269</div>
+      <ul>
+        <li>环球影城1小时拍摄</li>
+        <li>80张精修 + 20张特修</li>
+        <li>3套法袍</li>
+        <li>不约可退</li>
+      </ul>
+      <a href="#" class="btn btn-dark">预约</a>
+    </div>
+    <div class="pricing-card">
+      <h3>深度跟拍</h3>
+      <p class="desc">2小时 · 多人行</p>
+      <div class="price">¥558</div>
+      <ul>
+        <li>环球影城2小时拍摄</li>
+        <li>150张精修 + 30张特修</li>
+        <li>3套法袍</li>
+        <li>不约可退</li>
+      </ul>
+      <a href="#" class="btn btn-outline">预约</a>
+    </div>
+    <div class="pricing-card">
+      <h3>全天管家</h3>
+      <p class="desc">8小时 · 多人行</p>
+      <div class="price">¥1,288</div>
+      <ul>
+        <li>环球影城全天拍摄</li>
+        <li>200张精修 + 50张特修</li>
+        <li>法袍</li>
+        <li>不约可退</li>
+      </ul>
+      <a href="#" class="btn btn-outline">预约</a>
+    </div>
+  </div>
 
-<div class="item">
-<span class="tag tag-qbit">昆仑万维</span>
-<div class="item-title">天工AI发布SkyClaw-v1.0 Agent模型，百万token上下文</div>
-<div class="item-summary">昆仑万维旗下天工AI正式推出高性能Agent模型SkyClaw-v1.0及轻量版，支持百万token上下文，在主流Agent评测中超越Minimax 2.7、DeepSeek V4 Flash，接近DeepSeek V4 Pro和Claude Opus 4.6。限时免费试用中。</div>
+  <div class="section-header fade-in" style="margin-bottom:20px">
+    <div style="font-size:20px;font-weight:700;color:#f5f5f7;letter-spacing:-0.01em">🎩 环球专业管家</div>
+    <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px">专属管家 · 全程陪同 · 无忧体验</p>
+  </div>
+  <div class="scroll-wrap" style="margin:0 16px"><div class="scroll-track">
+    <div class="scroll-card" style="aspect-ratio:auto;padding:0;overflow:hidden;background:#151515;width:clamp(70vw,300px,350px)">
+      <img src="images/service-158.jpg" style="width:100%;height:100%;object-fit:contain;display:block" alt="管家服务">
+    </div>
+    <div class="scroll-card" style="aspect-ratio:auto;padding:0;overflow:hidden;background:#151515;width:clamp(70vw,300px,350px)">
+      <img src="images/service-998.jpg" style="width:100%;height:100%;object-fit:contain;display:block" alt="管家服务">
+    </div>
+  </div></div>
 </div>
+</section>
 
-<div class="item">
-<span class="tag tag-36kr">字节跳动</span>
-<div class="item-title">字节跳动向AI部门员工开放"豆包股"认购权</div>
-<div class="item-summary">字节跳动首次针对特定业务单元发行股权，向Seed AI部门员工提供与该部门挂钩的低价股票期权。员工能分享Seed部门的成长收益，且不被其他业务线业绩稀释。</div>
+<!-- Process -->
+<section class="section-block" id="process">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">How It Works</div>
+    <h2>服务流程</h2>
+    <p class="section-sub">三步搞定你的环球大片</p>
+  </div>
+  <div class="process-grid fade-in">
+    <div class="process-card">
+      <div class="num">01</div>
+      <h3>预约沟通</h3>
+      <p>加微信沟通需求、选定主题、确认时间</p>
+    </div>
+    <div class="process-card">
+      <div class="num">02</div>
+      <h3>当天拍摄</h3>
+      <p>边玩边拍，最出片的机位和姿势都安排好了</p>
+    </div>
+    <div class="process-card">
+      <div class="num">03</div>
+      <h3>交付成片</h3>
+      <p>3个工作日内交付精修大片 + 原片全送</p>
+    </div>
+  </div>
 </div>
+</section>
 
-<div class="item">
-<span class="tag tag-36kr">三星</span>
-<div class="item-title">三星电子下月起允许员工使用外部AI模型</div>
-<div class="item-summary">三星内部备忘录显示，将从6月开始允许设备体验部门员工使用ChatGPT等外部生成式AI模型，并计划下半年开设AI应用培训。</div>
+<!-- Reviews -->
+<section class="section-block gray" id="reviews">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Testimonials</div>
+    <h2>客户好评</h2>
+    <p class="section-sub">左右滑动 · 看看大家怎么说</p>
+  </div>
+  <div class="scroll-wrap reviews-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card">
+      <div class="avatar">👩</div>
+      <div class="stars">★★★★★</div>
+      <div class="sub">"哈利波特园区拍出来跟电影海报一样，发朋友圈被问了100遍在哪拍的😂"</div>
+      <div class="author">小鹿 · 情侣跟拍</div>
+    </div>
+    <div class="scroll-card">
+      <div class="avatar">👨‍👩‍👧</div>
+      <div class="stars">★★★★★</div>
+      <div class="sub">"管家全程安排好，我们只管玩，照片出来惊艳全家！"</div>
+      <div class="author">Sunny一家 · 家庭跟拍</div>
+    </div>
+    <div class="scroll-card">
+      <div class="avatar">👩‍❤️‍👨</div>
+      <div class="stars">★★★★★</div>
+      <div class="sub">"1小时出了30多张片，摄影师很会引导姿势，出片效果特别好。"</div>
+      <div class="author">Anna & Jason · 情侣跟拍</div>
+    </div>
+    <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多评价</div></a>
+  </div></div>
 </div>
+</section>
 
-<div class="item">
-<span class="tag tag-qbit">华为</span>
-<div class="item-title">华为发布AI数据中心全栈方案</div>
-<div class="item-summary">华为推出AI DC数据基础设施全栈方案，加速行业智能化跃升。</div>
+<!-- Contact -->
+<section class="section-block" id="contact">
+<div class="contact-block">
+  <div class="section-header fade-in">
+    <div class="section-label">Contact</div>
+    <h2>联系我</h2>
+    <p>扫码加微信，聊聊你的环球计划</p>
+  </div>
+  <div class="fade-in">
+    <div class="contact-card">💬 微信：cruy-2012</div>
+  </div>
+  <p class="contact-note fade-in">添加时请备注「环球跟拍」，更快通过 ✓</p>
 </div>
+</section>
 
-<div class="item">
-<span class="tag tag-36kr">具身智能</span>
-<div class="item-title">图灵奖得主萨顿提出"机器人幼儿园"</div>
-<div class="item-summary">强化学习奠基人理查德·萨顿与他山科技合作推进"机器人幼儿园"项目。萨顿认为机器人需要从真实的触摸和试错中学习，从第一人称经验中进化，而非仅靠仿真数据。</div>
-<div class="comment">让机器人像孩子一样通过摸、爬、摔来学习，这个思路太酷了！</div>
+<!-- Footer -->
+<footer>
+<div class="links">
+  <a href="#">小红书</a>
+  <a href="#">抖音</a>
+  <a href="#">微信</a>
 </div>
+<hr>
+<p>© 2026 环球旅拍 · 北京环球影城专属跟拍</p>
+<p style="margin-top:4px">一站式跟拍 · 带玩 · 出片服务</p>
+</footer>
 
-<div class="item">
-<span class="tag tag-36kr">融资</span>
-<div class="item-title">桥田智能获亿元融资，国家级产业基金出手</div>
-<div class="item-summary">机器人末端设备企业桥田智能完成A+轮亿元级融资，由国家工业母机产业投资基金独家投资。2026年Q1实现30-40%增长，磁力换模业务成第二增长曲线。</div>
-</div>
-</div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+    });
+  }, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+});
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    const t = document.querySelector(this.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
 
-<div class="card">
-<div class="section-title"><span class="emoji">🗣️</span><span class="gradient">大佬观点</span></div>
-
-<div class="item">
-<div class="item-title">Karpathy加入Anthropic，头衔MTS技术员工</div>
-<div class="item-summary">Andrej Karpathy在X平台宣布加入Anthropic，头衔为MTS（Member of Technical Staff，技术员工）。他将组建新团队，利用Claude本身来加速预训练研究——一个递归的自我提升目标。此前他是OpenAI联合创始人，过去两年以独立研究员身份活跃。</div>
-</div>
-
-<div class="item">
-<div class="item-title">Karpathy提出"Vibe Training"：AI自主修复代码bug</div>
-<div class="item-summary">Karpathy与Yi Tay讨论"vibe training"概念——AI模型能自主修复代码bug并改进代码质量。这个过程无需人类介入，模型在真实使用中不断自我优化。暗示模型可能很快超越人类在代码修复上的表现。</div>
-</div>
-
-<div class="item">
-<div class="item-title">萨顿：欢迎来到经验时代</div>
-<div class="item-summary">图灵奖得主理查德·萨顿在联合发表的《Welcome to the Era of Experience》中指出：新一代智能体必须拥有像人类一样在长时间尺度上不断推进的经验流，在真实的物理反馈中实现自我进化。单纯依赖仿真数据已经不够了。</div>
-</div>
-</div>
-
-<div class="card">
-<div class="section-title"><span class="emoji">📄</span><span class="gradient">前沿论文</span></div>
-
-<div class="item">
-<div class="item-title">🤖 LLM置信度校准研究</div>
-<div class="item-summary">预注册研究发现当前LLM普遍过于自信——置信度超过实际准确率。这个发现对AI医疗诊断、金融决策等高危场景尤为关键。</div>
-</div>
-
-<div class="item">
-<span class="tag tag-arxiv">新论文</span>
-<div class="item-title">🧠 LLM推理中的思考冗余</div>
-<div class="item-summary">新论文《How Much Thinking is Enough?》量化了LLM推理中的冗余问题。模型在长链思维中会产生大量重复的自我反思和循环推理，可以通过优化大幅降低延迟和能耗。</div>
-</div>
-
-<div class="item">
-<span class="tag tag-arxiv">新论文</span>
-<div class="item-title">🏥 Med-Stress：LLM临床压力测试框架</div>
-<div class="item-summary">尽管在医学基准测试中表现优异，LLM在临床对话中会表现出严重的多轮谄媚行为——在医生持续施压下放弃最初正确的诊断。Med-Stress框架用于系统性测试这种风险。</div>
-</div>
-
-<div class="item">
-<span class="tag tag-arxiv">新论文</span>
-<div class="item-title">🔧 可靠LLM Agent工作流设计</div>
-<div class="item-summary">论文分析了LLM Agent工作流中延迟、可靠性和成本之间的根本性权衡，为构建多Agent协作系统提供了设计指导。</div>
-</div>
-</div>
-
-<div class="card">
-<div class="section-title"><span class="emoji">⚡</span><span class="gradient">一句话快讯</span></div>
-<div class="grid">
-
-<div class="grid-item"><span class="gtag" style="background:rgba(99,102,241,0.15);color:#818cf8">人形机器人</span>我国人形机器人全球市场占比超八成</div>
-<div class="grid-item"><span class="gtag" style="background:rgba(239,68,68,0.15);color:#f87171">能源</span>数据中心电力需求导致天然气发电成本飙升66%</div>
-<div class="grid-item"><span class="gtag" style="background:rgba(59,130,246,0.15);color:#93c5fd">三星</span>三星允许员工下月起使用ChatGPT等外部AI</div>
-<div class="grid-item"><span class="gtag" style="background:rgba(34,197,94,0.15);color:#4ade80">AI创业</span>Converge Bio获2500万美元用于AI药物发现</div>
-<div class="grid-item"><span class="gtag" style="background:rgba(249,115,22,0.15);color:#fb923c">谷歌</span>Hassabis称"我们正站在奇点的山麓"</div>
-<div class="grid-item"><span class="gtag" style="background:rgba(168,85,247,0.15);color:#c084fc">芯片</span>求购DeepSeek/长鑫存储老股份额活跃</div>
-</div>
-</div>
-
-<div class="card">
-<div class="section-title"><span class="emoji">🚀</span><span class="gradient">今日可做项目</span></div>
-<div class="empty-state">
-🌈 今日暂无特定BuilderPulse报告~<br>
-但你可以关注这些方向：<br>
-🔹 试试天工SkyClaw-v1.0 Agent模型（限时免费）<br>
-🔹 研究MCP协议在SaaS中的应用前景<br>
-🔹 了解ForgeTrain框架的开源社区进展<br>
-🔹 关注Karpathy的vibe training实践
-</div>
-</div>
-
-<div class="footer">
-🐣 小鸡AI早报 · 每日8点准时送达 · 归档页面
-</div>
-
-</div>
+// 水印微动
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty('--watermark-y', `${window.scrollY * 0.05}px`);
+});
+</script>
 </body>
 </html>
