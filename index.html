@@ -475,7 +475,7 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
       <span class="cover-label">哈利波特特辑</span>
       <span class="cover-sub">点击查看</span>
     </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="window.open('http://39.106.148.82/videos/jurassic_video.mp4','_blank')">
+    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="playVideo('http://39.106.148.82/videos/jurassic_video.mp4','🦖 侏罗纪世界')">
       <div class="cover-bg" style="background-image:url('images/jurassic_video_cover.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
       <span class="cover-label">🦖 侏罗纪世界</span>
@@ -714,6 +714,16 @@ function openGallery(type, title, images) {
 var galleryScrollTarget = '';
 let galleryData = [];
 let currentIndex = 0;
+
+function playVideo(url, title) {
+  var modal = document.getElementById('galleryModal');
+  modal.classList.add('open');
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalCounter').textContent = '';
+  var track = document.getElementById('modalTrack');
+  track.innerHTML = '<div class="modal-slide" style="flex-direction:column;gap:12px"><video controls autoplay playsinline style="width:100%;max-height:80vh;border-radius:12px" src="'+url+'"></video></div>';
+  galleryScrollTarget = 'video';
+}
 
 function goToSlide(index) {
   if (index < 0) index = 0;
