@@ -475,17 +475,11 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
       <span class="cover-label">哈利波特特辑</span>
       <span class="cover-sub">点击查看</span>
     </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="playVideo('http://39.106.148.82/videos/jurassic_video.mp4','🦖 侏罗纪世界')">
+    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="openVideoGallery('video','🦖 侏罗纪世界',['http://39.106.148.82/videos/jurassic_video.mp4','http://39.106.148.82/videos/jurassic_video2.mp4'])">
       <div class="cover-bg" style="background-image:url('images/jurassic_video_cover.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
       <span class="cover-label">🦖 侏罗纪世界</span>
-      <span class="cover-sub">点击播放视频</span>
-    </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="playVideo('http://39.106.148.82/videos/jurassic_video2.mp4','🦖 侏罗纪世界 2')">
-      <div class="cover-bg" style="background-image:url('images/jurassic_video_cover.jpg')"></div>
-      <div class="play-icon" style="position:relative;z-index:1">▶</div>
-      <span class="cover-label">🦖 侏罗纪世界</span>
-      <span class="cover-sub">点击播放视频</span>
+      <span class="cover-sub">2个视频 · 左右滑动</span>
     </div>
     <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多视频</div></a>
   </div></div>
@@ -721,6 +715,28 @@ var galleryScrollTarget = '';
 let galleryData = [];
 let currentIndex = 0;
 
+function openVideoGallery(type, title, urls) {
+  galleryData = urls;
+  currentIndex = 0;
+  galleryScrollTarget = type;
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalCounter').textContent = '1/' + urls.length;
+  var track = document.getElementById('modalTrack');
+  track.innerHTML = '';
+  urls.forEach(function(url, i) {
+    var slide = document.createElement('div');
+    slide.className = 'modal-slide';
+    slide.style.flexDirection = 'column';
+    slide.style.gap = '12px';
+    slide.innerHTML = '<video controls autoplay playsinline style="width:100%;max-height:80vh;border-radius:12px" src="'+url+'"></video>';
+    slide.dataset.index = i;
+    track.appendChild(slide);
+  });
+  track.style.transform = 'translateX(0)';
+  document.getElementById('galleryModal').classList.add('open');
+  setupSwipe();
+}
+
 function playVideo(url, title) {
   var modal = document.getElementById('galleryModal');
   modal.classList.add('open');
@@ -734,9 +750,18 @@ function playVideo(url, title) {
 function goToSlide(index) {
   if (index < 0) index = 0;
   if (index >= galleryData.length) index = galleryData.length - 1;
+  // Pause current video if any
+  var track = document.getElementById('modalTrack');
+  var oldVids = track.querySelectorAll('video');
+  oldVids.forEach(function(v){ v.pause(); });
   currentIndex = index;
-  const track = document.getElementById('modalTrack');
   track.style.transform = 'translateX(-' + (currentIndex * 100) + 'vw)';
+  // Play new video if any
+  var slides = track.querySelectorAll('.modal-slide');
+  if (slides[currentIndex]) {
+    var vid = slides[currentIndex].querySelector('video');
+    if (vid) vid.play();
+  }
   updateCounter();
 }
 
