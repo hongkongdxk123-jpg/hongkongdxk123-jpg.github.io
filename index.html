@@ -689,8 +689,7 @@ function closeGallery() {
 function openGallery(type, title, images) {
   galleryData = images;
   currentIndex = 0;
-  var sectionMap = {'guides':'guides','video':'video'};
-  galleryScrollTarget = sectionMap[type] || type;
+  galleryScrollTarget = type;
   document.getElementById('modalTitle').textContent = title;
   
   const track = document.getElementById('modalTrack');
