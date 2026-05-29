@@ -410,10 +410,6 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 
 <!-- 功夫熊猫二级全屏画廊 -->
 <div id="kungfu-fullpage" style="display:none;position:fixed;inset:0;z-index:9998;background:#000;flex-direction:column">
-  <div style="padding:12px 16px;display:flex;align-items:center;gap:12px;background:rgba(0,0,0,0.95);z-index:2">
-    <span style="font-size:22px;color:#f5f5f7;cursor:pointer;padding:4px" onclick="hideKungfuGallery()">✕</span>
-    <span style="font-size:14px;color:rgba(255,255,255,0.5)">功夫熊猫</span>
-  </div>
   <div style="flex:1;display:flex;align-items:center;overflow:hidden">
     <div class="scroll-wrap" style="padding:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;width:100%">
       <div class="scroll-track" style="display:flex;gap:10px;padding:0 8px">
@@ -432,8 +428,9 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 </div>
 
 <script>
-function showKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='flex';document.body.style.overflow='hidden'}
-function hideKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='none';document.body.style.overflow=''}
+function showKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='flex';document.body.style.overflow='hidden';history.pushState({gallery:'kungfu'},'')}
+function hideKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='none';document.body.style.overflow='';document.getElementById('gallery-kungfu').scrollIntoView({behavior:'smooth',block:'start'})}
+window.addEventListener('popstate',function(e){if(document.getElementById('kungfu-fullpage').style.display==='flex')hideKungfuGallery()})
 </script>
 </div>
 </section>
