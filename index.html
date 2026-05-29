@@ -499,7 +499,7 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
       <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">哈利波特特辑</span>
     </div>
     <div class="scroll-card theme-cover" style="cursor:pointer" onclick="openVideoGallery('video','🦖 侏罗纪世界',['http://39.106.148.82/videos/jurassic_video.mp4','http://39.106.148.82/videos/jurassic_video2.mp4'])">
-      <div class="cover-bg" style="background-image:url('images/jurassic_video_cover.jpg')"></div>
+      <div class="cover-bg" style="background-image:url('images/jurassic_video_cover_v2.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">2段</span>
       <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">侏罗纪世界</span>
@@ -777,7 +777,7 @@ function openVideoGallery(type, title, urls) {
     slide.style.cursor = 'pointer';
     slide.style.minWidth = '65vw';
     slide.style.marginRight = (i < urls.length - 1) ? '12px' : '0';
-    var thumb = thumbs[i] || 'images/jurassic_video_cover.jpg';
+    var thumb = thumbs[i] || 'images/jurassic_video_cover_v2.jpg';
     slide.innerHTML = '<div class="img-wrap" style="width:100%;height:70%;border-radius:14px;overflow:hidden;position:relative" onclick="event.stopPropagation();playCurrentVideo('+i+')">'
       + '<img src="'+thumb+'" style="width:100%;height:100%;object-fit:cover">'
       + '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">'
