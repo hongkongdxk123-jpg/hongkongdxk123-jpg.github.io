@@ -976,7 +976,7 @@ function openGuideViewer(idx) {
   if (m.type === 'pdf') {
     body.style.display = 'block';
     body.style.alignItems = 'flex-start';
-    body.innerHTML = '<div style="width:100%;max-width:500px;margin:0 auto;padding:8px 0 30vh"><embed src="'+m.src+'" style="width:100%;min-height:120vh;border:none;border-radius:8px"></div>';
+    body.innerHTML = '<div style="width:100%;height:100%;display:flex;flex-direction:column"><iframe src="'+m.src+'" style="width:100%;flex:1;border:none;border-radius:8px;min-height:90vh"></iframe></div>';
   } else {
     body.style.display = 'flex';
     body.style.alignItems = 'center';
