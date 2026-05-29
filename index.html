@@ -388,17 +388,12 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="gallery-category fade-in">
     <div class="cat-header"><span class="cat-title">🐼 功夫熊猫</span><span class="cat-count">中国风</span></div>
     <div class="scroll-wrap"><div class="scroll-track">
-      <div class="scroll-card theme-cover" style="cursor:pointer">
-        <div class="cover-bg" style="background-image:url('images/jurassic_cover.jpg')"></div>
-        <span class="cover-label">🏮 灯笼街</span>
-        <span class="cover-sub">即将上线</span>
+      <div class="scroll-card theme-cover" onclick="openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg'])">
+        <div class="cover-bg" style="background-image:url('images/kungfu_cover.jpg')"></div>
+        <span class="cover-label">🏮 功夫熊猫</span>
+        <span class="cover-sub">点击浏览</span>
       </div>
-      <div class="scroll-card theme-cover" style="cursor:pointer">
-        <div class="cover-bg" style="background-image:url('images/dino_cover.jpg')"></div>
-        <span class="cover-label">🐼 熊猫阿宝</span>
-        <span class="cover-sub">即将上线</span>
-      </div>
-      <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">全部</div></a>
+      <a href="#" class="scroll-card more" onclick="event.preventDefault();openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg'])"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">全部</div></a>
     </div></div>
   </div>
 </div>
