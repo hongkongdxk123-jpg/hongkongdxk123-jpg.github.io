@@ -388,7 +388,7 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="gallery-category fade-in">
     <div class="cat-header"><span class="cat-title">🐼 功夫熊猫</span><span class="cat-count">中国风</span></div>
     <div class="scroll-wrap"><div class="scroll-track">
-      <a href="javascript:void(0)" class="scroll-card theme-cover" onclick="openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg'])" style="cursor:pointer;text-decoration:none">
+      <a id="kungfu-cover" href="#" class="scroll-card theme-cover" style="cursor:pointer;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px">
         <div class="cover-bg" style="background-image:url('images/kungfu_cover.jpg')"></div>
         <span class="cover-label">点击浏览 左右滑动</span>
         <span class="cover-sub">共9张</span>
@@ -683,6 +683,18 @@ document.addEventListener('DOMContentLoaded', function(){
 // Watermark parallax
 window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--watermark-y', `${window.scrollY * 0.05}px`);
+});
+
+// 功夫熊猫封面点击（兼容移动端）
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById('kungfu-cover');
+  if (el) {
+    el.onclick = function(e) {
+      e.preventDefault();
+      openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg']);
+      return false;
+    };
+  }
 });
 
 function closeGallery() {
