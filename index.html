@@ -28,7 +28,7 @@ img{pointer-events:none;-webkit-user-drag:none;user-select:none;-moz-user-select
 .img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
 /* ── 主题封面图 ── */
 .theme-cover{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
-.theme-cover .cover-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.4);transition:filter 0.3s}
+.theme-cover .cover-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.4);transition:filter 0.3s;pointer-events:none}
 .theme-cover:active .cover-bg{filter:brightness(0.6)}
 .theme-cover .cover-label{position:relative;z-index:1;font-size:14px;font-weight:600;color:#f5f5f7}
 .theme-cover .cover-sub{position:relative;z-index:1;font-size:11px;color:rgba(255,255,255,0.5)}
@@ -388,7 +388,7 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="gallery-category fade-in">
     <div class="cat-header"><span class="cat-title">🐼 功夫熊猫</span><span class="cat-count">中国风</span></div>
     <div class="scroll-wrap"><div class="scroll-track">
-      <div class="scroll-card theme-cover" onclick="openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg'])">
+      <div class="scroll-card theme-cover" style="cursor:pointer" onclick="openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg'])">
         <div class="cover-bg" style="background-image:url('images/kungfu_cover.jpg')"></div>
         <span class="cover-label">点击浏览 左右滑动</span>
         <span class="cover-sub">共9张</span>
