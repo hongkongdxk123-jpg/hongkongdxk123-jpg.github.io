@@ -753,10 +753,16 @@ function openGallery(type, title, images) {
   track.style.transform = 'translateX(0)';
   updateCounter();
   document.getElementById('galleryModal').classList.add('open');
-  
-  // Touch swipe
+  history.pushState({gallery:type},'');
   setupSwipe();
 }
+
+function closeGallery() {
+  document.getElementById('galleryModal').classList.remove('open');
+  var target = document.getElementById(galleryScrollTarget);
+  if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+window.addEventListener('popstate',function(e){if(document.getElementById('galleryModal').classList.contains('open'))closeGallery();else if(document.getElementById('kungfu-fullpage').style.display==='flex')hideKungfuGallery()});
 
 var galleryScrollTarget = '';
 let galleryData = [];
