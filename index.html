@@ -419,6 +419,28 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   </div>
 </div>
 
+<!-- 攻略二级全屏画廊 -->
+<div id="guide-fullpage" style="display:none;position:fixed;inset:0;z-index:9997;background:#000;flex-direction:column">
+  <div style="display:flex;align-items:center;padding:12px 16px;position:relative;z-index:2">
+    <button onclick="hideGuideFullpage()" style="background:none;border:none;color:#fff;font-size:20px;padding:8px;cursor:pointer">✕</button>
+    <span id="guide-gallery-title" style="color:#fff;font-size:16px;margin-left:8px;font-weight:500"></span>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;overflow:hidden">
+    <div class="scroll-wrap" style="padding:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;width:100%">
+      <div class="scroll-track" id="guide-track" style="display:flex;gap:10px;padding:0 8px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 攻略素材全屏查看 -->
+<div id="guide-viewer" style="display:none;position:fixed;inset:0;z-index:9999;background:#000;flex-direction:column">
+  <div style="display:flex;align-items:center;padding:12px 16px;position:relative;z-index:2">
+    <button onclick="hideGuideViewer()" style="background:none;border:none;color:#fff;font-size:20px;padding:8px;cursor:pointer">←</button>
+    <span style="color:rgba(255,255,255,0.5);font-size:13px;margin-left:8px">返回</span>
+  </div>
+  <div id="guide-viewer-body" style="flex:1;display:flex;align-items:center;justify-content:center;overflow:auto;-webkit-overflow-scrolling:touch;padding:8px"></div>
+</div>
+
 <script>
 function showKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='flex';document.body.style.overflow='hidden';history.pushState({gallery:'kungfu'},'')}
 function hideKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='none';document.body.style.overflow='';document.getElementById('gallery-kungfu').scrollIntoView({behavior:'smooth',block:'start'})}
@@ -436,31 +458,31 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
     <p class="section-sub">左右滑动 · 隐藏玩法全揭秘</p>
   </div>
   <div class="scroll-wrap guides-scroll fade-in"><div class="scroll-track">
-    <div class="scroll-card" style="cursor:default">
+    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('TOP10 出片机位',[{src:'images/guide_poster2.jpg',type:'image'},{src:'images/guide_spot1.jpg',type:'image'}])">
       <div class="icon">📸</div>
       <div class="label">TOP10 出片机位</div>
       <div class="sub">哈利波特城堡倒影、小黄人街区……隐藏机位大公开</div>
       <span class="guide-tag">拍照攻略</span>
     </div>
-    <div class="scroll-card" style="cursor:default">
+    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('省钱避雷指南',[{src:'images/guide_spot1.jpg',type:'image'}])">
       <div class="icon">💰</div>
       <div class="label">省钱避雷指南</div>
       <div class="sub">哪些项目值得排、哪些纪念品别买、怎么买票最划算</div>
       <span class="guide-tag">省钱秘籍</span>
     </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="openGallery('guides','最优路线规划',['images/guide-poster.jpg'])">
+    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="openGuideFullpage('最优路线规划',[{src:'images/guide-poster.jpg',type:'image'}])">
       <div class="cover-bg" style="background-image:url('images/guide-poster.jpg')"></div>
       <span class="cover-label">🗺️ 最优路线规划</span>
       <span class="cover-sub">点击查看路线图</span>
       <span class="guide-tag" style="position:relative;z-index:1;margin-top:4px">路线攻略</span>
     </div>
-    <div class="scroll-card" style="cursor:default">
+    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('穿搭指南',[{src:'images/guide_poster2.jpg',type:'image'}])">
       <div class="icon">👗</div>
       <div class="label">穿搭指南</div>
       <div class="sub">穿什么颜色最出片？要不要租魔法袍？</div>
       <span class="guide-tag">穿搭建议</span>
     </div>
-    <div class="scroll-card" style="cursor:default">
+    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('哈利波特省钱避雷指南',[{src:'images/guide_spot1.jpg',type:'image'}])">
       <div class="icon" style="font-size:28px;margin-bottom:2px;opacity:0.5">▶</div>
       <div class="label">哈利波特省钱避雷指南</div>
       <div class="sub" style="font-size:11px">图文攻略</div>
@@ -800,7 +822,12 @@ function closeGallery() {
   var jt = document.getElementById('jurassic-video-tab');
   if (jt) jt.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
 }
-window.addEventListener('popstate',function(e){if(document.getElementById('galleryModal').classList.contains('open'))closeGallery();else if(document.getElementById('kungfu-fullpage').style.display==='flex')hideKungfuGallery()});
+window.addEventListener('popstate',function(e){
+  if(document.getElementById('galleryModal').classList.contains('open'))closeGallery();
+  else if(document.getElementById('kungfu-fullpage').style.display==='flex')hideKungfuGallery();
+  else if(document.getElementById('guide-viewer').style.display==='flex')hideGuideViewer();
+  else if(document.getElementById('guide-fullpage').style.display==='flex')hideGuideFullpage()
+});
 
 var galleryScrollTarget = '';
 let galleryData = [];
@@ -912,6 +939,56 @@ function setupSwipe() {
     if (e.key === 'ArrowRight' && currentIndex < galleryData.length - 1) goToSlide(currentIndex + 1);
     if (e.key === 'ArrowLeft' && currentIndex > 0) goToSlide(currentIndex - 1);
   });
+}
+
+/* 攻略图库 */
+let guideMaterials = [];
+function openGuideFullpage(title, materials) {
+  guideMaterials = materials;
+  document.getElementById('guide-gallery-title').textContent = title;
+  var track = document.getElementById('guide-track');
+  track.innerHTML = '';
+  materials.forEach(function(m, i) {
+    var card = document.createElement('div');
+    card.className = 'scroll-card';
+    card.style.cssText = 'scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0;cursor:pointer';
+    card.onclick = function(){ openGuideViewer(i); };
+    if (m.type === 'image') {
+      card.innerHTML = '<div class="img-wrap" style="width:100%;height:100%"><img src="'+m.src+'" style="width:100%;height:100%;object-fit:cover;display:block"></div>';
+    } else {
+      card.innerHTML = '<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-size:14px;gap:8px"><div style="font-size:32px">📄</div><div>点击查看PDF</div></div>';
+    }
+    track.appendChild(card);
+  });
+  document.getElementById('guide-fullpage').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  document.getElementById('guide-viewer').style.display = 'none';
+  history.pushState({gallery:'guide'},'');
+}
+function hideGuideFullpage() {
+  document.getElementById('guide-fullpage').style.display = 'none';
+  document.body.style.overflow = '';
+  document.getElementById('guides').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function openGuideViewer(idx) {
+  var m = guideMaterials[idx];
+  var body = document.getElementById('guide-viewer-body');
+  if (m.type === 'pdf') {
+    body.style.display = 'block';
+    body.style.alignItems = 'flex-start';
+    body.innerHTML = '<div style="width:100%;max-width:500px;margin:0 auto;padding:8px 0 30vh"><embed src="'+m.src+'" style="width:100%;min-height:120vh;border:none;border-radius:8px"></div>';
+  } else {
+    body.style.display = 'flex';
+    body.style.alignItems = 'center';
+    body.innerHTML = '<img src="'+m.src+'" style="max-width:98vw;max-height:90vh;object-fit:contain;border-radius:8px">';
+  }
+  document.getElementById('guide-fullpage').style.display = 'none';
+  document.getElementById('guide-viewer').style.display = 'flex';
+  history.pushState({gallery:'guide-view'},'');
+}
+function hideGuideViewer() {
+  document.getElementById('guide-viewer').style.display = 'none';
+  document.getElementById('guide-fullpage').style.display = 'flex';
 }
 </script>
 </body>
