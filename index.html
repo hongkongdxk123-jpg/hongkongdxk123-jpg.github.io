@@ -793,6 +793,7 @@ function openVideoGallery(type, title, urls) {
   });
   track.style.transform = 'translateX(0)';
   document.getElementById('galleryModal').classList.add('open');
+  history.pushState({gallery:'video'},'');
   setupSwipe();
 }
 
