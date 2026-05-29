@@ -498,7 +498,7 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">即将上线</span>
       <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">哈利波特特辑</span>
     </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="openVideoGallery('video','🦖 侏罗纪世界',['http://39.106.148.82/videos/jurassic_video.mp4','http://39.106.148.82/videos/jurassic_video2.mp4'])">
+    <div class="scroll-card theme-cover" style="cursor:pointer" id="jurassic-video-tab" onclick="openVideoGallery('video','🦖 侏罗纪世界',['http://39.106.148.82/videos/jurassic_video.mp4','http://39.106.148.82/videos/jurassic_video2.mp4'])">
       <div class="cover-bg" style="background-image:url('images/jurassic_video_cover_v3.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">2段</span>
@@ -750,9 +750,13 @@ function openGallery(type, title, images) {
 }
 
 function closeGallery() {
+  document.querySelector('.back-btn').style.display = '';
   document.getElementById('galleryModal').classList.remove('open');
   var target = document.getElementById(galleryScrollTarget);
   if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
+  // 视频返回定位到侏罗纪卡片
+  var jt = document.getElementById('jurassic-video-tab');
+  if (jt) jt.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
 }
 window.addEventListener('popstate',function(e){if(document.getElementById('galleryModal').classList.contains('open'))closeGallery();else if(document.getElementById('kungfu-fullpage').style.display==='flex')hideKungfuGallery()});
 
@@ -761,6 +765,7 @@ let galleryData = [];
 let currentIndex = 0;
 
 function openVideoGallery(type, title, urls) {
+  document.querySelector('.back-btn').style.display = 'none';
   galleryData = urls;
   currentIndex = 0;
   galleryScrollTarget = type;
