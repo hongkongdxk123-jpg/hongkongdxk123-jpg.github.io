@@ -384,13 +384,13 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
     </div></div>
   </div>
 
-  <div class="gallery-category fade-in">
+  <div class="gallery-category fade-in" id="gallery-kungfu">
     <div class="cat-header"><span class="cat-title">🐼 功夫熊猫</span><span class="cat-count">中国风</span></div>
     <div class="scroll-wrap"><div class="scroll-track">
-      <div class="scroll-card theme-cover" style="cursor:default">
+      <div class="scroll-card theme-cover" style="cursor:pointer" onclick="var s=document.getElementById('kungfu-photos');s.style.display='block';setTimeout(function(){s.scrollIntoView({behavior:'smooth',block:'start'})},100)">
         <div class="cover-bg" style="background-image:url('images/kungfu_cover.jpg')"></div>
         <span class="cover-label">功夫熊猫 · 客片</span>
-        <span class="cover-sub">共9张 · 左右滑动</span>
+        <span class="cover-sub">点击浏览 共9张</span>
       </div>
       <div class="scroll-card theme-cover" style="cursor:pointer">
         <div class="cover-bg" style="background-image:url('images/jurassic_cover.jpg')"></div>
@@ -402,16 +402,25 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
         <span class="cover-label">🐼 熊猫阿宝</span>
         <span class="cover-sub">即将上线</span>
       </div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_2.jpg" alt="功夫熊猫1"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_3.jpg" alt="功夫熊猫2"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_8.jpg" alt="功夫熊猫3"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_9.jpg" alt="功夫熊猫4"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_10.jpg" alt="功夫熊猫5"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_11.jpg" alt="功夫熊猫6"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_12.jpg" alt="功夫熊猫7"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_13.jpg" alt="功夫熊猫8"></div></div>
-      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_14.jpg" alt="功夫熊猫9"></div></div>
       <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">全部</div></a>
+    </div></div>
+  </div>
+  <!-- 功夫熊猫二级客片 -->
+  <div id="kungfu-photos" class="gallery-category" style="display:none">
+    <div class="cat-header">
+      <span class="cat-title">📸 功夫熊猫客片</span>
+      <span class="cat-count" style="cursor:pointer;color:rgba(255,255,255,0.5)" onclick="this.parentElement.parentElement.style.display='none';document.getElementById('gallery-kungfu').scrollIntoView({behavior:'smooth'})">← 返回</span>
+    </div>
+    <div class="scroll-wrap"><div class="scroll-track">
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_2.jpg" alt="1"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_3.jpg" alt="2"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_8.jpg" alt="3"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_9.jpg" alt="4"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_10.jpg" alt="5"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_11.jpg" alt="6"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_12.jpg" alt="7"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_13.jpg" alt="8"></div></div>
+      <div class="scroll-card" style="padding:0;overflow:hidden"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_14.jpg" alt="9"></div></div>
     </div></div>
   </div>
 </div>
