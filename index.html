@@ -31,7 +31,17 @@ img{pointer-events:none;-webkit-user-drag:none;user-select:none;-moz-user-select
 .theme-cover .cover-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.4);transition:filter 0.3s;pointer-events:none}
 .theme-cover:active .cover-bg{filter:brightness(0.6)}
 .theme-cover .cover-label{position:relative;z-index:1;font-size:14px;font-weight:600;color:#f5f5f7}
-.theme-cover .cover-sub{position:relative;z-index:1;font-size:11px;color:rgba(255,255,255,0.5)}
+.theme-cover .cover-btn{
+  position:relative;z-index:2;
+  padding:10px 24px;border-radius:20px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  color:#fff;font-size:13px;font-weight:500;
+  border:1px solid rgba(255,255,255,0.15);
+  cursor:pointer;touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;-webkit-user-select:none;
+}
 /* ── Gallery Modal ── */
 .gallery-overlay{
   position:fixed;inset:0;z-index:9999;background:#000;
@@ -391,7 +401,7 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
       <div id="kungfu-cover" class="scroll-card theme-cover" style="cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;touch-action:manipulation" onclick="openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg'])" ontouchend="openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg'])"><!--pandacover-->
         <div class="cover-bg" style="background-image:url('images/kungfu_cover.jpg')"></div>
         <span class="cover-label">点击浏览 左右滑动</span>
-        <span class="cover-sub">共9张</span>
+        <span class="cover-btn" onclick="event.stopPropagation();openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg'])" ontouchend="event.stopPropagation();openGallery('kungfu','功夫熊猫客片',['images/kungfu_cover.jpg','images/kungfu_2.jpg','images/kungfu_3.jpg','images/kungfu_8.jpg','images/kungfu_9.jpg','images/kungfu_10.jpg','images/kungfu_11.jpg','images/kungfu_12.jpg','images/kungfu_13.jpg','images/kungfu_14.jpg'])">共9张 点击查看</span>
       </div>
       <div class="scroll-card theme-cover" style="cursor:pointer">
         <div class="cover-bg" style="background-image:url('images/jurassic_cover.jpg')"></div>
