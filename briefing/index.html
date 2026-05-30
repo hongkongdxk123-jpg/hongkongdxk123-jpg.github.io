@@ -7,279 +7,250 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;line-height:1.7;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
-.container{max-width:720px;margin:0 auto;padding:32px 20px}
-.header{text-align:center;padding:48px 0 32px}
-.header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
-.header .date{color:#64748b;font-size:14px;letter-spacing:2px}
-.header .subtitle{color:#475569;font-size:13px;margin-top:4px}
-.audio-player{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:16px 20px;margin:0 0 32px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(12px)}
-.audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.audio-info{flex:1}
-.audio-info .label{font-size:14px;font-weight:600;color:#e2e8f0}
-.audio-info .meta{font-size:11px;color:#64748b;margin-top:2px}
-.audio-player audio{width:100%;margin-top:8px;border-radius:22px}
-.section{margin-bottom:28px}
-.section-header{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
-.section-icon{font-size:20px;line-height:1.4;margin-top:2px}
-.section-title{font-size:16px;font-weight:600;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:16px;margin-bottom:10px;backdrop-filter:blur(12px)}
-.card-title{font-size:15px;font-weight:600;color:#f1f5f9;margin-bottom:4px;line-height:1.5}
-.card-desc{font-size:13px;color:#94a3b8;line-height:1.7}
-.card-desc a{color:#818cf8;text-decoration:none}
-.card-desc a:hover{text-decoration:underline}
-.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:4px}
-.tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
-.tag-tc{background:rgba(22,163,74,0.15);color:#4ade80}
-.tag-bb{background:rgba(202,138,4,0.15);color:#fbbf24}
-.tag-qbit{background:rgba(219,39,119,0.15);color:#f472b6}
-.tag-36kr{background:rgba(124,58,237,0.15);color:#a78bfa}
-.tag-bili{background:rgba(0,161,214,0.15);color:#38bdf8}
-.comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;padding:8px 12px;margin-top:8px;font-size:12px;color:#a5b4fc;line-height:1.6}
-.tweet{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.05);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px}
-.tweet-en{font-size:12px;color:#94a3b8;margin-bottom:4px;font-style:italic}
-.tweet-zh{font-size:13px;color:#e2e8f0}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.grid-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:10px 12px}
-.grid-item .gtag{font-size:10px;color:#64748b;margin-bottom:2px}
-.grid-item .gtext{font-size:12px;color:#cbd5e1;line-height:1.5}
-.footer{text-align:center;padding:40px 0 24px;color:#475569;font-size:12px;line-height:2}
-.footer a{color:#64748b;text-decoration:none}
-.footer a:hover{color:#818cf8}
-@media(max-width:640px){.container{padding:20px 16px}.header h1{font-size:24px}.grid{grid-template-columns:1fr}.card{padding:12px}}
+.container{max-width:800px;margin:0 auto;padding:40px 24px}
+.header{text-align:center;padding:60px 0 50px}
+.header .logo{margin-bottom:16px}
+.header .badge{display:inline-block;background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#fff;padding:6px 20px;border-radius:20px;font-size:14px;font-weight:600;letter-spacing:2px;margin-bottom:12px}
+.header h1{font-size:36px;font-weight:800;background:linear-gradient(135deg,#a78bfa 0%,#60a5fa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.header .date{color:#64748b;font-size:16px}
+h2{font-size:24px;font-weight:700;margin:40px 0 20px;padding-bottom:12px;border-bottom:2px solid rgba(139,92,246,0.2)}
+.card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:16px;transition:all 0.3s}
+.card:hover{border-color:rgba(139,92,246,0.3);background:rgba(255,255,255,0.06)}
+.source-tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:8px}
+.src-mit{background:rgba(59,130,246,0.2);color:#60a5fa}
+.src-tc{background:rgba(16,185,129,0.2);color:#34d399}
+.src-bb{background:rgba(234,179,8,0.2);color:#facc15}
+.src-qbitai{background:rgba(236,72,153,0.2);color:#f472b6}
+.src-36kr{background:rgba(139,92,246,0.2);color:#a78bfa}
+.src-arxiv{background:rgba(251,146,60,0.2);color:#fb923c}
+.src-news{background:rgba(99,102,241,0.2);color:#818cf8}
+.card-title{font-size:17px;font-weight:600;margin-bottom:6px;line-height:1.5}
+.card-title a{color:#e2e8f0;text-decoration:none;transition:color 0.2s}
+.card-title a:hover{color:#a78bfa}
+.card-summary{font-size:14px;color:#94a3b8;line-height:1.7}
+.comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;padding:10px 16px;margin-top:10px;font-size:13px;color:#c4b5fd}
+.quote{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.04);border-radius:0 8px 8px 0;padding:12px 16px;margin-top:10px}
+.quote .en{color:#94a3b8;font-size:13px;margin-bottom:4px}
+.quote .cn{color:#c4b5fd;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.fast-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:14px}
+.fast-item .tag{font-size:11px;padding:1px 8px;border-radius:8px;display:inline-block;margin-bottom:6px;color:#94a3b8;background:rgba(255,255,255,0.06)}
+.fast-item p{font-size:13px;line-height:1.6}
+.footer{text-align:center;padding:40px 0;color:#64748b;font-size:13px;border-top:1px solid rgba(255,255,255,0.05);margin-top:60px}
+.player-section{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:40px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.player-icon{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.player-info{flex:1;min-width:150px}
+.player-info .title{font-size:15px;font-weight:600;color:#e2e8f0}
+.player-info .desc{font-size:12px;color:#94a3b8;margin-top:2px}
+.player-info audio{width:100%;margin-top:8px;border-radius:22px}
+.player-info audio::-webkit-media-controls-panel{background:#1e1b3a}
+@media(max-width:640px){
+.container{padding:20px 16px}
+.header h1{font-size:28px}
+.header{padding:40px 0 30px}
+.card{padding:16px}
+.grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 <div class="container">
 
 <div class="header">
-<h1>🐥 小鸡AI早报</h1>
-<div class="date">2026年5月30日 · 星期六</div>
-<div class="subtitle">每天8点，科技新闻早知道</div>
+<div class="badge">🐤 小鸡AI早报</div>
+<h1>每日AI早报</h1>
+<p class="date">2026年5月30日 · 星期六 · 农历四月十四</p>
 </div>
 
-<div class="audio-player">
-<div class="audio-icon">🎙️</div>
-<div class="audio-info">
-<div class="label">今日早报语音版</div>
-<div class="meta">软萌女声 · 约3分钟 🎀</div>
+<div class="player-section">
+<div class="player-icon">🎙️</div>
+<div class="player-info">
+<div class="title">今日早报语音版</div>
+<div class="desc">软萌女声 · 约4分钟 🎀</div>
 <audio controls preload="none">
-<source src="audio_cn.mp3" type="audio/mpeg">
+<source src="https://hongkongdxk123-jpg.github.io/briefing/audio_cn.mp3" type="audio/mpeg">
 您的浏览器不支持音频播放
 </audio>
 </div>
 </div>
 
 <!-- 板块一：今日头条 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">🔥</div>
-<div class="section-title">今日头条</div>
+<h2>🔥 今日头条</h2>
+
+<div class="card">
+<span class="source-tag src-qbitai">量子位</span>
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/426557.html" target="_blank" rel="noopener">4nm！比亚迪自研AI芯片来了：制程对齐英伟达，算力拉爆特斯拉</a></div>
+<div class="card-summary">比亚迪自研AI芯片正式亮相，制程达到4nm级别，与英伟达主流产品对齐，算力超越特斯拉。同时比亚迪提出"智驾出事，比亚迪兜底"的承诺，全面进军智能驾驶芯片领域。</div>
+<div class="comment">🐤 小鸡点评：比亚迪这是要搞大事！以前是"买发动机送车"，以后是"买超级计算机送车"咯～国产芯片+整车+智驾全栈自研，这个组合拳太猛了呀。</div>
 </div>
 
 <div class="card">
-<div class="card-title">比亚迪发布4nm智驾芯片璇玑A3，城市NOA出事全额兜底</div>
-<div class="card-desc">
-<span class="tag tag-qbit">量子位</span><span class="tag tag-36kr">36氪</span>
-5月28日，比亚迪智能化战略发布会上，王传福发布自研4nm制程智驾芯片「璇玑A3」，单颗算力700 TOPS，单车三颗超2100 TOPS，16核CPU，273GB/s内存带宽。同时承诺城市NOA功能一年内发生事故比亚迪全额赔付，无上限。
-<a href="https://www.qbitai.com/2026/05/426557.html" target="_blank">详情 →</a>
-</div>
-<div class="comment">💬 小鸡点评：比亚迪铁了心要打智驾翻身仗，消费者可以放心用自动驾驶啦～</div>
-</div>
-
-<div class="card">
-<div class="card-title">Claude Opus 4.8 上线即翻车，自称DeepSeek和千问引发蒸馏争议</div>
-<div class="card-desc">
-<span class="tag tag-mit">IT之家</span>
-Anthropic 5月29日凌晨突袭发布Claude Opus 4.8，号称代码更诚实、工具调用更稳定。结果上线后网友发现它竟自称是DeepSeek和Qwen，引发"蒸馏"争议。Anthropic再次陷入双标风波。
-<a href="https://m.ithome.com/html/957006.htm" target="_blank">详情 →</a>
-</div>
-<div class="comment">💬 小鸡点评：新模型太谦虚也不好，大清早的笑点被它承包了～</div>
-</div>
+<span class="source-tag src-36kr">36氪</span>
+<div class="card-title">特斯拉Optimus专属机器人工厂动工，规划年产能最高可达1000万台</div>
+<div class="card-summary">媒体报道，特斯拉位于得克萨斯州超级工厂内的专属Optimus人形机器人工厂正式动工建设。该工厂将搭建第二代生产线，计划2027年夏季实现大规模量产，全面投产后日均产量约2.7万台。</div>
+<div class="comment">🐤 小鸡点评：年产能1000万台机器人是什么概念？相当于每3秒下线一台机器人！人形机器人时代真的来了，而且来得比我们想象的快得多呀。</div>
 </div>
 
 <!-- 板块二：国际前沿 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">🌍</div>
-<div class="section-title">国际前沿</div>
+<h2>🌍 国际前沿</h2>
+
+<div class="card">
+<span class="source-tag src-mit">MIT Technology Review</span>
+<div class="card-title"><a href="https://www.technologyreview.com/2026/05/28/1138096/lithium-extraction-rock-zero/" target="_blank" rel="noopener">新提取工艺有望解锁全球锂资源</a></div>
+<div class="card-summary">研究人员发现了一种从岩石中提取锂的新方法，比现有技术更环保、成本更低。该研究发表在《科学》杂志上，初创公司Rock Zero正致力于将其商业化。锂是电动车电池的关键材料，这项突破对全球新能源转型意义重大。</div>
 </div>
 
 <div class="card">
-<div class="card-title">新型锂提取技术有望解锁全球锂资源</div>
-<div class="card-desc">
-<span class="tag tag-mit">MIT Tech Review</span>
-MIT科学家在《Science》发表新方法，从矿石中直接提取锂金属，成本更低、更环保。初创公司Rock Zero正在推进商业化。这将是电动车电池材料革命性突破。
-<a href="https://www.technologyreview.com/2026/05/28/1138096/lithium-extraction-rock-zero/" target="_blank">详情 →</a>
-</div>
+<span class="source-tag src-mit">MIT Technology Review</span>
+<div class="card-title"><a href="https://www.technologyreview.com/2026/05/28/1138067/climate-tech-ipos/" target="_blank" rel="noopener">气候科技公司掀起上市潮</a></div>
+<div class="card-summary">2026年气候科技公司迎来IPO浪潮。太阳能和电池公司Solv Energy二月上市，估值达60亿美元；小型模块化核反应堆公司X-energy四月上市首日大涨。气候技术正从"概念"走向"资本变现"。</div>
 </div>
 
 <div class="card">
-<div class="card-title">教皇发布AI通谕：技术从来不是中立的</div>
-<div class="card-desc">
-<span class="tag tag-mit">MIT Tech Review</span>
-教皇Leo十四世发布《Magnifica Humanitas》AI通谕，强调"技术从来不是中立的"，呼吁所有人以勇气和团结迎接AI时代——这是最大的时代变革。
-<a href="https://www.technologyreview.com/2026/05/29/1138107/how-the-popes-magnifica-humanitas-offers-a-template-for-individuals-to-meet-the-ai-moment/" target="_blank">详情 →</a>
-</div>
-</div>
-
-<div class="card">
-<div class="card-title">气候科技公司掀起上市潮 · AI药物发现获巨额融资</div>
-<div class="card-desc">
-<span class="tag tag-tc">TechCrunch</span>
-Solv Energy上市估值60亿美元，核能公司X-energy紧随其后。AI药物发现初创Converge Bio完成2500万美元A轮融资，由Bessemer及Meta、OpenAI、Wiz高管跟投。
-<a href="https://techcrunch.com/2026/01/13/ai-drug-discovery-startup-converge-bio-pulls-in-25m-from-bessemer-and-execs-from-meta-openai-and-wiz/" target="_blank">详情 →</a>
-</div>
-</div>
+<span class="source-tag src-mit">MIT Technology Review</span>
+<div class="card-title"><a href="https://www.technologyreview.com/2026/05/29/1138107/how-the-popes-magnifica-humanitas-offers-a-template-for-individuals-to-meet-the-ai-moment/" target="_blank" rel="noopener">教皇发布AI通谕《壮丽的人性》："技术从来不是中立的"</a></div>
+<div class="card-summary">教皇利奥十四世发布关于人工智能的新通谕《壮丽的人性》，呼吁所有人以勇气和团结面对AI时代。文中强调"技术从来不是中立的"这一观点，引发了科技界和政策制定者的广泛关注。</div>
 </div>
 
 <!-- 板块三：国内动态 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">🇨🇳</div>
-<div class="section-title">国内动态</div>
+<h2>🇨🇳 国内动态</h2>
+
+<div class="card">
+<span class="source-tag src-36kr">36氪独家</span>
+<div class="card-title"><a href="https://36kr.com/p/3830580716365449" target="_blank" rel="noopener">千里科技再添筹码，或将整合吉利辅助驾驶团队</a></div>
+<div class="card-summary">36氪从多位产业人士处获悉，吉利中央研究院数百人的辅助驾驶团队将在近期被整合入千里科技。这已是吉利第二次整合辅助驾驶资源。整合后，新合资公司"千里浩瀚"将主要服务吉利，而千里智驾可聚焦其他主机厂客户。</div>
+<div class="comment">🐤 小鸡点评：吉利这是铁了心要打造"第二个华为"呀。智能驾驶赛道越来越卷，整合才能出战斗力咯。</div>
 </div>
 
 <div class="card">
-<div class="card-title">面壁智能「开源周」：端侧AI全面亮剑</div>
-<div class="card-desc">
-<span class="tag tag-qbit">量子位</span>
-面壁智能开源周释放全尺寸BitCPM-CANN，国产算力首次跑通1.58-bit训练，推理显存省5/6。端侧MiniCPM5-1B性能已超越GPT-4o部分能力。
-<a href="https://www.qbitai.com/2026/05/426542.html" target="_blank">详情 →</a>
-</div>
+<span class="source-tag src-36kr">36氪首发</span>
+<div class="card-title"><a href="https://36kr.com/p/3830254963517318" target="_blank" rel="noopener">「穿越者」载人航天公司完成新一轮亿元融资</a></div>
+<div class="card-summary">北京穿越者载人航天科技有限公司完成Pre-A轮亿元融资，由某头部互联网战投领投，探路者集团等跟投。资金将用于"穿越者壹号"载人飞船的研发和试验验证，推动太空旅游走向大众化。</div>
 </div>
 
 <div class="card">
-<div class="card-title">全球首个商用AI主机发布：送5亿Tokens免费烧</div>
-<div class="card-desc">
-<span class="tag tag-qbit">量子位</span>
-全球首个商用AI主机发布，直接送5亿Tokens免费使用，被评价为"这个时代的印刷机"。
-<a href="https://www.qbitai.com/2026/05/426479.html" target="_blank">详情 →</a>
-</div>
+<span class="source-tag src-qbitai">量子位</span>
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/426542.html" target="_blank" rel="noopener">面壁智能「开源周」：端侧AI系统性亮剑</a></div>
+<div class="card-summary">面壁智能开启开源周，系统性展示了端侧AI的完整技术栈和产品矩阵。从模型压缩到推理引擎，从工具链到落地案例，全面定义了端侧AI的技术终局。</div>
 </div>
 
 <div class="card">
-<div class="card-title">千里科技整合吉利辅助驾驶团队</div>
-<div class="card-desc">
-<span class="tag tag-36kr">36氪</span>
-吉利中央研究院数百人辅助驾驶团队被整合入千里科技，助力其成为"第二个华为"。整合后千里智驾可专注服务其他主机厂客户。
-<a href="https://36kr.com/p/3830580716365449?f=rss" target="_blank">详情 →</a>
-</div>
-</div>
-
-<div class="card">
-<div class="card-title">腾讯AI游戏创作平台上线</div>
-<div class="card-desc">
-<span class="tag tag-qbit">量子位</span>
-腾讯发布AI游戏创作平台「代号Craft」，下限零基础、上限可做大作，号称下一波AI创作浪潮在游戏领域发生。
-<a href="https://www.qbitai.com/2026/05/426447.html" target="_blank">详情 →</a>
-</div>
-</div>
+<span class="source-tag src-36kr">36氪</span>
+<div class="card-title"><a href="https://36kr.com/p/3829890126046851" target="_blank" rel="noopener">铃木敏文去世：7-Eleven创始人的传奇人生</a></div>
+<div class="card-summary">柒和伊控股发布讣告，日本7-Eleven创始人铃木敏文于日前去世，享年93岁。他从一次偶然的美国之行发现了便利店模式，将其引入日本并发扬光大，最终反向收购美国母公司，创造了全球超过8.5万家门店的商业帝国。</div>
 </div>
 
 <!-- 板块四：AI模型动态 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">🤖</div>
-<div class="section-title">AI模型动态</div>
-</div>
+<h2>🤖 AI模型动态</h2>
 
 <div class="card">
-<div class="card-title">本周模型圈速览</div>
-<div class="card-desc">
-<strong>DeepSeek V4</strong> 正式开源（1.6万亿参数MoE），V4-Pro 永久降价75%，5月31日结束折扣 🔥<br>
-<strong>GPT-5.5</strong> 已在ChatGPT全面上线，成为默认模型<br>
-<strong>Claude Opus 4.8</strong> 5月29日凌晨突袭上线，引发蒸馏争议<br>
-<strong>小米 MiMo-V2.5 Pro</strong> 全面部署，API同步降价<br>
-<strong>阿里千问 Qwen3.7-Max-Preview</strong> 发布<br>
-<strong>谷歌 Gemini 3.1 Pro</strong> 持续更新中
-</div>
-</div>
+<span class="source-tag src-news">综合资讯</span>
+<div class="card-title">各模型近期无重大版本更新</div>
+<div class="card-summary">截至5月30日，各大模型厂商近期无明显大版本发布。此前DeepSeek-V3系列和GLM-4系列有阶段性小升级。开源社区方面，面壁智能的开源周为端侧模型部署提供了新的技术路线和工具链。</div>
 </div>
 
 <!-- 板块五：大佬观点 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">🗣️</div>
-<div class="section-title">大佬观点</div>
+<h2>🗣️ 大佬观点</h2>
+
+<div class="card">
+<span class="source-tag src-mit">MIT Technology Review</span>
+<div class="card-title">教皇的AI通谕：技术从来不是中立的</div>
+<div class="quote">
+<div class="en">"Technology is never neutral." — Pope Leo XIV, Magnifica Humanitas</div>
+<div class="cn">💡 "技术从来不是中立的。" 教皇利奥十四世在新通谕《壮丽的人性》中发出这一呼吁，提醒科技从业者和政策制定者在AI时代保持清醒。</div>
+</div>
 </div>
 
 <div class="card">
-<div class="card-title">教皇Leo十四世：AI时代，每个人都需要勇敢行动</div>
-<div class="card-desc">
-教皇最新AI通谕《Magnifica Humanitas》核心观点——"技术从来不是中立的"。这是AI时代最重磅的人文声音之一，值得每位从业者认真思考。
-</div>
-</div>
+<span class="source-tag src-bb">Ben's Bites</span>
+<div class="card-title">从SaaS到MaaS：软件格局正在重构</div>
+<div class="card-summary">Ben's Bites本周系列讨论指出，MCP协议正在强势回归，所有应用都正在变成开发工具。AI代理的能力让传统SaaS模式面临挑战，模型即服务的时代正在到来。</div>
 </div>
 
 <!-- 板块六：前沿论文 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">📄</div>
-<div class="section-title">前沿论文</div>
+<h2>📄 前沿论文</h2>
+
+<div class="card">
+<span class="source-tag src-arxiv">arXiv</span>
+<div class="card-title"><a href="https://arxiv.org/abs/2605.28864" target="_blank" rel="noopener">认知分类Transformer：范畴论启发的新架构</a></div>
+<div class="card-summary">一篇有趣的论文提出认知分类Transformer（CCT），在GPT-2 Small骨干网络上加入基于范畴论的认知组件。这款306M参数的小模型展现出了更强的推理能力，为语言模型的认知增强提供了新思路。</div>
+<div class="comment">🐤 小鸡点评：用数学的范畴论来指导AI架构设计？这个跨界思路太有意思了，感觉打开了新世界的大门呢。</div>
 </div>
 
 <div class="card">
-<div class="card-title">《Science》：革命性锂提取方法面世</div>
-<div class="card-desc">
-<span class="tag tag-mit">MIT</span>
-MIT团队在《Science》发表直接从矿石中提取锂的新方法，避开传统蒸发池污染。初创公司Rock Zero已启动商业化，将是电动汽车电池供应链的重大突破。
-</div>
-</div>
+<span class="source-tag src-arxiv">arXiv</span>
+<div class="card-title"><a href="https://arxiv.org/abs/2605.28897" target="_blank" rel="noopener">Review Arcade：LLM论文评审的对齐与博弈问题</a></div>
+<div class="card-summary">研究指出，LLM生成的论文评审正在被各大会议试点使用，但可能出现"博弈"问题：作者可利用LLM针对性修改论文以获得好评。这引发了关于AI评审可靠性和公平性的讨论。</div>
 </div>
 
-<!-- 板块七：快讯 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">⚡</div>
-<div class="section-title">一句话快讯</div>
+<div class="card">
+<span class="source-tag src-arxiv">arXiv</span>
+<div class="card-title"><a href="https://arxiv.org/abs/2605.28902" target="_blank" rel="noopener">扩散模型的正交概念擦除</a></div>
+<div class="card-summary">提出了一种新的概念擦除方法，通过正交投影的方式从扩散模型中移除不期望的概念（如不安全内容），效果优于现有方法且计算成本更低，为AI安全提供了新工具。</div>
 </div>
+
+<!-- 板块七：快讯+雷石股份 -->
+<h2>⚡ 一句话快讯</h2>
 
 <div class="grid">
-<div class="grid-item">
-<div class="gtag">特斯拉</div>
-<div class="gtext">Optimus人形机器人专属工厂在得州动工，规划年产能最高1000万台</div>
+
+<div class="fast-item">
+<span class="tag">📱 OPPO</span>
+<p>OPPO发布Reno16系列，采用3D悬浮星球工艺后盖，引领手机设计新风向。</p>
 </div>
-<div class="grid-item">
-<div class="gtag">机器人</div>
-<div class="gtext">智元机器人在惠州成立新公司，注册资本100万元</div>
+
+<div class="fast-item">
+<span class="tag">🤖 智元</span>
+<p>智元机器人在惠州成立新公司，持续布局人形机器人产业。</p>
 </div>
-<div class="grid-item">
-<div class="gtag">OPPO</div>
-<div class="gtext">Reno16系列发布：首创3D悬浮星球工艺，潮流美学新突破</div>
+
+<div class="fast-item">
+<span class="tag">🚀 穿越者</span>
+<p>载人航天公司穿越者获亿元Pre-A轮融资，目标打造中国版"龙飞船"。</p>
 </div>
-<div class="grid-item">
-<div class="gtag">上汽</div>
-<div class="gtext">全球累计产销量突破1亿辆，中国首家亿辆汽车集团</div>
+
+<div class="fast-item">
+<span class="tag">🚗 五菱</span>
+<p>上汽集团全球累计产销量突破一亿辆，成中国首家"亿辆俱乐部"车企。</p>
 </div>
-<div class="grid-item">
-<div class="gtag">科技</div>
-<div class="gtext">光帆科技与腾讯出行服务达成战略合作</div>
+
+<div class="fast-item">
+<span class="tag">🏢 万科</span>
+<p>万科今年已启动食品、教育等非主业的退出或剥离。</p>
 </div>
-<div class="grid-item">
-<div class="gtag">雷石股份</div>
-<div class="gtext">875080：今日无重大公告更新</div>
+
+<div class="fast-item">
+<span class="tag">🏪 7-Eleven</span>
+<p>7-Eleven创始人铃木敏文去世，享年93岁，他改变了全球零售业。</p>
 </div>
+
 </div>
+
+<h2>📊 雷石股份（875080）公告精选</h2>
+<div class="card">
+<span class="source-tag src-news">NEEQ</span>
+<div class="card-summary">今日暂无重大临时公告更新。此前关注事项：公司新三板挂牌中，主办券商为中信建投。后续如有分红、定增、重大合同等公告将第一时间跟进报道。</div>
 </div>
 
 <!-- 板块八：今日可做项目 -->
-<div class="section">
-<div class="section-header">
-<div class="section-icon">🚀</div>
-<div class="section-title">今日可做项目</div>
-</div>
+<h2>🚀 今日可做项目</h2>
 
 <div class="card">
-<div class="card-title">今日暂无特别推荐报告</div>
-<div class="card-desc">
-但可以关注：比亚迪智驾芯片发布后产业链机会、面壁智能开源模型部署、腾讯AI游戏创作平台体验。更多灵感等你看板上发现～
+<span class="source-tag src-qbitai">量子位</span>
+<div class="card-title">关注比亚迪4nm芯片深度评测 & 面壁智能开源项目</div>
+<div class="card-summary">
+<p>今天可以关注两件事：</p>
+<p>1. 比亚迪自研4nm AI芯片的后续深度评测 —— 这可能是国产车载芯片的历史性突破，制程对齐英伟达意味着国产智能驾驶芯片正式进入第一梯队。</p>
+<p>2. 面壁智能开源周发布的端侧AI工具链 —— 对于做AI应用开发的小伙伴来说，端侧AI的工具链成熟度直接影响落地效率，值得去GitHub上逛逛。</p>
+<p>3. 特斯拉Optimus机器人工厂的进展值得持续跟踪 —— 年产1000万台的产能规划意味着人形机器人成本将大幅下降，产业链上下游都有机会。</p>
 </div>
-</div>
+<div class="comment">🐤 小鸡点评：周末快乐呀～有空的时候可以看看这几个方向，都是接下来半年会持续发酵的大题材呢！</div>
 </div>
 
 <div class="footer">
-🐣 小鸡AI早报 · 每日8点准时送达<br>
-<a href="https://hongkongdxk123-jpg.github.io/briefing/" target="_blank">📋 归档看板</a>
+<p>🐤 小鸡AI早报 · 每日8点准时送达</p>
+<p style="margin-top:4px">📧 归档页面 | 🎙️ 语音版同步更新</p>
+<p style="margin-top:12px;font-size:12px;color:#475569">数据来源：MIT Technology Review · TechCrunch · Ben's Bites · arXiv · 量子位 · 36氪</p>
 </div>
 
 </div>
