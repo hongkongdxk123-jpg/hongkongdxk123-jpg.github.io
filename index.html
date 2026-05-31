@@ -50,10 +50,10 @@ img{pointer-events:none;-webkit-user-drag:none;user-select:none;-moz-user-select
 .gallery-overlay .modal-header .modal-counter{font-size:12px;color:rgba(255,255,255,0.35)}
 .gallery-overlay .modal-body{
   flex:1;overflow:hidden;position:relative;
-  display:flex;align-items:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
 }
 .gallery-overlay .modal-track{
-  display:flex;height:100%;
+  display:flex;flex:1;width:100%;
   transition:transform 0.3s cubic-bezier(0.25,0.1,0.25,1);
   will-change:transform;
 }
@@ -146,7 +146,7 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 }
 .scroll-card{
   scroll-snap-align:start;
-  width:clamp(65vw,280px,320px);
+  width:clamp(56vw,250px,310px);
   aspect-ratio:3/4;
   border-radius:14px;overflow:hidden;
   background:#151515;
@@ -170,8 +170,17 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 
 /* ── Guides ── */
 .guides-scroll{padding:0;margin:0}
+
+/* ── 横向滚动箭头导航 ── */
+.scroll-nav{display:flex;justify-content:center;gap:10px;margin-top:14px;padding-bottom:4px}
+.scroll-nav button{width:28px;height:28px;border-radius:50%;border:none;background:linear-gradient(145deg,rgba(255,255,255,0.18),rgba(255,255,255,0.05));color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.25s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.2),inset 0 -1px 0 rgba(0,0,0,0.15)}
+.scroll-nav button:hover{background:linear-gradient(145deg,rgba(255,255,255,0.25),rgba(255,255,255,0.08));box-shadow:0 4px 14px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.25),inset 0 -1px 0 rgba(0,0,0,0.15);transform:scale(1.08)}
+.scroll-nav button:active{transform:scale(0.92);box-shadow:0 1px 4px rgba(0,0,0,0.3),inset 0 2px 4px rgba(0,0,0,0.2)}
+.scroll-nav button:disabled{opacity:0.18;cursor:default}
+.scroll-nav .nav-left::before{content:'←';font-size:14px;line-height:1;text-shadow:0 1px 2px rgba(0,0,0,0.4),0 -0.5px 0 rgba(255,255,255,0.3)}
+.scroll-nav .nav-right::before{content:'→';font-size:14px;line-height:1;text-shadow:0 1px 2px rgba(0,0,0,0.4),0 -0.5px 0 rgba(255,255,255,0.3)}
 .guides-scroll .scroll-card{
-  width:clamp(65vw,280px,320px);
+  width:clamp(56vw,250px,310px);
   aspect-ratio:auto;
   padding:22px 18px;
   justify-content:flex-start;align-items:flex-start;
@@ -181,6 +190,8 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 .guides-scroll .scroll-card .label{font-size:14px;font-weight:600;color:#f5f5f7}
 .guides-scroll .scroll-card .sub{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5;margin-top:2px}
 .guides-scroll .scroll-card .guide-tag{display:inline-block;padding:3px 10px;border-radius:100px;background:rgba(212,168,67,0.12);color:#d4a843;font-size:11px;font-weight:500;margin-top:6px}
+.guides-scroll .scroll-card .guide-count{font-size:22px;font-weight:600;color:rgba(255,255,255,0.12);letter-spacing:2px;font-family:Georgia,'Times New Roman',serif;margin-top:auto}
+.guides-scroll .scroll-card .guide-action{font-size:10px;color:rgba(255,255,255,0.15);letter-spacing:0.5px}
 
 /* ── Pricing ── */
 .pricing-grid{display:grid;gap:1px;background:rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;margin:0 16px}
@@ -210,7 +221,7 @@ p{font-size:clamp(14px,3vw,17px);line-height:1.5;color:rgba(255,255,255,0.6)}
 
 /* ── Reviews ── */
 .reviews-scroll .scroll-card{
-  width:clamp(65vw,280px,320px);
+  width:clamp(56vw,250px,310px);
   aspect-ratio:auto;
   padding:20px;
   justify-content:flex-start;align-items:flex-start;
@@ -419,30 +430,40 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   </div>
 </div>
 
-<!-- 攻略二级全屏画廊 -->
+<!-- 攻略二级页面 → 垂直布局，图片完整显示 -->
 <div id="guide-fullpage" style="display:none;position:fixed;inset:0;z-index:9997;background:#000;flex-direction:column">
-  <div style="display:flex;align-items:center;padding:12px 16px;position:relative;z-index:2">
+  <div style="display:flex;align-items:center;padding:12px 16px;position:relative;z-index:2;background:rgba(0,0,0,0.95)">
     <button onclick="hideGuideFullpage()" style="background:none;border:none;color:#fff;font-size:20px;padding:8px;cursor:pointer">✕</button>
     <span id="guide-gallery-title" style="color:#fff;font-size:16px;margin-left:8px;font-weight:500"></span>
   </div>
-  <div style="flex:1;display:flex;align-items:center;overflow:hidden">
-    <div class="scroll-wrap" style="padding:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;width:100%">
-      <div class="scroll-track" id="guide-track" style="display:flex;gap:10px;padding:0 8px"></div>
+  <div style="flex:1;display:flex;overflow:hidden;position:relative">
+    <div id="guide-track" style="flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:y mandatory;padding:0">
     </div>
   </div>
 </div>
 
-<!-- 攻略素材全屏查看 -->
+<!-- 攻略素材全屏查看 → 上下滑动浏览多图 -->
 <div id="guide-viewer" style="display:none;position:fixed;inset:0;z-index:9999;background:#000;flex-direction:column">
-  <div style="display:flex;align-items:center;padding:12px 16px;position:relative;z-index:2">
-    <button onclick="hideGuideViewer()" style="background:none;border:none;color:#fff;font-size:20px;padding:8px;cursor:pointer">←</button>
-    <span style="color:rgba(255,255,255,0.5);font-size:13px;margin-left:8px">返回</span>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;position:relative;z-index:2;background:rgba(0,0,0,0.95)">
+    <button onclick="hideGuideViewer()" style="background:none;border:none;color:#fff;font-size:20px;padding:8px;cursor:pointer">← 返回</button>
+    <span id="viewer-counter" style="color:rgba(255,255,255,0.35);font-size:12px"></span>
+    <span style="width:50px"></span>
   </div>
-  <div id="guide-viewer-body" style="flex:1;display:flex;align-items:center;justify-content:center;overflow:auto;-webkit-overflow-scrolling:touch;padding:8px"></div>
+  <div style="flex:1;display:flex;overflow:hidden;position:relative">
+    <div id="viewer-track" style="flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:y mandatory;padding:0"></div>
+  </div>
 </div>
 
 <script>
-function showKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='flex';document.body.style.overflow='hidden';history.pushState({gallery:'kungfu'},'')}
+function showKungfuGallery(){
+  document.getElementById('kungfu-fullpage').style.display='flex';
+  document.body.style.overflow='hidden';
+  history.pushState({gallery:'kungfu'},'');
+  setTimeout(function(){
+    var kfw=document.querySelector('#kungfu-fullpage .scroll-wrap');
+    if(kfw&&!kfw.parentNode.querySelector('.scroll-nav'))addScrollNav(kfw);
+  },100);
+}
 function hideKungfuGallery(){document.getElementById('kungfu-fullpage').style.display='none';document.body.style.overflow='';document.getElementById('gallery-kungfu').scrollIntoView({behavior:'smooth',block:'start'})}
 window.addEventListener('popstate',function(e){if(document.getElementById('kungfu-fullpage').style.display==='flex')hideKungfuGallery()})
 </script>
@@ -458,35 +479,45 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
     <p class="section-sub">左右滑动 · 隐藏玩法全揭秘</p>
   </div>
   <div class="scroll-wrap guides-scroll fade-in"><div class="scroll-track">
-    <div class="scroll-card theme-cover" style="cursor:pointer" onclick="openGuideFullpage('最优路线规划',[{src:'images/guide-poster.jpg',type:'image'},{src:'http://39.106.148.82/guides/route_guide.pdf',type:'pdf'}])">
-      <div class="cover-bg" style="background-image:url('images/guide-poster.jpg')"></div>
-      <span class="cover-label">🗺️ 最优路线规划</span>
-      <span class="cover-sub">点击查看路线图</span>
-      <span class="guide-tag" style="position:relative;z-index:1;margin-top:4px">路线攻略</span>
+    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('最优路线规划',[{src:'images/guide-poster.jpg',type:'image'},{src:'https://chupiandazi.cn/guides/route_guide.pdf',type:'pdf',name:'2026北京环球影城距离攻略',preview:'images/route_guide_preview.jpg'}])">
+      <div class="icon">🗺️</div>
+      <div class="label">最优路线规划</div>
+      <div class="sub">路线图+PDF攻略，省时省力玩转环球</div>
+      <span class="guide-tag">路线攻略</span>
+      <div class="guide-count">2</div>
+      <div class="guide-action">个攻略 · 点击获取</div>
     </div>
     <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('TOP10 出片机位',[{src:'images/guide_poster2.jpg',type:'image'},{src:'images/guide_spot1.jpg',type:'image'}])">
       <div class="icon">📸</div>
       <div class="label">TOP10 出片机位</div>
       <div class="sub">哈利波特城堡倒影、小黄人街区……隐藏机位大公开</div>
       <span class="guide-tag">拍照攻略</span>
+      <div class="guide-count">2</div>
+      <div class="guide-action">个机位 · 点击查看</div>
     </div>
     <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('省钱避雷指南',[{src:'images/guide_spot1.jpg',type:'image'}])">
       <div class="icon">💰</div>
       <div class="label">省钱避雷指南</div>
       <div class="sub">哪些项目值得排、哪些纪念品别买、怎么买票最划算</div>
       <span class="guide-tag">省钱秘籍</span>
+      <div class="guide-count">1</div>
+      <div class="guide-action">篇指南 · 点击获取</div>
     </div>
     <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('穿搭指南',[{src:'images/guide_poster2.jpg',type:'image'}])">
       <div class="icon">👗</div>
       <div class="label">穿搭指南</div>
       <div class="sub">穿什么颜色最出片？要不要租魔法袍？</div>
       <span class="guide-tag">穿搭建议</span>
+      <div class="guide-count">1</div>
+      <div class="guide-action">篇指南 · 点击获取</div>
     </div>
     <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('哈利波特省钱避雷指南',[{src:'images/guide_spot1.jpg',type:'image'}])">
       <div class="icon" style="font-size:28px;margin-bottom:2px;opacity:0.5">▶</div>
       <div class="label">哈利波特省钱避雷指南</div>
       <div class="sub" style="font-size:11px">图文攻略</div>
       <span class="guide-tag">视频攻略</span>
+      <div class="guide-count">1</div>
+      <div class="guide-action">篇指南 · 点击获取</div>
     </div>
     <a href="#" class="scroll-card more"><div class="icon">→</div><div class="label">全部攻略</div><div class="sub">全部</div></a>
   </div></div>
@@ -502,7 +533,7 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
     <p class="section-sub">左右滑动 · 跟拍花絮 · 客户出片集锦</p>
   </div>
   <div class="scroll-wrap video-scroll fade-in"><div class="scroll-track">
-    <div class="scroll-card theme-cover" style="cursor:pointer" id="jurassic-video-tab" onclick="openVideoGallery('video','🦖 侏罗纪世界',['http://39.106.148.82/videos/jurassic_video.mp4','http://39.106.148.82/videos/jurassic_video2.mp4'])">
+    <div class="scroll-card theme-cover" style="cursor:pointer" id="jurassic-video-tab" onclick="openVideoGallery('video','🦖 侏罗纪世界',['https://chupiandazi.cn/videos/jurassic_video.mp4','https://chupiandazi.cn/videos/jurassic_video2.mp4'])">
       <div class="cover-bg" style="background-image:url('images/jurassic_video_cover_v3.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">2段</span>
@@ -520,7 +551,7 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">即将上线</span>
       <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">出片集锦</span>
     </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" id="hp-video-tab" onclick="openVideoGallery('video','哈利波特特辑',['http://39.106.148.82/videos/hp_chupian_video.mp4'])">
+    <div class="scroll-card theme-cover" style="cursor:pointer" id="hp-video-tab" onclick="openVideoGallery('video','哈利波特特辑',['https://chupiandazi.cn/videos/hp_chupian_video.mp4'])">
       <div class="cover-bg" style="background-image:url('images/hp_8.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">1段</span>
@@ -811,6 +842,10 @@ function openGallery(type, title, images) {
   document.getElementById('galleryModal').classList.add('open');
   history.pushState({gallery:type},'');
   setupSwipe();
+  setTimeout(function(){
+    var mt=document.getElementById('modalTrack');
+    if(mt&&!mt.parentNode.querySelector('.scroll-nav'))addScrollNav(mt);
+  },100);
 }
 
 function closeGallery() {
@@ -864,6 +899,10 @@ function openVideoGallery(type, title, urls) {
   document.getElementById('galleryModal').classList.add('open');
   history.pushState({gallery:'video'},'');
   setupSwipe();
+  setTimeout(function(){
+    var mt=document.getElementById('modalTrack');
+    if(mt&&!mt.parentNode.querySelector('.scroll-nav'))addScrollNav(mt);
+  },100);
 }
 
 function playCurrentVideo(idx) {
@@ -941,28 +980,37 @@ function setupSwipe() {
   });
 }
 
-/* 攻略图库 */
+/* 攻略图库 - 二级页面：垂直布局，图片完整显示 */
 let guideMaterials = [];
+let viewerScrollHandler = null;
 function openGuideFullpage(title, materials) {
   guideMaterials = materials;
   document.getElementById('guide-gallery-title').textContent = title;
   var track = document.getElementById('guide-track');
   track.innerHTML = '';
   materials.forEach(function(m, i) {
-    var card = document.createElement('div');
-    card.className = 'scroll-card';
-    card.style.cssText = 'scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0;cursor:pointer';
-    card.onclick = function(){ openGuideViewer(i); };
+    var item = document.createElement('div');
+    item.style.cssText = 'min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 12px 40px;scroll-snap-align:start;box-sizing:border-box;cursor:pointer';
     if (m.type === 'image') {
-      card.innerHTML = '<div class="img-wrap" style="width:100%;height:100%"><img src="'+m.src+'" style="width:100%;height:100%;object-fit:cover;display:block"></div>';
+      item.innerHTML = '<img src="'+m.src+'" style="max-width:100%;max-height:78vh;width:auto;height:auto;object-fit:contain;border-radius:8px;display:block;margin:0 auto;cursor:pointer" loading="lazy">'
+        + '<div style="color:rgba(255,255,255,0.45);font-size:12px;margin-top:10px;text-align:center;line-height:1.5;max-width:85vw">'+(m.name||'点击图片查看大图')+'</div>';
+    } else if (m.preview) {
+      item.innerHTML = '<div style="position:relative;max-width:100%;max-height:70vh;display:flex;align-items:center;justify-content:center;cursor:pointer">'
+        + '<img src="'+m.preview+'" style="max-width:100%;max-height:70vh;object-fit:contain;border-radius:8px;display:block">'
+        + '<div style="position:absolute;bottom:8px;right:8px;background:rgba(212,168,67,0.15);color:#d4a843;font-size:11px;padding:4px 10px;border-radius:100px;font-weight:500">📄 PDF</div></div>'
+        + '<div style="color:#d4a843;font-size:13px;margin-top:8px;font-weight:500">'+(m.name||'点击查看PDF')+'</div>';
     } else {
-      card.innerHTML = '<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-size:14px;gap:8px"><div style="font-size:32px">📄</div><div>点击查看PDF</div></div>';
+      item.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:60px 24px;color:rgba(255,255,255,0.4);text-align:center">'
+        + '<div style="font-size:48px;opacity:0.4">📄</div>'
+        + '<div style="font-size:14px">'+(m.name||'点击查看')+'</div></div>';
     }
-    track.appendChild(card);
+    item.onclick = function(){ openGuideViewer(i); };
+    track.appendChild(item);
   });
   document.getElementById('guide-fullpage').style.display = 'flex';
   document.body.style.overflow = 'hidden';
   document.getElementById('guide-viewer').style.display = 'none';
+  track.scrollTop = 0;
   history.pushState({gallery:'guide'},'');
 }
 function hideGuideFullpage() {
@@ -970,18 +1018,37 @@ function hideGuideFullpage() {
   document.body.style.overflow = '';
   document.getElementById('guides').scrollIntoView({behavior:'smooth',block:'start'});
 }
-function openGuideViewer(idx) {
-  var m = guideMaterials[idx];
-  var body = document.getElementById('guide-viewer-body');
-  if (m.type === 'pdf') {
-    body.style.display = 'block';
-    body.style.alignItems = 'flex-start';
-    body.innerHTML = '<div style="width:100%;height:100%;display:flex;flex-direction:column"><iframe src="'+m.src+'" style="width:100%;flex:1;border:none;border-radius:8px;min-height:90vh"></iframe></div>';
-  } else {
-    body.style.display = 'flex';
-    body.style.alignItems = 'center';
-    body.innerHTML = '<img src="'+m.src+'" style="max-width:98vw;max-height:90vh;object-fit:contain;border-radius:8px">';
-  }
+
+/* 全屏查看器 - 上下滑动浏览多图 */
+function openGuideViewer(startIdx) {
+  var body = document.getElementById('viewer-track');
+  body.innerHTML = '';
+  guideMaterials.forEach(function(m, i) {
+    var slide = document.createElement('div');
+    slide.style.cssText = 'min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 8px 40px;scroll-snap-align:start;box-sizing:border-box';
+    if (m.type === 'image') {
+      slide.innerHTML = '<img src="'+m.src+'" style="max-width:100%;max-height:85vh;width:auto;height:auto;object-fit:contain;border-radius:4px;display:block">';
+    } else if (m.type === 'pdf') {
+      slide.innerHTML = '<div style="width:100%;height:80vh;display:flex;flex-direction:column"><iframe src="'+m.src+'" style="width:100%;flex:1;border:none;border-radius:8px"></iframe></div>'
+        + '<div style="color:rgba(255,255,255,0.35);font-size:11px;margin-top:8px">上下滑动 · 查看完整内容</div>';
+    } else {
+      slide.innerHTML = '<div style="width:100%;max-width:500px;padding:30px 20px;text-align:center;color:rgba(255,255,255,0.5);font-size:14px;line-height:1.8">'+(m.name||'')+'</div>';
+    }
+    body.appendChild(slide);
+  });
+  // Scroll to the clicked item
+  setTimeout(function() {
+    if(body.children[startIdx]) body.children[startIdx].scrollIntoView({behavior:'instant',block:'start'});
+  }, 80);
+  // Update page counter on scroll
+  var counter = document.getElementById('viewer-counter');
+  if (viewerScrollHandler) body.removeEventListener('scroll', viewerScrollHandler);
+  viewerScrollHandler = function() {
+    var idx = Math.round(body.scrollTop / body.clientHeight);
+    counter.textContent = (Math.min(idx, guideMaterials.length - 1) + 1) + '/' + guideMaterials.length;
+  };
+  body.addEventListener('scroll', viewerScrollHandler);
+  counter.textContent = (startIdx + 1) + '/' + guideMaterials.length;
   document.getElementById('guide-fullpage').style.display = 'none';
   document.getElementById('guide-viewer').style.display = 'flex';
   history.pushState({gallery:'guide-view'},'');
@@ -989,7 +1056,32 @@ function openGuideViewer(idx) {
 function hideGuideViewer() {
   document.getElementById('guide-viewer').style.display = 'none';
   document.getElementById('guide-fullpage').style.display = 'flex';
+  document.getElementById('guide-track').scrollTop = 0;
 }
+
+/* 横向滚动箭头导航 */
+function addScrollNav(w){
+  if(w.parentNode.querySelector('.scroll-nav'))return;
+  var nav=document.createElement('div');nav.className='scroll-nav';
+  var left=document.createElement('button');left.className='nav-left';var right=document.createElement('button');right.className='nav-right';
+  nav.appendChild(left);nav.appendChild(right);
+  w.parentNode.insertBefore(nav,w.nextSibling);
+  function update(){left.disabled=w.scrollLeft<=5;right.disabled=w.scrollLeft>=w.scrollWidth-w.clientWidth-5}
+  left.onclick=function(){w.scrollBy({left:-w.clientWidth*0.8,behavior:'smooth'});setTimeout(update,100)}
+  right.onclick=function(){w.scrollBy({left:w.clientWidth*0.8,behavior:'smooth'});setTimeout(update,100)}
+  w.addEventListener('scroll',update);
+  setTimeout(update,200);
+}
+function initScrollNavs(){
+  document.querySelectorAll('.gallery-category>.scroll-wrap,.guides-scroll,.video-scroll,.reviews-scroll').forEach(addScrollNav);
+  // 功夫熊猫二级页面（保留横向）
+  var kf=document.querySelector('#kungfu-fullpage .scroll-wrap');
+  if(kf && !kf.parentNode.querySelector('.scroll-nav'))addScrollNav(kf);
+  var mt=document.querySelector('#modalTrack');
+  if(mt && !mt.parentNode.querySelector('.scroll-nav'))addScrollNav(mt);
+}
+document.addEventListener('DOMContentLoaded',initScrollNavs);
+window.addEventListener('load',function(){setTimeout(initScrollNavs,800)});
 </script>
 </body>
 </html>
