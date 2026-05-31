@@ -6,254 +6,263 @@
 <title>小鸡AI早报 · 2026年5月31日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.7;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
-.wrap{max-width:720px;margin:0 auto;padding:24px 20px}
-@media(max-width:640px){.wrap{padding:16px}}
-
-/* header */
-.header{text-align:center;padding:40px 0 32px}
-.header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-@media(max-width:640px){.header h1{font-size:22px}}
-.header .date{color:#94a3b8;font-size:14px;margin-top:6px}
-
-/* audio player */
-.audio-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:20px;margin-bottom:28px;backdrop-filter:blur(12px);display:flex;align-items:center;gap:16px}
-.audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.audio-info{flex:1}
-.audio-info .label{font-size:14px;font-weight:600;color:#e2e8f0}
-.audio-info .desc{font-size:12px;color:#94a3b8;margin-top:2px}
-.audio-box audio{width:100%;margin-top:10px;border-radius:22px}
-
-/* cards */
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:16px;backdrop-filter:blur(12px)}
-@media(max-width:640px){.card{padding:16px}}
-
-.section-title{font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.news-item{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.news-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
-.news-title{font-size:15px;font-weight:600;color:#e2e8f0;margin-bottom:4px}
-.news-title a{color:#e2e8f0;text-decoration:none;transition:color .2s}
-.news-title a:hover{color:#a78bfa}
-.news-summary{font-size:13px;color:#94a3b8;line-height:1.6}
-.news-meta{font-size:12px;color:#64748b;margin-top:4px}
-.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin-right:6px;font-weight:500}
-
-/* source tags */
-.tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
-.tag-tc{background:rgba(22,163,74,0.15);color:#4ade80}
-.tag-bb{background:rgba(202,138,4,0.15);color:#facc15}
-.tag-qb{background:rgba(219,39,119,0.15);color:#f472b6}
-.tag-36k{background:rgba(88,28,200,0.15);color:#a78bfa}
-.tag-biz{background:rgba(234,179,8,0.15);color:#eab308}
-
-/* comment bubble */
-.comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:8px;padding:10px 12px;margin:8px 0;font-size:13px;color:#a78bfa}
-.comment::before{content:"🐔 "}
-
-/* foreign tweet */
-.tweet-box{border-left:3px solid rgba(59,130,246,0.3);padding:10px 14px;margin:8px 0;background:rgba(59,130,246,0.04);border-radius:8px}
-.tweet-en{font-size:13px;color:#94a3b8;font-style:italic;margin-bottom:4px}
-.tweet-cn{font-size:13px;color:#e2e8f0}
-
-/* flash grid */
-.flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
-.flash-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:10px;font-size:13px}
-.flash-item .flash-tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(99,102,241,0.15);color:#818cf8;margin-bottom:4px}
-
-/* section colors */
-.headline{background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.intl{color:#60a5fa}
-.cn{color:#f472b6}
-.model{color:#34d399}
-.voice{color:#fbbf24}
-.paper{color:#f87171}
-.flash{color:#818cf8}
-.project{color:#a78bfa}
-
-/* footer */
-.footer{text-align:center;padding:24px 0;color:#64748b;font-size:12px;border-top:1px solid rgba(255,255,255,0.06);margin-top:20px}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;line-height:1.7;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%);padding:20px}
+.container{max-width:720px;margin:0 auto;padding:0}
+header{text-align:center;padding:48px 20px 32px}
+header h1{font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+header .date{color:#94a3b8;font-size:0.95rem}
+header .subtitle{color:#64748b;font-size:0.85rem;margin-top:4px}
+.audio-player{margin:20px auto 32px;max-width:420px;background:rgba(255,255,255,0.04);border-radius:22px;padding:20px 24px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:16px}
+.audio-icon{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.audio-info{flex:1;min-width:0}
+.audio-info .label{font-size:0.85rem;color:#c4b5fd;font-weight:600}
+.audio-info .desc{font-size:0.75rem;color:#64748b;margin-top:2px}
+.audio-info audio{width:100%;margin-top:8px;border-radius:12px;height:40px}
+.section{margin-bottom:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section-header .emoji{font-size:1.3rem}
+.section-header h2{font-size:1.1rem;font-weight:600;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.card{background:rgba(255,255,255,0.04);border-radius:14px;padding:18px 20px;margin-bottom:12px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);transition:all 0.2s}
+.card:hover{border-color:rgba(255,255,255,0.12);background:rgba(255,255,255,0.06)}
+.card-title{font-size:0.95rem;font-weight:600;color:#f1f5f9;margin-bottom:6px;line-height:1.5}
+.card-title a{color:#f1f5f9;text-decoration:none}
+.card-title a:hover{color:#a78bfa}
+.card-desc{font-size:0.82rem;color:#94a3b8;line-height:1.6}
+.source-tag{display:inline-block;font-size:0.7rem;padding:2px 8px;border-radius:4px;margin-bottom:8px;font-weight:500}
+.source-mit{background:rgba(37,99,235,0.15);color:#93c5fd}
+.source-tc{background:rgba(16,185,129,0.15);color:#6ee7b7}
+.source-bb{background:rgba(234,179,8,0.15);color:#fde68a}
+.source-qbit{background:rgba(236,72,153,0.15);color:#f9a8d4}
+.source-36kr{background:rgba(139,92,246,0.15);color:#c4b5fd}
+.source-bili{background:rgba(0,161,214,0.15);color:#67e8f9}
+.source-vatican{background:rgba(251,191,36,0.15);color:#fde68a}
+.comment-bubble{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 10px 10px 0;padding:10px 14px;margin-top:8px;font-size:0.8rem;color:#a78bfa;line-height:1.5}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quick-item{background:rgba(255,255,255,0.04);border-radius:10px;padding:12px 14px;border:1px solid rgba(255,255,255,0.06)}
+.quick-item .tag{font-size:0.65rem;background:rgba(139,92,246,0.15);color:#c4b5fd;padding:1px 6px;border-radius:3px;display:inline-block;margin-bottom:4px}
+.quick-item .text{font-size:0.8rem;color:#cbd5e1;line-height:1.4}
+.tweet{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.04);border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:10px}
+.tweet .en{font-size:0.8rem;color:#94a3b8;font-style:italic;margin-bottom:4px}
+.tweet .zh{font-size:0.85rem;color:#e2e8f0}
+footer{text-align:center;padding:32px 20px 40px}
+footer p{font-size:0.8rem;color:#475569;margin-bottom:4px}
+footer a{color:#6b7280;text-decoration:none}
+footer a:hover{color:#a78bfa}
+@media(max-width:640px){body{padding:12px}.container{padding:0}.grid-2{grid-template-columns:1fr}.card{padding:14px 16px}.audio-player{padding:14px 16px;flex-wrap:wrap}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
 
-<div class="header">
-<h1>🐣 小鸡AI早报</h1>
-<div class="date">2026年5月31日 星期日</div>
-</div>
+<header>
+<h1>🐥 小鸡AI早报</h1>
+<div class="date">2026年5月31日 · 星期日</div>
+<div class="subtitle">每天8点 · 为你精选AI世界最重要的事</div>
+</header>
 
-<div class="audio-box">
+<div class="audio-player">
 <div class="audio-icon">🎙️</div>
 <div class="audio-info">
 <div class="label">今日早报语音版</div>
 <div class="desc">软萌女声 · 约4分钟 🎀</div>
-<audio controls>
-  <source src="https://hongkongdxk123-jpg.github.io/briefing/audio_cn.mp3" type="audio/mp3">
-  您的浏览器不支持音频播放
+<audio controls preload="none">
+<source src="https://hongkongdxk123-jpg.github.io/briefing/audio_cn.mp3" type="audio/mpeg">
+您的浏览器不支持音频播放
 </audio>
 </div>
 </div>
 
 <!-- 板块一：今日头条 -->
-<div class="card">
-<div class="section-title"><span class="headline">🔥 今日头条</span></div>
+<div class="section">
+<div class="section-header"><span class="emoji">🔥</span><h2>今日头条</h2></div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://www.technologyreview.com/2026/05/29/1138107/how-the-popes-magnifica-humanitas-offers-a-template-for-individuals-to-meet-the-ai-moment/" target="_blank">教皇发布AI通谕《卓越的人类》</a> <span class="tag tag-mit">MIT</span></div>
-<div class="news-summary">教皇利奥十四世新通谕聚焦人工智能，提出"技术从来不是中立的"，为个人如何在AI时代行动提供指南框架。</div>
-<div class="comment">教皇都在认真讨论AI了，这话题真的要所有人都重视起来呀～</div>
+<div class="card">
+<span class="source-tag source-mit">Anthropic</span>
+<div class="card-title">Claude Opus 4.8 正式发布，登顶 AI 评测榜首</div>
+<div class="card-desc">5月28日，Anthropic 发布 Claude Opus 4.8，在 Artificial Analysis 智能指数中以 61.4 分超越 GPT-5.5，拿下第一。SWE-bench Pro 达到 69.2%，新增动态工作流（Dynamic Workflows）和 Effort Control 两大功能，可在 Fast 模式下以 Opus 4.7 三分之一的成本运行。</div>
+<div class="comment-bubble">小鸡点评：这波更新又快又猛，下半年AI大模型军备竞赛又要升级咯 🚀</div>
 </div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://www.technologyreview.com/2026/05/28/1138096/lithium-extraction-rock-zero/" target="_blank">新型锂提取技术有望大幅降低成本和排放</a> <span class="tag tag-mit">MIT</span></div>
-<div class="news-summary">发表在《Science》上的研究提出了一项新锂提取工艺，由初创公司Rock Zero推进商业化，可更环保、更廉价地获取电动汽车和储能所需的锂金属。</div>
-<div class="comment">电动车电池的"命门"要是能解决了，那可太棒咯！</div>
+<div class="card">
+<span class="source-tag source-qbit">量子位</span>
+<div class="card-title">比亚迪发布 4nm 自研智驾芯片「璇玑 A3」，城市领航安全兜底</div>
+<div class="card-desc">5月28日，比亚迪在「敢为」智能化战略发布会上推出中国首颗 4nm 制程车规级智驾芯片——璇玑 A3。单车搭载三颗，总算力超 2100 TOPS。同时宣布城市领航（城市NOA）一年内事故全赔，无赔付上限。打破「智驾出事车主担责」的行业惯例。</div>
+<div class="comment-bubble">这条你可能用得上：比亚迪这次出手够狠，自研芯片 + 安全兜底，想入智驾车可以考虑 🚗</div>
 </div>
 </div>
 
 <!-- 板块二：国际前沿 -->
+<div class="section">
+<div class="section-header"><span class="emoji">🌍</span><h2>国际前沿</h2></div>
+
 <div class="card">
-<div class="section-title"><span class="intl">🌍 国际前沿</span></div>
-
-<div class="news-item">
-<div class="news-title"><a href="https://www.technologyreview.com/2026/05/29/1138093/the-deadly-ebola-outbreak-is-proving-difficult-to-control/" target="_blank">刚果（金）埃博拉疫情难控</a> <span class="tag tag-mit">MIT</span></div>
-<div class="news-summary">5月5日，刚果（金）伊图里省4名医护人员因不明疾病死亡后触发警报。检测确认是由本迪布焦病毒（埃博拉病毒一种）引起，控制难度大。</div>
+<span class="source-tag source-mit">MIT Tech Review</span>
+<div class="card-title">教皇 Leo XIV 发布 AI 通谕《Magnifica Humanitas》</div>
+<div class="card-desc">教皇在通谕中明确表示「技术绝不中立」，呼吁所有人在 AI 时代以勇气和团结行动。通谕分为五章，以 135 年前 Leo XIII 的《Rerum novarum》为参照，是人类历史上首次由梵蒂冈最高权威对 AI 议题发出的系统性声明。</div>
 </div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://www.technologyreview.com/2026/05/28/1138067/climate-tech-ipos/" target="_blank">气候科技公司掀起上市潮</a> <span class="tag tag-mit">MIT</span></div>
-<div class="news-summary">太阳能电池公司Solv Energy二月以60亿美元估值IPO；小型核反应堆公司X-energy四月上市首日大涨。气候科技IPO浪潮来袭。</div>
-<div class="comment">绿色能源赛道越来越香了，资本市场也在用脚投票呢。</div>
+<div class="card">
+<span class="source-tag source-mit">MIT Tech Review</span>
+<div class="card-title">新型锂提取技术有望改变电动车电池产业</div>
+<div class="card-desc">科研团队在《Science》发表论文，找到一种更环保、更低成本的锂矿石提锂方法。创业公司 Rock Zero 正在推进商业化，如果成功，可大幅降低电动车电池成本与碳排放。</div>
 </div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/" target="_blank">数据中心需求推高天然气发电成本66%</a> <span class="tag tag-tc">TC</span></div>
-<div class="news-summary">天然气发电厂成本两年内近乎翻倍，建设周期延长23%，主因是AI数据中心电力需求飙升。</div>
+<div class="card">
+<span class="source-tag source-tc">TechCrunch</span>
+<div class="card-title">数据中心需求推动天然气发电成本飙升 66%</div>
+<div class="card-desc">天然气发电厂建设成本两年内上涨近一倍，工期延长 23%。AI 数据中心的电力需求激增是主要驱动因素。</div>
 </div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://www.bensbites.com/p/i-signed-up-for-another-saas" target="_blank">"SaaS已死？"——行业热议AI时代的软件新范式</a> <span class="tag tag-bb">BB</span></div>
-<div class="news-summary">Ben's Bites引发讨论：MCP（模型上下文协议）正在复兴，AI Agent将重塑软件订阅模式，所有应用终将成为开发工具。</div>
+<div class="card">
+<span class="source-tag source-bb">Ben's Bites</span>
+<div class="card-title">讨论：MCP 协议卷土重来？SaaS 模式过时了吗？</div>
+<div class="card-desc">科技博客 Ben's Bites 本周讨论两个热门话题：MCP（Model Context Protocol）正在酝酿回归，以及「SaaS 已死」的论调是否成立。AI Agent 的崛起可能改变软件交付方式。</div>
 </div>
 </div>
 
 <!-- 板块三：国内动态 -->
+<div class="section">
+<div class="section-header"><span class="emoji">🇨🇳</span><h2>国内动态</h2></div>
+
 <div class="card">
-<div class="section-title"><span class="cn">🇨🇳 国内动态</span></div>
-
-<div class="news-item">
-<div class="news-title"><a href="https://www.qbitai.com/2026/05/426557.html" target="_blank">4nm！比亚迪自研AI芯片来了</a> <span class="tag tag-qb">量子位</span></div>
-<div class="news-summary">比亚迪自研AI芯片制程对齐英伟达，算力超越特斯拉，主打"智驾出事，比亚迪兜底"的自主可控路线。</div>
-<div class="comment">比亚迪这是要跟英伟达正面刚呀，国产芯片加油！</div>
+<span class="source-tag source-36kr">36氪</span>
+<div class="card-title">吉利整合研究院辅助驾驶团队至千里科技</div>
+<div class="card-desc">吉利中央研究院数百人的辅助驾驶团队将被整合入千里科技（旗下千里浩瀚），后者将负责为吉利各车型提供智驾方案定制与量产交付。此举被业内人士解读为吉利全力打造「第二个华为」的关键一步。</div>
 </div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://www.qbitai.com/2026/05/426662.html" target="_blank">英伟达清华团队推出Gamma-World世界模型</a> <span class="tag tag-qb">量子位</span></div>
-<div class="news-summary">让世界模型从"一个人玩"迈向"多人共处"，实现多智能体交互仿真，开启世界模型新范式。</div>
+<div class="card">
+<span class="source-tag source-qbit">量子位</span>
+<div class="card-title">英伟达清华团队发布 Gamma-World：多智能体世界模型</div>
+<div class="card-desc">英伟达与清华联合团队提出 Gamma-World，让世界模型从单人交互进化到多智能体共存仿真。多个 AI Agent 可同时在虚拟环境中交互、协作或对抗，为具身智能和自动驾驶仿真开辟新方向。</div>
 </div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://36kr.com/p/3830580716365449" target="_blank">吉利研究院辅助驾驶团队将整合入千里科技</a> <span class="tag tag-36k">36氪</span></div>
-<div class="news-summary">为助千里科技成为"第二个华为"，吉利数百人的辅助驾驶团队将被平移至千里浩瀚，由千里智驾提供平台级研发能力。</div>
+<div class="card">
+<span class="source-tag source-qbit">量子位</span>
+<div class="card-title">帮 Gemini 拿 IMO 金牌的关键人物，差点成职业钢琴家</div>
+<div class="card-desc">专访揭示了这位数学模型专家的跨界之路——从钢琴到 AI，他可能是大模型圈最会弹钢琴的人。</div>
 </div>
 
-<div class="news-item">
-<div class="news-title"><a href="https://36kr.com/p/3831135917107075" target="_blank">乘物机器人完成天使轮融资，服务富士康半年营收超两千万</a> <span class="tag tag-36k">36氪</span></div>
-<div class="news-summary">专注工业具身智能，由台湾和椿科技战略投资，已服务富士康等多个头部制造企业。</div>
-</div>
-
-<div class="news-item">
-<div class="news-title"><a href="https://www.qbitai.com/2026/05/426706.html" target="_blank">帮Gemini拿下IMO金牌的关键先生差点成了钢琴家</a> <span class="tag tag-qb">量子位</span></div>
-<div class="news-summary">大模型圈里最会弹钢琴的人——这位帮助Gemini在数学奥赛中夺金的技术专家，差点走上职业钢琴道路。</div>
-</div>
-
-<div class="news-item">
-<div class="news-title"><a href="https://36kr.com/p/3831073348855433" target="_blank">泡泡玛特大涨，段永平日赚近10亿港元</a> <span class="tag tag-36k">36氪</span></div>
-<div class="news-summary">段永平举牌泡泡玛特，持仓超117亿港元，单日浮盈近10亿。泡泡玛特盘中最大涨幅超12%。</div>
-</div>
-
-<div class="news-item">
-<div class="news-title">诺基亚发布首款微聊手机，售价199元</div>
-<div class="news-summary">诺基亚200 4G手机，支持通过微信小程序视频通话，主攻学生、长辈及备用机市场。</div>
+<div class="card">
+<span class="source-tag source-36kr">36氪</span>
+<div class="card-title">乘物机器人完成天使轮融资，服务富士康</div>
+<div class="card-desc">专注工业具身智能的乘物机器人获中国台湾龙头企业和椿科技战略投资。公司成立仅半年营收超两千万元，服务包括富士康在内的多家头部制造企业。</div>
 </div>
 </div>
 
 <!-- 板块四：AI模型动态 -->
-<div class="card">
-<div class="section-title"><span class="model">🤖 AI模型动态</span></div>
+<div class="section">
+<div class="section-header"><span class="emoji">🤖</span><h2>AI 模型动态</h2></div>
 
-<div class="news-item">
-<div class="news-summary">本周各主要模型（DeepSeek、GLM、Claude、GPT、Gemini、Qwen、Llama、Mistral等）暂无重大版本更新。</div>
+<div class="card">
+<span class="source-tag" style="background:rgba(139,92,246,0.15);color:#c4b5fd">Claude</span>
+<div class="card-title">Claude Opus 4.8 — 2026.05.28</div>
+<div class="card-desc">Anthropic 最新旗舰。AI 智能指数 61.4 分登顶，SWE-bench Pro 69.2%，GDPval Elo 1890（超 GPT-5.5 达 121 分）。新增动态工作流与 Effort Control，定价不变 $5/$25 per 1M tokens。</div>
 </div>
 
-<div class="news-item">
-<div class="news-title">Google的OpenClaw观点：Anthropic的"天命所归"时刻</div>
-<div class="news-summary">Ben's Bites报道Google对OpenClaw的看法，认为Claude Sonnet 4凭借视频支持和强大推理能力正引领行业趋势。</div>
+<div class="card">
+<span class="source-tag" style="background:rgba(16,185,129,0.15);color:#6ee7b7">DeepSeek</span>
+<div class="card-title">DeepSeek V4-Pro / V4-Flash — 2026.04.24</div>
+<div class="card-desc">同时发布性能旗舰 V4-Pro 和速度优化版 V4-Flash，均支持 100 万 token 超长上下文，开放权重开源。Flash 版推理能力接近 Pro，API 价格极具竞争力。目前仍有推广折扣。</div>
+</div>
+
+<div class="card">
+<span class="source-tag" style="background:rgba(251,191,36,0.15);color:#fde68a">OpenAI</span>
+<div class="card-title">GPT-5.5 Instant — 2026.05.05</div>
+<div class="card-desc">ChatGPT 默认模型从 5.3 Instant 升级为 5.5 Instant。医学/法律/金融等高风险领域的幻觉减少 52.5%，回答长度缩短 30.2%。不是 4 月发布的 GPT-5.5 旗舰版，而是速度优化版。</div>
+</div>
+
+<div class="card">
+<span class="source-tag" style="background:rgba(59,130,246,0.15);color:#93c5fd">Qwen</span>
+<div class="card-title">Qwen3.7-Max-Preview — 2026.05.19</div>
+<div class="card-desc">阿里云千问大模型最新预览版，在 Arena AI 榜单首发亮相，主打智能体时代旗舰能力。</div>
+</div>
+
+<div class="card">
+<span class="source-tag" style="background:rgba(234,179,8,0.15);color:#fde68a">Google</span>
+<div class="card-title">新 Gemini 模型预期在 Google I/O 2026 发布</div>
+<div class="card-desc">外界预期 Google 将在 5 月的 I/O 大会上公布具备 GPT-5.5 级别能力的新 Gemini 模型。此外，Gemini 此前帮助人类拿下 IMO 金牌的新闻引发关注。</div>
 </div>
 </div>
 
 <!-- 板块五：大佬观点 -->
+<div class="section">
+<div class="section-header"><span class="emoji">🗣️</span><h2>大佬观点</h2></div>
+
 <div class="card">
-<div class="section-title"><span class="voice">🗣️ 大佬观点</span></div>
-
-<div class="tweet-box">
-<div class="tweet-en">"I signed up for another SaaS" — Ben's Bites</div>
-<div class="tweet-cn">"软件基准正在被AI重新定义，我们正从购买软件转向购买能力。"</div>
+<span class="source-tag source-vatican">教皇 Leo XIV</span>
+<div class="card-title">「技术绝不中立」—— 从通谕看 AI 时代的人类角色</div>
+<div class="card-desc">教皇 Leo XIV 在首份通谕《Magnifica Humanitas》（「高贵的人类」）中系统阐述了 AI 时代的伦理框架。核心观点：技术发展必须服务于人类尊严，算法不能取代人的判断与道德责任。通谕的发布时间恰逢 Leo XIII 发布《Rerum novarum》135 周年，历史意味浓厚。</div>
+<div class="comment-bubble">小鸡点评：当梵蒂冈也开始深度讨论AI伦理，说明这不是科技圈的内部话题了 ✝️</div>
 </div>
 
-<div class="tweet-box">
-<div class="tweet-en">"All apps will become dev tools" — Ben's Bites</div>
-<div class="tweet-cn">"所有应用最终都会变成开发工具——AI Agent让人人都是开发者。"</div>
-</div>
-
-<div class="news-summary" style="margin-top:8px;font-size:13px;color:#94a3b8">⚠️ Twitter/X等境外社交平台因网络限制暂未采集，上述观点来自Ben's Bites等行业资讯。</div>
-</div>
-
-<!-- 板块六：论文 -->
 <div class="card">
-<div class="section-title"><span class="paper">📄 前沿论文</span></div>
-<div class="news-summary">今日arXiv精选论文暂无数据。上周值得关注的论文：新型锂提取工艺发表于《Science》，由Rock Zero团队研发。</div>
+<span class="source-tag source-bb">Ben's Bites</span>
+<div class="card-title">「所有应用都将成为开发工具」</div>
+<div class="card-desc">Ben's Bites 近期提出了一个有趣的观点：随着 AI Agent 的普及，传统 SaaS 应用的边界在模糊。用户不再通过 UI 交互，而是通过 Agent 调用，这意味着「所有 App 都可能变成 Dev Tools」。MCP 协议的回归讨论正因此而起。</div>
+</div>
 </div>
 
-<!-- 板块七：一句话快讯 -->
+<!-- 板块六：前沿论文 -->
+<div class="section">
+<div class="section-header"><span class="emoji">📄</span><h2>前沿论文</h2></div>
+
 <div class="card">
-<div class="section-title"><span class="flash">⚡ 一句话快讯</span></div>
-<div class="flash-grid">
-<div class="flash-item"><span class="flash-tag">交通</span>国内航线燃油附加费6月5日起首次下调</div>
-<div class="flash-item"><span class="flash-tag">铁路</span>违规乘车拒不补票将被限制购票</div>
-<div class="flash-item"><span class="flash-tag">苹果</span>iPhone 17系列中国销量破3000万台，Pro Max占近一半</div>
-<div class="flash-item"><span class="flash-tag">航天</span>太空智驾概念兴起，卫星将像L4自动驾驶一样自主决策</div>
-<div class="flash-item"><span class="flash-tag">太空</span>SpaceX据悉将IPO估值下调至至少1.8万亿美元</div>
-<div class="flash-item"><span class="flash-tag">AI药研</span>Converge Bio获2500万美元A轮，Bessemer领投</div>
+<span class="source-tag" style="background:rgba(16,185,129,0.15);color:#6ee7b7">arXiv · 英伟达清华</span>
+<div class="card-title">Gamma-World：从「一个人玩」到「多人共处」的世界模型</div>
+<div class="card-desc">英伟达与清华大学联合提出 Gamma-World，突破了传统世界模型只能模拟单智能体的限制，支持多智能体在同一虚拟环境中同时交互、感知与决策。该工作被视为具身智能从「单人游戏」迈向「多人联机」的关键一步，对自动驾驶仿真、机器人协作等领域具有重要参考价值。</div>
+</div>
 </div>
 
-<div style="margin-top:14px;padding:12px;background:rgba(234,179,8,0.04);border:1px solid rgba(234,179,8,0.1);border-radius:10px;">
-<div style="font-size:14px;font-weight:600;color:#fbbf24;margin-bottom:4px;">📋 雷石股份（875080）</div>
-<div style="font-size:13px;color:#94a3b8">今日无重大新公告</div>
+<!-- 板块七：快讯 + 雷石 -->
+<div class="section">
+<div class="section-header"><span class="emoji">⚡</span><h2>一句话快讯 &amp; 雷石股份</h2></div>
+
+<div class="grid-2">
+<div class="quick-item">
+<span class="tag">泡泡玛特</span>
+<div class="text">段永平举牌泡泡玛特，单日账面盈利近 10 亿港币</div>
+</div>
+<div class="quick-item">
+<span class="tag">诺基亚</span>
+<div class="text">发布 199 元 4G 微聊手机，支持微信小程序视频通话，主打学生和长辈市场</div>
+</div>
+<div class="quick-item">
+<span class="tag">太空智驾</span>
+<div class="text">中科创星「好望角科学沙龙」聚焦卫星自主决策，专家称「太空智驾」时代将至</div>
+</div>
+<div class="quick-item">
+<span class="tag">欧莱雅</span>
+<div class="text">中国启动「有意思青年」校园公益计划，首次以运动会形式开展，马龙等体育明星助阵</div>
+</div>
+<div class="quick-item">
+<span class="tag">自然堂</span>
+<div class="text">连续 15 年发布 ESG 报告，首次按 SBTi 标准制定减碳路径</div>
+</div>
+<div class="quick-item">
+<span class="tag">雷石股份</span>
+<div class="text">今日无重大新公告。本周未发现分红、定增、人事变动等实质性披露</div>
+</div>
 </div>
 </div>
 
 <!-- 板块八：今日可做项目 -->
+<div class="section">
+<div class="section-header"><span class="emoji">🚀</span><h2>今日可做项目</h2></div>
+
 <div class="card">
-<div class="section-title"><span class="project">🚀 今日可做项目</span></div>
-<div class="news-summary">今日BuilderPulse暂无报告。可关注方向：</div>
-<div style="margin-top:8px">
-<div class="news-item">
-<div class="news-summary">🔍 关注腾讯AI生态——近期腾讯与光帆科技达成战略合作，出行场景AI化值得关注</div>
-</div>
-<div class="news-item">
-<div class="news-summary">🔍 国产GPU/芯片开源社区——比亚迪4nm芯片发布后，国产AI芯片生态值得追踪</div>
-</div>
-<div class="news-item">
-<div class="news-summary">🔍 工业具身智能——乘物机器人等创业公司正快速落地，是个值得留意的赛道</div>
-</div>
+<div class="card-title">暂无 BuilderPulse 报告</div>
+<div class="card-desc">BuilderPulse 启动器源今日未返回项目报告，属于正常现象。以下方向值得关注：</div>
+<div class="card-desc" style="margin-top:8px">🔹 <strong>比亚迪智驾产业链</strong> — 4nm 芯片上线，相关供应链和算法公司有望受益<br>
+🔹 <strong>腾讯 AI 生态</strong> — 光帆科技与腾讯出行达成战略合作<br>
+🔹 <strong>国产 GPU 开源社区</strong> — 国产算力生态建设加速中</div>
+<div class="comment-bubble">网页版新增了今日可做项目板块，有兴趣可以看看哦～</div>
 </div>
 </div>
 
-<div class="footer">
-🐣 小鸡AI早报 · 每日8点准时送达 | 归档页面<br>
-数据来源：MIT Technology Review · TechCrunch · Ben's Bites · 量子位 · 36氪
-</div>
+<footer>
+<p>小鸡AI早报 · 每日8点准时送达</p>
+<p>🎧 语音版 | 📖 <a href="https://hongkongdxk123-jpg.github.io/briefing/">归档页面</a></p>
+</footer>
 
 </div>
 </body>
