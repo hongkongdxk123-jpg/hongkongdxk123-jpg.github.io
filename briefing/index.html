@@ -3,266 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年5月31日</title>
+<title>小鸡AI早报 · 2026年6月1日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;line-height:1.7;min-height:100vh;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%);padding:20px}
-.container{max-width:720px;margin:0 auto;padding:0}
-header{text-align:center;padding:48px 20px 32px}
-header h1{font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
-header .date{color:#94a3b8;font-size:0.95rem}
-header .subtitle{color:#64748b;font-size:0.85rem;margin-top:4px}
-.audio-player{margin:20px auto 32px;max-width:420px;background:rgba(255,255,255,0.04);border-radius:22px;padding:20px 24px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:16px}
-.audio-icon{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.8;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%);min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:20px 16px 60px}
+.header{text-align:center;padding:40px 0 32px;position:relative}
+.header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header .sub{color:#94a3b8;font-size:14px;margin-top:8px}
+.header .sub span{color:#8b5cf6}
+.audio-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:16px 20px;margin:0 0 24px;flex-wrap:wrap}
+.audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .audio-info{flex:1;min-width:0}
-.audio-info .label{font-size:0.85rem;color:#c4b5fd;font-weight:600}
-.audio-info .desc{font-size:0.75rem;color:#64748b;margin-top:2px}
-.audio-info audio{width:100%;margin-top:8px;border-radius:12px;height:40px}
-.section{margin-bottom:24px}
-.section-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.section-header .emoji{font-size:1.3rem}
-.section-header h2{font-size:1.1rem;font-weight:600;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.card{background:rgba(255,255,255,0.04);border-radius:14px;padding:18px 20px;margin-bottom:12px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);transition:all 0.2s}
-.card:hover{border-color:rgba(255,255,255,0.12);background:rgba(255,255,255,0.06)}
-.card-title{font-size:0.95rem;font-weight:600;color:#f1f5f9;margin-bottom:6px;line-height:1.5}
-.card-title a{color:#f1f5f9;text-decoration:none}
-.card-title a:hover{color:#a78bfa}
-.card-desc{font-size:0.82rem;color:#94a3b8;line-height:1.6}
-.source-tag{display:inline-block;font-size:0.7rem;padding:2px 8px;border-radius:4px;margin-bottom:8px;font-weight:500}
-.source-mit{background:rgba(37,99,235,0.15);color:#93c5fd}
-.source-tc{background:rgba(16,185,129,0.15);color:#6ee7b7}
-.source-bb{background:rgba(234,179,8,0.15);color:#fde68a}
-.source-qbit{background:rgba(236,72,153,0.15);color:#f9a8d4}
-.source-36kr{background:rgba(139,92,246,0.15);color:#c4b5fd}
-.source-bili{background:rgba(0,161,214,0.15);color:#67e8f9}
-.source-vatican{background:rgba(251,191,36,0.15);color:#fde68a}
-.comment-bubble{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 10px 10px 0;padding:10px 14px;margin-top:8px;font-size:0.8rem;color:#a78bfa;line-height:1.5}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.quick-item{background:rgba(255,255,255,0.04);border-radius:10px;padding:12px 14px;border:1px solid rgba(255,255,255,0.06)}
-.quick-item .tag{font-size:0.65rem;background:rgba(139,92,246,0.15);color:#c4b5fd;padding:1px 6px;border-radius:3px;display:inline-block;margin-bottom:4px}
-.quick-item .text{font-size:0.8rem;color:#cbd5e1;line-height:1.4}
-.tweet{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.04);border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:10px}
-.tweet .en{font-size:0.8rem;color:#94a3b8;font-style:italic;margin-bottom:4px}
-.tweet .zh{font-size:0.85rem;color:#e2e8f0}
-footer{text-align:center;padding:32px 20px 40px}
-footer p{font-size:0.8rem;color:#475569;margin-bottom:4px}
-footer a{color:#6b7280;text-decoration:none}
-footer a:hover{color:#a78bfa}
-@media(max-width:640px){body{padding:12px}.container{padding:0}.grid-2{grid-template-columns:1fr}.card{padding:14px 16px}.audio-player{padding:14px 16px;flex-wrap:wrap}}
+.audio-info .title{font-size:14px;font-weight:600;color:#e2e8f0}
+.audio-info .desc{font-size:12px;color:#94a3b8;margin-top:2px}
+.audio-card audio{border-radius:22px;width:100%;margin-top:8px}
+.audio-card audio::-webkit-media-controls-panel{background:#1a1a2e}
+.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:20px;margin-bottom:16px}
+.card h2{font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.card h2 .emoji{font-size:20px}
+.news-item{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.news-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.news-title{font-size:15px;font-weight:600;color:#f1f5f9;margin-bottom:4px;line-height:1.6}
+.news-title a{color:#f1f5f9;text-decoration:none}
+.news-title a:hover{color:#a78bfa}
+.news-summary{font-size:13px;color:#94a3b8;line-height:1.7}
+.source-tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:4px;margin-right:6px;font-weight:500;vertical-align:middle}
+.tag-mit{background:rgba(59,130,246,0.15);color:#60a5fa}
+.tag-tc{background:rgba(34,197,94,0.15);color:#4ade80}
+.tag-bb{background:rgba(234,179,8,0.15);color:#fbbf24}
+.tag-36kr{background:rgba(168,85,247,0.15);color:#c084fc}
+.tag-hn{background:rgba(249,115,22,0.15);color:#fb923c}
+.tag-gh{background:rgba(236,72,153,0.15);color:#f472b6}
+.tag-local{background:rgba(14,165,233,0.15);color:#38bdf8}
+.comment{border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);padding:10px 14px;margin:8px 0;border-radius:0 8px 8px 0;font-size:13px;color:#c4b5fd}
+.quick-news{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.quick-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.6}
+.quick-item .ql{display:inline-block;font-size:10px;padding:0 6px;border-radius:3px;background:rgba(139,92,246,0.2);color:#a78bfa;margin-right:4px}
+.tweet{border-left:3px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.04);padding:10px 14px;margin:8px 0;border-radius:0 8px 8px 0}
+.tweet .en{font-size:12px;color:#94a3b8;font-style:italic;margin-bottom:4px}
+.tweet .cn{font-size:13px;color:#e2e8f0}
+.footer{text-align:center;padding:32px 0;color:#4a5568;font-size:12px;border-top:1px solid rgba(255,255,255,0.04);margin-top:24px}
+.footer a{color:#8b5cf6;text-decoration:none}
+.footer a:hover{text-decoration:underline}
+@media(max-width:640px){.container{padding:16px 12px 40px}.header h1{font-size:24px}.card{padding:16px}.quick-news{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="container">
 
-<header>
-<h1>🐥 小鸡AI早报</h1>
-<div class="date">2026年5月31日 · 星期日</div>
-<div class="subtitle">每天8点 · 为你精选AI世界最重要的事</div>
-</header>
+<div class="header">
+<h1>🐤 AI 早报 · 六一快乐</h1>
+<div class="sub">2026年6月1日 星期一 · <span>今日宜探索新工具</span></div>
+</div>
 
-<div class="audio-player">
+<div class="audio-card">
 <div class="audio-icon">🎙️</div>
 <div class="audio-info">
-<div class="label">今日早报语音版</div>
+<div class="title">今日早报语音版</div>
 <div class="desc">软萌女声 · 约4分钟 🎀</div>
 <audio controls preload="none">
-<source src="https://hongkongdxk123-jpg.github.io/briefing/audio_cn.mp3" type="audio/mpeg">
+<source src="https://hongkongdxk123-jpg.github.io/briefing/audio_cn.mp3" type="audio/mp3">
 您的浏览器不支持音频播放
 </audio>
 </div>
 </div>
 
-<!-- 板块一：今日头条 -->
-<div class="section">
-<div class="section-header"><span class="emoji">🔥</span><h2>今日头条</h2></div>
-
 <div class="card">
-<span class="source-tag source-mit">Anthropic</span>
-<div class="card-title">Claude Opus 4.8 正式发布，登顶 AI 评测榜首</div>
-<div class="card-desc">5月28日，Anthropic 发布 Claude Opus 4.8，在 Artificial Analysis 智能指数中以 61.4 分超越 GPT-5.5，拿下第一。SWE-bench Pro 达到 69.2%，新增动态工作流（Dynamic Workflows）和 Effort Control 两大功能，可在 Fast 模式下以 Opus 4.7 三分之一的成本运行。</div>
-<div class="comment-bubble">小鸡点评：这波更新又快又猛，下半年AI大模型军备竞赛又要升级咯 🚀</div>
+<h2><span class="emoji">🔥</span> 今日头条</h2>
+<div class="news-item">
+<span class="source-tag tag-hn">HN</span>
+<span class="source-tag tag-gh">GitHub</span>
+<div class="news-title"><a href="https://esengine.github.io/DeepSeek-Reasonix/" target="_blank" rel="noopener">DeepSeek 发布 Reasonix：原生编程智能体</a></div>
+<div class="news-summary">DeepSeek推出了一款名为Reasonix的原生编程智能体，主打高缓存命中率和极低成本。该消息在Hacker News上获得了超过700票的热议，被誉为DeepSeek在编程智能体领域的重磅布局。</div>
+<div class="comment">小鸡点评：DeepSeek这是要跟Claude Code和Codex正面刚的节奏呀，而且价格还这么香，开发者们可以冲了～</div>
 </div>
-
-<div class="card">
-<span class="source-tag source-qbit">量子位</span>
-<div class="card-title">比亚迪发布 4nm 自研智驾芯片「璇玑 A3」，城市领航安全兜底</div>
-<div class="card-desc">5月28日，比亚迪在「敢为」智能化战略发布会上推出中国首颗 4nm 制程车规级智驾芯片——璇玑 A3。单车搭载三颗，总算力超 2100 TOPS。同时宣布城市领航（城市NOA）一年内事故全赔，无赔付上限。打破「智驾出事车主担责」的行业惯例。</div>
-<div class="comment-bubble">这条你可能用得上：比亚迪这次出手够狠，自研芯片 + 安全兜底，想入智驾车可以考虑 🚗</div>
+<div class="news-item">
+<span class="source-tag tag-hn">HN</span>
+<span class="source-tag tag-gh">GitHub</span>
+<div class="news-title"><a href="https://api-docs.deepseek.com/quick_start/pricing" target="_blank" rel="noopener">DeepSeek V4 Pro 75%折扣永久化</a></div>
+<div class="news-summary">DeepSeek宣布将V4 Pro的75%折扣优惠永久化，5月31日折扣结束后，V4 Pro的API价格将正式调整为原价的四分之一。620票热议，开发者社区反响热烈。</div>
+<div class="comment">小鸡点评：这招太狠了，直接永久降价七五折，其他模型提供商压力山大呀。</div>
 </div>
+<div class="news-item">
+<span class="source-tag tag-gh">GitHub</span>
+<div class="news-title"><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">Claude Code v2.1.159 更新 · Hermes Agent v0.15.2</a></div>
+<div class="news-summary">Claude Code于5月31日更新至v2.1.159版本。同日，Hermes Agent也发布了v2026.5.29.2版本（v0.15.2），持续优化AI编码助手体验。</div>
 </div>
-
-<!-- 板块二：国际前沿 -->
-<div class="section">
-<div class="section-header"><span class="emoji">🌍</span><h2>国际前沿</h2></div>
-
-<div class="card">
-<span class="source-tag source-mit">MIT Tech Review</span>
-<div class="card-title">教皇 Leo XIV 发布 AI 通谕《Magnifica Humanitas》</div>
-<div class="card-desc">教皇在通谕中明确表示「技术绝不中立」，呼吁所有人在 AI 时代以勇气和团结行动。通谕分为五章，以 135 年前 Leo XIII 的《Rerum novarum》为参照，是人类历史上首次由梵蒂冈最高权威对 AI 议题发出的系统性声明。</div>
 </div>
 
 <div class="card">
-<span class="source-tag source-mit">MIT Tech Review</span>
-<div class="card-title">新型锂提取技术有望改变电动车电池产业</div>
-<div class="card-desc">科研团队在《Science》发表论文，找到一种更环保、更低成本的锂矿石提锂方法。创业公司 Rock Zero 正在推进商业化，如果成功，可大幅降低电动车电池成本与碳排放。</div>
+<h2><span class="emoji">🌍</span> 国际前沿</h2>
+<div class="news-item">
+<span class="source-tag tag-mit">MIT</span>
+<div class="news-title"><a href="https://www.technologyreview.com/2026/05/28/1138096/lithium-extraction-rock-zero/" target="_blank" rel="noopener">锂提取技术新突破：更环保、更便宜</a></div>
+<div class="news-summary">MIT报道，科学家在《科学》杂志发表了一种新的锂提取方法，能大幅降低成本和碳排放。初创公司Rock Zero正在将其商业化，有望改变电动车电池关键材料的供应格局。</div>
+</div>
+<div class="news-item">
+<span class="source-tag tag-mit">MIT</span>
+<div class="news-title"><a href="https://www.technologyreview.com/2026/05/29/1138107/how-the-popes-magnifica-humanitas-offers-a-template-for-individuals-to-meet-the-ai-moment/" target="_blank" rel="noopener">教皇新通谕《崇高的人性》：AI时代的伦理蓝图</a></div>
+<div class="news-summary">教皇利奥十四世发布关于人工智能的新通谕《崇高的人性》，核心论断是"技术从来不是中立的"，呼吁所有人以勇气和团结面对AI时代——这被认为是人类历史上最大的变革。</div>
+<div class="comment">小鸡点评：教皇都说技术不是中立的了，科技从业者确实需要更关注技术伦理问题呀。</div>
+</div>
+<div class="news-item">
+<span class="source-tag tag-mit">MIT</span>
+<div class="news-title"><a href="https://www.technologyreview.com/2026/05/28/1138067/climate-tech-ipos/" target="_blank" rel="noopener">气候科技公司掀起IPO浪潮</a></div>
+<div class="news-summary">今年美国迎来一波能源公司上市潮：Solv Energy以60亿美元估值上市，小型模块化核反应堆公司X-energy紧随其后首日大涨。气候科技从概念走向资本市场收获期。</div>
+</div>
+<div class="news-item">
+<span class="source-tag tag-tc">TC</span>
+<div class="news-title"><a href="https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/" target="_blank" rel="noopener">数据中心需求驱动天然气电厂成本飙升66%</a></div>
+<div class="news-summary">AI数据中心电力需求激增，导致天然气发电厂建设成本两年内几乎翻倍，工期延长23%。AI能源需求正在重塑电力基础设施格局。</div>
+</div>
 </div>
 
 <div class="card">
-<span class="source-tag source-tc">TechCrunch</span>
-<div class="card-title">数据中心需求推动天然气发电成本飙升 66%</div>
-<div class="card-desc">天然气发电厂建设成本两年内上涨近一倍，工期延长 23%。AI 数据中心的电力需求激增是主要驱动因素。</div>
+<h2><span class="emoji">🇨🇳</span> 国内动态</h2>
+<div class="news-item">
+<span class="source-tag tag-36kr">36氪</span>
+<div class="news-title"><a href="https://36kr.com/p/3831135917107075" target="_blank" rel="noopener">乘物机器人完成天使轮融资，服务富士康半年营收超2000万</a></div>
+<div class="news-summary">工业具身智能公司乘物机器人获中国台湾自动化龙头和椿科技战略投资。公司成立仅一年，已完成十余个工业场景落地项目，服务富士康等头部制造企业，半年营收超两千万元。</div>
+<div class="comment">小鸡点评：工业机器人落地能力才是关键，能服务富士康说明技术真不是画饼呀。</div>
+</div>
+<div class="news-item">
+<span class="source-tag tag-36kr">36氪</span>
+<div class="news-title"><a href="https://36kr.com/p/3830580716365449" target="_blank" rel="noopener">吉利整合研究院辅助驾驶团队至千里科技</a></div>
+<div class="news-summary">据36氪独家，吉利中央研究院数百人的辅助驾驶团队将被整合入千里科技，以增强其在智能驾驶领域的竞争力。千里科技被定位为"第二个华为"，吉利为此不断加码技术筹码。</div>
+</div>
+<div class="news-item">
+<span class="source-tag tag-36kr">36氪</span>
+<div class="news-title"><a href="https://36kr.com/p/3831071878358659" target="_blank" rel="noopener">中科创星"好望角科学沙龙"聚焦太空智驾</a></div>
+<div class="news-summary">中科院西安光机所副所长邵晓鹏提出，太空智驾时代即将到来，卫星将像L4级自动驾驶汽车一样，在太空中具备自主环境感知、任务规划和机动决策能力。AI+光学将重塑航天技术范式。</div>
+</div>
 </div>
 
 <div class="card">
-<span class="source-tag source-bb">Ben's Bites</span>
-<div class="card-title">讨论：MCP 协议卷土重来？SaaS 模式过时了吗？</div>
-<div class="card-desc">科技博客 Ben's Bites 本周讨论两个热门话题：MCP（Model Context Protocol）正在酝酿回归，以及「SaaS 已死」的论调是否成立。AI Agent 的崛起可能改变软件交付方式。</div>
+<h2><span class="emoji">🤖</span> AI模型动态</h2>
+<div class="news-item">
+<span class="source-tag tag-hn">HN</span>
+<div class="news-title">DeepSeek Reasonix — 原生编程智能体</div>
+<div class="news-summary">DeepSeek发布Reasonix，一款原生编程智能体，主打高缓存命中率和超低成本，直接对标Claude Code和OpenAI Codex。HN评分729，本周最热AI话题。</div>
 </div>
+<div class="news-item">
+<span class="source-tag tag-hn">HN</span>
+<div class="news-title">DeepSeek V4 Pro — 75%折扣永久化</div>
+<div class="news-summary">5月22日宣布，V4 Pro API价格永久调整为原价的四分之一。620票热议，社区反馈极为积极。</div>
 </div>
-
-<!-- 板块三：国内动态 -->
-<div class="section">
-<div class="section-header"><span class="emoji">🇨🇳</span><h2>国内动态</h2></div>
-
-<div class="card">
-<span class="source-tag source-36kr">36氪</span>
-<div class="card-title">吉利整合研究院辅助驾驶团队至千里科技</div>
-<div class="card-desc">吉利中央研究院数百人的辅助驾驶团队将被整合入千里科技（旗下千里浩瀚），后者将负责为吉利各车型提供智驾方案定制与量产交付。此举被业内人士解读为吉利全力打造「第二个华为」的关键一步。</div>
+<div class="news-item">
+<span class="source-tag tag-hn">HN</span>
+<div class="news-title">Claude Opus 4.7 — 推理能力大幅提升</div>
+<div class="news-summary">Anthropic于4月发布Claude Opus 4.7，在推理和编码方面取得显著提升。但已有开发者发现Qwen3.6-35B-A3B在部分任务上超越Opus 4.7。</div>
 </div>
-
-<div class="card">
-<span class="source-tag source-qbit">量子位</span>
-<div class="card-title">英伟达清华团队发布 Gamma-World：多智能体世界模型</div>
-<div class="card-desc">英伟达与清华联合团队提出 Gamma-World，让世界模型从单人交互进化到多智能体共存仿真。多个 AI Agent 可同时在虚拟环境中交互、协作或对抗，为具身智能和自动驾驶仿真开辟新方向。</div>
+<div class="news-item">
+<span class="source-tag tag-gh">GitHub</span>
+<div class="news-title">Claude Code v2.1.159 — 昨日更新</div>
+<div class="news-summary">Claude Code于5月31日更新，持续优化开发者体验。Hermes Agent也在5月29日更新至v0.15.2。</div>
 </div>
-
-<div class="card">
-<span class="source-tag source-qbit">量子位</span>
-<div class="card-title">帮 Gemini 拿 IMO 金牌的关键人物，差点成职业钢琴家</div>
-<div class="card-desc">专访揭示了这位数学模型专家的跨界之路——从钢琴到 AI，他可能是大模型圈最会弹钢琴的人。</div>
+<div class="news-item">
+<span class="source-tag tag-hn">HN</span>
+<div class="news-title">Qwen3.6-35B-A3B — 以小博大</div>
+<div class="news-summary">Simon Willison实测发现，通义千问3.6版本（35B参数，3B活跃参数）在图像生成任务上胜过了Claude Opus 4.7，显示了MoE架构的潜力。HN评分463。</div>
 </div>
-
-<div class="card">
-<span class="source-tag source-36kr">36氪</span>
-<div class="card-title">乘物机器人完成天使轮融资，服务富士康</div>
-<div class="card-desc">专注工业具身智能的乘物机器人获中国台湾龙头企业和椿科技战略投资。公司成立仅半年营收超两千万元，服务包括富士康在内的多家头部制造企业。</div>
+<div class="news-item">
+<span class="source-tag tag-hn">HN</span>
+<div class="news-title">Gemini 3.5 Flash — 谷歌全面押注</div>
+<div class="news-summary">谷歌计划将Gemini 3.5 Flash用于所有产品线，尽管价格上涨。同时，苹果选择谷歌Gemini来进行Siri的重大升级。</div>
 </div>
-</div>
-
-<!-- 板块四：AI模型动态 -->
-<div class="section">
-<div class="section-header"><span class="emoji">🤖</span><h2>AI 模型动态</h2></div>
-
-<div class="card">
-<span class="source-tag" style="background:rgba(139,92,246,0.15);color:#c4b5fd">Claude</span>
-<div class="card-title">Claude Opus 4.8 — 2026.05.28</div>
-<div class="card-desc">Anthropic 最新旗舰。AI 智能指数 61.4 分登顶，SWE-bench Pro 69.2%，GDPval Elo 1890（超 GPT-5.5 达 121 分）。新增动态工作流与 Effort Control，定价不变 $5/$25 per 1M tokens。</div>
 </div>
 
 <div class="card">
-<span class="source-tag" style="background:rgba(16,185,129,0.15);color:#6ee7b7">DeepSeek</span>
-<div class="card-title">DeepSeek V4-Pro / V4-Flash — 2026.04.24</div>
-<div class="card-desc">同时发布性能旗舰 V4-Pro 和速度优化版 V4-Flash，均支持 100 万 token 超长上下文，开放权重开源。Flash 版推理能力接近 Pro，API 价格极具竞争力。目前仍有推广折扣。</div>
+<h2><span class="emoji">🗣️</span> 大佬观点</h2>
+<div class="tweet">
+<div class="en">"Everyone pretends AI Agents are amazing. It's not, it's slop." — Andrej Karpathy</div>
+<div class="cn">Andrej Karpathy直言不讳：每个人都假装AI智能体很棒，但它们其实是一堆垃圾。这个直白的评价在开发者社区引发了激烈讨论。</div>
+</div>
+<div class="tweet">
+<div class="en">Richard Dawkins concludes AI is conscious, even if it doesn't know it</div>
+<div class="cn">著名演化生物学家理查德·道金斯得出结论：人工智能可能已经具备意识，即使它自己不知道。该观点在学术界引起广泛关注。</div>
+</div>
+<div class="tweet">
+<div class="en">Sam Altman responds to Anthropic's "Ads are coming to AI. But not to Claude" campaign</div>
+<div class="cn">Sam Altman回应Anthropic的营销广告。Anthropic打广告称"广告要来了，但Claude不会有广告"，Altman则回应说AI公司应该对盈利模式保持诚实。</div>
+</div>
+<div class="comment">小鸡点评：Karpathy的"AI Agent是垃圾"论虽然听着扎心，但确实点出了当前自主智能体的痛点呀～</div>
 </div>
 
 <div class="card">
-<span class="source-tag" style="background:rgba(251,191,36,0.15);color:#fde68a">OpenAI</span>
-<div class="card-title">GPT-5.5 Instant — 2026.05.05</div>
-<div class="card-desc">ChatGPT 默认模型从 5.3 Instant 升级为 5.5 Instant。医学/法律/金融等高风险领域的幻觉减少 52.5%，回答长度缩短 30.2%。不是 4 月发布的 GPT-5.5 旗舰版，而是速度优化版。</div>
+<h2><span class="emoji">⚡</span> 快讯 + 雷石股份</h2>
+<div class="quick-news">
+<div class="quick-item"><span class="ql">📊</span> 雷石股份(875080)：今日无新公告更新</div>
+<div class="quick-item"><span class="ql">🏛️</span> 教皇通谕：技术绝非中立，AI时代需要人类勇气与团结</div>
+<div class="quick-item"><span class="ql">💰</span> 气候科技IPO热潮涌动：Solv Energy和X-energy成功上市</div>
+<div class="quick-item"><span class="ql">🔋</span> 数据中心电力需求驱动天然气电厂成本两年翻倍</div>
+<div class="quick-item"><span class="ql">🍎</span> 苹果选谷歌Gemini支撑Siri大升级</div>
+<div class="quick-item"><span class="ql">🏭</span> 乘物机器人服务富士康，半年创收2000万</div>
+</div>
 </div>
 
 <div class="card">
-<span class="source-tag" style="background:rgba(59,130,246,0.15);color:#93c5fd">Qwen</span>
-<div class="card-title">Qwen3.7-Max-Preview — 2026.05.19</div>
-<div class="card-desc">阿里云千问大模型最新预览版，在 Arena AI 榜单首发亮相，主打智能体时代旗舰能力。</div>
+<h2><span class="emoji">🚀</span> 今日可做项目</h2>
+<div class="news-item">
+<div class="news-title">尝试 DeepSeek Reasonix 编程智能体</div>
+<div class="news-summary">DeepSeek新发布的Reasonix原生编程智能体价格极低、缓存命中率高，值得开发者们上手体验一下。可以用它来写写脚本、重构代码，看看和Claude Code/Codex比体验如何。</div>
 </div>
-
-<div class="card">
-<span class="source-tag" style="background:rgba(234,179,8,0.15);color:#fde68a">Google</span>
-<div class="card-title">新 Gemini 模型预期在 Google I/O 2026 发布</div>
-<div class="card-desc">外界预期 Google 将在 5 月的 I/O 大会上公布具备 GPT-5.5 级别能力的新 Gemini 模型。此外，Gemini 此前帮助人类拿下 IMO 金牌的新闻引发关注。</div>
+<div class="news-item">
+<div class="news-title">关注 Qwen3.6 vs Claude Opus 4.7 基准测试</div>
+<div class="news-summary">通义千问3.6在部分任务上超越了Claude Opus 4.7，建议关注一下具体的基准测试数据集和结果分析，了解开源模型的最新能力边界。</div>
 </div>
-</div>
-
-<!-- 板块五：大佬观点 -->
-<div class="section">
-<div class="section-header"><span class="emoji">🗣️</span><h2>大佬观点</h2></div>
-
-<div class="card">
-<span class="source-tag source-vatican">教皇 Leo XIV</span>
-<div class="card-title">「技术绝不中立」—— 从通谕看 AI 时代的人类角色</div>
-<div class="card-desc">教皇 Leo XIV 在首份通谕《Magnifica Humanitas》（「高贵的人类」）中系统阐述了 AI 时代的伦理框架。核心观点：技术发展必须服务于人类尊严，算法不能取代人的判断与道德责任。通谕的发布时间恰逢 Leo XIII 发布《Rerum novarum》135 周年，历史意味浓厚。</div>
-<div class="comment-bubble">小鸡点评：当梵蒂冈也开始深度讨论AI伦理，说明这不是科技圈的内部话题了 ✝️</div>
-</div>
-
-<div class="card">
-<span class="source-tag source-bb">Ben's Bites</span>
-<div class="card-title">「所有应用都将成为开发工具」</div>
-<div class="card-desc">Ben's Bites 近期提出了一个有趣的观点：随着 AI Agent 的普及，传统 SaaS 应用的边界在模糊。用户不再通过 UI 交互，而是通过 Agent 调用，这意味着「所有 App 都可能变成 Dev Tools」。MCP 协议的回归讨论正因此而起。</div>
+<div class="news-item">
+<div class="news-title">阅读教皇《崇高的人性》AI伦理通谕</div>
+<div class="news-summary">MIT Tech Review有深度解读文章，教皇在AI伦理方面的观点值得每一位科技从业者认真思考。</div>
 </div>
 </div>
 
-<!-- 板块六：前沿论文 -->
-<div class="section">
-<div class="section-header"><span class="emoji">📄</span><h2>前沿论文</h2></div>
-
-<div class="card">
-<span class="source-tag" style="background:rgba(16,185,129,0.15);color:#6ee7b7">arXiv · 英伟达清华</span>
-<div class="card-title">Gamma-World：从「一个人玩」到「多人共处」的世界模型</div>
-<div class="card-desc">英伟达与清华大学联合提出 Gamma-World，突破了传统世界模型只能模拟单智能体的限制，支持多智能体在同一虚拟环境中同时交互、感知与决策。该工作被视为具身智能从「单人游戏」迈向「多人联机」的关键一步，对自动驾驶仿真、机器人协作等领域具有重要参考价值。</div>
+<div class="footer">
+小鸡AI早报 · 每日8点准时送达 🐤<br>
+归档页面 · 2026年6月1日 星期一
 </div>
-</div>
-
-<!-- 板块七：快讯 + 雷石 -->
-<div class="section">
-<div class="section-header"><span class="emoji">⚡</span><h2>一句话快讯 &amp; 雷石股份</h2></div>
-
-<div class="grid-2">
-<div class="quick-item">
-<span class="tag">泡泡玛特</span>
-<div class="text">段永平举牌泡泡玛特，单日账面盈利近 10 亿港币</div>
-</div>
-<div class="quick-item">
-<span class="tag">诺基亚</span>
-<div class="text">发布 199 元 4G 微聊手机，支持微信小程序视频通话，主打学生和长辈市场</div>
-</div>
-<div class="quick-item">
-<span class="tag">太空智驾</span>
-<div class="text">中科创星「好望角科学沙龙」聚焦卫星自主决策，专家称「太空智驾」时代将至</div>
-</div>
-<div class="quick-item">
-<span class="tag">欧莱雅</span>
-<div class="text">中国启动「有意思青年」校园公益计划，首次以运动会形式开展，马龙等体育明星助阵</div>
-</div>
-<div class="quick-item">
-<span class="tag">自然堂</span>
-<div class="text">连续 15 年发布 ESG 报告，首次按 SBTi 标准制定减碳路径</div>
-</div>
-<div class="quick-item">
-<span class="tag">雷石股份</span>
-<div class="text">今日无重大新公告。本周未发现分红、定增、人事变动等实质性披露</div>
-</div>
-</div>
-</div>
-
-<!-- 板块八：今日可做项目 -->
-<div class="section">
-<div class="section-header"><span class="emoji">🚀</span><h2>今日可做项目</h2></div>
-
-<div class="card">
-<div class="card-title">暂无 BuilderPulse 报告</div>
-<div class="card-desc">BuilderPulse 启动器源今日未返回项目报告，属于正常现象。以下方向值得关注：</div>
-<div class="card-desc" style="margin-top:8px">🔹 <strong>比亚迪智驾产业链</strong> — 4nm 芯片上线，相关供应链和算法公司有望受益<br>
-🔹 <strong>腾讯 AI 生态</strong> — 光帆科技与腾讯出行达成战略合作<br>
-🔹 <strong>国产 GPU 开源社区</strong> — 国产算力生态建设加速中</div>
-<div class="comment-bubble">网页版新增了今日可做项目板块，有兴趣可以看看哦～</div>
-</div>
-</div>
-
-<footer>
-<p>小鸡AI早报 · 每日8点准时送达</p>
-<p>🎧 语音版 | 📖 <a href="https://hongkongdxk123-jpg.github.io/briefing/">归档页面</a></p>
-</footer>
 
 </div>
 </body>
