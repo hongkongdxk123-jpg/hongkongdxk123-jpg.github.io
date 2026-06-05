@@ -84,6 +84,21 @@ nav{
 .nav-menu a{padding:6px 10px;font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap;transition:color 0.2s}
 .nav-menu a:active{color:#f5f5f7}
 
+/* ── 天气预报+升旗信息栏 ── */
+.weather-bar{
+  position:fixed;top:44px;left:0;right:0;z-index:99;
+  height:26px;display:flex;align-items:center;justify-content:center;gap:clamp(10px,4vw,28px);
+  background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.04);
+  font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.02em;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  overflow:hidden;white-space:nowrap;padding:0 12px;
+}
+.weather-bar .wb-item{display:flex;align-items:center;gap:4px}
+.weather-bar .wb-icon{font-size:13px;line-height:1}
+.weather-bar .wb-temp{color:rgba(255,255,255,0.55)}
+.weather-bar .wb-flag{color:#d4a843;font-weight:500}
+.weather-bar .wb-loading{font-size:10px;color:rgba(255,255,255,0.2)}
+
 /* ── Typography ── */
 h1{font-size:clamp(36px,8vw,56px);font-weight:700;letter-spacing:-0.015em;line-height:1.05}
 h2{font-size:clamp(28px,6vw,40px);font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:6px}
@@ -247,6 +262,9 @@ footer{background:#0a0a0a;border-top:1px solid rgba(255,255,255,0.06);padding:40
 footer .links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
 footer .links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:12px;transition:color 0.2s}
 footer .links a:active{color:#f5f5f7}
+footer .links .soc-icon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:4px;font-size:11px;font-weight:600;margin-right:3px;vertical-align:middle;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)}
+footer .links a:hover .soc-icon{background:rgba(255,255,255,0.1);color:#f5f5f7}
+footer .links .link-gap{display:inline-block;width:1px;height:14px;background:rgba(255,255,255,0.08);vertical-align:middle;margin:0 4px}
 footer p{font-size:11px;color:rgba(255,255,255,0.24);line-height:1.6}
 footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 
@@ -283,6 +301,11 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   </div>
 </div>
 </nav>
+
+<!-- 天气预报+升旗信息 -->
+<div class="weather-bar" id="weatherBar">
+  <span class="wb-loading">⏳ 加载天气...</span>
+</div>
 
 <!-- Hero -->
 <section class="hero" id="home">
@@ -405,6 +428,12 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
         <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">9张</span>
         <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">点击精彩不断</span>
       </div>
+      <div class="scroll-card theme-cover" style="cursor:pointer;aspect-ratio:9/16" onclick="openVideoGallery('kungfu','🐼 功夫熊猫',['https://chupiandazi.cn/videos/kungfu_clip.mp4'],['images/kungfu_thumb.jpg'])">
+        <div class="cover-bg" style="background-image:url('images/kungfu_video_cover.jpg')"></div>
+        <div class="play-icon" style="position:relative;z-index:1">▶</div>
+        <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">1段</span>
+        <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px;text-align:center">根本没有所谓的秘籍<br>关键在自己</span>
+      </div>
       <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多客片</div><div class="sub">全部</div></a>
     </div></div>
   </div>
@@ -413,32 +442,40 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 
 <!-- 功夫熊猫二级全屏画廊 -->
 <div id="kungfu-fullpage" style="display:none;position:fixed;inset:0;z-index:9998;background:#000;flex-direction:column">
+  <div style="display:flex;align-items:center;padding:12px 16px;position:relative;z-index:2;background:rgba(0,0,0,0.95)">
+    <button onclick="hideKungfuGallery()" style="background:none;border:none;color:#fff;font-size:20px;padding:8px;cursor:pointer">✕</button>
+    <span style="color:#fff;font-size:16px;margin-left:8px;font-weight:500">🐼 功夫熊猫</span>
+  </div>
   <div style="flex:1;display:flex;align-items:center;overflow:hidden">
     <div class="scroll-wrap" style="padding:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;width:100%">
-      <div class="scroll-track" style="display:flex;gap:10px;padding:0 8px">
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_3.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_8.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_9.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_10.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_11.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_12.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_13.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
-        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(65vw,280px,320px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#151515;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_14.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+      <div class="scroll-track" style="display:flex;gap:8px;padding:0 6px">
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_2.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_3.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_8.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_9.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_10.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_11.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_12.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_13.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+        <div class="scroll-card" style="scroll-snap-align:start;width:clamp(50vw,200px,260px);aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#111;flex-shrink:0"><div class="img-wrap" style="width:100%;height:100%"><img src="images/kungfu_14.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 攻略二级页面 → 垂直布局，图片完整显示 -->
+<!-- 攻略二级页面 → 横向滑动，一页多图露出边缘 -->
 <div id="guide-fullpage" style="display:none;position:fixed;inset:0;z-index:9997;background:#000;flex-direction:column">
   <div style="display:flex;align-items:center;padding:12px 16px;position:relative;z-index:2;background:rgba(0,0,0,0.95)">
     <button onclick="hideGuideFullpage()" style="background:none;border:none;color:#fff;font-size:20px;padding:8px;cursor:pointer">✕</button>
     <span id="guide-gallery-title" style="color:#fff;font-size:16px;margin-left:8px;font-weight:500"></span>
   </div>
   <div style="flex:1;display:flex;overflow:hidden;position:relative">
-    <div id="guide-track" style="flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:y mandatory;padding:0">
+    <div id="guide-track" style="display:flex;flex:1;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding:0 0 0 0">
     </div>
+  </div>
+  <div class="scroll-nav" id="guide-scroll-nav">
+    <button class="nav-left" disabled></button>
+    <button class="nav-right"></button>
   </div>
 </div>
 
@@ -459,7 +496,10 @@ function showKungfuGallery(){
   document.getElementById('kungfu-fullpage').style.display='flex';
   document.body.style.overflow='hidden';
   history.pushState({gallery:'kungfu'},'');
+  // 缩小卡片宽度让右边露出下一张
   setTimeout(function(){
+    var cards=document.querySelectorAll('#kungfu-fullpage .scroll-card');
+    for(var c=0;c<cards.length;c++){cards[c].style.width='200px';cards[c].style.minWidth='200px';cards[c].style.maxWidth='200px';cards[c].style.flex='0 0 200px'}
     var kfw=document.querySelector('#kungfu-fullpage .scroll-wrap');
     if(kfw&&!kfw.parentNode.querySelector('.scroll-nav'))addScrollNav(kfw);
   },100);
@@ -479,6 +519,14 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
     <p class="section-sub">左右滑动 · 隐藏玩法全揭秘</p>
   </div>
   <div class="scroll-wrap guides-scroll fade-in"><div class="scroll-track">
+    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('拍照攻略',[{src:'https://chupiandazi.cn/videos/photo_guide.mp4',type:'video',name:'跟着学十三个北环拍照姿势',preview:'images/photo_guide_cover_v2.jpg'}])">
+      <div class="icon">📸</div>
+      <div class="label">拍照攻略</div>
+      <div class="sub">跟着学十三个北环拍照姿势，走到哪拍到哪</div>
+      <span class="guide-tag">拍照技巧</span>
+      <div class="guide-count">1</div>
+      <div class="guide-action">个视频 · 点击播放</div>
+    </div>
     <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('最优路线规划',[{src:'images/guide-poster.jpg',type:'image'},{src:'https://chupiandazi.cn/guides/route_guide.pdf',type:'pdf',name:'2026北京环球影城距离攻略',preview:'images/route_guide_preview.jpg'}])">
       <div class="icon">🗺️</div>
       <div class="label">最优路线规划</div>
@@ -551,10 +599,10 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">即将上线</span>
       <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">出片集锦</span>
     </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" id="hp-video-tab" onclick="openVideoGallery('video','哈利波特特辑',['https://chupiandazi.cn/videos/hp_chupian_video.mp4'])">
+    <div class="scroll-card theme-cover" style="cursor:pointer" id="hp-video-tab" onclick="openVideoGallery('video','哈利波特特辑',['https://chupiandazi.cn/videos/hp_forbidden_journey.mp4','https://chupiandazi.cn/videos/hp_chupian_video.mp4'],['images/hp_forbidden_thumb.jpg','images/hp_8.jpg'])">
       <div class="cover-bg" style="background-image:url('images/hp_8.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
-      <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">1段</span>
+      <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">2段</span>
       <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">哈利波特特辑</span>
     </div>
     <a href="#" class="scroll-card more"><div class="icon">+</div><div class="label">更多视频</div></a>
@@ -767,6 +815,12 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
   <a href="#">小红书</a>
   <a href="#">抖音</a>
   <a href="#">微信</a>
+  <span class="link-gap"></span>
+  <a href="#"><span class="soc-icon">f</span> Facebook</a>
+  <a href="#"><span class="soc-icon">𝕏</span></a>
+  <a href="#"><span class="soc-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></span> Instagram</a>
+  <a href="#"><span class="soc-icon">▶</span> YouTube</a>
+  <a href="#"><span class="soc-icon">♪</span> TikTok</a>
 </div>
 <hr>
 <p>© 2026 出片搭子 · 北京环球影城专属跟拍</p>
@@ -816,6 +870,9 @@ function updateCounter() {
 }
 function closeGallery() {
   document.getElementById('galleryModal').classList.remove('open');
+  // 停止所有视频
+  var videos = document.getElementById('galleryModal').querySelectorAll('video');
+  for(var v=0;v<videos.length;v++){ videos[v].pause(); videos[v].src=''; }
   var target = document.getElementById(galleryScrollTarget);
   if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -851,6 +908,10 @@ function openGallery(type, title, images) {
 function closeGallery() {
   document.querySelector('.back-btn').style.display = '';
   document.getElementById('galleryModal').classList.remove('open');
+  // 停止所有仍在播放的视频
+  var modal = document.getElementById('galleryModal');
+  var videos = modal.querySelectorAll('video');
+  for(var v=0;v<videos.length;v++){ videos[v].pause(); videos[v].src=''; }
   var target = document.getElementById(galleryScrollTarget);
   if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
   // 视频返回定位到侏罗纪卡片
@@ -868,7 +929,7 @@ var galleryScrollTarget = '';
 let galleryData = [];
 let currentIndex = 0;
 
-function openVideoGallery(type, title, urls) {
+function openVideoGallery(type, title, urls, thumbs) {
   document.querySelector('.back-btn').style.display = 'none';
   galleryData = urls;
   currentIndex = 0;
@@ -877,7 +938,7 @@ function openVideoGallery(type, title, urls) {
   document.getElementById('modalCounter').textContent = '1/' + urls.length;
   var track = document.getElementById('modalTrack');
   track.innerHTML = '';
-  var thumbs = ['images/jurassic_thumb1.jpg','images/jurassic_thumb2.jpg'];
+  var defaultThumbs = thumbs || ['images/jurassic_thumb1.jpg','images/jurassic_thumb2.jpg'];
   urls.forEach(function(url, i) {
     var slide = document.createElement('div');
     slide.className = 'modal-slide';
@@ -886,7 +947,7 @@ function openVideoGallery(type, title, urls) {
     slide.style.cursor = 'pointer';
     slide.style.minWidth = '65vw';
     slide.style.marginRight = (i < urls.length - 1) ? '12px' : '0';
-    var thumb = thumbs[i] || 'images/jurassic_video_cover_v3.jpg';
+    var thumb = defaultThumbs[i] || 'images/jurassic_video_cover_v3.jpg';
     slide.innerHTML = '<div class="img-wrap" style="width:100%;height:70%;border-radius:14px;overflow:hidden;position:relative" onclick="event.stopPropagation();playCurrentVideo('+i+')">'
       + '<img src="'+thumb+'" style="width:100%;height:100%;object-fit:cover">'
       + '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">'
@@ -988,35 +1049,72 @@ function openGuideFullpage(title, materials) {
   document.getElementById('guide-gallery-title').textContent = title;
   var track = document.getElementById('guide-track');
   track.innerHTML = '';
+  track.style.paddingLeft = '0';
   materials.forEach(function(m, i) {
     var item = document.createElement('div');
-    item.style.cssText = 'min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 12px 40px;scroll-snap-align:start;box-sizing:border-box;cursor:pointer';
+    item.style.cssText = 'width:80vw;height:100%;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 12px 20px;scroll-snap-align:start;box-sizing:border-box';
     if (m.type === 'image') {
-      item.innerHTML = '<img src="'+m.src+'" style="max-width:100%;max-height:78vh;width:auto;height:auto;object-fit:contain;border-radius:8px;display:block;margin:0 auto;cursor:pointer" loading="lazy">'
-        + '<div style="color:rgba(255,255,255,0.45);font-size:12px;margin-top:10px;text-align:center;line-height:1.5;max-width:85vw">'+(m.name||'点击图片查看大图')+'</div>';
+      item.innerHTML = '<div style="position:relative;max-width:100%;max-height:70vh;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="openGuideViewer('+i+')">'
+        + '<img src="'+m.src+'" style="max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;border-radius:8px;display:block;margin:0 auto" loading="lazy">'
+        + '<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 20px rgba(0,0,0,0.3)">\u25b6</div></div>'
+        + '<div style="color:rgba(255,255,255,0.45);font-size:12px;margin-top:8px;text-align:center;line-height:1.5;max-width:70vw">'+(m.name||'点击播放')+'</div>'
+        + '<div style="flex:1;display:flex;align-items:flex-end"><span style="font-size:10px;color:rgba(255,255,255,0.15);letter-spacing:1px">→ 右划看更多</span></div>';
+    } else if (m.preview && m.type === 'video') {
+      item.innerHTML = '<div style="position:relative;max-width:100%;max-height:65vh;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="openGuideViewer('+i+')">'
+        + '<img src="'+m.preview+'" style="max-width:100%;max-height:65vh;object-fit:contain;border-radius:8px;display:block">'
+        + '<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 20px rgba(0,0,0,0.3)">\u25b6</div>'
+        + '<div style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);font-size:11px;padding:4px 10px;border-radius:100px;font-weight:500">▶ 视频</div></div>'
+        + '<div style="color:#f5f5f7;font-size:13px;margin-top:8px;font-weight:500">'+(m.name||'点击播放')+'</div>'
+        + '<div style="flex:1;display:flex;align-items:flex-end"><span style="font-size:10px;color:rgba(255,255,255,0.15);letter-spacing:1px">→ 右划看更多</span></div>';
     } else if (m.preview) {
-      item.innerHTML = '<div style="position:relative;max-width:100%;max-height:70vh;display:flex;align-items:center;justify-content:center;cursor:pointer">'
-        + '<img src="'+m.preview+'" style="max-width:100%;max-height:70vh;object-fit:contain;border-radius:8px;display:block">'
+      item.innerHTML = '<div style="position:relative;max-width:100%;max-height:65vh;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="openGuideViewer('+i+')">'
+        + '<img src="'+m.preview+'" style="max-width:100%;max-height:65vh;object-fit:contain;border-radius:8px;display:block">'
         + '<div style="position:absolute;bottom:8px;right:8px;background:rgba(212,168,67,0.15);color:#d4a843;font-size:11px;padding:4px 10px;border-radius:100px;font-weight:500">📄 PDF</div></div>'
-        + '<div style="color:#d4a843;font-size:13px;margin-top:8px;font-weight:500">'+(m.name||'点击查看PDF')+'</div>';
+        + '<div style="color:#d4a843;font-size:13px;margin-top:8px;font-weight:500">'+(m.name||'点击查看PDF')+'</div>'
+        + '<div style="flex:1;display:flex;align-items:flex-end"><span style="font-size:10px;color:rgba(255,255,255,0.15);letter-spacing:1px">→ 右划看更多</span></div>';
     } else {
-      item.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:60px 24px;color:rgba(255,255,255,0.4);text-align:center">'
+      item.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:40px 24px;color:rgba(255,255,255,0.4);text-align:center">'
         + '<div style="font-size:48px;opacity:0.4">📄</div>'
-        + '<div style="font-size:14px">'+(m.name||'点击查看')+'</div></div>';
+        + '<div style="font-size:14px">'+(m.name||'点击查看')+'</div></div>'
+        + '<div style="flex:1;display:flex;align-items:flex-end"><span style="font-size:10px;color:rgba(255,255,255,0.15);letter-spacing:1px">→ 右划看更多</span></div>';
     }
-    item.onclick = function(){ openGuideViewer(i); };
     track.appendChild(item);
   });
+  // Add some right padding so the last card scrolls into center nicely
+  if (materials.length > 1) {
+    track.style.paddingRight = '20vw';
+  }
   document.getElementById('guide-fullpage').style.display = 'flex';
   document.body.style.overflow = 'hidden';
   document.getElementById('guide-viewer').style.display = 'none';
-  track.scrollTop = 0;
+  track.scrollLeft = 0;
   history.pushState({gallery:'guide'},'');
+  // Setup scroll nav arrows
+  setTimeout(function(){ setupGuideScrollNav(); }, 100);
 }
 function hideGuideFullpage() {
+  // Stop all videos in both viewer and fullpage
+  var vids = document.querySelectorAll('#viewer-track video, #guide-track video');
+  for(var vi=0;vi<vids.length;vi++){ vids[vi].pause(); vids[vi].currentTime=0; }
   document.getElementById('guide-fullpage').style.display = 'none';
   document.body.style.overflow = '';
   document.getElementById('guides').scrollIntoView({behavior:'smooth',block:'start'});
+}
+/* 横向箭头导航（攻略二级页面） */
+function setupGuideScrollNav(){
+  var track = document.getElementById('guide-track');
+  var nav = document.getElementById('guide-scroll-nav');
+  if(!track || !nav) return;
+  var left = nav.querySelector('.nav-left');
+  var right = nav.querySelector('.nav-right');
+  function update(){
+    left.disabled = track.scrollLeft <= 5;
+    right.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 5;
+  }
+  left.onclick = function(){ track.scrollBy({left:-track.clientWidth*0.6,behavior:'smooth'}); setTimeout(update,150); };
+  right.onclick = function(){ track.scrollBy({left:track.clientWidth*0.6,behavior:'smooth'}); setTimeout(update,150); };
+  track.addEventListener('scroll', update);
+  setTimeout(update, 200);
 }
 
 /* 全屏查看器 - 上下滑动浏览多图 */
@@ -1025,9 +1123,13 @@ function openGuideViewer(startIdx) {
   body.innerHTML = '';
   guideMaterials.forEach(function(m, i) {
     var slide = document.createElement('div');
-    slide.style.cssText = 'min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 8px 40px;scroll-snap-align:start;box-sizing:border-box';
+    slide.style.cssText = 'height:calc(100vh - 60px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 8px 0;scroll-snap-align:start;box-sizing:border-box';
     if (m.type === 'image') {
-      slide.innerHTML = '<img src="'+m.src+'" style="max-width:100%;max-height:85vh;width:auto;height:auto;object-fit:contain;border-radius:4px;display:block">';
+      slide.innerHTML = '<img src="'+m.src+'" style="max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;border-radius:4px;display:block">'
+        + '<div style="flex:1;display:flex;align-items:flex-end;padding:0 0 8px 0"><span style="font-size:10px;color:rgba(255,255,255,0.1);letter-spacing:1px">下滑继续 ⠇</span></div>';
+    } else if (m.type === 'video') {
+      slide.innerHTML = '<div style="width:100%;height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center"><video controls autoplay playsinline style="max-width:100%;max-height:80vh;border-radius:8px" src="'+m.src+'"></video></div>'
+        + '<div style="color:rgba(255,255,255,0.35);font-size:11px;margin-top:8px">上下滑动 · 查看完整内容</div>';
     } else if (m.type === 'pdf') {
       slide.innerHTML = '<div style="width:100%;height:80vh;display:flex;flex-direction:column"><iframe src="'+m.src+'" style="width:100%;flex:1;border:none;border-radius:8px"></iframe></div>'
         + '<div style="color:rgba(255,255,255,0.35);font-size:11px;margin-top:8px">上下滑动 · 查看完整内容</div>';
@@ -1054,9 +1156,13 @@ function openGuideViewer(startIdx) {
   history.pushState({gallery:'guide-view'},'');
 }
 function hideGuideViewer() {
+  // Stop all videos in viewer
+  var vids = document.querySelectorAll('#viewer-track video');
+  for(var vi=0;vi<vids.length;vi++){ vids[vi].pause(); vids[vi].currentTime=0; }
   document.getElementById('guide-viewer').style.display = 'none';
   document.getElementById('guide-fullpage').style.display = 'flex';
-  document.getElementById('guide-track').scrollTop = 0;
+  document.getElementById('guide-track').scrollLeft = 0;
+  setTimeout(function(){ setupGuideScrollNav(); }, 100);
 }
 
 /* 横向滚动箭头导航 */
@@ -1082,6 +1188,90 @@ function initScrollNavs(){
 }
 document.addEventListener('DOMContentLoaded',initScrollNavs);
 window.addEventListener('load',function(){setTimeout(initScrollNavs,800)});
+
+/* ── 天气预报+升旗时间 ── */
+(function(){
+  function fetchWeather(){
+    var bar = document.getElementById('weatherBar');
+    if(!bar) return;
+    function setIcon(desc){
+      var d = desc.toLowerCase();
+      if(d.includes('sunny')||d.includes('clear')) return '☀️';
+      if(d.includes('partly cloudy')) return '⛅';
+      if(d.includes('cloudy')||d.includes('overcast')) return '☁️';
+      if(d.includes('light rain')||d.includes('patchy rain')) return '🌦️';
+      if(d.includes('heavy rain')||d.includes('moderate rain')) return '🌧️';
+      if(d.includes('thunder')||d.includes('storm')) return '⛈️';
+      if(d.includes('snow')||d.includes('sleet')) return '❄️';
+      if(d.includes('fog')||d.includes('mist')||d.includes('haze')) return '🌫️';
+      return '☀️';
+    }
+    function fmtTime(t){
+      if(!t) return '';
+      var parts = t.match(/(\d+):(\d+)/);
+      if(!parts) return t;
+      return parts[1]+':'+parts[2];
+    }
+    fetch('https://wttr.in/Beijing?format=j1',{mode:'cors'})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        var weather = d.weather || [];
+        if(weather.length < 2) { bar.innerHTML='<span class="wb-loading">天气数据加载中</span>'; return; }
+        var today = weather[0];
+        var tDesc = (today.hourly[3]||{}).weatherDesc||[{value:''}];
+        var tIcon = setIcon(tDesc[0].value);
+        var tHigh = today.maxtempC||'';
+        var tLow = today.mintempC||'';
+        var tomorrow = weather[1];
+        var tmDesc = (tomorrow.hourly[3]||{}).weatherDesc||[{value:''}];
+        var tmIcon = setIcon(tmDesc[0].value);
+        var tmHigh = tomorrow.maxtempC||'';
+        var tmLow = tomorrow.mintempC||'';
+        var astro = tomorrow.astronomy||[{}];
+        var flagTime = fmtTime(astro[0].sunrise||'');
+        bar.innerHTML =
+          '<span class="wb-item"><span class="wb-icon">'+tIcon+'</span><span>今天 <span class="wb-temp">'+tLow+'~'+tHigh+'°</span></span></span>' +
+          '<span class="wb-item"><span class="wb-icon">'+tmIcon+'</span><span>明天 <span class="wb-temp">'+tmLow+'~'+tmHigh+'°</span></span></span>' +
+          (flagTime ? '<span class="wb-item"><span class="wb-icon">🇨🇳</span><span>明升旗 <span class="wb-flag">'+flagTime+'</span></span></span>' : '');
+      })
+      .catch(function(){
+        // Retry once after 3s (wttr.in sometimes rate-limits)
+        setTimeout(function(){
+          fetch('https://wttr.in/Beijing?format=j1',{mode:'cors'})
+            .then(function(r){ return r.json(); })
+            .then(function(d){
+              var weather = d.weather || [];
+              if(weather.length < 2) return;
+              var today = weather[0];
+              var tDesc = (today.hourly[3]||{}).weatherDesc||[{value:''}];
+              var tIcon = setIcon(tDesc[0].value);
+              var tHigh = today.maxtempC||'';
+              var tLow = today.mintempC||'';
+              var tomorrow = weather[1];
+              var tmDesc = (tomorrow.hourly[3]||{}).weatherDesc||[{value:''}];
+              var tmIcon = setIcon(tmDesc[0].value);
+              var tmHigh = tomorrow.maxtempC||'';
+              var tmLow = tomorrow.mintempC||'';
+              var astro = tomorrow.astronomy||[{}];
+              var flagTime = fmtTime(astro[0].sunrise||'');
+              bar.innerHTML =
+                '<span class="wb-item"><span class="wb-icon">'+tIcon+'</span><span>今天 <span class="wb-temp">'+tLow+'~'+tHigh+'°</span></span></span>' +
+                '<span class="wb-item"><span class="wb-icon">'+tmIcon+'</span><span>明天 <span class="wb-temp">'+tmLow+'~'+tmHigh+'°</span></span></span>' +
+                (flagTime ? '<span class="wb-item"><span class="wb-icon">🇨🇳</span><span>明升旗 <span class="wb-flag">'+flagTime+'</span></span></span>' : '');
+            })
+            .catch(function(){
+              bar.innerHTML='<span class="wb-loading">天气暂不可用</span>';
+              bar.style.display='none';
+            });
+        }, 3000);
+      });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',fetchWeather);
+  } else {
+    fetchWeather();
+  }
+})();
 </script>
 </body>
 </html>
