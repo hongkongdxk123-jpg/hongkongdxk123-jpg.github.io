@@ -1056,8 +1056,8 @@ function openGuideFullpage(title, materials) {
     if (m.type === 'image') {
       item.innerHTML = '<div style="position:relative;max-width:100%;max-height:70vh;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="openGuideViewer('+i+')">'
         + '<img src="'+m.src+'" style="max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;border-radius:8px;display:block;margin:0 auto" loading="lazy">'
-        + '<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 4px 20px rgba(0,0,0,0.3)">\u25b6</div></div>'
-        + '<div style="color:rgba(255,255,255,0.45);font-size:12px;margin-top:8px;text-align:center;line-height:1.5;max-width:70vw">'+(m.name||'点击播放')+'</div>'
+        + '</div>'
+        + '<div style="color:rgba(255,255,255,0.45);font-size:12px;margin-top:8px;text-align:center;line-height:1.5;max-width:70vw">'+(m.name||'点击放大')+'</div>'
         + '<div style="flex:1;display:flex;align-items:flex-end"><span style="font-size:10px;color:rgba(255,255,255,0.15);letter-spacing:1px">→ 右划看更多</span></div>';
     } else if (m.preview && m.type === 'video') {
       item.innerHTML = '<div style="position:relative;max-width:100%;max-height:65vh;display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="openGuideViewer('+i+')">'
