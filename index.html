@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>出片搭子 · 北京环球影城专属跟拍</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="出片搭子 · 北京环球影城专属跟拍。一站式跟拍·带玩·出片服务：不用找机位，不用排队等，不用自己修图。轻量跟拍¥139起，透明定价无隐形消费。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="出片搭子">
+<meta property="og:title" content="出片搭子 · 北京环球影城专属跟拍">
+<meta property="og:description" content="一站式跟拍·带玩·出片服务。不用找机位，不用排队等，不用自己修图。轻量跟拍¥139起，透明定价无隐形消费。">
+<meta property="og:image" content="https://chupiandazi.cn/images/video_cover_chupian.jpg">
+<meta property="og:url" content="https://chupiandazi.cn/">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent;background:#000}
@@ -271,6 +282,172 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
 /* ── Animation ── */
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ── Articles Section ── */
+.articles-grid{display:grid;gap:12px;margin:0 16px}
+@media(min-width:768px){.articles-grid{grid-template-columns:1fr 1fr;gap:16px;margin:0 24px}}
+.article-card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:18px;padding:20px;
+  text-decoration:none;color:#f5f5f7;display:block;
+  transition:all 0.3s;
+  position:relative;overflow:hidden;
+}
+.article-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 120% 80% at 90% 10%, rgba(212,168,67,0.06) 0%, transparent 70%);
+  pointer-events:none;
+}
+.article-card:active{transform:scale(0.98);border-color:rgba(212,168,67,0.15)}
+.article-card .cat-tag{
+  display:inline-block;padding:3px 10px;border-radius:100px;
+  background:rgba(212,168,67,0.1);color:#d4a843;
+  font-size:10px;font-weight:500;letter-spacing:0.04em;margin-bottom:8px;
+}
+.article-card h3{font-size:16px;font-weight:600;line-height:1.4;margin-bottom:6px;color:#f5f5f7}
+.article-card .excerpt{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;margin-bottom:10px}
+.article-card .meta{
+  display:flex;align-items:center;gap:12px;
+  font-size:11px;color:rgba(255,255,255,0.2);
+}
+.article-card .meta .read-more{color:#d4a843;margin-left:auto;font-weight:500}
+.article-card.coming-soon{background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.08)}
+.article-card.coming-soon h3{color:rgba(255,255,255,0.3)}
+.article-card.coming-soon .excerpt{color:rgba(255,255,255,0.15)}
+.article-card.coming-soon .cat-tag{background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.2)}
+
+/* ── Booking Section ── */
+.booking-block{
+  padding:60px 16px 50px;min-height:auto;
+  position:relative;overflow:hidden;
+}
+.booking-block::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 30%, rgba(212,168,67,0.03) 0%, transparent 70%);
+  pointer-events:none;
+}
+.booking-inner{
+  max-width:560px;margin:0 auto;
+  background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:24px;padding:32px 24px;
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  position:relative;
+}
+.booking-inner::before{
+  content:'';position:absolute;inset:-1px;border-radius:25px;
+  background:linear-gradient(135deg,rgba(212,168,67,0.1),transparent 40%,transparent 60%,rgba(212,168,67,0.05));
+  pointer-events:none;z-index:-1;
+}
+.booking-inner .form-title{text-align:center;margin-bottom:20px}
+.booking-inner .form-title h3{font-size:20px;font-weight:700;margin-bottom:4px}
+.booking-inner .form-title p{font-size:13px;color:rgba(255,255,255,0.4)}
+.form-group{margin-bottom:14px}
+.form-group label{
+  display:flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);margin-bottom:5px;
+}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:14px 16px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;color:#f5f5f7;
+  font-size:14px;font-family:inherit;
+  outline:none;transition:all 0.25s;
+  -webkit-appearance:none;appearance:none;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.2)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:rgba(212,168,67,0.3);
+  background:rgba(255,255,255,0.06);
+  box-shadow:0 0 0 3px rgba(212,168,67,0.05);
+}
+.form-group select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.3)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;
+}
+.form-group select option{background:#1a1a1a;color:#f5f5f7}
+.form-group textarea{resize:vertical;min-height:80px;line-height:1.5}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:400px){.form-row{grid-template-columns:1fr}}
+.btn-gold{
+  display:block;width:100%;padding:16px;border:none;border-radius:100px;
+  background:linear-gradient(135deg,#d4a843,#e8c065);color:#000;
+  font-size:15px;font-weight:600;cursor:pointer;transition:all 0.25s;
+  font-family:inherit;letter-spacing:0.02em;
+}
+.btn-gold:active{transform:scale(0.97);opacity:0.9}
+.btn-gold:disabled{opacity:0.4;cursor:default}
+.form-success{display:none;text-align:center;padding:20px 0}
+.form-success .success-icon{font-size:36px;margin-bottom:8px}
+.form-success h4{font-size:18px;font-weight:600;margin-bottom:4px}
+.form-success p{font-size:13px;color:rgba(255,255,255,0.45)}
+.form-note{text-align:center;font-size:11px;color:rgba(255,255,255,0.18);margin-top:14px}
+
+/* ═══════════════════════════════════════
+   进化层 v2 (2026-08-09) — 仅新增，不改原规则
+   1. 桌面 hover 微交互（仅 hover 设备生效，手机端不受影响）
+   2. hero 入场动画（轻量，respect reduced-motion）
+   3. prefers-reduced-motion 全局降级
+   ═══════════════════════════════════════ */
+@media (hover:hover) and (pointer:fine){
+  /* ── Nav ── */
+  .nav-menu a{position:relative;transition:color 0.2s}
+  .nav-menu a::after{content:'';position:absolute;left:10px;right:10px;bottom:2px;height:1px;background:linear-gradient(90deg,#f5d68a,#d4a843);transform:scaleX(0);transform-origin:left;transition:transform 0.3s cubic-bezier(0.25,1,0.5,1)}
+  .nav-menu a:hover{color:#f5f5f7}
+  .nav-menu a:hover::after{transform:scaleX(1)}
+  /* ── 按钮 ── */
+  .btn-primary{transition:transform 0.2s cubic-bezier(0.25,1,0.5,1),box-shadow 0.2s,background 0.2s}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(212,168,67,0.25),inset 0 1px 0 rgba(255,255,255,0.5)}
+  .btn-secondary{transition:transform 0.2s cubic-bezier(0.25,1,0.5,1),border-color 0.2s,background 0.2s,box-shadow 0.2s}
+  .btn-secondary:hover{transform:translateY(-1px);border-color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.05);box-shadow:0 8px 24px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.08)}
+  /* ── 客片卡片 ── */
+  .scroll-card{transition:transform 0.25s cubic-bezier(0.25,1,0.5,1),box-shadow 0.25s,border-color 0.25s}
+  .scroll-card:hover{transform:translateY(-3px);border-color:rgba(212,168,67,0.25);box-shadow:0 12px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.06)}
+  .scroll-card.more:hover{border-color:rgba(212,168,67,0.3);background:rgba(212,168,67,0.05)}
+  /* ── 攻略卡片 ── */
+  .guides-scroll .scroll-card:hover{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))}
+  /* ── 价格卡 ── */
+  .pricing-card{transition:background 0.25s,transform 0.25s cubic-bezier(0.25,1,0.5,1)}
+  .pricing-card:hover{background:#161616;transform:translateY(-2px)}
+  .pricing-card.featured:hover{background:linear-gradient(180deg,#171410,#111)}
+  .pricing-card .btn-dark{transition:transform 0.2s,box-shadow 0.2s}
+  .pricing-card .btn-dark:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(245,245,247,0.15)}
+  .pricing-card .btn-outline{transition:transform 0.2s,border-color 0.2s,background 0.2s}
+  .pricing-card .btn-outline:hover{transform:translateY(-1px);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.06)}
+  /* ── 文章卡 ── */
+  .article-card{transition:transform 0.25s cubic-bezier(0.25,1,0.5,1),border-color 0.25s,box-shadow 0.25s}
+  .article-card:hover{transform:translateY(-2px);border-color:rgba(212,168,67,0.2);box-shadow:0 10px 28px rgba(0,0,0,0.45)}
+  .article-card.coming-soon:hover{border-color:rgba(255,255,255,0.12)}
+  /* ── 流程卡 ── */
+  .process-card{transition:background 0.25s}
+  .process-card:hover{background:#161616}
+  /* ── 联系卡 ── */
+  .contact-card{transition:border-color 0.25s,background 0.25s,transform 0.25s cubic-bezier(0.25,1,0.5,1)}
+  .contact-card:hover{border-color:rgba(212,168,67,0.35);background:rgba(212,168,67,0.06);transform:translateY(-1px)}
+  /* ── 封面卡 ── */
+  .theme-cover{transition:transform 0.25s cubic-bezier(0.25,1,0.5,1),box-shadow 0.25s}
+  .theme-cover:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.5)}
+  /* ── 预约卡 ── */
+  .booking-inner{transition:border-color 0.3s,box-shadow 0.3s}
+  .booking-inner:hover{border-color:rgba(212,168,67,0.12);box-shadow:0 16px 48px rgba(0,0,0,0.4)}
+}
+
+/* ── Hero 入场动画（仅首次加载，轻量）── */
+.hero .hero-logos,.hero .hero-badge,.hero h1,.hero p,.hero-actions{opacity:0;animation:heroIn 0.7s cubic-bezier(0.16,1,0.3,1) forwards}
+.hero .hero-logos{animation-delay:0.05s}
+.hero .hero-badge{animation-delay:0.15s}
+.hero h1{animation-delay:0.25s}
+.hero p{animation-delay:0.4s}
+.hero-actions{animation-delay:0.55s}
+@keyframes heroIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── 全局 reduced-motion 降级 ── */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  .hero .hero-logos,.hero .hero-badge,.hero h1,.hero p,.hero-actions{opacity:1;animation:none}
+}
 </style>
 </head>
 <body>
@@ -296,7 +473,9 @@ footer hr{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
   <div class="nav-menu">
     <a href="#portfolio">客片</a>
     <a href="#guides">攻略</a>
+    <a href="#articles">文章</a>
     <a href="#pricing">价格</a>
+    <a href="#booking">预约</a>
     <a href="#contact">联系</a>
   </div>
 </div>
@@ -519,7 +698,7 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
     <p class="section-sub">左右滑动 · 隐藏玩法全揭秘</p>
   </div>
   <div class="scroll-wrap guides-scroll fade-in"><div class="scroll-track">
-    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('拍照攻略',[{src:'https://chupiandazi.cn/videos/photo_guide.mp4',type:'video',name:'跟着学十三个北环拍照姿势',preview:'images/photo_guide_cover_v2.jpg'},{src:'https://chupiandazi.cn/videos/beihuan_baoyuan.mp4',type:'video',name:'北环爆园这样也能出大片',preview:'images/beihuan_baoyuan_cover.jpg'},{src:'https://chupiandazi.cn/videos/dakajwei.mp4',type:'video',name:'环球影城最全打卡机位',preview:'images/dakajwei_cover.jpg'}])">
+    <div class="scroll-card" style="cursor:pointer" onclick="openGuideFullpage('拍照攻略',[{src:'https://chupiandazi.cn/videos/photo_guide.mp4',type:'video',name:'跟着学十三个北环拍照姿势',preview:'images/photo_guide_cover_v2.jpg'},{src:'https://chupiandazi.cn/videos/beihuan_baoyuan_h264.mp4',type:'video',name:'北环爆园这样也能出大片',preview:'images/beihuan_baoyuan_cover.jpg'},{src:'https://chupiandazi.cn/videos/dakajwei_h264.mp4',type:'video',name:'环球影城最全打卡机位',preview:'images/dakajwei_cover.jpg'}])">
       <div class="icon">📸</div>
       <div class="label">拍照攻略</div>
       <div class="sub">拍照姿势+爆园出片+最全打卡机位，走到哪拍到哪</div>
@@ -572,6 +751,73 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
 </div>
 </section>
 
+<!-- 攻略文章（SEO） -->
+<section class="section-block" id="articles">
+<div class="container">
+  <div class="section-header fade-in">
+    <div class="section-label">Articles</div>
+    <h2>攻略文章</h2>
+    <p class="section-sub">干货攻略 · 持续更新</p>
+  </div>
+  <div class="articles-grid fade-in" id="articlesGrid">
+    <a href="#contact" class="article-card coming-soon">
+      <span class="cat-tag">📸 拍照攻略</span>
+      <h3>环球影城哈利波特区5个隐藏机位</h3>
+      <p class="excerpt">不用跟别人挤破头抢位置，跟拍摄影师私藏的5个出片机位，拍出属于你的魔法世界大片。</p>
+      <div class="meta">
+        <span>⏳ 即将发布</span>
+        <span class="read-more">…</span>
+      </div>
+    </a>
+    <a href="#contact" class="article-card coming-soon">
+      <span class="cat-tag">💰 价格透明</span>
+      <h3>环球影城跟拍到底花多少钱？</h3>
+      <p class="excerpt">一张详细的账单拆解：跟拍费用、精修张数、法袍租赁、全程管家——到底值不值，看完你就知道了。</p>
+      <div class="meta">
+        <span>⏳ 即将发布</span>
+        <span class="read-more">…</span>
+      </div>
+    </a>
+    <a href="#contact" class="article-card coming-soon">
+      <span class="cat-tag">👗 穿搭建议</span>
+      <h3>环球影城穿什么最出片？配色公式来了</h3>
+      <p class="excerpt">哈利波特区穿什么、侏罗纪怎么搭、小黄人区的色彩秘诀——一套配色公式，让你在哪都能拍出大片感。</p>
+      <div class="meta">
+        <span>⏳ 即将发布</span>
+        <span class="read-more">…</span>
+      </div>
+    </a>
+    <a href="#contact" class="article-card coming-soon">
+      <span class="cat-tag">⚠️ 避雷指南</span>
+      <h3>环球影城新手别踩这5个坑</h3>
+      <p class="excerpt">第一次去容易犯的错：门票买错、路线走反、吃饭排长队、跟拍踩雷…这些坑我都替你踩过了。</p>
+      <div class="meta">
+        <span>⏳ 即将发布</span>
+        <span class="read-more">…</span>
+      </div>
+    </a>
+    <a href="#contact" class="article-card coming-soon">
+      <span class="cat-tag">🦕 侏罗纪专题</span>
+      <h3>侏罗纪世界怎么拍？冒险氛围拿捏住</h3>
+      <p class="excerpt">侏罗纪区光线复杂、人流量大，怎么拍出电影感的冒险大片？跟拍3年的摄影师告诉你独家技巧。</p>
+      <div class="meta">
+        <span>⏳ 即将发布</span>
+        <span class="read-more">…</span>
+      </div>
+    </a>
+    <a href="#contact" class="article-card coming-soon">
+      <span class="cat-tag">🗺️ 路线攻略</span>
+      <h3>环球影城不走回头路路线，多玩3个项目</h3>
+      <p class="excerpt">最优路线规划+跟拍机位串联，边玩边拍两不误。带上这篇攻略，一天玩透环球影城。</p>
+      <div class="meta">
+        <span>⏳ 即将发布</span>
+        <span class="read-more">…</span>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
 <!-- Video -->
 <section class="section-block gray" id="video">
 <div class="container">
@@ -587,7 +833,7 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">2段</span>
       <span style="position:relative;z-index:1;font-size:12px;color:rgba(255,255,255,0.15);letter-spacing:1px">侏罗纪世界</span>
     </div>
-    <div class="scroll-card theme-cover" style="cursor:pointer" id="genpai-video-tab" onclick="openVideoGallery('video','跟拍花絮',['https://chupiandazi.cn/videos/genpai_video.mp4'],['images/genpai_video_cover_v3.jpg'])">
+    <div class="scroll-card theme-cover" style="cursor:pointer" id="genpai-video-tab" onclick="openVideoGallery('video','跟拍花絮',['https://chupiandazi.cn/videos/genpai_video_h264.mp4'],['images/genpai_video_cover_v3.jpg'])">
       <div class="cover-bg" style="background-image:url('images/genpai_video_cover_v2.jpg')"></div>
       <div class="play-icon" style="position:relative;z-index:1">▶</div>
       <span style="position:relative;z-index:1;font-size:26px;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:4px;font-family:Georgia,'Times New Roman',serif">1段</span>
@@ -794,6 +1040,115 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
 </div>
 </section>
 
+<!-- 预约咨询 -->
+<section class="section-block" id="booking">
+<div class="booking-block">
+  <div class="section-header fade-in">
+    <div class="section-label">Booking</div>
+    <h2>预约咨询</h2>
+    <p class="section-sub">留下信息，我们聊聊你的环球计划</p>
+  </div>
+  <div class="booking-inner fade-in">
+    <div class="form-title">
+      <h3>📋 预约信息</h3>
+      <p>填写后我们会通过微信联系你</p>
+    </div>
+    <form id="bookingForm" action="/api/book" method="POST" onsubmit="return submitBooking(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label><span class="field-icon">👤</span> 称呼</label>
+          <input type="text" name="name" placeholder="怎么称呼你？" required>
+        </div>
+        <div class="form-group">
+          <label><span class="field-icon">📱</span> 微信/手机</label>
+          <input type="text" name="contact" placeholder="微信号或手机号" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label><span class="field-icon">📅</span> 计划日期</label>
+          <input type="date" name="date">
+        </div>
+        <div class="form-group">
+          <label><span class="field-icon">👥</span> 人数</label>
+          <select name="people">
+            <option value="">选择人数</option>
+            <option value="1">1人</option>
+            <option value="2">2人</option>
+            <option value="3">3人</option>
+            <option value="4">4人</option>
+            <option value="5+">5人以上</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label><span class="field-icon">🎯</span> 需求</label>
+        <select name="service">
+          <option value="">选择服务类型</option>
+          <option value="跟拍">📸 环球跟拍</option>
+          <option value="管家">🎩 全程管家</option>
+          <option value="跟拍+管家">🌟 跟拍+管家套餐</option>
+          <option value="咨询">💬 先了解看看</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><span class="field-icon">💬</span> 备注</label>
+        <textarea name="note" placeholder="有什么特别需求或想法？比如想拍的园区、喜欢的风格……"></textarea>
+      </div>
+      <button type="submit" class="btn-gold" id="submitBtn">
+        <span class="send-icon">✈︎</span> 提交预约
+      </button>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <div class="success-icon">✅</div>
+      <h4>提交成功！</h4>
+      <p>我们会尽快通过微信联系你<br>请留意好友申请 🙌</p>
+    </div>
+    <p class="form-note">提交即表示你同意我们使用你的联系方式与你沟通</p>
+  </div>
+</div>
+</section>
+
+<script>
+/* ── 预约表单提交（独立脚本，不影响主站任何功能）── */
+function submitBooking(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ 提交中...';
+  var form = document.getElementById('bookingForm');
+  var data = {
+    name: form.name.value.trim(),
+    contact: form.contact.value.trim(),
+    date: form.date.value || '未填',
+    people: form.people.value || '未选',
+    service: form.service.value || '未选',
+    note: form.note.value.trim() || '无',
+    time: new Date().toLocaleString('zh-CN', {timeZone:'Asia/Shanghai'})
+  };
+  fetch('/api/book', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(data)
+  }).then(function(r){return r.json()})
+    .then(function(res){
+      if(res.status === 'ok'){
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<span class="send-icon">✈︎</span> 提交预约';
+      }
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.innerHTML = '<span class="send-icon">✈︎</span> 提交预约';
+      alert('提交失败，请直接加微信: cruy-2012');
+    });
+  return false;
+}
+</script>
+
 <!-- Contact -->
 <section class="section-block" id="contact">
 <div class="contact-block">
@@ -829,13 +1184,20 @@ window.addEventListener('popstate',function(e){if(document.getElementById('kungf
 
 <script>
 // Fade-in observer
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded',function(){
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
     });
   }, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // 进化层 v2：非首屏图片懒加载（不动首屏 hero 图片）
+  setTimeout(function(){
+    document.querySelectorAll('img').forEach(function(img){
+      if(!img.closest('.hero') && !img.getAttribute('loading')){ img.loading='lazy'; img.decoding='async'; }
+    });
+  }, 500);
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -972,7 +1334,7 @@ function playCurrentVideo(idx) {
   var url = galleryData[idx];
   slides[idx].style.minWidth = '100vw';
   slides[idx].style.marginRight = '0';
-  slides[idx].innerHTML = '<div style="width:100%;height:100%;display:flex;align-items:center"><video controls autoplay playsinline style="width:100%;max-height:85vh;border-radius:12px" src="'+url+'"></video></div>';
+  slides[idx].innerHTML = '<div style="width:100%;height:100%;display:flex;align-items:center"><video controls autoplay muted playsinline style="width:100%;max-height:85vh;border-radius:12px" src="'+url+'"></video></div>';
 }
 
 function playVideo(url, title) {
@@ -981,7 +1343,7 @@ function playVideo(url, title) {
   document.getElementById('modalTitle').textContent = title;
   document.getElementById('modalCounter').textContent = '';
   var track = document.getElementById('modalTrack');
-  track.innerHTML = '<div class="modal-slide" style="flex-direction:column;gap:12px"><video controls autoplay playsinline style="width:100%;max-height:80vh;border-radius:12px" src="'+url+'"></video></div>';
+  track.innerHTML = '<div class="modal-slide" style="flex-direction:column;gap:12px"><video controls autoplay muted playsinline style="width:100%;max-height:80vh;border-radius:12px" src="'+url+'"></video></div>';
   galleryScrollTarget = 'video';
 }
 
@@ -1128,7 +1490,7 @@ function openGuideViewer(startIdx) {
       slide.innerHTML = '<img src="'+m.src+'" style="max-width:100%;max-height:70vh;width:auto;height:auto;object-fit:contain;border-radius:4px;display:block">'
         + '<div style="flex:1;display:flex;align-items:flex-end;padding:0 0 8px 0"><span style="font-size:10px;color:rgba(255,255,255,0.1);letter-spacing:1px">下滑继续 ⠇</span></div>';
     } else if (m.type === 'video') {
-      slide.innerHTML = '<div style="width:100%;height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center"><video controls autoplay playsinline style="max-width:100%;max-height:80vh;border-radius:8px" src="'+m.src+'"></video></div>'
+      slide.innerHTML = '<div style="width:100%;height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center"><video controls autoplay muted playsinline style="max-width:100%;max-height:80vh;border-radius:8px" src="'+m.src+'"></video></div>'
         + '<div style="color:rgba(255,255,255,0.35);font-size:11px;margin-top:8px">上下滑动 · 查看完整内容</div>';
     } else if (m.type === 'pdf') {
       slide.innerHTML = '<div style="width:100%;height:80vh;display:flex;flex-direction:column"><iframe src="'+m.src+'" style="width:100%;flex:1;border:none;border-radius:8px"></iframe></div>'
