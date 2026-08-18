@@ -5,94 +5,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小鸡天气早知道 | 2026年8月19日</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background:#0a0a1a;
-    color:#e2e8f0;
-    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
-    min-height:100vh;
-    padding:24px 16px 40px;
+    background: #0a0a1a;
+    color: #e5e7eb;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    min-height: 100vh;
+    padding: 24px 16px 48px;
   }
-  .wrap { max-width:720px; margin:0 auto; }
-  h1 {
-    font-size:26px; font-weight:800; text-align:center;
-    background:linear-gradient(135deg,#a78bfa,#60a5fa);
-    -webkit-background-clip:text; background-clip:text;
-    -webkit-text-fill-color:transparent; color:transparent;
-    margin-bottom:6px; letter-spacing:1px;
+  .container { max-width: 720px; margin: 0 auto; }
+  .header { text-align: center; margin-bottom: 28px; }
+  .header h1 {
+    font-size: 30px; font-weight: 800; letter-spacing: 2px;
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
   }
-  .sub { text-align:center; color:#8b93b8; font-size:14px; margin-bottom:24px; }
+  .header .sub { font-size: 15px; color: #9ca3af; }
   .card {
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(167,139,250,0.18);
-    border-radius:16px;
-    padding:18px 20px;
-    margin-bottom:14px;
-    backdrop-filter:blur(10px);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    backdrop-filter: blur(8px);
   }
   .card h2 {
-    font-size:15px; font-weight:700; margin-bottom:10px;
-    color:#c4b5fd; display:flex; align-items:center; gap:8px;
+    font-size: 15px; font-weight: 600; color: #a78bfa;
+    margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
   }
-  .card p { font-size:15px; line-height:1.8; color:#d7dcf0; }
-  .big-temp {
-    text-align:center; font-size:34px; font-weight:800;
-    background:linear-gradient(135deg,#fbbf24,#fb7185);
-    -webkit-background-clip:text; background-clip:text;
-    -webkit-text-fill-color:transparent;
-  }
-  .tag { display:inline-block; background:rgba(96,165,250,0.15); color:#93c5fd; font-size:12px; border-radius:20px; padding:2px 10px; margin:2px 4px 2px 0; }
-  .foot { text-align:center; color:#5b6388; font-size:12px; margin-top:22px; line-height:1.8; }
+  .card p, .card li { font-size: 15px; line-height: 1.7; color: #d1d5db; }
+  .card ul { list-style: none; }
+  .card ul li { padding: 5px 0; }
+  .temp-range { font-size: 26px; font-weight: 700; color: #f3f4f6; }
+  .temp-range span { color: #60a5fa; }
+  .tag { display: inline-block; background: rgba(96,165,250,0.12); color: #93c5fd; border-radius: 6px; padding: 2px 8px; font-size: 13px; margin-right: 6px; margin-top: 4px; }
+  .footer { text-align: center; color: #6b7280; font-size: 12px; margin-top: 28px; line-height: 1.8; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>🐤 小鸡天气早知道</h1>
-  <div class="sub">2026年8月19日（周三）· 数据来源 wttr.in</div>
+<div class="container">
+  <div class="header">
+    <h1>小鸡天气早知道</h1>
+    <div class="sub">2026年8月19日 周三 · 北京</div>
+  </div>
 
   <div class="card">
     <h2>🌤️ 天气概况</h2>
-    <p>凌晨一场中到大阵雨带来短暂清凉，清晨转薄雾，白天云开见晴、迅速升温，午后晴热最高32°C，傍晚烟霾渐起。整体「前雨后晴」的一天。</p>
+    <p>凌晨薄雾开场，上午有霾闷热，午后转阴、偶有零星阵雨，傍晚霾再起，夜间又见零星雨点。最高30°C，闷热感明显，整体偏干爽但湿度不低。</p>
   </div>
 
   <div class="card">
     <h2>🌡️ 温度</h2>
-    <p class="big-temp">21°C ~ 32°C</p>
-    <p style="text-align:center;margin-top:8px;">午后体感最高可达 35°C，晴晒感明显；凌晨微凉体感 21°C 左右</p>
+    <p class="temp-range">22<span>°C</span> ~ 30<span>°C</span></p>
+    <p style="margin-top:6px;">全天体感闷热，午后太阳出来时接近33°C体感，凌晨凉爽舒适。</p>
   </div>
 
   <div class="card">
     <h2>🌬️ 风力</h2>
-    <p>全天以 1~2 级轻风为主：凌晨东北风（2~5 km/h），午后转南风并短暂增强（最大 11 km/h），傍晚转东南风，整体风力温和。</p>
+    <p>1~2级微风（2~7 km/h），风向多变：凌晨东南风转东北风，午后转南风、傍晚东南风，整体风力柔和。</p>
   </div>
 
   <div class="card">
     <h2>💧 湿度</h2>
-    <p>50% ~ 97%。凌晨湿度接近饱和（91%~97%）闷湿感明显，雨后午后回落至 50%~59%，干爽不少。</p>
+    <p>59% ~ 96%，凌晨接近饱和、薄雾潮湿，午后降到60%上下最干爽，整体闷而不燥。</p>
   </div>
 
   <div class="card">
     <h2>☔ 降水</h2>
-    <p>降水集中在凌晨 03:00 前后，为中到大阵雨（预计 2.6mm，概率 83%），夜间至清晨出门建议带伞；白天转晴，基本无雨。</p>
+    <p>全天以零星阵雨为主，降水概率不高（最高20%），集中在午后12点和夜间21点前后，雨量极小。出门可以带把折叠伞以防万一。</p>
   </div>
 
   <div class="card">
-    <h2>☀️ 日出 / 日落</h2>
-    <p style="font-size:20px;font-weight:700;color:#fcd34d;">05:30 / 19:06</p>
+    <h2>☀️ 日出/日落</h2>
+    <p>05:30 / 19:06</p>
   </div>
 
   <div class="card">
     <h2>💡 出门提醒</h2>
-    <p>
-      🏠 睡前关好门窗、收好阳台衣物，凌晨有阵雨<br>
-      🌧️ 早起出门带把伞，03 点前后阵雨概率 83%<br>
-      🧍♀️ 午后晴热体感 35°C，注意防暑、及时补水<br>
-      👓 白天有烟霾，敏感人群外出可戴口罩<br>
-      🚶♂️ 傍晚雨过转晴，适合散步，但余热仍在
-    </p>
+    <ul>
+      <li>🏠 出门前关好门窗，凌晨湿度大，阳台衣物记得收</li>
+      <li>🌧️ 午后和夜间有零星阵雨可能，包里塞把折叠伞更安心</li>
+      <li>🧍♀️ 午后紫外线指数6，户外活动注意防晒，戴帽子或涂防晒霜</li>
+      <li>👓 上午有霾能见度一般，骑车开车注意安全，敏感人群戴口罩</li>
+      <li>🚶♂️ 早晚体感最舒服，适合散步遛弯，中午尽量避开暴晒时段</li>
+    </ul>
   </div>
 
-  <div class="foot">数据来源：wttr.in（weather[0] hourly 逐时段 + astronomy 字段）<br>生成时间：2026-08-18</div>
+  <div class="footer">
+    数据来源：wttr.in / World Weather Online<br>
+    小鸡天气早知道 · 每日自动更新
+  </div>
 </div>
 </body>
 </html>
