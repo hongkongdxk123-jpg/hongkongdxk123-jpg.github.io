@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小鸡天气早知道 · 2026年8月21日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a1a;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    min-height: 100vh;
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container { width: 100%; max-width: 720px; }
+  .hero { text-align: center; margin-bottom: 32px; }
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  .subtitle { font-size: 1.05rem; color: #94a3b8; }
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(167,139,250,0.18);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  }
+  .card h2 {
+    font-size: 1.05rem;
+    color: #a78bfa;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card p { line-height: 1.8; font-size: 0.98rem; color: #cbd5e1; }
+  .big-temp {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .temp-range { font-size: 1.7rem; font-weight: 700; color: #f8fafc; }
+  .temp-note { font-size: 0.9rem; color: #94a3b8; }
+  .remind { list-style: none; }
+  .remind li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(148,163,184,0.15);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  .remind li:last-child { border-bottom: none; }
+  .source {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #64748b;
+    margin-top: 20px;
+  }
+  .sun-row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .sun-item { flex: 1; min-width: 120px; text-align: center; }
+  .sun-item .label { font-size: 0.82rem; color: #94a3b8; margin-bottom: 4px; }
+  .sun-item .value { font-size: 1.25rem; font-weight: 700; color: #fbbf24; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>小鸡天气早知道</h1>
+    <div class="subtitle">2026年8月21日 周五</div>
+  </div>
+
+  <div class="card">
+    <h2>🌤️ 天气概况</h2>
+    <p>凌晨阴天，早晨到上午有轻雾霾，午后云开转晴闷热，傍晚起可能飘零星阵雨</p>
+  </div>
+
+  <div class="card">
+    <h2>🌡️ 温度</h2>
+    <div class="big-temp">
+      <span class="temp-range">24°C ~ 33°C</span>
+      <span class="temp-note">午后体感可达36°C，闷热；早晚较舒适</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🌬️ 风力</h2>
+    <p>2~3级。上午偏东风，午后转东南风，傍晚阵风稍大（可达4级左右）</p>
+  </div>
+
+  <div class="card">
+    <h2>💧 湿度</h2>
+    <p>44%~83%。中午前后较干燥，早晚偏潮湿，体感黏闷</p>
+  </div>
+
+  <div class="card">
+    <h2>☔ 降水</h2>
+    <p>白天以零星阵雨为主（概率低、基本不下），傍晚到夜间有零星阵雨可能，出门建议带把伞</p>
+  </div>
+
+  <div class="card">
+    <h2>☀️ 日出/日落</h2>
+    <div class="sun-row">
+      <div class="sun-item">
+        <div class="label">🌅 日出</div>
+        <div class="value">05:32</div>
+      </div>
+      <div class="sun-item">
+        <div class="label">🌇 日落</div>
+        <div class="value">19:03</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>💡 出门提醒</h2>
+    <ul class="remind">
+      <li>🏠 早晚偏凉快，短袖出门可备件薄外套，地铁公交空调别着凉</li>
+      <li>🌧️ 傍晚到夜间可能有零星阵雨，包里放把折叠伞有备无患</li>
+      <li>🧍‍♀️ 午后最热体感36°C，注意防暑，多喝水少暴晒</li>
+      <li>👓 上午有轻雾霾，敏感人群可戴口罩，戴眼镜留意镜片起雾</li>
+      <li>🚶‍♂️ 中午紫外线强（UV 7），外出做好防晒，戴帽或打伞</li>
+    </ul>
+  </div>
+
+  <div class="source">数据来源：wttr.in（WorldWeatherOnline）· 北京 · 小鸡天气看板</div>
+</div>
+</body>
+</html>
