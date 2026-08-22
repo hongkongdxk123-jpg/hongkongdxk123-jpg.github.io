@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡天气早知道 · 2026年8月22日</title>
+<title>小鸡天气早知道 | 2026年8月23日</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     background: #0a0a1a;
-    color: #e2e8f0;
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: #e5e7eb;
     min-height: 100vh;
-    padding: 32px 16px 48px;
+    padding: 40px 16px;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% -10%, rgba(167,139,250,0.12), transparent),
+      radial-gradient(ellipse 80% 50% at 80% 110%, rgba(96,165,250,0.12), transparent);
   }
   .container { max-width: 720px; margin: 0 auto; }
   .main-title {
@@ -20,101 +23,124 @@
     text-align: center;
     background: linear-gradient(135deg, #a78bfa, #60a5fa);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
     margin-bottom: 8px;
   }
   .sub-title {
     text-align: center;
-    color: #94a3b8;
-    font-size: 16px;
-    margin-bottom: 28px;
+    color: #9ca3af;
+    font-size: 15px;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
   }
   .card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(8px);
   }
   .card-title {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 14px;
     color: #a78bfa;
+    font-weight: 600;
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    letter-spacing: 1px;
   }
-  .card p { font-size: 15px; line-height: 1.7; color: #cbd5e1; }
+  .card-body { font-size: 16px; line-height: 1.7; color: #e5e7eb; }
+  .card-body strong { color: #60a5fa; font-weight: 600; }
   .temp-big {
     font-size: 42px;
     font-weight: 800;
-    color: #f8fafc;
-    background: linear-gradient(135deg, #fbbf24, #f87171);
+    background: linear-gradient(135deg, #fbbf24, #fb7185);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  .temp-sub { font-size: 14px; color: #94a3b8; margin-top: 4px; }
-  .remind-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-  .remind-item:last-child { margin-bottom: 0; }
-  .remind-item .emoji { font-size: 18px; flex-shrink: 0; }
-  .remind-item .txt { font-size: 14.5px; line-height: 1.65; color: #cbd5e1; }
+  .temp-range { font-size: 16px; color: #9ca3af; margin-top: 4px; }
+  .remind-list { list-style: none; }
+  .remind-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255,255,255,0.08);
+    line-height: 1.6;
+  }
+  .remind-list li:last-child { border-bottom: none; }
   .source {
     text-align: center;
+    color: #6b7280;
     font-size: 12px;
-    color: #64748b;
     margin-top: 24px;
+    letter-spacing: 1px;
+  }
+  .sun-time { display: flex; justify-content: center; gap: 32px; font-size: 18px; }
+  .sun-time .item { text-align: center; }
+  .sun-time .label { font-size: 12px; color: #9ca3af; margin-bottom: 4px; }
+  .sun-time .value { font-size: 20px; font-weight: 700; color: #fbbf24; }
+  @media (max-width: 480px) {
+    .main-title { font-size: 26px; }
+    .card { padding: 16px 18px; }
+    .temp-big { font-size: 36px; }
   }
 </style>
 </head>
 <body>
 <div class="container">
   <h1 class="main-title">小鸡天气早知道</h1>
-  <div class="sub-title">2026年8月22日 周六 · 北京</div>
+  <p class="sub-title">2026年8月23日 周日</p>
 
   <div class="card">
     <div class="card-title">🌤️ 天气概况</div>
-    <p>早晨晴间有轻霾，上午9点前后转中雨，午后转多云渐晴、闷热感明显，夜间又有阵雨，可能伴有雷电。</p>
+    <div class="card-body">早晨有小阵雨、湿度大，上午雨渐停转多云，午后升温到 34°C 闷热暴晒，傍晚到夜间有雷暴出没风险，全天风力微弱。</div>
   </div>
 
   <div class="card">
     <div class="card-title">🌡️ 温度</div>
-    <div class="temp-big">24°C ~ 34°C</div>
-    <div class="temp-sub">午后体感可达35°C+，闷热；夜间回落到26°C左右</div>
+    <div class="card-body">
+      <span class="temp-big">24°C ~ 34°C</span>
+      <div class="temp-range">最低 24°C（凌晨）、最高 34°C（午后 15 点），体感闷热，午后像蒸笼</div>
+    </div>
   </div>
 
   <div class="card">
     <div class="card-title">🌬️ 风力</div>
-    <p>1~2级微风，东风转东南风，傍晚偏南风，整体风不大</p>
+    <div class="card-body">微风 1~2 级（风速 1~8 km/h），早晨东南风、午后转西南风、夜间东北风</div>
   </div>
 
   <div class="card">
     <div class="card-title">💧 湿度</div>
-    <p>46% ~ 88%，午后偏干、早晚潮湿，夜间湿度高、体感黏腻</p>
+    <div class="card-body">51% ~ 91%，早晨潮湿闷热（91%），午后干燥些，体感黏腻</div>
   </div>
 
   <div class="card">
     <div class="card-title">☔ 降水</div>
-    <p>上午9点前后有中雨（概率约47%），中午零星小雨，夜间21点后阵雨概率大增（约68%，可能带雷）。出门建议带伞。</p>
+    <div class="card-body">早晨 6~9 点小阵雨（降雨概率最高 60%，量级小雨），午后到夜间有雷暴出没风险，出门建议带伞</div>
   </div>
 
   <div class="card">
-    <div class="card-title">☀️ 日出 / 日落</div>
-    <p>05:33 / 19:02</p>
+    <div class="card-title">☀️ 日出/日落</div>
+    <div class="card-body">
+      <div class="sun-time">
+        <div class="item"><div class="label">🌅 日出</div><div class="value">05:34</div></div>
+        <div class="item"><div class="label">🌇 日落</div><div class="value">19:00</div></div>
+      </div>
+    </div>
   </div>
 
   <div class="card">
     <div class="card-title">💡 出门提醒</div>
-    <div class="remind-item"><span class="emoji">🏠</span><span class="txt">早晨有轻霾，开窗透气赶在上午下雨前</span></div>
-    <div class="remind-item"><span class="emoji">🌧️</span><span class="txt">上午9点前后有中雨，出门务必带伞</span></div>
-    <div class="remind-item"><span class="emoji">🧍♀️</span><span class="txt">午后34°C闷热，防晒补水不能少</span></div>
-    <div class="remind-item"><span class="emoji">👓</span><span class="txt">早晨霾天能见度低，骑车开车多留意</span></div>
-    <div class="remind-item"><span class="emoji">🚶♂️</span><span class="txt">夜间21点后可能有雷阵雨，晚归带好伞、避开树下</span></div>
+    <ul class="remind-list">
+      <li>🏠 早晨湿度高达 91%，出门前关好门窗，衣物别晾外面</li>
+      <li>🌧️ 6~9 点有小阵雨，出门带伞，通勤路上备着防淋</li>
+      <li>🧍‍♀️ 午后 34°C 闷热暴晒，注意防暑防晒，多补水</li>
+      <li>👓 傍晚有雷暴风险，户外活动留意天色，雷雨时别在空旷处逗留</li>
+      <li>🚶‍♂️ 全天风小，傍晚雨歇后体感尚可，适合晚饭后散步</li>
+    </ul>
   </div>
 
-  <div class="source">数据来源：wttr.in 逐3小时预报 · 更新于 2026-08-21</div>
+  <p class="source">数据来源：wttr.in（World Weather Online）· 小鸡天气早知道</p>
 </div>
 </body>
 </html>
