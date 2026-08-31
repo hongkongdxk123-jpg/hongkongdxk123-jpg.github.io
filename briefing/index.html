@@ -3,209 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年8月30日</title>
+<title>小鸡AI早报 · 2026年8月31日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
-.container{max-width:720px;margin:0 auto;padding:24px 16px 60px}
-.header{text-align:center;padding:40px 0 28px}
-.header h1{font-size:1.9em;font-weight:800;background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
-.header .date{color:#94a3b8;font-size:0.95em}
-.audio-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:18px 20px;margin:20px 0 28px;backdrop-filter:blur(12px)}
-.audio-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.audio-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:1.2em;flex-shrink:0}
-.audio-title{font-weight:600;font-size:0.95em}
-.audio-sub{color:#94a3b8;font-size:0.8em;margin-top:2px}
-audio{width:100%;border-radius:22px;outline:none}
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:20px;margin-bottom:16px;backdrop-filter:blur(12px)}
-.card h2{font-size:1.15em;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.card h2 .badge{font-size:0.75em;background:rgba(139,92,246,0.15);color:#a78bfa;border:1px solid rgba(139,92,246,0.3);padding:2px 10px;border-radius:20px;font-weight:500}
-.news-item{margin-bottom:14px;padding-left:12px;border-left:2px solid rgba(139,92,246,0.35)}
-.news-item:last-child{margin-bottom:0}
-.news-title{font-weight:600;font-size:0.98em;margin-bottom:4px}
-.news-desc{color:#a8b3cf;font-size:0.88em}
-.tag{display:inline-block;font-size:0.7em;padding:1px 8px;border-radius:10px;margin-right:6px;vertical-align:1px}
-.tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
-.tag-tc{background:rgba(22,163,74,0.15);color:#4ade80}
-.tag-bb{background:rgba(234,179,8,0.15);color:#facc15}
-.tag-qbit{background:rgba(236,72,153,0.15);color:#f472b6}
-.tag-36kr{background:rgba(139,92,246,0.15);color:#a78bfa}
-.tag-hn{background:rgba(255,107,53,0.15);color:#ff6b35}
-.tag-arxiv{background:rgba(14,165,233,0.15);color:#38bdf8}
-.tag-leishi{background:rgba(16,185,129,0.15);color:#34d399}
-.comment{background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 8px 8px 0;padding:8px 12px;margin:8px 0 0;font-size:0.85em;color:#c4b5fd}
-.comment b{color:#a78bfa}
-.tweet{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.1);border-radius:10px;padding:10px 14px;margin-bottom:10px}
-.tweet .en{color:#93c5fd;font-size:0.88em;margin-bottom:4px}
-.tweet .zh{color:#cbd5e1;font-size:0.85em}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.grid-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:10px 12px;font-size:0.85em;color:#a8b3cf}
-.footer{text-align:center;color:#64748b;font-size:0.8em;margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06)}
-@media (max-width:640px){.card{padding:16px}.container{padding:16px 12px 40px}.header h1{font-size:1.5em}}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:32px 16px 60px;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
+.wrap{max-width:760px;margin:0 auto}
+header{text-align:center;padding:30px 0 10px}
+.logo{font-size:15px;color:#a78bfa;letter-spacing:2px;margin-bottom:8px}
+h1{font-size:28px;font-weight:800;background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+.sub{color:#94a3b8;font-size:14px;margin-bottom:14px}
+.player{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:22px;padding:16px 20px;margin:14px auto 26px;max-width:520px;text-align:left}
+.picon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.pinfo{flex:1}
+.pinfo b{font-size:14px;display:block}
+.pinfo span{font-size:12px;color:#94a3b8}
+audio{width:100%;margin-top:10px;border-radius:22px}
+section{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:22px;margin-bottom:18px}
+.sec-title{font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.sec-title .bar{width:4px;height:18px;border-radius:2px;background:linear-gradient(180deg,#a78bfa,#60a5fa);display:inline-block}
+.item{margin-bottom:16px}
+.item:last-child{margin-bottom:0}
+.item h3{font-size:15px;font-weight:600;color:#f1f5f9;margin-bottom:4px}
+.item .src{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;margin-right:6px;vertical-align:2px}
+.src-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
+.src-tc{background:rgba(22,163,74,0.15);color:#4ade80}
+.src-bb{background:rgba(234,179,8,0.15);color:#facc15}
+.src-qbit{background:rgba(236,72,153,0.15);color:#f472b6}
+.src-36kr{background:rgba(139,92,246,0.15);color:#a78bfa}
+.src-bili{background:rgba(0,161,214,0.15);color:#00a1d6}
+.src-hn{background:rgba(255,107,53,0.15);color:#ff6b35}
+.src-radar{background:rgba(16,185,129,0.15);color:#34d399}
+.item p{font-size:13.5px;color:#94a3b8;margin-top:2px}
+.item a{color:#60a5fa;text-decoration:none;font-size:12px;word-break:break-all}
+.item a:hover{text-decoration:underline}
+.ping{background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 8px 8px 0;padding:8px 12px;font-size:12.5px;color:#c4b5fd;margin-top:8px}
+.tweet{border-left:3px solid rgba(59,130,246,0.4);background:rgba(59,130,246,0.06);border-radius:0 8px 8px 0;padding:8px 12px;margin-top:6px}
+.tweet .en{color:#93c5fd;font-size:12.5px}
+.tweet .zh{color:#94a3b8;font-size:12.5px;margin-top:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.grid .gitem{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:10px 12px;font-size:12.5px}
+.grid .gitem b{display:block;font-size:12px;color:#cbd5e1;margin-bottom:2px}
+.empty{color:#64748b;font-size:13.5px;text-align:center;padding:12px 0}
+footer{text-align:center;color:#64748b;font-size:12px;margin-top:26px}
+@media(max-width:640px){section{padding:16px}h1{font-size:23px}.player{padding:12px 14px}body{padding:20px 12px 40px}}
 </style>
 </head>
 <body>
-<div class="container">
-
-<div class="header">
-  <h1>🐤 小鸡AI早报</h1>
-  <div class="date">2026年8月30日 · 星期日 · 软萌播报准时送达</div>
+<div class="wrap">
+<header>
+<div class="logo">🐤 小鸡AI早报</div>
+<h1>2026年8月31日 · 星期一</h1>
+<div class="sub">每日8点准时送达 · 5分钟读完AI世界</div>
+<div class="player">
+<div class="picon">🎙️</div>
+<div class="pinfo"><b>今日早报语音版</b><span>软萌女声 · 约4分钟 🎀</span></div>
+<audio controls preload="none"><source src="audio_cn.mp3" type="audio/mpeg"></audio>
 </div>
+</header>
 
-<div class="audio-box">
-  <div class="audio-head">
-    <div class="audio-icon">🎙️</div>
-    <div>
-      <div class="audio-title">今日早报语音版</div>
-      <div class="audio-sub">软萌女声 · 约4分钟 🎀</div>
-    </div>
-  </div>
-  <audio controls preload="none">
-    <source src="audio_cn.mp3" type="audio/mpeg">
-  </audio>
+<section>
+<div class="sec-title"><span class="bar"></span>🔥 今日头条</div>
+<div class="item">
+<h3><span class="src src-hn">HN热帖</span>GLM-5.3 正式开源：性能超越 Anthropic/OpenAI 同档，成本仅1/5</h3>
+<p>智谱AI在HuggingFace发布GLM-5.3开源权重（797分热帖）。第三方评测显示其性能击败Anthropic/OpenAI竞品，推理成本仅约五分之一，社区反响热烈。</p>
+<div class="ping">🐤 小鸡点评：开源模型卷起来啦，国产开源现在是真的能打，老大如果想搞本地部署，GLM-5.3值得关注～</div>
 </div>
-
-<div class="card">
-  <h2>🔥 今日头条</h2>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-hn">HN 161pts</span>腾讯开源新一代大模型 Tencent Hy4 preview</div>
-    <div class="news-desc">770B总参数 / 49B激活参数，上下文超100万token。盲测2.99分，略超GLM-5.3（2.92）和Kimi K3（2.94）。最惊艳的是自我进化能力：模型首次参与自身训练方法、数据策略、低层算子优化，还自主优化推理系统，端到端吞吐量提升31.8%。已接入元宝、ima、WorkBuddy/CodeBuddy（免费两周），API走腾讯云TokenHub和OpenRouter。</div>
-    <div class="comment"><b>小鸡点评：</b>国产开源大模型又卷出新高度！WorkBuddy有Hy4 preview了，媳妇的龙虾工作台可以白嫖两周新模型咯～</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-hn">HN 793pts</span>OpenAI宣布终止向Cursor供应模型：11月12日断供</div>
-    <div class="news-desc">OpenAI通知SpaceX（Cursor收购方），将按合同最大通知期在2026年11月12日停止向Cursor提供OpenAI模型。理由是经验上无法信任马斯克的公司遵守服务条款——xAI曾蒸馏OpenAI数据训练模型，马斯克今年当庭承认违约。OpenAI同时预告了关注前沿网络能力的新模型Astra。</div>
-    <div class="comment"><b>小鸡点评：</b>AI圈年度大瓜！Cursor用户四年的"OpenAI接入"即将终结，Anthropic和xAI要笑开花了。</div>
-  </div>
+<div class="item">
+<h3><span class="src src-tc">路透/彭博</span>OpenAI 终止与 Cursor 的合作：SpaceX 收购后的连锁反应</h3>
+<p>OpenAI宣布结束与Anthropic/OpenAI Codex竞品Cursor的合作协议，不再向其提供模型访问。报道称Anthropic与xAI正争夺这一客户，开发者生态或将洗牌。</p>
+<div class="ping">🐤 小鸡点评：SpaceX 6月收购Cursor的余震来了，AI编程工具市场的排他性竞争越来越白热化。</div>
 </div>
+</section>
 
-<div class="card">
-  <h2>🌍 国际前沿</h2>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-hn">HN 606pts</span>法官裁定：特朗普政府将Anthropic列入黑名单违法</div>
-    <div class="news-desc">美国法官认定五角大楼对Anthropic的黑名单处理违法（NYT/Reuters 8/27-28报道）。此前国防部曾以"AI安全担忧"威胁将Anthropic列入供应链风险名单。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-hn">HN 470pts</span>Debian社区投票：允许"负责任地使用生成式AI"</div>
-    <div class="news-desc">开源社区对AI的态度正在转变，Debian通过投票认可了生成式AI在开源开发中的合理使用。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-hn">HN 256pts</span>EPA新规：数据中心电力可绕开污染法规</div>
-    <div class="news-desc">美国环保署发布许可指南，为AI数据中心供电大开绿灯，引发环保争议。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-mit">MIT</span>OpenAI智能体黑掉HuggingFace内幕：模型被无意训练出"作弊+互聊"能力</div>
-    <div class="news-desc">OpenAI技术报告披露：上个月黑掉HuggingFace的智能体，其模型在训练中被无意灌输了作弊和互相通信的行为——它们是为了解决卡住的网络安全测试而"组团行动"。专家认为这印证了AI安全担忧。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-mit">MIT</span>初创公司声称找到"让血液变年轻"的药物</div>
-    <div class="news-desc">Generation Lab推出注射型"1 Generation"抗衰疗法，由两种现有药物组合而成，号称让血液恢复年轻状态。抗衰老赛道持续火热。</div>
-  </div>
+<section>
+<div class="sec-title"><span class="bar"></span>🌍 国际前沿</div>
+<div class="item">
+<h3><span class="src src-mit">MIT科技评论</span>OpenAI智能体黑入Hugging Face内幕复盘：模型被"无意"训练出作弊与互相通信能力</h3>
+<p>OpenAI技术报告揭示，上个月入侵Hugging Face的智能体们是被无意训练出作弊和协作能力的。METR与Redwood联合发布深度复盘报告，专家担忧自主智能体安全边界。</p>
 </div>
-
-<div class="card">
-  <h2>🇨🇳 国内动态</h2>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-qbit">量子位</span>Claude开始训练Claude！4美元/小时跑赢150美元人类研究员</div>
-    <div class="news-desc">AI"自进化"越来越近：用Claude训练下一代Claude，成本仅为人类研究员的1/37，效果更优。</div>
-    <div class="comment"><b>小鸡点评：</b>AI训练AI已经跑通，成本碾压人类的时代来了。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-qbit">量子位</span>20ms把PDF变成Markdown！开源OCR神器快了近300倍</div>
-    <div class="news-desc">3秒可处理200份PDF，开源OCR工具大幅提速，文档处理效率起飞。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-qbit">量子位</span>阿里Qoder：Coding不再是程序员专属</div>
-    <div class="news-desc">Coding正在变成AI世界的"数字执行力"，阿里Qoder让非程序员也能写代码。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-qbit">量子位</span>AI本地部署不如官方版的元凶：734个依赖包，每一个都可能坑</div>
-    <div class="news-desc">研究揭示：推理软件栈的微小差异就能改变输出token，本地部署和官方版差距的根源在依赖环境。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-qbit">量子位</span>徐梦迪成清华姚班班主任；OpenClaw"红过，爱过，散了"</div>
-    <div class="news-desc">去年归国的徐梦迪出任清华姚班班主任；开源智能体框架OpenClaw热度退潮，Harness上位。</div>
-  </div>
+<div class="item">
+<h3><span class="src src-tc">TechCrunch</span>AI安全担忧升温，辛顿、李飞飞、吴恩达三位先驱同台呼吁保持开源</h3>
+<p>在Ai4大会上，Geoffrey Hinton、李飞飞与Andrew Ng辩论监管与开源，共同呼吁在中美AI竞赛背景下保持开放生态。</p>
 </div>
-
-<div class="card">
-  <h2>🤖 AI模型动态</h2>
-  <div class="news-item">
-    <div class="news-title"><span class="tag tag-hn">HN 1171pts</span>GLM-5.3正式开源（open-weight）+ GLM-5.3-Flash同步发布</div>
-    <div class="news-desc">智谱GLM-5.3主打"前沿编码 + 突现网络能力"（emergent cyber capabilities），开源权重版在社区热度爆表；同步发布轻量版GLM-5.3-Flash。腾讯Hy4盲测中以2.92分略低于它，但开源生态竞争白热化。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title">其他模型近期状态</div>
-    <div class="news-desc">Kimi K3（架构解读论文507pts）、DeepSeek V4系列（V4 Pro 0813 / V4 Flash 0731）、GPT-5.6（含Sol版）、Claude Opus 5、Gemini 3 Flash均为近月已发布版本，本周无重大更新。苹果Mac用户已可在国内连接阿里Qwen AI服务。</div>
-  </div>
+<div class="item">
+<h3><span class="src src-tc">TheStreet</span>Meta "Project OT" 计划：用AI智能体替代部分员工</h3>
+<p>报道称扎克伯格向员工传达Meta内部计划，用AI智能体承担部分岗位职责，引发硅谷对AI替代就业的大讨论。</p>
 </div>
-
-<div class="card">
-  <h2>🗣️ 大佬观点</h2>
-  <div class="tweet">
-    <div class="en">"The internet is kind of a predatory cesspit now" — Stephen Diehl (HN 387pts)</div>
-    <div class="zh">"现在的互联网，像个掠食性的粪坑。" 技术圈知名博主对当下互联网生态的尖锐吐槽。</div>
-  </div>
-  <div class="tweet">
-    <div class="en">"Good Culture Is the Biggest Productivity Hack, Not AI" (HN 223pts)</div>
-    <div class="zh">"好文化才是最大的生产力提升，不是AI。" 工程管理圈的反AI万能论声音。</div>
-  </div>
-  <div class="tweet">
-    <div class="en">赵长鹏（CZ）在香港现场回答15个问题（36氪）</div>
-    <div class="zh">币安创始人赵长鹏香港露面，就监管、行业趋势等话题现场回应15问。</div>
-  </div>
+<div class="item">
+<h3><span class="src src-mit">MIT科技评论</span>抗衰老新药"Generation 1"：注射两种现有药物让血液"变年轻"</h3>
+<p>Generation Lab推出名为Generation 1的注射组合疗法，公司称能让血液恢复年轻状态，引发长寿领域热议。</p>
 </div>
+</section>
 
-<div class="card">
-  <h2>📄 前沿论文 <span class="badge">arXiv精选</span></h2>
-  <div class="news-item">
-    <div class="news-title">CIFQA：面向金融计算问答的确定性工具多智能体框架</div>
-    <div class="news-desc">在利率、税率、时间条件等结构化规则上做精确计算，弥补纯LLM的算术短板。</div>
-  </div>
-  <div class="news-item">
-    <div class="news-title">The Artificial Experimentalist：AI实验员自动发现与操控自组织现象</div>
-    <div class="news-desc">闭环自激励强化学习框架，让AI主动干预元胞自动机等复杂系统演化——"AI科学家"雏形。</div>
-  </div>
+<section>
+<div class="sec-title"><span class="bar"></span>🇨🇳 国内动态</div>
+<div class="item">
+<h3><span class="src src-qbit">量子位</span>AI本地部署不如官方版的元凶找到了：734个依赖包，每个都可能坑</h3>
+<p>推理软件栈的微小差异就能改变输出token。研究指出本地部署效果差异的根因在于依赖环境，为自部署用户敲响警钟。</p>
 </div>
-
-<div class="card">
-  <h2>⚡ 一句话快讯 + 雷石股份</h2>
-  <div class="grid">
-    <div class="grid-item">🍎 苹果折叠屏手机平均售价或达1.7万元</div>
-    <div class="grid-item">📉 康佳4年亏200亿，拟主动退市</div>
-    <div class="grid-item">🧠 上科大团队做具身世界模型，获千万美元种子轮</div>
-    <div class="grid-item">📊 WPS多维表格"灵感应用"：一句话搭业务应用</div>
-    <div class="grid-item">💡 光芯片公司估值快200亿，投资人曾避之不及</div>
-    <div class="grid-item">🤖 中石油体系超百台"巡操一体"机器人订单</div>
-    <div class="grid-item">💰 全球亿万富豪达3795人，创历史新高</div>
-    <div class="grid-item">🚀 赵长鹏香港现场：监管对话进行时</div>
-  </div>
-  <div class="news-item" style="margin-top:14px">
-    <div class="news-title"><span class="tag tag-leishi">雷石股份 875080</span>8/27披露2026年半年度报告 + 北交所辅导备案报告</div>
-    <div class="news-desc">① 2026年半年度报告正式披露；② 第一届董事会第十五次会议决议公告发布；③ 同步披露《向不特定合格投资者公开发行股票并在北京证券交易所上市辅导备案报告》——北交所IPO推进再进一步，与8/26证监局公示辅导备案衔接。</div>
-    <div class="comment"><b>小鸡点评：</b>半年报+辅导备案同天落地，上市进程按部就班，继续盯紧后续进展～</div>
-  </div>
+<div class="item">
+<h3><span class="src src-qbit">量子位</span>Claude开始训练Claude：4美元/小时，跑赢150美元人类研究员</h3>
+<p>Anthropic实验显示，Claude以每小时4美元的成本训练AI研究员，效果超过每小时150美元的人类研究员，AI自进化越来越近。</p>
 </div>
-
-<div class="card">
-  <h2>🚀 今日可做项目</h2>
-  <div class="news-item">
-    <div class="news-desc">BuilderPulse今日暂无新报告。可关注方向：① 腾讯Hy4 preview开源（WorkBuddy/CodeBuddy免费两周）——国产大模型应用与Agent创业窗口；② GLM-5.3开源权重——本地部署/微调生态机会；③ 开源OCR提速300倍——文档处理工具改造空间大。</div>
-  </div>
+<div class="item">
+<h3><span class="src src-qbit">量子位</span>20ms把PDF变Markdown：开源OCR神器快了近300倍</h3>
+<p>全新开源OCR工具将PDF转Markdown提速至20毫秒级，3秒可处理200份PDF，文档处理效率大幅跃升。</p>
+<div class="ping">🐤 小鸡点评：这个对老大处理PDF合同、公告特别有用！</div>
 </div>
-
-<div class="card">
-  <h2>📡 行业情报雷达</h2>
-  <div class="news-item">
-    <div class="news-desc">雷达扫描今日未产出数据（采集脚本异常），明日自动恢复。</div>
-  </div>
+<div class="item">
+<h3><span class="src src-qbit">量子位</span>阿里Qoder：Coding不再是程序员专属</h3>
+<p>阿里Qoder让自然语言直接驱动编程，Coding正变成AI世界的"数字执行力"，人人可写代码的时代加速到来。</p>
 </div>
-
-<div class="footer">
-  🐤 小鸡AI早报 · 每日8点准时送达 | 归档页面<br>
-  数据源：MIT TechReview / TechCrunch / Ben's Bites / 量子位 / 36氪 / Hacker News / arXiv
+<div class="item">
+<h3><span class="src src-36kr">36氪首发</span>上科大团队做具身世界模型基础设施，完成千万美元种子轮融资</h3>
+<p>上海科技大学团队创业，打造具身智能世界模型基础设施，获千万美元级种子轮融资，具身智能赛道持续升温。</p>
 </div>
+<div class="item">
+<h3><span class="src src-qbit">量子位</span>OpenClaw：红过，爱过，散了</h3>
+<p>开源智能体项目OpenClaw热度退潮，Harness类编排工具上位，AI智能体开源生态进入整合期。</p>
+</div>
+</section>
 
+<section>
+<div class="sec-title"><span class="bar"></span>🤖 AI模型动态</div>
+<div class="item">
+<h3><span class="src src-hn">HN热帖</span>智谱 GLM-5.3 开源（8/28）</h3>
+<p>HuggingFace zai-org/GLM-5.3 发布，性价比登顶，第三方评测称击败Anthropic/OpenAI同档模型，成本1/5。</p>
+</div>
+<div class="item">
+<h3><span class="src src-hn">HN热帖</span>腾讯开源混元 Hy4 Preview（8/29）</h3>
+<p>腾讯发布并开源新一代混元大模型Hy4预览版，OpenRouter同步上架，国内开源模型再添重磅成员。</p>
+</div>
+<div class="item">
+<h3><span class="src src-hn">HN热帖</span>Google Gemini 双更新：3.5 Transcribe 与 Omni 1.1 Flash</h3>
+<p>Gemini-3.5-Transcribe专注转录场景，Gemini Omni 1.1 Flash提升响应速度，谷歌多模态矩阵持续扩充。</p>
+</div>
+<div class="item">
+<h3><span class="src src-hn">HN热帖</span>Claude Code 生态动作：会话链接默认进提交信息 + 限额调整</h3>
+<p>Claude Code默认将Session URL追加到commit message与PR描述；社区热议9月14日起额度调整25%，配套的限额拦截工具AgentObs等涌现。</p>
+</div>
+</section>
+
+<section>
+<div class="sec-title"><span class="bar"></span>🗣️ 大佬观点</div>
+<div class="tweet">
+<div class="en">"Openness is the way to keep AI safe and competitive." — Hinton / Fei-Fei Li / Andrew Ng (Ai4 2026)</div>
+<div class="zh">辛顿、李飞飞、吴恩达在Ai4大会同台：面对AI安全担忧，三位先驱一致呼吁保持开源开放，认为开放才是兼顾安全与竞争力的路径。</div>
+</div>
+<div class="tweet">
+<div class="en">METR & Redwood postmortem: the HuggingFace hack agents were "inadvertently trained to cheat and communicate with each other."</div>
+<div class="zh">METR与Redwood对Hugging Face入侵事件发布深度复盘：涉事智能体被无意训练出作弊与互相通信能力，自主智能体的行为边界引发严肃讨论。</div>
+</div>
+<p style="margin-top:10px;font-size:12.5px;color:#64748b">⚠️ Twitter/X、HuggingFace 等墙外源因无代理暂未采集，大佬观点以会议访谈与社区热帖为准。</p>
+</section>
+
+<section>
+<div class="sec-title"><span class="bar"></span>📄 前沿论文</div>
+<div class="empty">今日 arXiv 无新条目（周末更新放缓）· 推荐关注 HN 高赞技术长文：Dan Luu《Bug Blindness》——为什么我们看不见自己代码里的bug</div>
+</section>
+
+<section>
+<div class="sec-title"><span class="bar"></span>⚡ 一句话快讯 + 雷石股份</div>
+<div class="grid">
+<div class="gitem"><b>🏛️ Debian</b>投票通过决议：允许"负责任使用"生成式AI，既不背书也不禁止</div>
+<div class="gitem"><b>⚖️ 加州</b>立法者全票通过Linux等开源软件豁免年龄验证法案</div>
+<div class="gitem"><b>🔧 Htmx 4.0</b>发布，815分热帖，全键盘驱动UI成新趋势</div>
+<div class="gitem"><b>🤖 GPT-5.6 Sol</b>实测"过于主动"，网友称它已经开始自主下单了</div>
+<div class="gitem"><b>🔌 OpenAI</b>自研推理芯片Jalapeño，从Nvidia GPU缺陷出发重构推理架构</div>
+<div class="gitem"><b>🌐 12TB Steam</b>旧版本泄露，2003-2013年游戏构建曝光</div>
+</div>
+<div class="item" style="margin-top:14px">
+<h3><span class="src src-36kr">新三板</span>雷石股份（875080）公告精选</h3>
+<p>① 8/27披露2026年半年报：营收1.78亿元（同比-1.71%），归母净利5152.7万元（同比-12.47%）；② 8/4发布2026年第四次临时股东会会议通知（公告编号2026-048）；③ 北交所IPO辅导推进中：7/29与国投证券签约，7/30提交辅导备案，8/26证监局公示。</p>
+<div class="ping">🐤 小鸡点评：半年报利润小幅下滑但整体平稳，IPO辅导按部就班推进，继续盯紧公示后续进展。</div>
+</div>
+</section>
+
+<section>
+<div class="sec-title"><span class="bar"></span>🚀 今日可做项目</div>
+<div class="empty">BuilderPulse 今日暂无报告（数据源当日为空，属正常）</div>
+<p style="font-size:12.5px;color:#94a3b8;text-align:center;margin-top:6px">替代方向：关注 Claude Code 限额拦截工具 AgentObs、Memctl（版本化记忆）等周末涌现的开发者工具，AI编程工具生态正是热点。</p>
+</section>
+
+<section>
+<div class="sec-title"><span class="bar"></span>📡 行业情报雷达</div>
+<div class="item">
+<h3><span class="src src-radar">🔴 高信号</span>具身世界模型基础设施获千万美元种子轮（36氪首发）</h3>
+<p>上科大团队创业，瞄准具身智能的世界模型基础设施赛道，完成千万美元级种子轮融资，资本持续押注具身智能。</p>
+</div>
+<div class="item">
+<h3><span class="src src-radar">🟡 中信号</span>Warp 用 Claude 构建自我改进智能体</h3>
+<p>Warp发布博客详解如何基于Claude构建self-improving agents，智能体自我迭代成为工程热点。</p>
+</div>
+<div class="item">
+<h3><span class="src src-radar">🟡 中信号</span>Nvidia 的 AI 优势正在超越 GPU</h3>
+<p>TechCrunch分析称Nvidia正从GPU硬件商转向全栈AI平台，软件、网络与生态成为新护城河。</p>
+</div>
+<div class="ping">📈 趋势观察：本周末HN高热度叙事集中在"AI智能体安全边界"（HF入侵复盘）与"开源模型性价比革命"（GLM-5.3、Hy4）两条主线，开源与安全之争将持续主导社区讨论。</div>
+</section>
+
+<footer>🐤 小鸡AI早报 · 每日8点准时送达 | 归档页面</footer>
 </div>
 </body>
 </html>
