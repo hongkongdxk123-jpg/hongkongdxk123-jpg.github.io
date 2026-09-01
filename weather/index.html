@@ -6,67 +6,212 @@
 <title>小鸡天气早知道 · 2026年9月2日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:32px 16px 60px;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
-.wrap{max-width:760px;margin:0 auto}
-header{text-align:center;padding:30px 0 10px}
-.logo{font-size:15px;color:#a78bfa;letter-spacing:2px;margin-bottom:8px}
-h1{font-size:28px;font-weight:800;background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
-.sub{color:#94a3b8;font-size:14px;margin-bottom:14px}
-section{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:22px;margin-bottom:18px}
-.sec-title{font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.sec-title .bar{width:4px;height:18px;border-radius:2px;background:linear-gradient(180deg,#a78bfa,#60a5fa);display:inline-block}
-.big{font-size:34px;font-weight:800;background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
-.gitem{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:12px 14px;font-size:13px}
-.gitem b{display:block;font-size:12px;color:#94a3b8;margin-bottom:4px;font-weight:600}
-.gitem .v{color:#f1f5f9;font-size:15px;font-weight:600}
-.tip{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:13.5px;color:#cbd5e1}
-.tip:last-child{margin-bottom:0}
-.tip .e{flex-shrink:0;font-size:16px}
-.note{background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 8px 8px 0;padding:8px 12px;font-size:12.5px;color:#c4b5fd;margin-top:10px}
-footer{text-align:center;color:#64748b;font-size:12px;margin-top:26px}
-@media(max-width:640px){section{padding:16px}h1{font-size:23px}body{padding:20px 12px 40px}.big{font-size:30px}}
+:root{
+  --bg:#07070f;
+  --card:rgba(255,255,255,0.035);
+  --card2:rgba(255,255,255,0.02);
+  --hair:rgba(255,255,255,0.07);
+  --txt:#eef1f8;
+  --sub:#9aa3b5;
+  --acc:#a78bfa;
+  --acc2:#5eead4;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.75;
+  padding:0 0 64px;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+/* ── 背景光晕层（固定，不随滚动重绘） ── */
+.orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+.orb1{width:420px;height:420px;left:50%;top:-160px;transform:translateX(-50%);background:radial-gradient(circle,rgba(124,58,237,.32),transparent 70%);animation:breathe 9s var(--ease) infinite alternate}
+.orb2{width:300px;height:300px;right:-100px;top:34%;background:radial-gradient(circle,rgba(45,212,191,.14),transparent 70%);animation:breathe 11s 1.2s var(--ease) infinite alternate}
+.orb3{width:260px;height:260px;left:-90px;bottom:-60px;background:radial-gradient(circle,rgba(139,92,246,.16),transparent 70%);animation:breathe 13s .6s var(--ease) infinite alternate}
+@keyframes breathe{from{opacity:.38;transform:translateX(var(--tx,0)) scale(1)}to{opacity:.6;transform:translateX(var(--tx,0)) scale(1.12)}}
+.orb1{--tx:-50%}
+/* 细网格纹理 */
+.orbs::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%)}
+
+.wrap{max-width:680px;margin:0 auto;padding:0 18px}
+
+/* ── 顶部 ── */
+header{padding:52px 0 8px;text-align:center;animation:rise .9s var(--ease) both}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--acc);border:1px solid rgba(167,139,250,.28);border-radius:99px;padding:5px 14px;background:rgba(167,139,250,.06);margin-bottom:18px}
+.eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--acc2);box-shadow:0 0 8px var(--acc2);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-size:30px;font-weight:800;letter-spacing:-.5px;line-height:1.25}
+h1 .date{background:linear-gradient(92deg,#c4b5fd 10%,#7dd3fc 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.subline{color:var(--sub);font-size:13.5px;margin-top:8px}
+
+/* ── 英雄温度：双层嵌套 ── */
+.hero-card{
+  margin:26px 0 20px;padding:10px;border-radius:34px;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  border:1px solid var(--hair);
+  box-shadow:0 24px 60px -32px rgba(0,0,0,.9),inset 0 1px 1px rgba(255,255,255,.08);
+  animation:rise .9s .12s var(--ease) both;
+}
+.hero-inner{
+  border-radius:25px;padding:30px 26px 22px;text-align:center;
+  background:linear-gradient(180deg,rgba(20,18,40,.88),rgba(10,10,20,.92));
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.12);
+}
+.hero-row{display:flex;align-items:center;justify-content:center;gap:20px}
+.hero-icon{font-size:56px;line-height:1;filter:drop-shadow(0 6px 22px rgba(167,139,250,.35))}
+.hero-temp{font-size:76px;font-weight:800;letter-spacing:-3px;line-height:1;background:linear-gradient(180deg,#fff 20%,#b9a8f5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-temp .deg{font-size:30px;letter-spacing:0;vertical-align:top;color:#8f86c9;-webkit-text-fill-color:#8f86c9}
+.hero-desc{font-size:16.5px;font-weight:600;margin-top:6px}
+.hero-range{color:var(--sub);font-size:13.5px;margin-top:3px}
+.hero-tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.tag{font-size:11.5px;color:#c9d2e3;background:rgba(255,255,255,.05);border:1px solid var(--hair);padding:4px 12px;border-radius:99px}
+
+/* ── SVG 温度曲线 ── */
+.chart-card{animation:rise .9s .2s var(--ease) both}
+.chart-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.chart-title{font-size:15px;font-weight:700}
+.chart-note{font-size:11px;color:var(--sub);letter-spacing:.06em}
+.chart-wrap{width:100%;overflow:visible}
+.chart-wrap svg{width:100%;height:auto;display:block}
+.tick{font-size:10px;fill:var(--sub)}
+
+/* ── 数据网格：错落bento ── */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.cell{
+  border-radius:22px;padding:16px 18px;
+  background:var(--card);border:1px solid var(--hair);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.06);
+  transition:transform .5s var(--ease),border-color .5s var(--ease);
+}
+.cell:hover{transform:translateY(-3px);border-color:rgba(167,139,250,.35)}
+.cell.wide{grid-column:span 2}
+.cell .k{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--sub);letter-spacing:.05em;margin-bottom:6px}
+.cell .k .ic{font-size:14px}
+.cell .v{font-size:18px;font-weight:750;letter-spacing:-.2px}
+.cell .d{font-size:12.5px;color:var(--sub);margin-top:3px}
+.cell .v em{font-style:normal;color:var(--acc2)}
+.uv-bar{height:5px;border-radius:99px;background:rgba(255,255,255,.07);margin-top:10px;overflow:hidden}
+.uv-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#5eead4,#fbbf24,#fb7185);animation:fill 1.4s .6s var(--ease) forwards}
+@keyframes fill{to{width:88%}}
+
+/* ── 提醒 ── */
+.tips{margin-top:12px}
+.tip{
+  display:flex;gap:13px;align-items:flex-start;padding:13px 4px;
+  border-bottom:1px solid rgba(255,255,255,.045);
+  animation:rise .7s var(--ease) both;
+}
+.tip:last-child{border-bottom:none}
+.tip .e{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.18);border-radius:12px}
+.tip p{font-size:13.5px;color:#c7cede}
+.tip p b{color:var(--txt);font-weight:650}
+
+.foot{margin-top:14px;padding:14px 18px;border-radius:18px;background:rgba(94,234,212,.05);border:1px solid rgba(94,234,212,.14);font-size:12.5px;color:#a7e8dd;text-align:center}
+footer{text-align:center;color:#5b6478;font-size:11.5px;margin-top:30px;letter-spacing:.04em}
+footer .lnk{color:#7c86a0;text-decoration:none}
+
+/* ── 入场动画 ── */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.d1{animation-delay:.26s}.d2{animation-delay:.32s}.d3{animation-delay:.38s}.d4{animation-delay:.44s}.d5{animation-delay:.5s}.d6{animation-delay:.56s}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}
+  .orb{animation:none}
+}
+@media(max-width:560px){
+  h1{font-size:24px}
+  .hero-temp{font-size:60px}
+  .hero-icon{font-size:44px}
+  header{padding-top:38px}
+}
 </style>
 </head>
 <body>
+<div class="orbs"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
+
 <div class="wrap">
+
 <header>
-<div class="logo">🌤️ 小鸡天气早知道</div>
-<h1>2026年9月2日 · 星期三</h1>
-<div class="sub">每晚20点报次日 · 北京</div>
+<div class="eyebrow"><span class="dot"></span>BEIJING · 每晚20点报次日</div>
+<h1><span class="date">2026年9月2日</span> · 星期三</h1>
+<div class="subline">🌤️ 小鸡天气早知道 · 明日穿衣出行指南</div>
 </header>
 
-<section>
-<div class="sec-title"><span class="bar"></span>🌡️ 温度</div>
-<div style="text-align:center;padding:6px 0 2px">
-<span class="big">20°C ~ 31°C</span>
-<p style="color:#94a3b8;font-size:13.5px;margin-top:6px">昼夜温差大：早晚凉爽舒适，午后日晒下偏热</p>
+<div class="hero-card"><div class="hero-inner">
+<div class="hero-row">
+<div class="hero-icon">☀️</div>
+<div class="hero-temp">31<span class="deg">°C</span></div>
+</div>
+<div class="hero-desc">午后晴，全天有轻霾</div>
+<div class="hero-range">夜间 20°C — 昼夜温差 11°C</div>
+<div class="hero-tags">
+<span class="tag">💨 微风1-2级</span><span class="tag">💧 干燥32%</span><span class="tag"> umbrella 无雨</span>
+</div>
+</div></div>
+
+<section class="chart-card">
+<div class="chart-head">
+<div class="chart-title">🌡️ 24小时温度曲线</div>
+<div class="chart-note">TOMORROW · HOURLY</div>
+</div>
+<div class="chart-wrap">
+<svg viewBox="0 0 340 110" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#a78bfa" stop-opacity=".33"/>
+<stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="lg" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#7dd3fc"/><stop offset="55%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#fbbf24"/>
+</linearGradient>
+</defs>
+<path d="M10,58 L54,64 L98,70 L142,50 L186,14 L230,10 L274,30 L318,44 L318,96 L10,96 Z" fill="url(#tg)"/>
+<path d="M10,58 L54,64 L98,70 L142,50 L186,14 L230,10 L274,30 L318,44" fill="none" stroke="url(#lg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#a78bfa">
+<circle cx="10" cy="58" r="2.6"/><circle cx="54" cy="64" r="2.6"/><circle cx="98" cy="70" r="2.6"/><circle cx="142" cy="50" r="2.6"/>
+</g>
+<circle cx="186" cy="14" r="3.4" fill="#fbbf24"/>
+<circle cx="230" cy="10" r="3.4" fill="#fbbf24"/>
+<circle cx="274" cy="30" r="2.6" fill="#a78bfa"/><circle cx="318" cy="44" r="2.6" fill="#a78bfa"/>
+<text class="tick" x="10" y="107" text-anchor="middle">0时</text>
+<text class="tick" x="98" y="107" text-anchor="middle">6时</text>
+<text class="tick" x="186" y="107" text-anchor="middle">12时</text>
+<text class="tick" x="274" y="107" text-anchor="middle">18时</text>
+<text class="tick" x="318" y="107" text-anchor="end">24时</text>
+<text x="230" y="7" text-anchor="middle" font-size="9.5" fill="#fbbf24" font-weight="600">31°峰值</text>
+<text x="98" y="84" text-anchor="middle" font-size="9.5" fill="#8fa0bd">20°低点</text>
+</svg>
 </div>
 </section>
 
-<section>
-<div class="sec-title"><span class="bar"></span>📊 全天节奏</div>
 <div class="grid">
-<div class="gitem"><b>🌤️ 天气概况</b><span class="v">晴到烟霾</span><br>凌晨至上午晴转轻霾，午后放晴，傍晚起再有轻霾</div>
-<div class="gitem"><b>🌬️ 风力</b><span class="v">1~2级 微风</span><br>风速1-10km/h，白天以北风为主，风力很弱</div>
-<div class="gitem"><b>💧 湿度</b><span class="v">32% ~ 67%</span><br>明显转干，不再是前几日的闷湿体感</div>
-<div class="gitem"><b>☔ 降水</b><span class="v">无雨</span><br>全天降雨概率≤5%，不用带伞</div>
-<div class="gitem"><b>☀️ 日出/日落</b><span class="v">05:43 / 18:45</span><br>昼长收缩中，傍晚18点后天黑得快</div>
-<div class="gitem"><b>😷 空气体感</b><span class="v">轻霾</span><br>多时段Smoke/Haze，敏感人群建议减少久待户外</div>
+<div class="cell"><div class="k"><span class="ic">🌬️</span>风力</div><div class="v">1~2级 <em>微风</em></div><div class="d">白天北风为主，夜间渐弱</div></div>
+<div class="cell"><div class="k"><span class="ic">💧</span>湿度</div><div class="v">32% ~ 67%</div><div class="d">明显转干，不再闷湿</div></div>
+<div class="cell"><div class="k"><span class="ic">☔</span>降水</div><div class="v"><em>0mm 无雨</em></div><div class="d">全天降雨概率≤5%</div></div>
+<div class="cell"><div class="k"><span class="ic">☀️</span>日出/日落</div><div class="v">05:43 / 18:45</div><div class="d">天黑变早，傍晚行动趁早</div></div>
+<div class="cell half"><div class="k"><span class="ic">😷</span>空气质量体感</div><div class="v">轻霾持续</div><div class="d">多时段Smoke/Haze</div>
+<div class="uv-bar"><div class="uv-fill"></div></div></div>
+<div class="cell half"><div class="k"><span class="ic">🕶️</span>紫外线峰值</div><div class="v">UV7 <em>正午很强</em></div><div class="d">12时前后注意防晒</div></div>
 </div>
-</section>
 
 <section>
-<div class="sec-title"><span class="bar"></span>💡 出门提醒</div>
-<div class="tip"><span class="e">🏠</span><span>早晚20°C出头，出门搭件薄外套，中午31°C单衣就够</span></div>
-<div class="tip"><span class="e">😷</span><span>全天有轻霾，敏感人群、孩子长时间户外建议戴口罩</span></div>
-<div class="tip"><span class="e">🧴</span><span>午后晴朗紫外线偏强，防晒别偷懒</span></div>
-<div class="tip"><span class="e">💧</span><span>湿度降到三成多，天干物燥，多补水润喉</span></div>
-<div class="tip"><span class="e">🚶♂️</span><span>傍晚18:45日落，想遛弯锻炼趁18点前天亮时</span></div>
-<div class="note">🐤 小鸡提醒：昼夜温差超10°C，一早一晚最容易着凉，穿衣按"洋葱式"来～</div>
+<div class="chart-head"><div class="chart-title">💡 出门提醒</div><div class="chart-note">DAILY TIPS</div></div>
+<div class="tips">
+<div class="tip d1"><div class="e">🧥</div><p><b>早晚20°C出头</b>，出门带件薄外套，中午31°C单衣即可——洋葱式穿衣，进出空调房不遭罪</p></div>
+<div class="tip d2"><div class="e">😷</div><p><b>全天轻霾</b>，敏感人群和孩子户外活动建议戴口罩，晨练改到午后晴天时段</p></div>
+<div class="tip d3"><div class="e">🧴</div><p><b>正午紫外线UV7</b>，暴晒时段在11-14点，通勤族帽子/防晒安排上</p></div>
+<div class="tip d4"><div class="e">💧</div><p><b>湿度降到三成</b>，天干物燥，多喝水润喉，皮肤保湿别偷懒</p></div>
+<div class="tip d5"><div class="e">🚶</div><p><b>18:45日落</b>，遛弯锻炼趁18点前天亮，晚饭后散步可赏初秋晚风</p></div>
+<div class="tip d6"><div class="e">🌬️</div><p><b>扩散条件差</b>，阳台衣物能晾干但别隔夜，关窗时段选凌晨至上午</p></div>
+</div>
+<div class="foot">🐤 昼夜温差11°C，一早一晚最容易着凉——记得提醒家里老人小孩加件外套</div>
 </section>
 
-<footer>🌤️ 小鸡天气早知道 · 每晚20点报次日 | 归档页面</footer>
+<footer>🌤️ 小鸡天气早知道 · 每晚20点报次日 · <a class="lnk" href="https://hongkongdxk123-jpg.github.io/briefing/">早报看板</a></footer>
 </div>
 </body>
 </html>
