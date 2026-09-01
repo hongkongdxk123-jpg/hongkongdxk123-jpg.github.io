@@ -7,22 +7,11 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#07070f;
-  --card:rgba(255,255,255,0.035);
-  --hair:rgba(255,255,255,0.07);
-  --txt:#eef1f8;
-  --sub:#9aa3b5;
-  --acc:#a78bfa;
-  --acc2:#5eead4;
-  --gold:#fbbf24;
+  --bg:#07070f;--card:rgba(255,255,255,0.035);--hair:rgba(255,255,255,0.07);
+  --txt:#eef1f8;--sub:#9aa3b5;--acc:#a78bfa;--acc2:#5eead4;--gold:#fbbf24;
   --ease:cubic-bezier(0.22,1,0.36,1);
 }
-body{
-  background:var(--bg);color:var(--txt);
-  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
-  line-height:1.75;padding:0 0 64px;overflow-x:hidden;-webkit-font-smoothing:antialiased;
-}
-/* ── 背景层 ── */
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;padding:0 0 56px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
 .orb1{width:440px;height:440px;left:50%;top:-170px;transform:translateX(-50%);background:radial-gradient(circle,rgba(124,58,237,.34),transparent 70%);animation:breathe 9s var(--ease) infinite alternate;--tx:-50%}
@@ -30,93 +19,80 @@ body{
 .orb3{width:280px;height:280px;left:-100px;bottom:-60px;background:radial-gradient(circle,rgba(139,92,246,.17),transparent 70%);animation:breathe 13s .6s var(--ease) infinite alternate}
 @keyframes breathe{from{opacity:.38;transform:translateX(var(--tx,0)) scale(1)}to{opacity:.62;transform:translateX(var(--tx,0)) scale(1.12)}}
 .orbs::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%)}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
 
-.wrap{max-width:680px;margin:0 auto;padding:0 18px}
-
-/* ── 顶部 ── */
-header{padding:52px 0 8px;text-align:center;animation:rise .9s var(--ease) both}
-.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--acc);border:1px solid rgba(167,139,250,.28);border-radius:99px;padding:5px 14px;background:rgba(167,139,250,.06);margin-bottom:18px}
+header{padding:40px 0 4px;text-align:center;animation:rise .8s var(--ease) both}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--acc);border:1px solid rgba(167,139,250,.28);border-radius:99px;padding:4px 13px;background:rgba(167,139,250,.06);margin-bottom:14px}
 .eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--acc2);box-shadow:0 0 8px var(--acc2);animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-h1{font-size:30px;font-weight:800;letter-spacing:-.5px;line-height:1.25}
+h1{font-size:27px;font-weight:800;letter-spacing:-.5px}
 h1 .date{background:linear-gradient(92deg,#c4b5fd 10%,#7dd3fc 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.subline{color:var(--sub);font-size:13.5px;margin-top:8px}
+.subline{color:var(--sub);font-size:12.5px;margin-top:5px}
 
-/* ── 英雄温度 ── */
-.hero-card{
-  margin:26px 0 16px;padding:10px;border-radius:34px;position:relative;overflow:hidden;
-  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
-  border:1px solid var(--hair);
-  box-shadow:0 24px 60px -32px rgba(0,0,0,.9),inset 0 1px 1px rgba(255,255,255,.08);
-  animation:rise .9s .12s var(--ease) both;
-}
-.hero-glow{position:absolute;top:-90px;left:50%;transform:translateX(-50%);width:380px;height:220px;background:radial-gradient(ellipse,rgba(167,139,250,.28),transparent 68%);pointer-events:none}
-.hero-wm{position:absolute;right:-14px;bottom:-28px;font-size:120px;opacity:.06;pointer-events:none;line-height:1}
-.hero-inner{position:relative;border-radius:25px;padding:32px 26px 22px;text-align:center;background:linear-gradient(180deg,rgba(20,18,40,.88),rgba(10,10,20,.92));box-shadow:inset 0 1px 1px rgba(255,255,255,.12)}
-.hero-row{display:flex;align-items:center;justify-content:center;gap:20px}
-.hero-icon{font-size:58px;line-height:1;filter:drop-shadow(0 6px 22px rgba(167,139,250,.4))}
-.hero-temp{font-size:82px;font-weight:800;letter-spacing:-3.5px;line-height:1;background:linear-gradient(180deg,#fff 15%,#b9a8f5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.hero-temp .deg{font-size:32px;letter-spacing:0;vertical-align:top;color:#8f86c9;-webkit-text-fill-color:#8f86c9}
-.hero-desc{font-size:17px;font-weight:650;margin-top:6px}
-.hero-range{color:var(--sub);font-size:13.5px;margin-top:3px}
-.hero-tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}
-.tag{font-size:11.5px;color:#c9d2e3;background:rgba(255,255,255,.05);border:1px solid var(--hair);padding:4px 12px;border-radius:99px}
+/* 英雄卡（紧凑） */
+.hero-card{margin:18px 0 12px;padding:8px;border-radius:28px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--hair);box-shadow:0 24px 60px -32px rgba(0,0,0,.9),inset 0 1px 1px rgba(255,255,255,.08);animation:rise .8s .1s var(--ease) both}
+.hero-glow{position:absolute;top:-90px;left:50%;transform:translateX(-50%);width:380px;height:200px;background:radial-gradient(ellipse,rgba(167,139,250,.28),transparent 68%);pointer-events:none}
+.hero-inner{position:relative;border-radius:21px;padding:20px 18px 16px;text-align:center;background:linear-gradient(180deg,rgba(20,18,40,.88),rgba(10,10,20,.92));box-shadow:inset 0 1px 1px rgba(255,255,255,.12)}
+.hero-row{display:flex;align-items:center;justify-content:center;gap:16px}
+.hero-icon{font-size:44px;line-height:1;filter:drop-shadow(0 5px 18px rgba(167,139,250,.4))}
+.hero-temp{font-size:58px;font-weight:800;letter-spacing:-2.5px;line-height:1;background:linear-gradient(180deg,#fff 15%,#b9a8f5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-temp .deg{font-size:26px;letter-spacing:0;vertical-align:top;color:#8f86c9;-webkit-text-fill-color:#8f86c9}
+.hero-desc{font-size:14.5px;font-weight:650;margin-top:4px}
+.hero-range{color:var(--sub);font-size:12px;margin-top:2px}
+.hero-tags{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:10px}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#c9d2e3;background:rgba(255,255,255,.05);border:1px solid var(--hair);padding:3px 11px;border-radius:99px}
 
-/* ── 升降旗（金色焦点卡） ── */
-.flag-card{
-  margin:16px 0 20px;padding:9px;border-radius:30px;
-  background:linear-gradient(180deg,rgba(251,191,36,.12),rgba(251,191,36,.03));
-  border:1px solid rgba(251,191,36,.28);
-  box-shadow:0 20px 50px -30px rgba(251,191,36,.25),inset 0 1px 1px rgba(251,191,36,.15);
-  animation:rise .9s .18s var(--ease) both;
-}
-.flag-inner{border-radius:22px;padding:22px 24px 18px;background:linear-gradient(180deg,rgba(34,27,12,.55),rgba(16,13,6,.72));box-shadow:inset 0 1px 1px rgba(251,191,36,.12)}
-.flag-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.flag-title{display:flex;align-items:center;gap:9px;font-size:15.5px;font-weight:750;color:#fde68a}
-.flag-title .flag{font-size:20px;filter:drop-shadow(0 2px 10px rgba(251,191,36,.5))}
-.flag-note{font-size:10px;letter-spacing:.14em;color:rgba(253,230,138,.55);text-transform:uppercase}
-.flag-times{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.flag-t{text-align:center;padding:14px 8px 12px;border-radius:16px;background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.16)}
-.flag-t .lab{font-size:11.5px;letter-spacing:.2em;color:rgba(253,230,138,.75);margin-bottom:4px}
-.flag-t .t{font-size:34px;font-weight:800;letter-spacing:-1px;background:linear-gradient(180deg,#fef3c7,#fbbf24);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.15}
-.flag-t .s{font-size:11px;color:rgba(253,230,138,.55);margin-top:2px}
-.flag-tip{margin-top:12px;font-size:12px;color:rgba(253,230,138,.75);text-align:center}
+/* 金色升降旗卡（紧凑） */
+.flag-card{margin:12px 0;padding:7px;border-radius:26px;background:linear-gradient(180deg,rgba(251,191,36,.12),rgba(251,191,36,.03));border:1px solid rgba(251,191,36,.28);box-shadow:0 20px 50px -30px rgba(251,191,36,.25),inset 0 1px 1px rgba(251,191,36,.15);animation:rise .8s .16s var(--ease) both}
+.flag-inner{border-radius:20px;padding:14px 16px 12px;background:linear-gradient(180deg,rgba(34,27,12,.55),rgba(16,13,6,.72));box-shadow:inset 0 1px 1px rgba(251,191,36,.12)}
+.flag-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.flag-title{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:750;color:#fde68a}
+.flag-title .flag{font-size:17px;filter:drop-shadow(0 2px 8px rgba(251,191,36,.5))}
+.flag-note{font-size:9px;letter-spacing:.14em;color:rgba(253,230,138,.55);text-transform:uppercase}
+.flag-times{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.flag-t{text-align:center;padding:10px 6px 9px;border-radius:14px;background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.16)}
+.flag-t .lab{font-size:10.5px;letter-spacing:.18em;color:rgba(253,230,138,.75);margin-bottom:2px}
+.flag-t .t{font-size:27px;font-weight:800;letter-spacing:-.8px;background:linear-gradient(180deg,#fef3c7,#fbbf24);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.15}
+.flag-t .s{font-size:10px;color:rgba(253,230,138,.55);margin-top:1px}
+.flag-tip{margin-top:9px;font-size:10.5px;color:rgba(253,230,138,.7);text-align:center}
 
-/* ── 曲线 ── */
-.chart-card{animation:rise .9s .24s var(--ease) both}
-.chart-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
-.chart-title{font-size:15px;font-weight:700}
-.chart-note{font-size:11px;color:var(--sub);letter-spacing:.06em}
+/* 曲线卡 */
+section{background:var(--card);border:1px solid var(--hair);border-radius:20px;padding:16px 16px 13px;margin-top:12px;box-shadow:inset 0 1px 1px rgba(255,255,255,.05)}
+.chart-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.sec-title{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:700}
+.sec-title .bar{width:3.5px;height:15px;border-radius:2px;background:linear-gradient(180deg,#a78bfa,#60a5fa)}
+.chart-note{font-size:10px;color:var(--sub);letter-spacing:.06em}
 .chart-wrap svg{width:100%;height:auto;display:block}
-.tick{font-size:10px;fill:var(--sub)}
+.tick{font-size:9.5px;fill:var(--sub)}
 
-/* ── 数据网格 ── */
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-.cell{border-radius:22px;padding:16px 18px;background:var(--card);border:1px solid var(--hair);box-shadow:inset 0 1px 1px rgba(255,255,255,.06);transition:transform .5s var(--ease),border-color .5s var(--ease)}
-.cell:hover{transform:translateY(-3px);border-color:rgba(167,139,250,.35)}
-.cell .k{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--sub);letter-spacing:.05em;margin-bottom:6px}
-.cell .k .ic{font-size:14px}
-.cell .v{font-size:18px;font-weight:750;letter-spacing:-.2px}
-.cell .d{font-size:12.5px;color:var(--sub);margin-top:3px}
+/* 数据网格：紧凑两列，图标徽章 */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+.cell{border-radius:16px;padding:11px 13px;background:var(--card);border:1px solid var(--hair);box-shadow:inset 0 1px 1px rgba(255,255,255,.06);transition:transform .5s var(--ease),border-color .5s var(--ease)}
+.cell:hover{transform:translateY(-2px);border-color:rgba(167,139,250,.35)}
+.cell .k{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--sub);letter-spacing:.04em;margin-bottom:4px}
+.cell .k .ic{width:22px;height:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11.5px;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.16);border-radius:7px}
+.cell .v{font-size:16.5px;font-weight:750;letter-spacing:-.2px}
+.cell .d{font-size:11.5px;color:var(--sub);margin-top:1px}
 .cell .v em{font-style:normal;color:var(--acc2)}
-.uv-bar{height:5px;border-radius:99px;background:rgba(255,255,255,.07);margin-top:10px;overflow:hidden}
-.uv-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#5eead4,#fbbf24,#fb7185);animation:fill 1.4s .6s var(--ease) forwards}
+.uv-bar{height:4px;border-radius:99px;background:rgba(255,255,255,.07);margin-top:8px;overflow:hidden}
+.uv-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#5eead4,#fbbf24,#fb7185);animation:fill 1.4s .5s var(--ease) forwards}
 @keyframes fill{to{width:88%}}
 
-/* ── 提醒 ── */
-.tip{display:flex;gap:13px;align-items:flex-start;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.045);animation:rise .7s var(--ease) both}
+/* 提醒：紧凑单行圆标 */
+.tips{margin-top:2px}
+.tip{display:flex;gap:10px;align-items:flex-start;padding:8px 2px;border-bottom:1px solid rgba(255,255,255,.04)}
 .tip:last-child{border-bottom:none}
-.tip .e{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.18);border-radius:12px}
-.tip p{font-size:13.5px;color:#c7cede}
+.tip .e{width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12.5px;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.18);border-radius:9px;margin-top:2px}
+.tip p{font-size:12.5px;color:#c7cede;line-height:1.55}
 .tip p b{color:var(--txt);font-weight:650}
-.foot{margin-top:14px;padding:14px 18px;border-radius:18px;background:rgba(94,234,212,.05);border:1px solid rgba(94,234,212,.14);font-size:12.5px;color:#a7e8dd;text-align:center}
-footer{text-align:center;color:#5b6478;font-size:11.5px;margin-top:30px;letter-spacing:.04em}
+.foot{margin-top:10px;padding:11px 15px;border-radius:14px;background:rgba(94,234,212,.05);border:1px solid rgba(94,234,212,.14);font-size:11.5px;color:#a7e8dd;text-align:center}
+footer{text-align:center;color:#5b6478;font-size:11px;margin-top:22px;letter-spacing:.04em}
 footer .lnk{color:#7c86a0;text-decoration:none}
 
-@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-.d1{animation-delay:.26s}.d2{animation-delay:.32s}.d3{animation-delay:.38s}.d4{animation-delay:.44s}.d5{animation-delay:.5s}.d6{animation-delay:.56s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.d1{animation-delay:.22s}.d2{animation-delay:.27s}.d3{animation-delay:.32s}.d4{animation-delay:.37s}.d5{animation-delay:.42s}.d6{animation-delay:.47s}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}.orb{animation:none}}
-@media(max-width:560px){h1{font-size:24px}.hero-temp{font-size:62px}.hero-icon{font-size:46px}.flag-t .t{font-size:29px}header{padding-top:38px}}
+@media(max-width:560px){h1{font-size:22px}.hero-temp{font-size:50px}.hero-icon{font-size:38px}.flag-t .t{font-size:24px}header{padding-top:30px}}
 </style>
 </head>
 <body>
@@ -131,7 +107,7 @@ footer .lnk{color:#7c86a0;text-decoration:none}
 </header>
 
 <div class="hero-card">
-<div class="hero-glow"></div><div class="hero-wm">☀️</div>
+<div class="hero-glow"></div>
 <div class="hero-inner">
 <div class="hero-row">
 <div class="hero-icon">☀️</div>
@@ -140,7 +116,7 @@ footer .lnk{color:#7c86a0;text-decoration:none}
 <div class="hero-desc">午后晴，全天有轻霾</div>
 <div class="hero-range">夜间 20°C — 昼夜温差 11°C</div>
 <div class="hero-tags">
-<span class="tag">💨 微风1-2级</span><span class="tag">💧 干燥32%</span><span class="tag"> umbrella 无雨</span>
+<span class="tag">🌬️ 微风1-2级</span><span class="tag">💧 干燥32%</span><span class="tag">☔ 无雨</span>
 </div>
 </div>
 </div>
@@ -148,22 +124,22 @@ footer .lnk{color:#7c86a0;text-decoration:none}
 <div class="flag-card"><div class="flag-inner">
 <div class="flag-head">
 <div class="flag-title"><span class="flag">🚩</span>天安门升降旗</div>
-<div class="flag-note">FLAG CEREMONY</div>
+<div class="flag-note">FLAG · DAILY</div>
 </div>
 <div class="flag-times">
-<div class="flag-t"><div class="lab">升旗 · 日出</div><div class="t">05:43</div><div class="s">清晨看升旗，建议4:40前到</div></div>
-<div class="flag-t"><div class="lab">降旗 · 日落</div><div class="t">18:45</div><div class="s">傍晚降旗，18:00前入场</div></div>
+<div class="flag-t"><div class="lab">🌅 升旗 · 日出</div><div class="t">05:43</div><div class="s">看升旗建议4:40前到</div></div>
+<div class="flag-t"><div class="lab">🌇 降旗 · 日落</div><div class="t">18:45</div><div class="s">看降旗18:00前入场</div></div>
 </div>
-<div class="flag-tip">升降旗时间随日出日落每日变化 · 以天安门管委会当日公告为准</div>
+<div class="flag-tip">升降旗随日出日落每日变化 · 以天安门管委会当日公告为准</div>
 </div></div>
 
-<section class="chart-card">
+<section>
 <div class="chart-head">
-<div class="chart-title">🌡️ 24小时温度曲线</div>
-<div class="chart-note">TOMORROW · HOURLY</div>
+<div class="sec-title"><span class="bar"></span>🌡️ 24小时温度曲线</div>
+<div class="chart-note">HOURLY</div>
 </div>
 <div class="chart-wrap">
-<svg viewBox="0 0 340 110" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 340 104" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="#a78bfa" stop-opacity=".33"/><stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
@@ -172,20 +148,18 @@ footer .lnk{color:#7c86a0;text-decoration:none}
 <stop offset="0%" stop-color="#7dd3fc"/><stop offset="55%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#fbbf24"/>
 </linearGradient>
 </defs>
-<path d="M10,58 L54,64 L98,70 L142,50 L186,14 L230,10 L274,30 L318,44 L318,96 L10,96 Z" fill="url(#tg)"/>
-<path d="M10,58 L54,64 L98,70 L142,50 L186,14 L230,10 L274,30 L318,44" fill="none" stroke="url(#lg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<g fill="#a78bfa">
-<circle cx="10" cy="58" r="2.6"/><circle cx="54" cy="64" r="2.6"/><circle cx="98" cy="70" r="2.6"/><circle cx="142" cy="50" r="2.6"/>
-</g>
-<circle cx="186" cy="14" r="3.4" fill="#fbbf24"/><circle cx="230" cy="10" r="3.4" fill="#fbbf24"/>
-<circle cx="274" cy="30" r="2.6" fill="#a78bfa"/><circle cx="318" cy="44" r="2.6" fill="#a78bfa"/>
-<text class="tick" x="10" y="107" text-anchor="middle">0时</text>
-<text class="tick" x="98" y="107" text-anchor="middle">6时</text>
-<text class="tick" x="186" y="107" text-anchor="middle">12时</text>
-<text class="tick" x="274" y="107" text-anchor="middle">18时</text>
-<text class="tick" x="318" y="107" text-anchor="end">24时</text>
-<text x="230" y="7" text-anchor="middle" font-size="9.5" fill="#fbbf24" font-weight="600">31°峰值</text>
-<text x="98" y="84" text-anchor="middle" font-size="9.5" fill="#8fa0bd">20°低点</text>
+<path d="M10,54 L54,60 L98,66 L142,47 L186,13 L230,9 L274,28 L318,41 L318,90 L10,90 Z" fill="url(#tg)"/>
+<path d="M10,54 L54,60 L98,66 L142,47 L186,13 L230,9 L274,28 L318,41" fill="none" stroke="url(#lg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#a78bfa"><circle cx="10" cy="54" r="2.5"/><circle cx="54" cy="60" r="2.5"/><circle cx="98" cy="66" r="2.5"/><circle cx="142" cy="47" r="2.5"/></g>
+<circle cx="186" cy="13" r="3.2" fill="#fbbf24"/><circle cx="230" cy="9" r="3.2" fill="#fbbf24"/>
+<circle cx="274" cy="28" r="2.5" fill="#a78bfa"/><circle cx="318" cy="41" r="2.5" fill="#a78bfa"/>
+<text class="tick" x="10" y="101" text-anchor="middle">0时</text>
+<text class="tick" x="98" y="101" text-anchor="middle">6时</text>
+<text class="tick" x="186" y="101" text-anchor="middle">12时</text>
+<text class="tick" x="274" y="101" text-anchor="middle">18时</text>
+<text class="tick" x="318" y="101" text-anchor="end">24时</text>
+<text x="230" y="6" text-anchor="middle" font-size="9" fill="#fbbf24" font-weight="600">31°峰值</text>
+<text x="98" y="80" text-anchor="middle" font-size="9" fill="#8fa0bd">20°低点</text>
 </svg>
 </div>
 </section>
@@ -194,18 +168,18 @@ footer .lnk{color:#7c86a0;text-decoration:none}
 <div class="cell"><div class="k"><span class="ic">🌬️</span>风力</div><div class="v">1~2级 <em>微风</em></div><div class="d">白天北风为主，夜间渐弱</div></div>
 <div class="cell"><div class="k"><span class="ic">💧</span>湿度</div><div class="v">32% ~ 67%</div><div class="d">明显转干，不再闷湿</div></div>
 <div class="cell"><div class="k"><span class="ic">☔</span>降水</div><div class="v"><em>0mm 无雨</em></div><div class="d">全天降雨概率≤5%</div></div>
-<div class="cell"><div class="k"><span class="ic">🕶️</span>紫外线峰值</div><div class="v">UV7 <em>正午很强</em></div><div class="d">12时前后注意防晒</div></div>
+<div class="cell"><div class="k"><span class="ic">🕶️</span>紫外线峰值</div><div class="v">UV7 <em>很强</em></div><div class="d">12时前后注意防晒<div class="uv-bar"><div class="uv-fill"></div></div></div></div>
 </div>
 
 <section>
-<div class="chart-head"><div class="chart-title">💡 出门提醒</div><div class="chart-note">DAILY TIPS</div></div>
+<div class="chart-head"><div class="sec-title"><span class="bar"></span>💡 出门提醒</div><div class="chart-note">TIPS</div></div>
 <div class="tips">
-<div class="tip d1"><div class="e">🚩</div><p><b>想看升旗</b>：05:43升旗，夏季人多，建议凌晨4:40前到广场安检排队；看降旗18:45，18:00前入场即可</p></div>
-<div class="tip d2"><div class="e">🧥</div><p><b>早晚20°C出头</b>，出门带件薄外套，中午31°C单衣即可——洋葱式穿衣，进出空调房不遭罪</p></div>
-<div class="tip d3"><div class="e">😷</div><p><b>全天轻霾</b>，敏感人群和孩子户外活动建议戴口罩，晨练改到午后晴天时段</p></div>
-<div class="tip d4"><div class="e">🧴</div><p><b>正午紫外线UV7</b>，暴晒时段11-14点，通勤族帽子防晒安排上</p></div>
-<div class="tip d5"><div class="e">💧</div><p><b>湿度降到三成</b>，天干物燥，多喝水润喉，皮肤保湿别偷懒</p></div>
-<div class="tip d6"><div class="e">🚶</div><p><b>傍晚18:45日落</b>，遛弯锻炼趁18点前天亮，看完降旗正好吃晚饭</p></div>
+<div class="tip d1"><div class="e">🚩</div><p><b>看升旗</b>：05:43升旗，建议凌晨4:40前到广场排队安检；看降旗18:45，18:00前入场即可</p></div>
+<div class="tip d2"><div class="e">🧥</div><p><b>早晚20°C出头</b>，带件薄外套，中午31°C单衣即可，洋葱式穿衣进出空调房不遭罪</p></div>
+<div class="tip d3"><div class="e">😷</div><p><b>全天轻霾</b>，敏感人群和孩子户外建议戴口罩，晨练改到午后晴天时段</p></div>
+<div class="tip d4"><div class="e">🧴</div><p><b>正午紫外线UV7</b>，暴晒时段11-14点，帽子防晒安排上</p></div>
+<div class="tip d5"><div class="e">💧</div><p><b>湿度降到三成</b>，天干物燥，多喝水润喉，保湿别偷懒</p></div>
+<div class="tip d6"><div class="e">🚶</div><p><b>18:45日落</b>，遛弯锻炼趁18点前，看完降旗正好吃晚饭</p></div>
 </div>
 <div class="foot">🐤 昼夜温差11°C，一早一晚最容易着凉——记得提醒家里老人小孩加件外套</div>
 </section>
