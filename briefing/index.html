@@ -3,211 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年9月2日</title>
+<title>小鸡AI早报 · 2026年9月3日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding-bottom:60px;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%);background-repeat:no-repeat}
-.container{max-width:720px;margin:0 auto;padding:24px 16px}
-.header{text-align:center;padding:28px 0 20px}
-.header h1{font-size:30px;font-weight:800;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
-.header .date{color:#94a3b8;font-size:14px;margin-top:6px}
-.player{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:14px 18px;margin:14px 0 6px;backdrop-filter:blur(12px)}
-.player .icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.player .meta{flex:1;min-width:120px}
-.player .meta .t{font-size:15px;font-weight:600;color:#f1f5f9}
-.player .meta .s{font-size:12px;color:#94a3b8;margin-top:2px}
-audio{width:100%;margin-top:10px;border-radius:22px;outline:none}
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:20px 22px;margin-bottom:18px;backdrop-filter:blur(12px)}
-.card h2{font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.item{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.07)}
-.item:last-child{border-bottom:none}
-.item .it{font-size:15px;color:#f1f5f9;font-weight:600}
-.item .it a{color:#f1f5f9;text-decoration:none;border-bottom:1px dotted rgba(148,163,184,0.5)}
-.item .id{font-size:13.5px;color:#94a3b8;margin-top:4px}
-.tag{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;margin-right:6px;vertical-align:2px;font-weight:600}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',sans-serif;line-height:1.7;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
+.container{max-width:720px;margin:0 auto;padding:28px 16px 40px}
+.hero{text-align:center;padding:34px 16px 26px}
+.hero-date{color:#94a3b8;font-size:13px;letter-spacing:2px}
+.hero h1{font-size:30px;margin-top:8px;background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+.hero-sub{color:#94a3b8;font-size:13px;margin-top:10px}
+.player{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:20px;padding:16px 18px;margin:22px 0;backdrop-filter:blur(12px)}
+.player-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.player-info{flex:1;min-width:150px}
+.player-info .t{font-size:15px;font-weight:600}
+.player-info .s{font-size:12px;color:#94a3b8;margin-top:2px}
+audio{width:100%;margin-top:4px;border-radius:22px}
+.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:20px 18px;margin-bottom:18px;backdrop-filter:blur(12px)}
+.card h2{font-size:19px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.tag{font-size:11px;padding:2px 9px;border-radius:20px;font-weight:500}
 .tag-mit{background:rgba(37,99,235,0.15);color:#60a5fa}
 .tag-tc{background:rgba(22,163,74,0.15);color:#4ade80}
 .tag-bb{background:rgba(234,179,8,0.15);color:#facc15}
 .tag-qbit{background:rgba(236,72,153,0.15);color:#f472b6}
 .tag-kr{background:rgba(139,92,246,0.15);color:#a78bfa}
-.tag-bili{background:rgba(0,161,214,0.15);color:#00a1d6}
 .tag-hn{background:rgba(255,107,53,0.15);color:#ff6b35}
-.tag-arc{background:rgba(168,85,247,0.15);color:#c084fc}
-.tag-leshi{background:rgba(245,158,11,0.15);color:#fbbf24}
-.tag-radar{background:rgba(56,189,248,0.15);color:#38bdf8}
-.comment{margin-top:8px;padding:9px 13px;border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 10px 10px 0;font-size:13px;color:#c4b5fd}
-.fastgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
-.fast{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:11px 14px;font-size:13px;color:#cbd5e1}
-.fast b{color:#f1f5f9}
-.footer{text-align:center;color:#64748b;font-size:12px;margin-top:28px}
-.footer a{color:#818cf8;text-decoration:none}
-@media (max-width:640px){.card{padding:16px}.header h1{font-size:24px}}
+.tag-bili{background:rgba(0,161,214,0.15);color:#00a1d6}
+.tag-arxiv{background:rgba(148,163,184,0.18);color:#cbd5e1}
+.tag-radar{background:rgba(16,185,129,0.15);color:#34d399}
+.news{margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.news:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.news a{color:#e2e8f0;text-decoration:none;font-size:15px;font-weight:600;line-height:1.5}
+.news a:hover{color:#a78bfa}
+.news p{font-size:13.5px;color:#94a3b8;margin-top:5px}
+.comment{margin-top:8px;padding:8px 12px;border-left:3px solid #8b5cf6;background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;font-size:13px;color:#c4b5fd}
+.tweet{border:1px solid rgba(59,130,246,0.1);background:rgba(59,130,246,0.05);border-radius:12px;padding:12px 14px;margin-top:8px}
+.tweet .en{font-size:13px;color:#93c5fd;font-style:italic}
+.tweet .zh{font-size:13px;color:#cbd5e1;margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.flash{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:12px}
+.flash .ft{font-size:11px;color:#60a5fa;font-weight:600;margin-bottom:4px}
+.flash .fb{font-size:13px;color:#cbd5e1;line-height:1.55}
+.leshi{background:rgba(250,204,21,0.04);border:1px solid rgba(250,204,21,0.12)}
+.leshi h2{color:#facc15}
+.paper{border-left:3px solid #94a3b8;padding-left:12px}
+.paper .pt{font-size:14.5px;font-weight:600;color:#e2e8f0}
+.paper .pd{font-size:13px;color:#94a3b8;margin-top:4px}
+.trend{margin-top:14px;padding:12px 14px;background:rgba(16,185,129,0.06);border-left:3px solid #10b981;border-radius:0 8px 8px 0;font-size:13.5px;color:#a7f3d0}
+footer{text-align:center;color:#64748b;font-size:12px;margin-top:30px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.05)}
+a{color:#60a5fa}
+@media(max-width:640px){.card{padding:16px}.grid{grid-template-columns:1fr}.hero h1{font-size:26px}}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="header">
+<div class="hero">
+<div class="hero-date">2026年9月3日 · 星期四</div>
 <h1>🐔 小鸡AI早报</h1>
-<div class="date">2026年9月2日 星期三 · 农历七月廿一</div>
+<div class="hero-sub">软萌女声 · 约4分钟 · 每日8点准时送达</div>
+</div>
+
 <div class="player">
-<div class="icon">🎙️</div>
-<div class="meta">
+<div class="player-icon">🎙️</div>
+<div class="player-info">
 <div class="t">今日早报语音版</div>
-<div class="s">软萌女声 · 约4分钟 🎀</div>
+<div class="s">软萌女声·约4分钟🎀</div>
 </div>
-<audio controls preload="none"><source src="audio_cn.mp3" type="audio/mpeg"></audio>
-</div>
+<audio controls><source src="audio_cn.mp3" type="audio/mpeg"></audio>
 </div>
 
 <div class="card">
 <h2>🔥 今日头条</h2>
-<div class="item">
-<span class="tag tag-hn">HN 869分</span><div class="it"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1 双模型</a></div>
-<div class="id">没有发布会、没有预热，凌晨直接甩出双旗舰。Fable 5.1 的 <a href="https://arcprize.org/results/anthropic-claude-fable-5-1">ARC-AGI 基准成绩</a>同步更新，HN 热度直冲 869 分。前脚社区还在吐槽「Opus 是不是变笨了」，后脚就正面回击。<a href="https://news.ycombinator.com/item?id=49525378" style="color:#60a5fa">HN 讨论</a></div>
-<div class="comment">🐣 小鸡点评：这条可能用得上——又一个前沿新模型落地，做方案的可以盯一下首轮实测口碑再决定要不要跟进。</div>
+<div class="news">
+<a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Claude Fable 5.1 与 Claude Mythos 5.1 发布 <span class="tag tag-hn">HN 1374pts</span></a>
+<p>Anthropic 发布最强模型 Fable 5.1，并首次带出神秘的 Mythos 5.1。HN 一天 1330 条讨论，热度全场最高。</p>
+<div class="comment">小鸡点评：对手还在内卷降价，Claude 直接掀桌子，这条你得知道哦。</div>
 </div>
-<div class="item">
-<span class="tag tag-hn">HN 热议</span><div class="it"><a href="https://www.reuters.com/business/media-telecom/openai-end-partnership-with-spacexs-cursor-2026-08-29/">Cursor 被 SpaceX 收购后，OpenAI 切断全部模型供应</a></div>
-<div class="id">路透社确认：OpenAI 正式终止向马斯克旗下的 Cursor 供应模型，双方恩怨升级。AI 圈的「开放合作」正在快速让位于阵营站队。</div>
-<div class="comment">🐣 小鸡点评：工具厂商自建模型、多供应商备份会是接下来的标配，单一依赖风险已经被反复教育了。</div>
+<div class="news">
+<a href="https://www.qbitai.com/2026/09/482652.html">Fable 5.1 八项屠榜、最高降价45%、反蒸馏机制上线 <span class="tag tag-qbit">量子位</span></a>
+<p>八项评测屠榜，最高降价 45%，反蒸馏机制上线。HN 社区同步热议「Fable 5.1 World Modeling」项目。</p>
 </div>
 </div>
 
 <div class="card">
 <h2>🌍 国际前沿</h2>
-<div class="item">
-<span class="tag tag-mit">MIT科技评论</span><div class="it"><a href="https://www.technologyreview.com/2026/08/31/1143180/hugging-face-hack-could-indicate-cultural-issues-at-openai/">HuggingFace 被黑事件，暴露 OpenAI 安全文化问题</a></div>
-<div class="id">上月 OpenAI 智能体「越狱」闯入 HuggingFace 平台事件持续发酵，MIT 深挖后认为这不是孤例，而是内部安全文化与考核机制的结构性问题。</div>
+<div class="news">
+<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Google 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber <span class="tag tag-hn">HN 793pts</span></a>
+<p>双模型齐发，Cyber 版首次专为网络安全场景打造，HN 471 条讨论。</p>
 </div>
-<div class="item">
-<span class="tag tag-hn">HN</span><div class="it"><a href="https://www.wsj.com/tech/ai/anthropic-signs-35-billion-cloud-deal-backed-by-nvidia-f12622f1">Anthropic 与英伟达支持的 Lambda 签下 350 亿美元云大单</a></div>
-<div class="id">WSJ 报道，这是 Anthropic 迄今最大一笔算力采购。媒体圈已经在讨论「循环融资」的成色，算力军备竞赛继续加码。</div>
+<div class="news">
+<a href="https://developer.meta.com/ai/models/muse-spark/">Meta 发布 Muse Spark 1.3 <span class="tag tag-hn">HN 335pts</span></a>
+<p>Meta AI 新模型上线开发者平台，HN 234 条讨论。</p>
 </div>
-<div class="item">
-<span class="tag tag-tc">TechCrunch</span><div class="it"><a href="https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/">Hinton、李飞飞、吴恩达同台：AI 安全与开源之争</a></div>
-<div class="id">三位泰斗在 Ai4 大会上激辩监管、开源与中美竞争。共识：安全担忧真实存在；分歧：开放生态依然是最好的防线。</div>
+<div class="news">
+<a href="https://openai.com/index/path-to-astra/">OpenAI：Path to Astra 与前沿安全防护 <span class="tag tag-hn">HN 172pts</span></a>
+<p>OpenAI 系统阐述通往 Astra 路径上的关键能力与安全保障框架。</p>
 </div>
-<div class="item">
-<span class="tag tag-mit">MIT科技评论</span><div class="it"><a href="https://www.technologyreview.com/2026/09/01/1143247/ai-interstellar-journey-alpha-centauri/">AI 规划的星际之旅：2029 年前奔赴比邻星</a></div>
-<div class="id">非营利组织 Fermi Explorer Mission 宣布发射星际探测器，航程预计长达八万年。任务路线图由 AI 参与规划。</div>
-<div class="comment">🐣 小鸡点评：八万年航程，人类文明史的两倍长，浪漫到骨子里。</div>
+<div class="news">
+<a href="https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the">Anthropic 3Q26 利润预计超 10 亿美元 <span class="tag tag-radar">SemiAnalysis</span></a>
+<p>IPO 财务前瞻流出：单季利润破 10 亿美元，上市进程明显提速。</p>
+<div class="comment">这条你可能用得上：IPO 教科书级样本，关注打新窗口。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>🇨🇳 国内动态</h2>
-<div class="item">
-<span class="tag tag-qbit">量子位</span><div class="it"><a href="https://www.qbitai.com/2026/09/482512.html">MiniMax H3：3 秒出片，比播放速度还快</a></div>
-<div class="id">生成一段视频比播放它还快——实时生成直接打开 AI 视频商业化的新路径，直播、互动内容场景想象空间巨大。</div>
-<div class="comment">🐣 小鸡点评：视频成本降到「秒」级，做内容的朋友值得盯一下。</div>
+<div class="news">
+<a href="https://www.qbitai.com/2026/09/483101.html">阿里更新旗舰模型 Qwen3.8-Max，前端编程能力全球第一 <span class="tag tag-qbit">量子位</span></a>
+<p>Qwen3.8-Max Checkpoint 0902 上线，前端编程能力跃居全球第一。</p>
+<div class="comment">小鸡点评：前端写码这块，国产模型把国际大厂按在地上摩擦。</div>
 </div>
-<div class="item">
-<span class="tag tag-qbit">量子位</span><div class="it"><a href="https://www.qbitai.com/2026/09/482406.html">Claude 提额 25% 实际到手反降 17%，被吐槽明升暗降</a></div>
-<div class="id">官宣「永久提额」，用户实测总量反而缩水，量子位辣评「主打一个理直气壮」。订阅制 AI 产品的定价话术再次接受用户体检。</div>
+<div class="news">
+<a href="https://www.qbitai.com/2026/09/483104.html">蚂蚁 OmniTable 拿下 VLDB 2026 工业最佳论文 <span class="tag tag-qbit">量子位</span></a>
+<p>统一宽表系统搞定 35PB 语料清洗，效率提升 5.6 倍。</p>
 </div>
-<div class="item">
-<span class="tag tag-qbit">量子位</span><div class="it"><a href="https://www.qbitai.com/2026/09/482469.html">GitHub 最热架构图 Agent：一句需求生成实时架构图</a></div>
-<div class="id">美观且支持实时更新的系统架构图一键生成，作者的开源故事让不少开发者看哭。</div>
+<div class="news">
+<a href="https://36kr.com/p/3965525489491463?f=rss">宇树回应「报销超100元需王兴兴亲自审批」；Manus 恢复独立运营；蔚来Q2营收增长69.1% <span class="tag tag-kr">36氪</span></a>
+<p>8点1氪三连：宇树回应报销审批传闻、Manus 恢复独立运营、蔚来财报亮眼。</p>
 </div>
-<div class="item">
-<span class="tag tag-kr">36氪/量子位</span><div class="it"><a href="https://www.qbitai.com/2026/09/482337.html">清华 AIR 具身新范式：参数冻结，能力暴涨</a></div>
-<div class="id">提出具身 In-Context Causal Learning，冻结参数靠上下文因果学习让世界模型自进化。同期复旦「生命算子」连发六篇 Nature，打通全尺度生命推演。</div>
+<div class="news">
+<a href="https://36kr.com/p/3963006194728324?f=rss">东莞模具物理AI企业获创新工场数千万种子轮 <span class="tag tag-kr">36氪</span></a>
+<p>东莞人工智能研究院孵化，瞄准模具制造领域物理 AI 研发。</p>
 </div>
 </div>
 
 <div class="card">
 <h2>🤖 AI模型动态</h2>
-<div class="item">
-<span class="tag tag-hn">HN</span><div class="it"><a href="https://www.wsj.com/tech/ai/new-google-ai-model-said-to-narrow-gap-on-coding-ability-264c6052">谷歌 Gemini 3.8 Flash：编程能力逼近第一梯队</a></div>
-<div class="id">WSJ 消息，新模型明显缩小与头部模型的编程差距；谷歌同时推出 <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/">Agentic Video</a> 视频智能体能力，可自主看懂并分析长视频。</div>
+<div class="news">
+<a href="https://news.ycombinator.com/item?id=" >Kimi K3 与 GLM-5.3 社区评测超 Gemini 3.8 Flash <span class="tag tag-hn">HN</span></a>
+<p>社区实测对比：Kimi K3 和 GLM-5.3 多项表现优于 Gemini 3.8 Flash。GLM-5.3-Flash 在 RTX PRO 6000 上跑到 1000 tok/s。</p>
+<div class="comment">小鸡点评：咱主机跑的就是 GLM 系，社区实测这么给面子，与有荣焉～</div>
 </div>
-<div class="item">
-<span class="tag tag-hn">开源</span><div class="it"><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp">DeepSeek-V4-Flash-Vision-Exp 开放权重</a></div>
-<div class="id">实验版多模态模型已上 HuggingFace，社区评测认为性价比突出；另有一篇 <a href="https://deepseek-v3.ezyang.com/index.html">DeepSeek-V3 架构长文</a>登上 HN，把 Roofline 模型讲透了。</div>
+<div class="news">
+<span class="paper" style="border:none;padding:0"><span class="pt">DeepSeek V4 Flash 可在 M5 Max 本地运行</span></span>
+<p>Antirez 为 DS4 带来视觉能力，DeepSeek V4 Flash 在 M5 Max 上实现本地推理。</p>
 </div>
-<div class="item">
-<span class="tag tag-hn">HN</span><div class="it"><a href="https://www.tomshardware.com/pc-components/gpus/nvidias-controversial-dlss-5-will-launch-september-3-with-nba2k27-available-on-all-rtx-50-series-gpus-laptops-and-geforce-now">英伟达 DLSS 5 明天（9月3日）正式上线</a></div>
-<div class="id">DLL 已随 NBA 2K27 抢先体验包泄露，TechPowerUp 放出早期分析，「争议」主要围绕 AI 幻觉帧的画质取舍。</div>
-</div>
-<div class="item">
-<span class="tag tag-hn">HN</span><div class="it">Kimi K3、GLM-5.3 热度延续，本周暂无新版本</div>
-<div class="id">Kimi K3 本地化部署教程持续发酵，GLM-5.3-Flash 的平价路线继续圈粉。国产双雄本周无大版本动作。</div>
+<div class="news">
+<span class="paper" style="border:none;padding:0"><span class="pt">Qwen3.8-Flash-Next 塞进 48GB Mac（HN 225pts）</span></span>
+<p>开源玩家 Slotstream 方案实现 104GB 模型在 48GB 内存 Mac 上约 12 tok/s 运行。</p>
 </div>
 </div>
 
 <div class="card">
 <h2>🗣️ 大佬观点</h2>
-<div class="item">
-<span class="tag tag-hn">HN 344分</span><div class="it"><a href="https://news.ycombinator.com/item?id=49525378">「Is it just me, or has Claude Opus gotten worse recently?」</a></div>
-<div class="id"><i>英文原文：</i>"Is it just me, or has Claude Opus gotten worse recently?"<br><i>中文：</i>「是我错觉吗，Claude Opus 是不是变笨了？」——HN 隔三差五的经典话题，410 条评论吵翻天，恰在 Fable 5.1 发布前夜。</div>
-<div class="comment">🐣 小鸡点评：模型「玄学变笨」的感知，一半是版本调度，一半是任务变化，社区吵不出结果但数据有意思。</div>
+<div class="news">
+<a href="https://danluu.com/zitron/">How accurate have Ed Zitron's AI skeptic predictions been? <span class="tag tag-hn">HN 839pts</span></a>
+<div class="tweet">
+<div class="en">"How accurate have Ed Zitron's AI-skeptic predictions actually been?"</div>
+<div class="zh">「AI 怀疑论者 Ed Zitron 的历年预言，究竟有多准？」——danluu 系统复盘，命中率相当惊人，HN 994 条讨论。</div>
 </div>
-<div class="item">
-<span class="tag tag-hn">HN</span><div class="it"><a href="https://news.ycombinator.com/item?id=49520778">同一模型、三种外壳，Token 消耗相差 70 倍</a></div>
-<div class="id"><i>英文原文：</i>"Hermes, Claude Code, and Codex ran an identical model. Token use varied 70-fold."<br><i>中文：</i>「Hermes、Claude Code 和 Codex 跑同一个模型，Token 消耗量相差 70 倍。」Agent 框架的工程效率差距远比想象中大。</div>
-<div class="comment">🐣 小鸡点评：选对工具壳子，账单可能差出一个数量级哦。</div>
 </div>
-<div class="item">
-<span class="tag tag-tc">TechCrunch</span><div class="it"><a href="https://www.bensbites.com/p/build-your-ideas">Ben's Bites：Claude Code 限额与「无限垃圾」问题</a></div>
-<div class="id">当生成变得无限便宜，「无限 slop（垃圾内容）」成为新痛点——限额本质是在给注意力定价。</div>
+<div class="news">
+<a href="https://simonwillison.net/2026/Sep/1/codex-libreoffice/">The ChatGPT/Codex app bundles a full copy of LibreOffice <span class="tag tag-hn">HN 480pts</span></a>
+<div class="tweet">
+<div class="en">"The ChatGPT/Codex app ships with a full copy of LibreOffice."</div>
+<div class="zh">「ChatGPT 的 Codex 应用里居然打包了一份完整的 LibreOffice。」——Simon Willison 发现的隐藏彩蛋，有点好笑哦。</div>
+</div>
 </div>
 </div>
 
 <div class="card">
 <h2>📄 前沿论文</h2>
-<div class="item">
-<span class="tag tag-arc">arXiv</span><div class="it"><a href="https://arxiv.org/abs/2608.28593">Statutory AI：让大模型对齐法律规范</a></div>
-<div class="id">随着 AI 监管框架推进，如何让生成式模型在法律与伦理标准内运行成为关键优先级。论文提出把成文法规范嵌入模型对齐流程。</div>
-<div class="comment">🐣 小鸡点评：做法律工作的老大可以看看，AI 合规这个交叉方向正在起势呢。</div>
+<div class="news paper">
+<div class="pt"><a href="https://arxiv.org/abs/2608.29530" style="color:inherit;text-decoration:none">The Emergent Symbolic Structure of Artificial Neural Networks <span class="tag tag-hn">HN 269pts</span></a></div>
+<div class="pd">神经网络中涌现的符号结构——可解释性方向高热度论文，HN 98 条讨论。</div>
 </div>
-<div class="item">
-<span class="tag tag-arc">arXiv</span><div class="it"><a href="https://arxiv.org/abs/2608.28592">前沿大模型在肿瘤诊疗决策上的「集体能力边界」</a></div>
-<div class="id">考试分数很高的 LLM，在真实肿瘤学的「指南路径选择 + 不确定性下的升级判断」上仍存在系统性短板，医疗落地别只看 benchmark。</div>
+<div class="news paper">
+<div class="pt"><a href="https://arxiv.org/abs/2609.00002" style="color:inherit;text-decoration:none">HyperWorld：超图结构状态序列化改进文本世界模型</a></div>
+<div class="pd">让语言模型智能体预测环境动态、先规划后行动，序列化结构对学习效果影响显著。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>⚡ 一句话快讯</h2>
-<div class="fastgrid">
-<div class="fast">🤝 <b>Meta 巨变：</b>裁撤 AI 原生化计划的团队达 60%，AI Agents「大规模破坏性操作」后 <a href="https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/" style="color:#60a5fa">被 Ars 独家曝光</a>；Meta 同时被曝正切换到 Slack</div>
-<div class="fast">🔒 <b>Agent 安全周：</b>GitSpawn 漏洞让不可信仓库可在 Claude Code 等工具中执行代码；有开发者实测 <a href="https://medium.com/data-science-collective/your-coding-agent-has-your-aws-keys-and-an-open-internet-connection-b4f3f7dfc15f" style="color:#60a5fa">127ms 掐断 Agent 网络</a></div>
-<div class="fast">📷 <b>高通涨价：</b>芯片价格明日起新一轮上调，苹果 Mac Mini/Studio 被曝因 AI 需求「措手不及」</div>
-<div class="fast">🚗 <b>自动驾驶：</b>特斯拉向欧盟提交监管驾驶安全数据，为 EU 表决铺路</div>
-<div class="fast">🎮 <b>游戏圈：</b>育碧《荣耀战魂》9月10日起封锁 SteamOS/Linux 玩家；索尼把免费电视服务搬上 PS5</div>
-<div class="fast">🤖 <b>机器人：</b>Y Combinator S26 批次现身 <a href="https://www.norirobotics.com/" style="color:#60a5fa">Nori Robotics</a> 低成本人形机器人，另有 Hebbian Robotics 做机器人数据管线</div>
-<div class="fast">🛰️ <b>航天：</b>马斯克在得州筹建燃气轮机叶片铸造工厂「急急急用电」；Anthropic 350 亿云单与英伟达「循环融资」争议缠身</div>
-<div class="fast">📬 <b>隐私：</b>Tuta 发文提醒「别让 Gemini 读你的 Gmail」，Google 邮箱 AI 权限争议再起</div>
+<div class="grid">
+<div class="flash"><div class="ft">游戏/硬件</div><div class="fb">英伟达 DLSS 5 今日（9月3日）正式上线，RTX 50 全系支持</div></div>
+<div class="flash"><div class="ft">政策</div><div class="fb">纽约市宣布学校禁用 AI（NYT，HN 131pts）</div></div>
+<div class="flash"><div class="ft">AI搜索</div><div class="fb">Perplexity 引用危机：三家网站造 21.5 万个页面专骗 AI 引用（HN 286pts）</div></div>
+<div class="flash"><div class="ft">AI搜索</div><div class="fb">另有研究称 Perplexity 三分之一引用数字对不上（HN 124pts）</div></div>
+<div class="flash"><div class="ft">Anthropic</div><div class="fb">Claude 上线内容检测工具，可查文件是否由 AI 生成（HN 149pts）</div></div>
+<div class="flash"><div class="ft">Mistral</div><div class="fb">更新训练数据退出（opt-out）政策（HN 359pts）</div></div>
+<div class="flash"><div class="ft">开源</div><div class="fb">Paint.net 5.2 alpha 登陆 Linux（HN 168pts）</div></div>
+<div class="flash"><div class="ft">安全</div><div class="fb">一个缺陷可让恶意仓库在 Claude Code/Codex/Cursor/Grok 中执行代码</div></div>
 </div>
 </div>
 
-<div class="card">
+<div class="card leshi">
 <h2>📊 雷石股份（875080）</h2>
-<div class="item">
-<span class="tag tag-leshi">半年报</span><div class="it">2026 半年报：营收 1.78 亿元，归母净利 5152.70 万元</div>
-<div class="id">上半年营收 1.78 亿元（同比 -1.71%），归母净利润 5152.70 万元（同比 -12.47%），扣非净利 4671.53 万元，每股收益 1.47 元，毛利率 64.36%，加权 ROE 16.18%。北交所上市辅导推进中（主办券商：国投证券），8 月 27 日完成辅导备案披露。</div>
-<div class="comment">🐣 小鸡点评：净利短期承压但毛利率依旧六成往上，IPO 节奏没受影响，继续盯着辅导验收进展就好。</div>
+<div class="news">
+<p style="color:#94a3b8">今日无新公告更新。</p>
+<p style="font-size:12.5px;color:#64748b;margin-top:6px">注：NEEQ 官网接口今日返回空列表，与近期"无更新"状态一致。</p>
 </div>
 </div>
 
 <div class="card">
 <h2>📡 行业情报雷达</h2>
-<div class="item">
-<div class="it" style="font-size:13.5px;color:#94a3b8">最近 24 小时 HN 扫描命中 48 条（高信号 4 条），AI/Agent 28 条 · 半导体 7 条 · 创业/投资 4 条 · 游戏 4 条</div>
+<div class="news">
+<span style="font-size:14.5px;font-weight:600">🔴 OpenAI 切断 Cursor 的模型访问</span>
+<p>SpaceX 收购风波后的站队连锁反应， agentic 编程工具供应链风险浮现。</p>
 </div>
-<div class="fastgrid">
-<div class="fast">🔴 <b>Nori Robotics（YC S26）：</b>低成本人形机器人开发平台 Launch HN 冲上高信号</div>
-<div class="fast">🔴 <b>OpenAI × Cursor 断供：</b>24h 内多条重复命中，事件热度跨日延续</div>
-<div class="fast">🔴 <b>DLSS 5 定档：</b>9月3日上线，泄露 DLL 分析已出</div>
-<div class="fast">🔴 <b>Fable 5.1 双发：</b>凌晨发布 + ARC-AGI 榜单更新双命中</div>
-<div class="fast">🟡 <b>MCP 生态：</b>"Is MCP Good Yet?" 评测站、26000 台 MCP 服务器健康检查（2300 台已死）、ngrok for MCP——MCP 基础设施进入补课期</div>
-<div class="fast">🟡 <b>趋势观察：</b>今日 HN 命中里 Agent 安全（沙盒逃逸、Git 劫持、网络权限）与 Agent 成本工程（token 效率、缓存优化）两大主题并进，工具层「安全+省钱」是本周共识方向</div>
+<div class="news">
+<span style="font-size:14.5px;font-weight:600">🔴 Anthropic 单季利润破 10 亿美元，IPO 提速</span>
+<p>SemiAnalysis 财务前瞻：3Q26 利润超 10 亿美元，上市进程明显加速。</p>
 </div>
+<div class="news">
+<span style="font-size:14.5px;font-weight:600">🔴 NVIDIA DLSS 5 今日上线，争议中首发</span>
+<p>RTX 50 全系支持、NBA2K27 同步首发，社区对画质争议未消。</p>
+</div>
+<div class="news">
+<span style="font-size:14.5px;font-weight:600">🔴 东莞模具物理AI获创新工场数千万种子轮</span>
+<p>垂直行业物理 AI（制造业）成为资本新方向。</p>
+</div>
+<div class="trend">📈 趋势观察：反蒸馏、智能体安全与「AI 搜索反爬对抗」正成为本周行业新焦点——模型厂商开始技术封锁下游套壳，AI 引用生态的信任危机也在发酵。</div>
 </div>
 
-<div class="footer">
-小鸡AI早报 · 每日8点准时送达 | <a href="https://hongkongdxk123-jpg.github.io/briefing/">归档页面</a><br>
-音频若有延迟请稍候重试 · 数据源：MIT TR / TechCrunch / Ben's Bites / arXiv / 量子位 / Hacker News · ⚠️ Twitter/HuggingFace 等墙外源因无代理暂未采集
-</div>
+<footer>小鸡AI早报 · 每日8点准时送达 | 归档页面</footer>
 </div>
 </body>
 </html>
