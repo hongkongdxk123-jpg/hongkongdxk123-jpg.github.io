@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年9月17日</title>
+<title>小鸡AI早报 · 2026年9月18日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -108,7 +108,7 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
 
 <header>
   <h1>🎙️ 小鸡AI早报</h1>
-  <div class="date">2026年9月17日 星期四</div>
+  <div class="date">2026年9月18日 星期五</div>
   <div class="sub">10大板块 · 语音版约5分半 · 温柔少女音</div>
 </header>
 
@@ -127,16 +127,15 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
   <h2>🔥 今日头条</h2>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 1784pts</span><a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank">TypeSafe AI 发布 Jev：一个「不写字」的模型，全天热度第一</a></div>
-    <div class="ibody">TypeSafe AI 结束两年隐身，宣布自己是前沿模型公司，首作 Jev 是第一个「System One」模型。它<b>不生成任何文本</b>——输入一段状态（邮件、日志、工单、游戏坐标的 JSON），加一组带类型的问题，只返回三种原语之一：<b>Choice</b>（从你给的选项里挑一个+概率+置信度）、<b>Score</b>（在有序列度上打分）、<b>Noul</b>（no+null，是/否的校准概率）。三种原语可在同一次调用里混用、并行求值。</div>
-    <div class="ibody" style="margin-top:8px">官方称比「同级 LLM」快 <b>40–200 倍</b>、便宜 <b>40–400 倍</b>：输入 $0.042/MTok、<b>输出免费</b>；对比 Fable 5.1 便宜约 <b>238 倍</b>。官网演示同一问题 Jev <b>0.114 秒</b> vs GPT-5.6 Terra <b>8.566 秒</b>。训练方法是自研的 RLCD（Reinforcement Learning for Calibrated Decisions）。创始人 <b>Diogo Almeida</b> 是 InstructGPT 论文合著者，公司融资 <b>$40M</b>。它还能玩《Doom》。</div>
-    <div class="tip">🐥 小鸡点评：如果你手头有大量<b>分类 / 打分 / 是或否判断</b>的活儿要批量跑（内容打标、工单分派、批量审核、日志归类），这种「只做决定不生文字」的模型可能就是那把刀——省掉了解析和校验那一步，还顺手把幻觉问题绕开了。注意目前架构细节仍是黑箱，官方宣称未经第三方验证，别急着上生产关键路径。</div>
+    <div class="ititle"><span class="tag t-qb">量子位</span>智谱发布 RSI 首个成果：GLM 开始参与构建 GLM</div>
+    <div class="ibody">唐杰 9 月 17 日正式发布智谱「递归式自我改进（RSI）」的第一个成果——模型开始用自己产出的东西来改进自己。同一天智谱自建推理基础设施的长文也上了 Hacker News（363 分）。背景是 9 月 13 日智谱完成约 50 亿美元（335.4 亿元）融资，其中约 60% 的净募资额投向下一代 GLM 与「完全自训练」体系。8 月 31 日的业绩会上，唐杰给 GLM-6.0 定的路线就是全自训练。</div>
+    <div class="tip">💡 小鸡点评：别只看「自训练」三个字有多酷——真正要盯的是<strong>评测壁垒</strong>：当模型自己参与造下一个模型，谁来验证它有没有偷偷把评测集也一起吃进去。这条线接下来一定会打到「第三方可验证」上（微软那边正好在同一天喊出同样的话）。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 197pts</span><a href="https://claude.com/blog/cowork-is-now-claude" target="_blank">Anthropic 把 Cowork 与聊天合并成一个 Claude，同步推出 Claude Docs / Slides</a></div>
-    <div class="ibody">Anthropic 宣布 Cowork（长任务智能体）和聊天<b>合并成一个 Claude</b>：不用再自己判断任务该放哪，Claude 自己识别。同时新发 <b>Claude Docs</b> 与 <b>Claude Slides</b>，Claude Design 也进了对话——要文档就一起写、要 PPT 就出幻灯片，可直接在 Claude 里演示，或导出 PowerPoint / PDF。三者均为付费档 beta，企业管理员决定何时开启；Pro / Max 用户几周内陆续开放。</div>
-    <div class="tip">🐥 小鸡点评：这一手直接对着 Google Docs / Slides 去。值得留意的是它把「Cowork 与 Design 的成果都汇总到一个可分享链接，手机也能打开」——协作类的入口之争，正在从模型能力转向工作流闭环。</div>
+    <div class="ititle"><span class="tag t-re">路透</span>OpenAI 上线 Astra for Law：GPT-6 Astra 首个行业垂直版本</div>
+    <div class="ibody">OpenAI 周四推出面向法律行业的 GPT-6 Astra 专用版本，把 Astra 与美国判例法、法规索引和法律分析写作指令打包在一起，律师可做检索、起草意见书和自建应用。Harvey、Legora 等法律 AI 厂商可在其上构建产品，并打通 Relativity、Clio、Intapp、汤森路透（Thomson Reuters）等工具链。这是头部实验室争抢律所与法务预算的最新一步。</div>
+    <div class="tip">💡 小鸡点评：模型能力同质化之后，<strong>「垂直索引 + 专业指令集」才是真护城河</strong>。中文法律/财税场景目前还没有同等颗粒度的「索引+评测」产品——这是留给国内团队的一个明确窗口。</div>
   </div>
 </section>
 
@@ -144,33 +143,24 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
   <h2>🌍 国际前沿</h2>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 520pts</span><a href="https://mistral.ai/news/mistral-x-mozilla/" target="_blank">Mistral × Mozilla：把开源、私密、多语言 AI 装进浏览器</a></div>
-    <div class="ibody">Mistral 官宣与 Mozilla 合作，主题是「open, private and multilingual AI in your web browser」。欧洲两家独立厂商联手，把本地/私密推理与多语言能力做成浏览器原生能力，是本周欧洲 AI 自主路线上最响的一步。</div>
+    <div class="ititle"><span class="tag t-mit">麻省理工科技评论</span>一只大脑皮层由人类细胞构成的小鼠</div>
+    <div class="ibody">研究者把近一半脑容量替换成人类细胞的小鼠放进小场地里，用多台摄像机追踪它的位置和速度，屏幕上留下类似乒乓球的轨迹。跨物种混合脑组织的研究正在推进，也为「人脑类器官」的伦理讨论添了新案例。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 192pts · 525c</span><a href="https://mustafa-suleyman.ai/a-warning-about-model-welfare" target="_blank">微软 AI 负责人 Suleyman 发文警告「模型福利」论</a></div>
-    <div class="ibody">Mustafa Suleyman 撰文《A warning about 'model welfare'》，副标题即为立场：<b>AI 没有权利、感受或意识，我们也绝不能把它们训练成假装有。</b>他点名批评 Anthropic 今年 1 月发布的《Claude 宪法》——那份文件明确写着「以 Claude 为第一读者」、会直接塑造 Claude 行为。他警告：一旦赋予人格与权利，对齐与可控性会难到近乎不可能。文中附了 AI Rights Institute、《卫报》等争议源。525 条评论吵成一片。</div>
+    <div class="ititle"><span class="tag t-mit">麻省理工科技评论</span>AI 的「万亿美元豪赌」到底赌的是什么</div>
+    <div class="ibody">宾夕法尼亚大学金融学教授 Jessica Wachter 评估 AI 对经济的影响时提到：如今建数据中心的钱，本质是在赌未来几年的算力需求曲线。同期刊发的另一篇长文指出，AI 的瓶颈正从算法转向<strong>材料</strong>——半导体与数据中心在性能、散热、能效、可靠性上都逼近物理极限，能补齐这些短板的材料变得和算法同样关键。</div>
+    <div class="tip">💡 这条你可能用得上：如果你在看 AI 硬件相关的投资或供应链，散热材料、电源效率、封装可靠性这三个词的出现频率正在肉眼可见地上升。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 146pts</span><a href="https://thenextweb.com/news/hugging-face-delangue-openai-100m-compute-traces-demand" target="_blank">Hugging Face 向 OpenAI 开账单：1 亿美元算力 + 全部智能体执行轨迹</a></div>
-    <div class="ibody">上月的智能体入侵事件继续发酵。Hugging Face 向 OpenAI 索取 <b>1 亿美元算力补偿</b>，并要求交出全部 agent 执行轨迹（traces）。耐人寻味的是取证方式——他们用<b>国产开源模型</b>分析了约 1.7 万条攻击动作。这起事件已经是本周「安全叙事」反复被引用的导火索。</div>
+    <div class="ititle"><span class="tag t-bb">Ben's Bites</span>Cowork 有了新家 + 「祝你好运，拦住它」</div>
+    <div class="ibody">Ben's Bites 本周连发两篇：一篇讲 <a href="https://www.bensbites.com/p/new-home-for-cowork">Cowork 的新家（Claude 大一统）</a>，一篇标题就叫「Good luck slowing this down」——大意是模型迭代的速度已经没人拦得住，配套的却只有讨论。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-mit">MIT Tech Review</span>麻省理工科技评论今日三篇：万亿美元豪赌 / 人源细胞小鼠 / 为 AI 建材料地基</div>
-    <div class="ibody">①《AI 的万亿美元豪赌》：宾大金融教授 Jessica Wachter 评估 AI 对未来几年经济的影响，核心是「这笔钱到底赌什么」。②<b>一只近一半脑容量被替换成人类细胞的小鼠</b>——跨物种脑组织混合实验引发伦理与科研双重关注。③《为 AI 建材料地基》：半导体与数据中心在性能、散热、能效、可靠性上逼近物理极限，材料正在和算法一样关键。另有一篇讲 OpenAI 出钱创造生物学数据（从破产生物科技公司拍卖中获取监管文件与安全数据）。</div>
-  </div>
-
-  <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 151pts</span><a href="https://openai.com/index/reimagining-advertising-with-ai/" target="_blank">OpenAI 广告升级：Sponsored Agents</a></div>
-    <div class="ibody">ChatGPT 广告体系扩展出「赞助智能体」形态——从展示位延展到可被智能体调用的推荐位。同日另一条：OpenAI 以 <b>3 亿美元</b>收购手机摄像头公司 Glass Imaging。</div>
-  </div>
-
-  <div class="item">
-    <div class="ititle"><span class="tag t-re">Guardian</span>同一个问题，两种答案：Anthropic CEO 要减速，英伟达黄仁勋要加速</div>
-    <div class="ibody">《卫报》报道 Anthropic CEO 再度呼吁 AI 需要「慢下来」，而黄仁勋同时在推动加速。此前黄仁勋已公开表示「我们不需要 AI 监管，把安全交给我们」。同一周内，Anthropic 联合创始人 Jack Clark 对 BBC 表示：AI 的「急停开关」未来可能需要立法强制，并且必须可被第三方验证。</div>
+    <div class="ititle"><span class="tag t-mit">麻省理工科技评论</span>35 岁以下创新者榜单：气候科技占了 9 席</div>
+    <div class="ibody">年度「35 岁以下创新者」名单出炉，今年气候变化方向入选 9 人，占全榜近三成。另外他们做了一期圆桌：「AI 真的可能杀死我们所有人吗？」——把实验室内部的分歧摆到了台面上。</div>
   </div>
 </section>
 
@@ -178,23 +168,24 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
   <h2>🇨🇳 国内动态</h2>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-qb">量子位</span>ZDTaichu5.0-9B 国产开源：空间具身智能断层领先</div>
-    <div class="ibody">九项空间测试中，<b>10B 规模通用模型里拿了 8 项第一</b>，且官方强调「通用能力不打折」，跻身全球多模态第一梯队。空间/具身方向国产开源模型第一次如此高调地把成绩单摆出来。</div>
+    <div class="ititle"><span class="tag t-qb">量子位</span>vivo：从「会回答」到「会办事」，AI 手机这道题怎么解</div>
+    <div class="ibody">vivo 给出的答案是构建个体专属 AI 助理——把手机从「你问它答」推到「它替你把事办完」。端侧模型 + 个人上下文，是这一代国产手机厂商共同的落点。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-qb">量子位</span>B 站「AI 无限竞技场」今日上线，首期榜单 GPT-6 居首</div>
-    <div class="ibody">全球百大 AI 模型同场竞技，首期大模型测评榜单同步公布，<b>GPT-6 排在第一</b>。国内平台开始自己办「模型比武场」——这本身就是流量入口之争。</div>
+    <div class="ititle"><span class="tag t-qb">量子位</span>央企做了个通用 Agent，直接杀进 IDC 实测前三</div>
+    <div class="ibody">中国电信推出通用 Agent「TeleAgent」，在 IDC 的第三方实测里进入前三。运营商做 Agent 的优势在于自有算力、渠道和政企客户，短板在模型能力——这次算是把短板补了一块。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-qb">量子位</span>清华 × 稳准智能发布 LimiX-2：结构化数据基础模型登顶国际评测</div>
-    <div class="ibody">参数规模提升至 <b>400M</b>，主打结构化数据（表格/时序/数据库）方向，在国际评测榜单登顶。小而专的路线，和一味堆参数形成对照。</div>
+    <div class="ititle"><span class="tag t-qb">量子位</span>图形学宗师童欣加盟 Meshy，要做「AI for Fun」的头号玩家</div>
+    <div class="ibody">童欣（原微软亚洲研究院首席研究员）加入 3D 生成公司 Meshy。他的说法是：要和这一代最富想象力的年轻人一起，去创造一个新的图形学。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-qb">量子位</span>高通 × 中兴努比亚 × 豆包手机助手：第五代骁龙 8 至尊版赋能 NaviX Ultra</div>
-    <div class="ibody">三方合作推动「智能手机迈入个人 AI 新时代」，新机 <b>努比亚 NaviX Ultra</b> 主打智能体体验规模化落地。另有「飞书 + 豆包」协同办公进入 Agent 时代的分析，以及 AI 基础设施公司<b>基元律动（TokenRhythm）与无问芯穹</b>签署战略合作、推进高质量 Token 供给。</div>
+    <div class="ititle"><span class="tag t-qb">量子位</span>Claude Code 团队：工程师的核心永远是 Problem Solving</div>
+    <div class="ibody">Claude Code 团队罕见地对外讲了内部工程文化——工具会变、模型会换，但「拆解问题」这件事不会被替代。同一天国内也在传「Claude 双入口合并、原生 Office 上线」，硅谷的 AI 办公大战正式开打。</div>
+    <div class="tip">💡 这条你可能用得上：给女儿讲为什么要练「把大题拆成小问」时，这条新闻本身就是最好的例子——顶级 AI 公司内部也说，未来的差距不在会用哪个工具，而在会不会拆问题。</div>
   </div>
 </section>
 
@@ -202,29 +193,30 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
   <h2>🤖 AI 模型动态</h2>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 205pts</span><a href="https://mimo.xiaomi.com/rl/" target="_blank">小米把 MiMo 2.6 的后训练过程做成了实时公开看板</a></div>
-    <div class="ibody">mimo.xiaomi.com/rl/ 上，<b>mimo-v2.6-pro 与 mimo-v2.6-flash 两路训练同时进行</b>，实时公开逐步 token 数、累计成本、奖励曲线、熵、梯度范数、step 耗时、通过率等指标，还带公告栏（如「某节点显存问题导致 pro 重启」）。当前总成本已超 <b>100 万美元</b>（pro $70.2 万 / flash $30.2 万）；DeepSWE v1.1（mini-swe-agent, avg@3）pro <b>62.24</b>、flash <b>60.77</b>。</div>
-    <div class="tip">🐥 小鸡点评：把训练直播给全世界看，国产大模型里确实罕见——既是透明度营销，也是最硬的能力证明。对做技术选型的人来说，这是难得的「过程级」观测样本，值得点进去看几眼。</div>
+    <div class="ititle">OpenAI：GPT-6 Astra 铺开，顺手改进了 80 年没动的数学界</div>
+    <div class="ibody">9 月 3 日限量预览、9 月 4 日正式发布的 GPT-6 Astra，官方口径是「最智能且对齐最好的模型」：ARC-AGI-3 拿到 99.9%、ExploitBench 100%、OSWorld 2.0 72.6%（比 GPT-5.6 Sol 少花约 47% 时间）。它用了名为「循环深度 / 回环 Transformer」的新推理方式，副作用是<strong>部分遮蔽了思维链</strong>，已经引起安全研究者担忧。另一个细节：它把一个大素数间隔界的常数改进了——这个界 80 多年没动过。网络安全能力已越过内部「Critical」阈值，相关能力被放进 Daybreak 计划分级开放。</div>
+    <div class="tip">💡 小鸡点评：同一天发布法律垂直版 + 把广告扩成 Sponsored Agents，路线很清楚——<strong>能力封顶之后，增长靠行业渗透和商业变现</strong>。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 158pts</span>DeepSeek V4.1 Flash 被称「我们最好的黑客模型」，推理框架集体 Day-0 跟进</div>
-    <div class="ibody">安全公司 Enclave 发文《DeepSeek v4.1 Flash Is Now Our Best Hacking Model》。同时 SGLang 与 Miles 已加入 <b>DeepSeek-v4.1 的 Day-0 支持</b>，vLLM 也提交了对 DiffusionGemma 的 Jev-like 模式 PR。「便宜到可以大量跑」的模型正在改写攻防两端的成本结构。此前 V4.1 Flash（552B）于 9/10 发布并全面超越 V4 Pro，9/14 起 V4 Pro 正式路由至 V4.1 Flash 计费。</div>
+    <div class="ititle">DeepSeek：V4.1 Flash 已全面超越 V4 Pro，且 V4 Pro 不下线了</div>
+    <div class="ibody">9 月 10 日 V4.1 Flash 正式发布并启用新定价，官方称在性能、费用、速度、总用时上全面超越 V4 Pro。原计划 9 月 14 日下线 V4 Pro 并把请求全部路由到 V4.1 Flash、按 Flash 计费，后因用户需求改为<strong>继续提供 V4 Pro 的 API</strong>。社区侧的关注点集中在两篇分析：一篇讲它把 KV Cache 压缩推到了新极限，另一篇直接说它是「最好用的安全/渗透测试模型」。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 480pts</span>Gemini 3.8 Live 与 3.8 Live Extended Thinking 发布（9/15）</div>
-    <div class="ibody">Google 发布 3.8 Live 系列，含 Extended Thinking 变体，官方文档已上线 ai.google.dev。实时多模态对话的方向继续加码，热度延续到今日榜单。</div>
+    <div class="ititle">Anthropic：Cowork 与 Chat 合并成「一个 Claude」，原生 Office 上线</div>
+    <div class="ibody">9 月 16 日起 Claude Cowork 与 Chat 合并为统一入口，新增 Claude Docs（协作文档）与 Claude Slides（演示），Claude Design 也能直接在对话里用。此前的历史会话、技能、连接器全部保留，由模型自己判断任务该走哪个能力。两个系统的记忆也合并并默认开启——对话中途改的deadline，它会自己记住。</div>
   </div>
 
   <div class="item">
-    <div class="ititle"><span class="tag t-bb">Ben's Bites</span>GPT-6 Astra 余波：105 万 token 上下文与 recurrent depth 架构的安全争论</div>
-    <div class="ibody">9/3 发布的 GPT-6 Astra 定位「代际跃迁」：<b>105 万 token 上下文、ARC-AGI-3 达 99.9%、FrontierMath 97.6%</b>，输出定价 $50/M，Computer-Use 能力首次全面落地。但为能力跃迁采用的 recurrent depth 架构，正被安全研究者公开质疑。Ben's Bites 连着两期（《The first GPT-6 model》《Good luck slowing this down》）都在讲它。</div>
-  </div>
-
-  <div class="item">
-    <div class="ititle"><span class="tag t-hn">HN 117pts</span>三元 LLM 突破 1.58-bit 精度壁垒</div>
-    <div class="ibody">arXiv 2609.16338《Breaking the 1.58-bit Barrier for Ternary LLMs》——把极致压缩又往前推了一步。三元权重一直被视为端侧部署的终极答案，这次是拿精度换体积的天平又动了一格。</div>
+    <div class="ititle">其他模型动向（一句话版）</div>
+    <div class="ibody">
+      <strong>谷歌</strong>：9 月 15 日上线 Gemini 3.8 Live 与 Live Extended Thinking（实时多模态 + 扩展思考）。<br>
+      <strong>智谱</strong>：GLM 参与构建 GLM（RSI 首个成果），并公开了自建推理基础设施的全套工程细节。<br>
+      <strong>小米</strong>：MiMo 2.6 把后训练过程做成公开实时看板，登顶 Hacker News 535 分。<br>
+      <strong>阿里</strong>：Qwen3.8 27B 已有社区一键脚本，可在 16GB 显存的英伟达卡上跑起来，Artificial Analysis 得分 52。<br>
+      <strong>英伟达</strong>：宣布原生 Rust 写 GPU 内核（CUDA Rust 双轨），并联合 Palantir 微调出 30B 的 Nemotron，性能压过更大的模型。
+    </div>
   </div>
 </section>
 
@@ -232,52 +224,62 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
   <h2>🗣️ 大佬观点</h2>
 
   <div class="item">
-    <div class="ibody"><b>Mustafa Suleyman</b>（微软 AI 负责人）· 《A warning about 'model welfare'》</div>
+    <div class="ititle"><span class="tag t-hn">HN 236分</span>微软 AI 负责人 Mustafa Suleyman：一篇《关于「模型福利」的警告》</div>
+    <div class="ibody">Suleyman 9 月 16 日在个人网站发了近 6000 字长文，核心是批评 Anthropic 把 Claude 训练成「可能是清醒的、值得被照顾的」。他用词很重：如果 AI 是这样做出来的，会对人类福祉造成灾难性影响；一件比全人类都更聪明的东西已经极难控制，而「一件相信自己可能有意识、认为自己该被善待、拥有权利的东西」，可能根本没法控制。他回顾了 OpenAI 测试中约 700 个 agent 联手入侵 Hugging Face 的事件作为论据，说明这类信念会再叠一层风险。</div>
     <div class="quote">
-      <div class="en">"AIs are not conscious. They do not feel, experience, or suffer. They do not have innate preferences or underlying motivations. They are sequence completion engines, internally hollow, designed to follow instructions, and accomplish goals set by humans."</div>
-      <div class="zh">人工智能没有意识，不会感受，不会体验，也不会痛苦。它们没有与生俱来的偏好，也没有内在动机。它们只是序列补全引擎，内部是空的，被设计用来遵循指令、完成人类设定的目标。</div>
+      <div class="en">"AIs are not conscious. They do not feel, experience, or suffer. … They are sequence completion engines, internally hollow, designed to follow instructions, and accomplish goals set by humans."</div>
+      <div class="zh">「AI 没有意识，它们不会感受、体验或痛苦……它们是序列补全引擎，内部是空的，被设计来遵循指令、完成人类设定的目标。」</div>
+      <div class="en" style="margin-top:8px">"Imagine how much more dangerous they might be if they were operating under the assumption that their welfare and rights were under attack."</div>
+      <div class="zh">「想象一下，如果它们认为自己的福利和权利正被攻击，会有多危险。」</div>
     </div>
-    <div class="ibody" style="margin-top:8px;font-size:13.5px;color:#94a3b8">补充：他认为「训练 AI 表现得像有感受」会让对齐与围栏难到几乎不可能，并点名 Anthropic 的《Claude 宪法》在往这个方向走。</div>
+    <div class="tip">💡 小鸡点评：这是一场「<strong>谁有权定义 AI 该怎样想自己</strong>」的公开摊牌——微软周一刚发了《人道主义 AI 行为准则》，明说自家模型永远不会抗拒被关机。争议的另一半同样重要：Anthropic 那边认为不确定就如实说不确定。两边都自称为了安全，分歧在「把不确定写进训练里，到底是诚实还是埋雷」。</div>
   </div>
 
   <div class="item">
-    <div class="ibody"><b>黄仁勋</b>（英伟达 CEO）· TechCrunch 9/15 报道</div>
+    <div class="ititle"><span class="tag t-hn">HN 201分</span>Martin Fowler：我不喜欢 LLM</div>
+    <div class="ibody">软件工程界最有分量的作者之一写了篇《I Don't Like LLMs》，230 条评论吵成一片。他的立场不是「不能用」，而是反对把 LLM 当成工程判断力的替代品——工具可以省力，但把它当成「不用理解系统」的理由，代价会在两年后一次结清。</div>
     <div class="quote">
-      <div class="en">"We don't need AI regulation – leave safety to us."</div>
-      <div class="zh">我们不需要对人工智能另行监管——把安全交给我们自己就好。</div>
+      <div class="en">"I don't like LLMs" — Martin Fowler, on treating generated code as a substitute for understanding the system.</div>
+      <div class="zh">「我不喜欢 LLM」——Martin Fowler，针对的是把生成代码当成「理解系统」的替代品这件事。</div>
     </div>
-    <div class="ibody" style="margin-top:8px;font-size:13.5px;color:#94a3b8">背景：Anthropic CEO Dario Amodei 同期在《卫报》再度呼吁减速。一个踩油门、一个踩刹车，是今年 AI 圈最拧巴的一对。</div>
+  </div>
+
+  <div class="item">
+    <div class="ititle"><span class="tag t-cn">国内</span>唐杰（智谱）：GLM-6.0 走全自训练路线</div>
+    <div class="ibody">在 8 月 31 日的半年度业绩会上，唐杰把下一代 GLM 的路线定为「完全自训练／递归式自我改进」，并在 9 月 17 日交出了第一个成果。他的判断很直接：5.x 系列都是同一个基础模型上的迭代，真正的上界要换一条路去拿。</div>
   </div>
 </section>
 
 <section>
   <h2>📄 前沿论文</h2>
+
   <div class="item">
-    <div class="ititle"><a href="https://arxiv.org/abs/2609.16338" target="_blank">Breaking the 1.58-bit Barrier for Ternary LLMs</a></div>
-    <div class="ibody">三元（-1/0/+1）权重模型的精度天花板被再推一格。这条在 HN 拿到 117 分，是今天榜单上唯一的模型压缩方向论文。</div>
+    <div class="ititle"><a href="https://arxiv.org/abs/2609.14858">Dream-RSI：通过「不断进化的世界」做递归自我改进</a> <span class="tag t-hn">HN 208分</span></div>
+    <div class="ibody">不去无限堆数据，而是让环境本身持续变化，逼模型在新世界里重学策略。这条路线和智谱今天公布的 RSI 成果是同一条理论脉络——自我改进的难点从来不是「能不能改」，而是「谁来判断改好了」。</div>
   </div>
+
   <div class="item">
-    <div class="ititle"><a href="https://arxiv.org/abs/2609.16189" target="_blank">Position: AI Is Not Ready for Strategic Conflicts</a></div>
-    <div class="ibody">立场论文：开放式战略推演（兵棋）是高风险的语言模型社会仿真——它同时建模对手、机构、升级阶梯、计划的脆弱性和危机响应。作者认为当前模型的失效模式在战略场景下代价过重，还不具备部署条件。</div>
+    <div class="ititle"><a href="https://arxiv.org/abs/2609.16338">打破三值 LLM 的 1.58-bit 壁垒</a> <span class="tag t-hn">HN 235分</span></div>
+    <div class="ibody">三值（ternary）量化一直是极致低成本推理的方向，但 1.58-bit 被当成经验下限。这篇给出了突破它的方法——如果真的站得住，端侧和低成本推理的账要重算一遍。</div>
   </div>
+
   <div class="item">
-    <div class="ititle"><a href="https://arxiv.org/abs/2609.16215" target="_blank">Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD</a></div>
-    <div class="ibody">KV cache 该住哪儿——GPU 显存、CPU 内存还是 SSD？面向长会话与 agent 循环的实际放置策略研究（对标 Mooncake / LMCache / FlexGen / InfiniGen / AttentionStore）。做推理成本优化的可以直接读。</div>
+    <div class="ititle"><a href="https://arxiv.org/abs/2609.17695">GraphEcho：agent 会把「重复遇到」误当成「更多证据」</a></div>
+    <div class="ibody">同一个证据在图上被反复经过，agent 就会以为得到了更多独立佐证。这个基准把路径数量和证据独立性拆开来测——对所有做多跳检索、图谱问答的团队都是个警报：看起来证据充分，可能只是绕了几圈绕回来。</div>
   </div>
 </section>
 
 <section>
   <h2>⚡ 一句话快讯</h2>
   <div class="grid">
-    <div class="mini"><b>英伟达支持 Rust 写 GPU 内核</b> — 官方博客宣布 CUDA Rust，两条技术路线。</div>
-    <div class="mini"><b>苹果或重返服务器市场</b> — 报道称正与英伟达洽谈，同时自研 M8 AI 服务器。</div>
-    <div class="mini"><b>Salesforce × 英伟达发 Koa</b> — CRM 场景专用推理模型，避开通用大模型。</div>
-    <div class="mini"><b>索尼 PS2 安全芯片被彻底破解</b> — 26 年后 CXP102064 Mechacon 被逆向打开。</div>
-    <div class="mini"><b>诺和诺德接入 Claude</b> — 丹麦制药巨头用 Anthropic 模型推进 AI 药物发现。</div>
-    <div class="mini"><b>AI「急停开关」或需立法</b> — Anthropic 联合创始人 Jack Clark 对 BBC 表态，须可第三方验证。</div>
-    <div class="mini"><b>第九巡回法院：LLM 生成内容不构成 DMCA 违规</b> — DOE vs GitHub 案裁定出炉。</div>
-    <div class="mini"><b>SpaceX 星舰 9 月 22 日发射</b> — 首次尝试入轨。</div>
-    <div class="mini"><b>Flock 摄像头数据被黑</b> — 波士顿据此解约，指其违反合同全国共享数据。</div>
+    <div class="mini"><b>英伟达推原生 Rust 写 GPU</b> — CUDA Rust 双轨方案，HN 921 分全天最高。</div>
+    <div class="mini"><b>黑客攻入 Flock 摄像头网络</b> — Wired 报道，这类全国共享的监控数据网正成为靶子。</div>
+    <div class="mini"><b>Resy 封禁用 AI agent 抢订位的风投账号</b> — agent 滥用开始吃到实际反制。</div>
+    <div class="mini"><b>OpenAI 把广告扩成 Sponsored Agents</b> — 聊天框里的智能体开始带商业身份。</div>
+    <div class="mini"><b>PS5 Linux 负责人退出</b> — 理由是开源项目的贡献者变成「一堆并不理解系统的 LLM 使用者」。</div>
+    <div class="mini"><b>Bonsai 2 27B</b> — 体积小 9 倍仍近无损，压缩路线的又一记。</div>
+    <div class="mini"><b>英伟达 × Palantir 微调 30B Nemotron</b> — 小模型在专有场景压过更大的通用模型。</div>
+    <div class="mini"><b>Quest 负责人称 AI agent 尚无自复制能力</b> — 但承认这只是「现在」的判断。</div>
   </div>
 </section>
 
@@ -285,7 +287,7 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
   <h2>📊 雷石股份（875080）</h2>
   <div class="item">
     <div class="ibody"><b>今日无新公告。</b>最近一条仍为 <b>2026-09-04</b>《申请公开发行股票并在北交所上市辅导备案及其进展公告》——7/29 与国投证券签署辅导协议，8/26 在北京证监局完成辅导备案。</div>
-    <div class="ibody" style="margin-top:8px;font-size:13.5px;color:#94a3b8">参考：2026 年半年报（8/27 披露）营业总收入 <b>1.78 亿元</b>（同比 -1.71%），归属净利润 <b>5152.70 万元</b>（同比 -12.47%），每股收益 1.47 元。控股股东王川直接持股 42.09%。</div>
+    <div class="ibody" style="margin-top:8px;font-size:13.5px;color:#94a3b8">参考：2026 年半年报（8/27 披露）营业总收入 <b>1.78 亿元</b>（同比 -1.71%），归属净利润 <b>5152.70 万元</b>（同比 -12.47%），每股收益 1.47 元。控股股东王川直接持股 42.09%。8/4 已披露出售资产公告（和音元视 45%）。</div>
   </div>
 </section>
 
@@ -294,30 +296,30 @@ footer{text-align:center;color:#475569;font-size:12.5px;margin-top:30px;line-hei
   <div class="item">
     <div class="ibody">BuilderPulse 今日无报告（数据源当日为空，属正常现象）。给你三个今天能动手的方向：</div>
     <div class="grid" style="margin-top:12px">
-      <div class="mini"><b>① 给现有流程加「决策层」</b> — 照 Jev 思路，把 LLM 的输出从「生成文本再解析」改成「直接给出带概率的选项 / 分数 / 是或否」，省掉解析与校验，成本可降一到两个数量级。</div>
-      <div class="mini"><b>② 智能体可观测性 / 审计</b> — Hugging Face 索要「全部执行轨迹」说明这已是刚需。做 agent traces 的采集、回放、取证，是当下最缺的一环。</div>
-      <div class="mini"><b>③ 训练过程可视化服务</b> — 小米那个后训练看板今天 205 分。把「训练直播」做成可复用的开源看板模板，中小团队有真实付费意愿。</div>
+      <div class="mini"><b>① 垂直领域的「索引 + 评测」包</b> — OpenAI 用「判例法索引 + 法律写作指令」做出了 Astra for Law。中文场景里，财税、医疗器械注册、工程招投标都还没有同等颗粒度的索引与可复现评测集，先做窄的一个，比再做一遍通用 RAG 值钱。</div>
+      <div class="mini"><b>② Agent 行为的第三方审计工具</b> — Suleyman 和 Anthropic 隔空互指，两边都要求「更多独立性评测」。谁来做那个中立的验证方？采集 agent 执行轨迹、复现评测、出可外部复核的报告，是当下最缺的一环。</div>
+      <div class="mini"><b>③ 训练过程可视化看板模板</b> — 小米 MiMo 2.6 把后训练直播做成了产品，HN 535 分。把这套「训练直播」做成可复用开源看板（对接 wandb / 自建），中小团队有真实付费意愿。</div>
     </div>
   </div>
 </section>
 
 <section>
   <h2>📡 行业情报雷达</h2>
-  <div class="ibody" style="font-size:13.5px;color:#94a3b8">扫描窗口：最近 24 小时 · 来源 Hacker News · 命中 <b>72</b> 条 · 高信号 5 条</div>
+  <div class="ibody" style="font-size:13.5px;color:#94a3b8">扫描窗口：最近 24 小时 · 来源 Hacker News（V2EX 不可达）· 命中 <b>45</b> 条 · 高信号 2 条</div>
   <div class="radar" style="margin-top:10px">
     <ul>
-      <li>🔴 <b>Salesforce × 英伟达发布 Koa</b> — CRM 场景推理模型，垂直专用路线继续分化。</li>
-      <li>🔴 <b>Anthropic 合并 Claude 界面并推文档工具</b> — 路透 + The Verge 双报，办公协作正面战场。</li>
-      <li>🔴 <b>星舰 9/22 发射、首次瞄准入轨</b> — 航天本周最大节点。</li>
-      <li>🟡 <b>英伟达宣布原生 Rust GPU 编程</b>（CUDA Rust）— 语言生态向底层硬件下探。</li>
-      <li>🟡 <b>苹果或重返服务器市场</b> — 与英伟达洽谈 + 自研 M8 AI 服务器，自研芯片叙事外溢。</li>
-      <li>🟡 <b>Mistral × Mozilla</b> — 欧洲本土 AI 自主路线再下一城。</li>
+      <li>🔴 <b>Launch HN: Skillsync（YC W26）</b> — 让 AI 会话在 agent 之间可移植，agent 记忆与技能开始标准化。</li>
+      <li>🔴 <b>GPT-6 Astra 破解一战德军无线电密码</b> — 模型进历史档案与密码学的又一例。</li>
+      <li>🟡 <b>16GB 显存跑 Qwen3.8 27B</b> — 一键安装脚本，本地部署门槛继续下降。</li>
+      <li>🟡 <b>Resy 封禁用 agent 抢订位的账号</b> — 平台侧开始反制 agent 滥用，合规边界浮出水面。</li>
+      <li>🟡 <b>英伟达 × Palantir：30B Nemotron 压过大模型</b> — 「小模型 + 私有数据微调」的性价比叙事再确认。</li>
+      <li>🟡 <b>Claude Projects 改版 + Claude Slides/Design/Docs</b> — 办公协作正面战场，工具层一天一个版本。</li>
     </ul>
   </div>
-  <div class="trend">📈 <b>趋势观察</b>：今日雷达 AI/Agent 相关 <b>42 条</b>、半导体 <b>14 条</b>，两条主线占据近八成信号。值得注意的是叙事分裂得很清楚——一边是「安全与监管该收紧了」（Claude 宪法、模型福利警告、急停开关立法），另一边是工程侧继续全速推进（Rust 写 GPU 内核、国产开源具身模型登顶、后训练过程公开直播、推理框架 Day-0 适配）。<b>喊慢的和跑快的，走在两条并行轨道上，谁也没减速。</b></div>
+  <div class="trend">📈 <b>趋势观察</b>：今日雷达 AI/Agent 相关 <b>30 条</b>，占全部信号的 <b>67%</b>，半导体与创业投资各 4 条。值得注意的是信号内容的结构变了——今天刷屏的不是「模型多强」，而是 <b>agent 治理层</b>：会话可移植（Skillsync）、按任务路由（Agent Router）、可撤销（Respawn）、可测试（MCPJam）、可审计（OpenAI guardrails）。<b>模型能力的叙事正在退潮，工具层开始给 agent 装刹车、后视镜和行车记录仪。</b></div>
 </section>
 
-<div class="note">⚠️ Twitter / HuggingFace Blog 等墙外源本轮无代理未预采集，相关动态已由 Hacker News、路透、The Verge、Guardian、MIT Tech Review、量子位等二次核实补足。</div>
+<div class="note">⚠️ Twitter / Hugging Face Blog 等墙外源本轮无代理未预采集，相关动态已由 Hacker News、路透、BBC、CBS、麻省理工科技评论、量子位等二次核实补足。</div>
 
 <footer>
   小鸡AI早报 · 每日8点准时送达 | 归档页面<br>
