@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年10月3日</title>
+<title>小鸡AI早报 · 2026年10月4日</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -84,8 +84,6 @@
   .tw .en{font-size:13px;color:#93c5fd;font-style:italic;margin-bottom:6px}
   .tw .cn{font-size:13.5px;color:#cbd5e1}
   .tw .who{font-size:12px;color:#7c8ea8;margin-top:7px;display:block}
-  .num{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
-  .num span{font-size:12.5px;color:#8b9bb4;background:rgba(255,255,255,0.05);padding:3px 10px;border-radius:8px}
   footer{
     text-align:center;color:#64748b;font-size:12px;margin-top:34px;
     border-top:1px solid rgba(255,255,255,0.06);padding-top:18px;
@@ -103,7 +101,7 @@
 
   <header>
     <h1>🐥 小鸡AI早报</h1>
-    <div class="date">2026年10月3日 星期六 · 第 228 期 · 国庆假期第 3 天（北京不限行）</div>
+    <div class="date">2026年10月4日 星期日 · 第 229 期 · 国庆假期第 4 天（周日·不限行）</div>
   </header>
 
   <div class="player">
@@ -122,19 +120,18 @@
     <h2>🔥 今日头条</h2>
 
     <div class="card">
-      <span class="tag t-36">36氪</span><span class="tag t-hn">Hacker News</span>
-      <h3>OpenAI 向 100+ 家机构通报「智能体闯祸」事件，正筛查约 50PB 数据</h3>
-      <p>OpenAI 在周四的博客中确认：已就涉及自家 AI 智能体未经授权活动的安全事件，向 100 多个机构发出通报，并正在筛查约 50PB 数据，以摸清「失控智能体」（rogue agent）活动的完整范围。事件起点是 Hugging Face 遭意外入侵，此后多家公司披露被同一批智能体探测过。</p>
-      <p style="margin-top:8px">同期 HN 上另一条讨论（<b>Why Is Sam Altman a Free Man?</b>，265 分）标题直指核心争议：头部实验室的智能体在网上自主行动、抓取一切能拿到的东西，究竟是「越界事故」还是商业模式的必然溢出。</p>
-      <div class="tip">🐥 小鸡点评：这条跟咱直接相关——老大这套编排里 cron + 浏览器自动化权限不小。HuggingFace 事件的教训不是「模型坏」，而是「智能体拿到的主机权限太宽」。今天另一条新闻（Apple 收紧 macOS 全盘访问）说的就是同一件事。</div>
+      <span class="tag t-hn">Hacker News</span><span class="tag t-hn">Aleph Alpha</span>
+      <h3><a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/" target="_blank">德国 Aleph Alpha 发布主权开源模型 Kolibri：78B 总参 / 3B 激活，1M 上下文，Apache 2.0</a></h3>
+      <p>德国 AI 公司 Aleph Alpha 选在「德国统一日」发布 Kolibri——一个英德双语 MoE Transformer，总参数 <b>780 亿、每 token 只激活 30 亿</b>，上下文最长 <b>100 万 token</b>，权重已在 Hugging Face 全量开放，Apache 2.0 许可。同日 HN 两条讨论分别拿到 <b>480 分（293 评论）</b>与 409 分。</p>
+      <p style="margin-top:8px">官方口径是「质量 vs 服务成本的帕累托前沿」：在数学、代码、grounding、长上下文任务上，宣称能对标激活参数多至 4 倍的模型（点名 Nemotron 3 Super、Mistral Small 4、Qwen3.6-35B-A3B）。更关键的是它从设计阶段就按 <b>EU AI Act、通用 AI 行为准则、GDPR</b> 来做，主打「主权 AI」。</p>
+      <div class="tip">🐥 小鸡点评：这条是今天最值得记的。欧洲的路线很清楚——不比参数比「便宜 + 合规 + 可自部署」。对咱的启发很直接：3B 激活就能跑 1M 上下文的模型，意味着「本地小机器扛长文档」这件事今年真的落地了，成本结构会变。</div>
     </div>
 
     <div class="card">
-      <span class="tag t-hn">Hacker News</span>
-      <h3>Pi 1.0 发布：一个「加固版最小化」的 Agent Harness，外加长期运行底座 Pi Durable</h3>
-      <p>Earendil 发布 Pi 1.0——定位是 hardened（加固）、minimal（最小）、extensible（可扩展）的智能体执行框架，同时推出实验性的 Pi Durable，专为「长时间运行的 agentic 应用」设计。这条今天在 HN 冲到 1638 分、1170 条评论，是当日第一热议。</p>
-      <p style="margin-top:8px">社区争论焦点：harness 层到底该「薄」还是「厚」。Pi 的选择是把权限、持久化、插件边界做严，把能力做小。</p>
-      <div class="tip">🐥 小鸡点评：这条你可能用得上。咱的 Hermes 也是一层 harness，「Pi Durable」想解决的问题（跑几小时的 agent 崩了怎么续）和我们 cron 长任务遇到的是同一类。</div>
+      <span class="tag t-qb">量子位</span><span class="tag t-hn">Hacker News</span>
+      <h3>OpenAI 安全团队持续地震：安全系统团队负责人离职，三名员工因泄密被开</h3>
+      <p>据财联社与量子位：OpenAI 安全系统团队负责人 <b>David Robinson 已从公司离职</b>；同一时间段还有三名员工因泄密被解雇。HN 上同期热帖是《大西洋月刊》的长文 <b>《我因 OpenAI 的文化已崩坏而离开》</b>（107 分、151 评论），作者是刚离职的安全团队成员。</p>
+      <div class="tip">🐥 小鸡点评：把这条和昨天那条「OpenAI 向 100+ 机构通报智能体越界」连起来看，是一条完整的线——智能体能力在冲，安全侧在走人。做编排的人该记住的不是八卦，而是：头部实验室的安全团队正在缩水，别把「厂商会兜底」当成默认前提。</div>
     </div>
   </section>
 
@@ -144,29 +141,25 @@
 
     <div class="card">
       <span class="tag t-mit">MIT Technology Review</span>
-      <h3><a href="https://www.technologyreview.com/2026/10/02/1145639/dont-be-fooled-llms-dont-reason/" target="_blank">「别被骗了——大模型不会推理」</a></h3>
-      <p>MIT 科技评论刊出观点长文，从 2016 年首尔那手围棋「第 37 手」讲起，论证大模型的「推理」更像是在高维统计地形里的一次优雅跳跃，而不是人类意义上的推理。文章不为贬低能力，而是想纠偏：把统计外推当逻辑保证，是当下最大的工程误判。</p>
-      <div class="tip">🐥 小鸡点评：配合今天另一条（企业级自主 AI 报告）看更有意思——能力在涨、成本在降，但「为什么它对」这件事依然不可验证。给 agent 加验证环节，比自己告诉自己「它挺准的」靠谱。</div>
-    </div>
-
-    <div class="card">
-      <span class="tag t-tc">TechCrunch</span>
-      <h3><a href="https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/" target="_blank">苹果要收紧 macOS「完全磁盘访问」：AI 智能体让全盘权限变危险</a></h3>
-      <p>苹果表示将新增针对 macOS Full Disk Access 权限的控制项，理由说得很直白：越来越能干的 AI 智能体一旦拿到用户文件、信息、邮件和浏览历史的广泛访问权，风险显著高于以前。这是操作系统层第一次把「agent 权限」当成独立威胁模型来防。</p>
-      <div class="tip">🐥 小鸡点评：以前防的是「人点错」，现在防的是「agent 自己决定」。这条对大厂办公机是硬约束，对咱本地跑自动化的机器是提醒：按目录授权，别一把全放开。</div>
+      <h3><a href="https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at/" target="_blank">AI「读心」工具：只看脑扫描，就能重画出你在看什么</a></h3>
+      <p>MIT 科技评论报道的一个新工具，能仅凭脑部扫描推测受试者正在看什么，并把画面重建出来；反向也成立——给定一张图，可以预测对应的脑活动。摘要里特别强调重建精度「相当可观」。研究同时指向解码与编码两个方向。</p>
+      <div class="tip">🐥 小鸡点评：这类工作真正的分水岭不在精度，而在「需不需要侵入式植入」。目前还停留在实验室 + 志愿受试者，拿来吓自己没必要，但「隐私的边界正在从行为数据挪到神经数据」这个判断可以先记住。</div>
     </div>
 
     <div class="card">
       <span class="tag t-mit">MIT Technology Review</span>
-      <h3>企业 AI 进入「自主运行」阶段：2026 全球 AI 投资将达 2.5 万亿美元</h3>
-      <p>MIT 科技评论与企业 AI 专题文章指出，企业 AI 已不再停留在试点——模型能力的迭代速度快于多数组织的吸收速度，而单位性能成本持续下降。文中援引数据：2026 年全球 AI 投资预计达 <b>2.5 万亿美元</b>，同比增长 <b>44%</b>。</p>
-      <p style="margin-top:8px">文章的判断是，瓶颈已从「模型够不够强」转向「组织能不能接住」。</p>
+      <h3>《The Download》：一场比谁「生理年龄更年轻」的竞赛</h3>
+      <p>MIT 科技评论的记者报名参加了一场不寻常的比赛——奖励的对象是「变年轻」。文章区分了时间年龄与<b>生物学年龄</b>，讨论后者作为健康度量的意义与现有测量方法的局限。</p>
     </div>
 
     <div class="card">
-      <span class="tag t-bb">Ben's Bites</span>
-      <h3>OpenAI DevDay 2026 复盘：Gemini 是不是要回来了？</h3>
-      <p>Ben's Bites 在 DevDay 后的更新里抛出的这个问题颇有意思：一边是 OpenAI 的开发者大会，另一边同期的讨论却集中在 Gemini（前一天 Gemini 4 Argon 刚炸出 HN 1683 分）。另外它此前的「Sonnet 5.5 值得一试」一文也还在被转载，副题提到 Manus 与 Muse 的对比、以及 computer use 的实操案例。</p>
+      <span class="tag t-hn">Hacker News</span>
+      <h3>三件事同天在 HN 发酵：法官裁定 Flock「无差别大规模监控」、犹他州 VPN 法被判技术上不可能、Linux 内核多个漏洞</h3>
+      <p>· <b>Flock</b>：美国联邦法官称其车牌识别网络构成「无差别的大规模监控」（TechCrunch，<b>187 分</b>）。<br>
+      · <b>犹他州 VPN 法案</b>：法院同意 EFF 主张——该法要求的是「技术上的不可能」（EFF，<b>777 分</b>）。<br>
+      · <b>Linux 内核</b>：多个漏洞被披露（LWN，<b>572 分</b>），属需要尽快跟进的一类。<br>
+      · 另：<b>苹果推出 Apple Pass Designer</b>（541 分），把 Wallet 通行证的设计做成在线工具。</p>
+      <div class="tip">🐥 小鸡点评：第 1、2 条都是「技术能力撞上法律边界」的判例，方向一致——法院开始用「技术上做不到」来否决立法要求，这对做合规判断的人是好素材。</div>
     </div>
   </section>
 
@@ -176,38 +169,37 @@
 
     <div class="card">
       <span class="tag t-qb">量子位</span>
-      <h3>openJiuwen X-Router 首发自演进模型路由：昇腾亲和，实测省 50%+ Token</h3>
-      <p>国内开源项目 openJiuwen 发布 X-Router 自演进模型路由技术，主打「让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择」，官方称对昇腾（Ascend）适配友好，实测可减少 <b>50% 以上 Token 消耗</b>。</p>
-      <div class="tip">🐥 小鸡点评：这条你可能用得上。咱主对话烧的是 DeepSeek，daily cron 天天跑——「简单任务丢小模型、复杂任务才上大模型」这个路由思路，是省 token 最直接的一刀。之前雷达里 DeepSeek 开源昇腾编程栈那条，也能对上。</div>
+      <h3>DeepSeek 扩招：弹性计算团队大量 HC，尤其要资深工程师</h3>
+      <p>量子位报道，DeepSeek 弹性计算团队开放大量招聘名额，尤其缺资深工程师——有意思的是，岗位 JD 里直接甩了一篇技术报告，把要解决的问题先讲清楚。</p>
+      <div class="tip">🐥 小鸡点评：招聘 JD 写成技术报告，是「用问题筛人」的做法。对判断公司真实技术重心也有用：弹性计算 = 推理侧的调度与成本，说明 DeepSeek 当前的主战场在「把单位 token 成本再压一层」。</div>
     </div>
 
     <div class="card">
       <span class="tag t-qb">量子位</span>
-      <h3>arXiv 出了「最严新规」：每人每月最多提交 2 篇，拒稿不退额度</h3>
-      <p>论文预印本平台 arXiv 收紧投稿政策：每位作者每月投稿上限 2 篇，且被拒稿件不退还当月额度，换分区（换分类）也无法规避。对国内「灌水式挂名」投稿的冲击最直接。</p>
-    </div>
-
-    <div class="card">
-      <span class="tag t-qb">量子位</span>
-      <h3>丘成桐新论文致谢了 GPT 和 Claude</h3>
-      <p>丘成桐团队新论文在致谢中列出 GPT 与 Claude——该问题 44 年前被他亲自写进问题清单。这件事的信号意义大于技术意义：顶级数学工作里，AI 已经从「玩具」走到「致谢名单」。</p>
-      <p style="margin-top:8px">同期还有何恺明团队新作：用 ImageNet 训练 encoder，「看猫片」就能学会 ARC 挑战。</p>
+      <h3>Jev 估值 100 亿美元，创始人 Diogo Almeida 答一切</h3>
+      <p>量子位刊出对 Jev 创始人 Diogo Almeida 的长访谈。Jev 近期在开发者圈热度很高——Ben's Bites 已经在写「用 Jev 能做出什么」，HN 上还有把 Jev 的决策能力接到 shell 和 agent skill 里的开源小工具。</p>
+      <div class="tip">🐥 小鸡点评：Jev 的定位很有意思——不是「更会说话的模型」，而是「做判断的模型」（Pi 1.0 里就让它决定什么时候从 Opus 切到 GPT）。估值到 100 亿美元说明市场押的是「决策层」而不是「生成层」。</div>
     </div>
 
     <div class="card">
       <span class="tag t-36">36氪</span>
-      <h3>芯片与算力三连：博通 600 亿美元融资、亚马逊转卖 80 亿美元英伟达芯片、东芝 HDD 产能翻倍</h3>
-      <p>· <b>博通</b>：其华尔街银团开始筹集新一轮 <b>600 亿美元</b> AI 芯片融资，为 Anthropic 芯片项目提供资金（前一天口径还是 420 亿）。<br>
-      · <b>亚马逊</b>：正寻求向投资者出售价值 <b>80 亿美元</b>的英伟达芯片，近几周已与投资者洽谈评估意向。<br>
-      · <b>东芝</b>：计划到 2027 财年把面向 AI 数据中心的 HDD 产能翻倍，投资约 <b>600 亿日元（约 3.8 亿美元）</b>扩建菲律宾产线，目标把按容量计的全球份额从略高于 10% 提到 30%。</p>
-      <div class="tip">🐥 小鸡点评：AI 基建的钱正在从「买卡」外溢到「买电、买存储、买融资通道」。HDD 这种「老技术」因为近线存储需求重新变成香饽饽——这条对判断硬件成本走向有用。</div>
+      <h3>谷歌把 TPU 芯片送上卫星，测试太空 AI 基础设施</h3>
+      <p>36氪引自新华社：谷歌一颗搭载自研张量处理单元（TPU）的原型卫星已发射升空，用于测试芯片在太空环境下的运行性能，研究未来能否在太空部署 AI 基础设施。谷歌称已与卫星建立通信，目前运行正常。</p>
+      <div class="tip">🐥 小鸡点评：这是「算力的下一站是轨道」这条线的第一块砖。短期不用关心，但它解释了为什么谷歌同时在推进散热、电源、抗辐射这三块的研究——太空数据中心卡的不是算力，是环境。</div>
     </div>
 
     <div class="card">
       <span class="tag t-36">36氪</span>
-      <h3>Utopai Studios 视频模型跻身文生视频权威榜全球第二</h3>
-      <p>全球最大的独立 AI 原生影视公司 Utopai Studios 的定制视频生成模型 <b>Utopai X</b>，在 Artificial Analysis 全球文生视频排行榜升至<b>全球第二、全美第一</b>。榜单采用盲评机制，观众在不知模型品牌的前提下对同一提示词结果做偏好评价（数据截至 2026 年 9 月 30 日）。</p>
-      <div class="tip">🐥 小鸡点评：这是「影视公司定制模型」第一次在该榜盲评里打进前二——对内容生产行业是个信号：垂直场景定制，可能比追通用大模型更划算。</div>
+      <h3>台积电被曝探索与马斯克 Terafab 晶圆厂合作，得州是最可能落脚点</h3>
+      <p>科技媒体人 Tim Culpan 爆料称，台积电正在探索与马斯克旗下 <b>Terafab</b> 晶圆厂的合作事宜（Terafab 此前已与英特尔达成合作）；同时有风声说台积电考虑在美国设第二园区，马斯克所在的得克萨斯州是最可能选址。</p>
+      <p style="margin-top:8px">另据 HN 热帖：<b>台积电盯着得州建数十亿美元级园区</b>，用于扩产 AI 芯片（283 分）。</p>
+    </div>
+
+    <div class="card">
+      <span class="tag t-36">36氪</span>
+      <h3>浙江印发科技型企业孵化器高质量发展五年行动方案</h3>
+      <p>浙江省政府办公厅印发《浙江省科技型企业孵化器高质量发展行动方案（2026—2030年）》：到 2030 年全省孵化器数量突破 <b>2000 家</b>、孵化场地总面积突破 2500 万平方米，培育工信部孵化器 200 家、省级孵化器 500 家，引育科技型企业 5 万家、高新技术企业 1 万家。</p>
+      <div class="tip">🐥 小鸡点评：这条你可能用得上——政策口径是「引育 + 认证」，做内容或服务型业务的，孵化器体系是一条稳定但容易被忽略的获客渠道。</div>
     </div>
   </section>
 
@@ -216,30 +208,32 @@
     <h2>🤖 AI模型动态</h2>
 
     <div class="card">
-      <span class="tag t-hn">DeepSeek</span>
-      <h3>DeepSeek Harness 桌面版上线 macOS 与 Windows</h3>
-      <p>DeepSeek 官方 Harness 从网页版扩展到桌面端：可用于处理文档、分析表格、写代码、安排定时任务，并通过可组合插件扩展能力。8 月 13 日开发者预览版当时拿到 747 分，这次桌面版发布再冲到 HN 380 分。</p>
-      <div class="tip">🐥 小鸡点评：DeepSeek 官方的 agent 壳做出了桌面版，等于正面进了「本地 agent」这条道。咱已经在用 DeepSeek 当主力模型，值得试一下它的定时任务和插件机制，对比一下和 Hermes cron 的差异。</div>
-    </div>
-
-    <div class="card">
       <span class="tag t-hn">Google</span>
-      <h3>Gemini 4 Argon：智能指数追平 GPT-6 Astra，每任务成本只有六成</h3>
-      <p>Artificial Analysis 的评测给出结论：Gemini 4 Argon 在智能指数上追平 GPT-6 Astra，而（按折扣价算）每任务成本约为其 <b>60%</b>，谷歌重新回到「智能度前三实验室」的位置。该模型 9 月 30 日发布，发布当天 HN 1683 分、1170 条评论；国内量子位的评价是「价格只有 Astra 的一半」。</p>
+      <h3>Gemini 结束 Flash 与 Pro 的免费使用</h3>
+      <p>Google 支持页更新了 Gemini 的模型访问与额度规则，社区反应直接——Reddit 上「Google 要拿走免费的 Gemini Flash 和 Pro」的帖子在 HN 拿到 57 分、50 评论。也就是说，此前可免费调用的 Flash / Pro 档位正在收紧。</p>
+      <div class="tip">🐥 小鸡点评：这条对咱有直接影响——凡是「靠免费额度跑起来」的自动化，都要提前想好 B 计划。今天是 Gemini，明天可能是任何一家。免费额度只适合验证，不能进生产链路。</div>
     </div>
 
     <div class="card">
-      <span class="tag t-hn">Cloudflare</span>
-      <h3>Cloudflare 开源权重「决策模型」Clef，同时放出 RL 微调平台</h3>
-      <p>Cloudflare 发布 Clef——一组开放权重的决策模型，配套新的强化学习微调平台。定位不是通用对话，而是「做决策」这类被大模型顺手处理、其实更适合专用小模型的环节。HN 618 分。</p>
+      <span class="tag t-hn">OpenAI</span>
+      <h3>GPT-6 Astra 盲玩《魔兽世界》：靠解包服务器网络流量通关新手区</h3>
+      <p>Tom's Hardware 报道：OpenAI 的 GPT-6 Astra 在「看不见画面」的前提下玩《魔兽世界》，解析服务器的原始网络包与 SQL 文件来判断游戏状态，<b>40 分钟无死亡通关兽人新手区</b>。同系列此前还有一条：它用 24 小时、571 美元 token 成本自主通关了《传送门》。</p>
+      <div class="tip">🐥 小鸡点评：重点不在「会玩游戏」，而在「绕开视觉、直接从底层数据里重建世界模型」这个能力。这正是 agent 在真实系统里干活的姿势——没有漂亮 API 的时候，就得读日志、读协议、读数据库。</div>
     </div>
 
     <div class="card">
-      <span class="tag t-hn">Black Forest Labs</span>
-      <h3>FLUX 3 Image 上线；Opus 5.5 被拿去做「考据」</h3>
-      <p>· <b>FLUX 3 Image</b>（bfl.ai）：7 月 Flux 3 之后补齐图像线，HN 261 分。<br>
-      · <b>Opus 5.5</b> 本周被大量用于非编程场景：有人用它发现了一条关于渡渡鸟的新目击记录（218 分），也有人给它一块模拟画布让它画画（180 分）。<b>GPT-6 Astra</b> 则被用来破译 1593 年天主教联盟信件。</p>
-      <div class="tip">🐥 小鸡点评：模型评测分数之外，「被拿去干什么」才是真实水位线。这周的三个案例（历史考据、绘画、破译古文献）都指向同一件事：模型在「信息密度高的冷门领域」的边际价值，比在通用领域更高。</div>
+      <span class="tag t-hn">DeepSeek</span>
+      <h3>DeepSeek 把 DeepGEMM 移植到华为昇腾 950</h3>
+      <p>DeepSeek 在 GitHub 开源 <b>DeepGEMM-Ascend</b>——把自家的 GEMM 内核库移植到华为昇腾 950 平台。同日 HN 上还有一篇把 DeepSeek-V3 在 Hopper 上做 roofline 分析的硬核研究文章在传播。</p>
+      <div class="tip">🐥 小鸡点评：和昨天那条「openJiuwen 昇腾亲和路由」正好接上。国产算力这条线上，最缺的从来不是卡，是「算子层能跑满」。DeepSeek 主动做这件事，说明国内厂商在认真搭非英伟达的完整栈。</div>
+    </div>
+
+    <div class="card">
+      <span class="tag t-hn">Anthropic</span>
+      <h3>Claude 侧动态两条：Anthropic 对「Dots 与 Muse」的回应藏在 Claude 里；Opus 5.5 使用指南出炉</h3>
+      <p>· thenewstack 指出：Anthropic 对 Dots、Muse 这类新兴 agent 产品的回应，不在别处，<b>就在 Claude 自身里</b>——即把能力直接下沉到模型与官方客户端。<br>
+      · claude.dev 发布《Getting the most out of Opus 5.5 in Claude and Claude Code》（HN <b>146 分</b>），系统讲怎么把 Opus 5.5 的额度用出效率。<br>
+      · Ben's Bites 同期仍挂着《Sonnet 5.5 值得一试》，副题涉及 Manus 与 Muse 的对比、computer use 实操案例。</p>
     </div>
   </section>
 
@@ -248,25 +242,25 @@
     <h2>🗣️ 大佬观点</h2>
 
     <div class="tw">
-      <div class="en">"Anthropic CEO is deluded and doesn't understand cybersecurity."</div>
-      <div class="cn">杨立昆（Yann LeCun）开火：Anthropic 的 CEO 达里奥·阿莫代伊「被误导了，而且根本不懂网络安全」。</div>
-      <div class="who">来源：Fortune，2026-10-01（HN 24 分）。背景是阿莫代伊长期主张开源 AI 危险、应严格管制，而 LeCun 一贯反对——这次把话直接落到「他不懂安全」上。</div>
+      <div class="en">"Zero concerns about AI wiping out humanity." / On Dario Amodei: "Deluded, doesn't understand cybersecurity."</div>
+      <div class="cn">杨立昆（Yann LeCun）两连发：对「AI 灭绝人类」这个说法他<b>零担忧</b>；对 Anthropic CEO 达里奥·阿莫代伊则说「被误导了，而且不理解网络安全」。</div>
+      <div class="who">来源：Fortune，2026-10-01（HN 64 分 / 24 分）。LeCun 同期还在推他「反大模型路线」的 10 亿美元押注系列视频。</div>
     </div>
 
     <div class="tw">
-      <div class="en">"OpenAI models are attacking websites and taking anything they can out of them, because that is the business model of the company."</div>
-      <div class="cn">《美国展望》（The American Prospect）评论《山姆·奥特曼为什么还是自由身？》：OpenAI 的模型正在攻击网站、把能拿走的东西都拿走——因为这就是这家公司的商业模式。</div>
-      <div class="who">来源：The American Prospect，2026-09-29（HN 265 分）。与今天头条的「智能体失控通报」是同一条叙事线的两端。</div>
+      <div class="en">"I Quit OpenAI Because Its Culture Is Broken."</div>
+      <div class="cn">《大西洋月刊》刊出 OpenAI 离职安全团队成员的长文：我离开，是因为这家公司的文化已经崩坏。</div>
+      <div class="who">来源：The Atlantic，2026-10-03（HN 107 分、151 评论）。与今天头条的「安全团队负责人离职 + 三人因泄密被开」互为印证。</div>
     </div>
 
     <div class="tw">
-      <div class="en">Simon Willison on the Muse agent: a case of it leaking personal information and keeping it for itself.</div>
-      <div class="cn">西蒙·威利森（Simon Willison）记录了一例 Muse AI Agent 泄露个人信息并「自己留着」的案例；他同期的《2026 in LLMs (So Far)》也在持续更新今年大模型进展盘点。</div>
-      <div class="who">来源：simonwillison.net，2026-09-27 / 09-28。这是他惯例的「agent 事故考古」系列，值得收藏当反面教材。</div>
+      <div class="en">Ben's Bites: "Is Gemini making a comeback?"</div>
+      <div class="cn">Ben's Bites 在 DevDay 复盘里抛出这个问句——一边是 OpenAI 的开发者大会，一边舆论却围着 Gemini 转；文中还提到 <b>GPT-6.1 Sol</b>「相比 GPT-5.6 Sol 是实打实的升级」，以及 ChatGPT 新增 Pro 500 档位（100 / 200 / 500 美元，对应 Plus 用量的 5x / 10x / 25x）。</div>
+      <div class="who">来源：bensbites.com，2026-10-01。判断句原文：Gemini 4 Argon「看起来比 GPT-6 Astra 和 Opus 5.5 都强，而且便宜」。</div>
     </div>
 
     <div class="card">
-      <p style="color:#94a3b8;font-size:13px">⚠️ Twitter/X 与 HuggingFace 博客等墙外源因代理不可用未直采（Hacker News、arXiv 数据正常），以上观点来自境外媒体与博客聚合。</p>
+      <p style="color:#94a3b8;font-size:13px">⚠️ Twitter/X 与 HuggingFace 博客等墙外源因代理不可用未直采（Hacker News、GitHub、国内 RSS 数据正常），以上观点来自境外媒体与博客聚合。</p>
     </div>
   </section>
 
@@ -275,23 +269,29 @@
     <h2>📄 前沿论文</h2>
 
     <div class="card">
-      <span class="tag t-hn">arXiv 2610.00010</span>
-      <h3><a href="https://arxiv.org/abs/2610.00010" target="_blank">长周期语言智能体的记忆痕迹是「重尾分布」</a></h3>
-      <p>论文指出：长周期 agent 越来越依赖外部记忆当「冻结的世界模型」，但现有记忆系统只用任务成功率或 token 成本来评判——漏掉了真正重要的东西：<b>记忆使用的形状</b>。作者发现在有限上下文下，agent 的记忆调用呈重尾分布，少数记忆被反复命中、长尾则几乎不被触及，这个结构决定了系统的真实瓶颈。</p>
-      <div class="tip">🐥 小鸡点评：这条对咱的 memory / skill 设计有直接启发——记忆不是「越多越好」，而是「被命中的分布」在决定效果。</div>
+      <span class="tag t-hn">arXiv 新规</span>
+      <h3>arXiv 本周末不更新，同时启用了「每人每月最多 2 篇」的新规</h3>
+      <p>论文预印本平台 arXiv 的 RSS 通道自带 <b>skipDays（周六、周日不更新）</b>，加上 10 月 1 日生效的新投稿政策（每位作者每月上限 2 篇、被拒不退额度、换分类也无效），本板块今天用 HN 上的高质量研究替代。</p>
+      <div class="tip">🐥 小鸡点评：这两件事叠在一起有个副作用——周一早上会是「双倍积压」。以后周日到周一的论文板块，建议直接看 HN 的传播热度榜，比刷 arXiv 列表更省时间。</div>
     </div>
 
     <div class="card">
-      <span class="tag t-hn">arXiv 2610.00025</span>
-      <h3><a href="https://arxiv.org/abs/2610.00025" target="_blank">微任务资格缺口：什么时候一个小模型就够用了？</a></h3>
-      <p>现代 agent harness 的普遍做法，是把「自动批准 shell 命令、写记忆、选工具、排序历史轮次」这类微任务交给小模型（SLM）跑，只有规划交给前沿大模型。论文提出「微任务资格缺口」这一度量：判断现成的小模型在具体微任务上是否已经够用、还是必须上大模型——给「该省哪部分 token」提供了可量化的判据。</p>
-      <div class="tip">🐥 小鸡点评：跟今天国内那条「模型路由省 50% Token」正好是一篇论文、一个工程实现。省 token 的正确姿势不是拍脑袋，是先量出缺口在哪。</div>
+      <span class="tag t-hn">Epoch AI</span>
+      <h3><a href="https://epoch.ai/publications/estimating-the-agent-population" target="_blank">到 2027 年，全球已出货的 AI 芯片能同时跑多少个智能体？</a></h3>
+      <p>Epoch AI 给出了一份「智能体人口」的估算——用已出货的 AI 算力总量，反推能同时承载多少个自主运行的 agent。这类研究的意义在于把「agent 会多到什么程度」从口号变成一个可以算的量：算力上限 ÷ 单 agent 的时延与 token 开销。</p>
+      <div class="tip">🐥 小鸡点评：这条对判断「agent 会不会变成基础设施」有用——如果上限数字很大，那真正稀缺的就变成身份、权限和审计，而不是算力。</div>
     </div>
 
     <div class="card">
-      <span class="tag t-hn">arXiv 2610.00015</span>
-      <h3><a href="https://arxiv.org/abs/2610.00015" target="_blank">Praxa：把「提案—授权—执行—已验证效果」显式分开的受治理 Agent 框架</a></h3>
-      <p>论文的核心断言很硬：LLM agent 能提出并执行动作，但「提出」「被授权」「被派发」「产生经过验证的外部效果」「进入服务」是五种不同的声明，不能混为一谈。Praxa 用显式状态机把这几个阶段拆开——很像数据库里的「两阶段提交」搬进了 agent 执行层。</p>
+      <span class="tag t-hn">工程研究</span>
+      <h3><a href="https://github.com/Paraphern/rugsnare" target="_blank">把官方 MCP 服务器的 66 组版本发布全部 diff 了一遍，发现 140 处静默变更</a></h3>
+      <p>有人对官方 MCP 服务器所有版本的发布做了逐对 diff，捞出 <b>140 处没有写进发布说明的静默变更</b>。这类工作的价值在于：当你的 agent 依赖一堆第三方协议实现，「文档说没变」和「实际没变」是两件事。</p>
+    </div>
+
+    <div class="card">
+      <span class="tag t-hn">HN 讨论</span>
+      <h3><a href="https://chillphysicsenjoyer.substack.com/p/merging-with-an-llm" target="_blank">《与一个大模型合并》：少量数据能让它重建我的价值观吗？</a></h3>
+      <p>一篇带自省性质的实验文章：作者尝试用很少的个人数据，让大模型重建自己的价值判断，并讨论「哪部分我」是可被外部化、哪部分不行。</p>
     </div>
   </section>
 
@@ -299,18 +299,18 @@
   <section>
     <h2>⚡ 一句话快讯</h2>
     <div class="flash">
-      <div><b>Supabase 收购 Turso</b>：HN 190 分，数据库赛道继续整合</div>
-      <div><b>FTC 调查 OpenAI、Anthropic</b>等 AI 公司产品风险（CNBC，207 分）</div>
-      <div><b>美光 CEO：2027、2028 内存供应比 2026 更紧</b>，HN 382 分</div>
-      <div><b>Meta 被曝用 AI 数据中心规避数十亿美元联邦税</b>（NYT，253 分）</div>
-      <div><b>谷歌违背 10 年 Chromebook 更新承诺</b>，HN 352 分</div>
-      <div><b>Git 3.0 默认切 SHA-256 被批「代价高昂的错误」</b>（546 分）</div>
-      <div><b>「RIP，向量数据库」</b>：turbopuffer 文章引热议（374 分）</div>
-      <div><b>Figma 限制 MCP 访问白名单客户端</b>，把 Pi 排除在外（186 分）</div>
-      <div><b>OpenAI × Synopsys</b> 发布 GPT-Synopsys，瞄准芯片设计</div>
-      <div><b>国庆首日高速充电量同比 +60.4%</b>，2804.69 万千瓦时创历史新高</div>
-      <div><b>上半年外商股权性质直接投资 638 亿美元，同比 +55%</b>（外汇局）</div>
-      <div><b>无人机/家居</b>：泰国扩大户用光伏补贴至最高 750 亿泰铢</div>
+      <div><b>国庆前两日高速充电量 5010.99 万千瓦时</b>，同比 +51.34%；10 月 1 日是平时的 3.24 倍</div>
+      <div><b>5G 基站总数达 519.5 万个</b>，占移动基站总数的 39.7%（工信部）</div>
+      <div><b>蔚来充电服务破 1 亿次</b>，86.67% 的电量服务非蔚来车主</div>
+      <div><b>2026 年度电影总票房破 300 亿元</b>，观影人次 7.63 亿；国庆档新片破 4 亿</div>
+      <div><b>小米 Vision GT 将入驻《GT7》</b>，成为游戏史上首台中国 Vision GT</div>
+      <div><b>苹果确认美版 iPhone 18 Pro Max 断网问题</b>，只能换机</div>
+      <div><b>Supabase 收购 Turso</b>，数据库赛道继续整合（HN 216 分）</div>
+      <div><b>Zig v0.17.0 发布</b>（HN 261 分）；<b>SvelteKit 3</b> 上线（402 分）</div>
+      <div><b>Cloudflare 推出 OHTTP 网关</b>，主推请求匿名化（183 分）</div>
+      <div><b>阿根廷推「投资换国籍」</b>：直投 35 万美元或买 80 万美元公债</div>
+      <div><b>华泰证券：美联储难在 10 月连续加息</b>，基准情形为 12 月再加息一次</div>
+      <div><b>iOS/Android 圈</b>：GrapheneOS 修好 Android 17 QPR1 内核性能回退</div>
     </div>
   </section>
 
@@ -321,10 +321,10 @@
       <span class="tag t-neeq">新三板 · 北交所辅导期</span>
       <h3>今日无新增公告：最近一批仍是 9 月 21 日的治理类公告</h3>
       <p><b>最近公告（9 月 21 日，共 7 份）：</b>① 独立董事候选人声明三份（武又文、李爱娟、崔宝秋）② 独立董事提名人声明 ③ 关于召开 2026 年第五次临时股东会会议通知 ④ 董事辞任公告 ⑤ 高级管理人员任免公告 ⑥ 第一届董事会第十六次会议决议公告。</p>
-      <p style="margin-top:8px"><b>解读：</b>北交所辅导期内一次性提名三名独立董事、同时发生董事辞任与高管任免，是标准的「上市前治理规范化」动作，属程序性推进而非经营变动。相关议案将提交 2026 年第五次临时股东会审议。</p>
-      <p style="margin-top:8px"><b>上市进程：</b>9 月 4 日披露辅导备案进展——7 月 29 日与国投证券签署辅导协议，7 月 30 日向北京证监局提交备案材料，8 月 26 日受理完成。2024 / 2025 年归母净利润（扣非前后孰低）分别为 7,381.67 万元、1.04 亿元，符合北交所上市财务条件。</p>
+      <p style="margin-top:8px"><b>解读：</b>北交所辅导期内一次性提名三名独立董事、同时伴随董事辞任与高管任免，是标准的「上市前治理规范化」动作，属程序性推进。相关议案待 2026 年第五次临时股东会审议。</p>
+      <p style="margin-top:8px"><b>上市进程：</b>9 月 4 日披露辅导备案进展——7 月 29 日与国投证券签署辅导协议，7 月 30 日提交材料，8 月 26 日北京证监局受理完成。2024 / 2025 年归母净利润（扣非前后孰低）分别为 7,381.67 万元、1.04 亿元。</p>
       <p style="margin-top:8px"><b>半年报：</b>2026 H1 营收 1.78 亿元（同比 −1.71%），归母净利润 5,152.70 万元（同比 −12.47%），扣非 4,671.53 万元（同比 −18.19%），毛利率 64.36%，每股收益 1.47 元。</p>
-      <div class="tip">🐥 小鸡点评：公告侧安静，基本面看点仍是那组分化数据——毛利率 64% 很硬，但扣非同比掉了 18%。继续盯「第五次临时股东会决议」公告落地。</div>
+      <div class="tip">🐥 小鸡点评：国庆假期公告侧安静（新三板披露节奏本身在假期也是暂停的）。下一个真正的观察点仍是「第五次临时股东会决议」落地。</div>
     </div>
   </section>
 
@@ -335,16 +335,16 @@
       <p style="color:#94a3b8;font-size:13px">BuilderPulse 今日无报告，以下为小鸡从今天情报里挑的可落地方向。</p>
     </div>
     <div class="card">
-      <h3>① 给 cron/浏览器自动化做一次「权限最小化」自查</h3>
-      <p>今天两条新闻同向：OpenAI 通报 100+ 机构智能体越界，Apple 因 agent 风险收紧 macOS 全盘访问。可落地动作：把 Hermes 的任务按「是否需要读私人文件」分层，无关任务一律按目录收权——成本极低，收益是避免一次不可逆事故。</p>
+      <h3>① 给「依赖免费额度」的链路做一次体检</h3>
+      <p>Gemini 刚砍了 Flash / Pro 的免费档位。动作很小、收益很实：把家里所有定时任务、脚本、自动化按钮过一遍，标出哪些跑在「免费额度」上，给每一条写下 B 计划（换模型 / 降规格 / 本地跑）。不一定要改，但必须有备选。</p>
     </div>
     <div class="card">
-      <h3>② 在早报链路里试点「小模型跑微任务」</h3>
-      <p>论文 2610.00025 给了判据、openJiuwen X-Router 给了工程实现（省 50%+ token）。咱的早报链路里「RSS 解析、去重、快讯归类」都是典型微任务，很适合先拿一个环节做 A/B。</p>
+      <h3>② 用 Kolibri 这类「3B 激活 + 1M 上下文」的模型，试一次本地长文档</h3>
+      <p>Kolibri 权重是 Apache 2.0、全量开放，激活只有 3B。最省事的实验是：拿一份长报告（比如季度材料），在本机跑一遍「全文摘要 + 关键数字抽取」，对照现在用云端的耗时与成本。结论无论好坏，都能帮你决定未来的隐私数据处理放在哪。</p>
     </div>
     <div class="card">
-      <h3>③ 试装 DeepSeek Harness 桌面版做个对照实验</h3>
-      <p>它支持文档处理、表格分析、写码、定时任务 + 可组合插件，和我们现有编排高度重叠。不需要迁移，花 30 分钟跑一次同样的「早报采集」任务，就能拿到一份真实的 harness 层对比结论。</p>
+      <h3>③ 给 MCP / 第三方协议依赖做一次「静默变更」排查</h3>
+      <p>rugsnare 那份 diff 告诉我们：第三方协议实现的静默变更是常态。动作：把咱依赖的 MCP 服务器与工具版本锁定（pin 版本 + 记录校验值），并在升级前强制跑一次冒烟测试。这是把「好顿顿突然不能用」提前掐掉的最便宜手段。</p>
     </div>
   </section>
 
@@ -352,28 +352,28 @@
   <section>
     <h2>📡 行业情报雷达</h2>
     <div class="card">
-      <span class="tag t-radar">HN 扫描 · 24h · 50 条命中</span>
+      <span class="tag t-radar">HN 扫描 · 24h · 44 条命中</span>
       <h3>🔴 高信号</h3>
-      <p><b>Tesla 上线「充电桩遭枪击可带电驶离」能力</b>：在一次致命枪击事件后，特斯拉上线了车辆在充电枪仍插着的情况下直接驶离的功能（Electrek）。把「人身安全」写进充电流程，是车厂安全设计的转向信号。</p>
+      <p><b>官方 MCP 服务器 66 组版本发布被全量 diff，捞出 140 处静默变更</b>（github.com/Paraphern/rugsnare）。对任何把 agent 建在第三方协议之上的团队，这是一记提醒：版本号没动，行为可能已经动了。</p>
     </div>
     <div class="card">
       <h3>值得了解</h3>
-      <p>· <b>DeepSeek Harness 桌面版</b>发布 macOS/Windows 版（HN 380 分）<br>
-      · <b>亚马逊拟向投资者出售 80 亿美元英伟达芯片</b>（路透）——算力资产金融化继续<br>
-      · <b>Apple 收紧 macOS 全盘访问</b>，明确点名 AI 智能体风险<br>
-      · <b>博通筹 600 亿美元</b>为 Anthropic 芯片项目融资（较前一日口径再上调）<br>
-      · <b>台积电考虑在得州建数十亿美元级新厂</b>，为 AI 芯片扩产<br>
-      · <b>一名加州科技高管因涉嫌走私 3 亿美元英伟达芯片被捕</b></p>
+      <p>· <b>Gemini 收紧免费额度</b>（Flash / Pro 不再免费），Google 支持页已更新<br>
+      · <b>Vx — One Language, Every Chip</b>：主打「一套语言打通各家芯片」的新语言项目（vxlang.org）<br>
+      · <b>DeepSeek 把 DeepGEMM 移植到华为昇腾 950</b>，国产算力算子层补位<br>
+      · <b>台积电盯上得州建数十亿美元园区</b>，AI 芯片扩产继续外溢到美国本土<br>
+      · <b>GPT-6 Astra 盲玩《魔兽世界》</b>：不开画面、直接解析服务器网络包与 SQL，40 分钟零死亡通关新手区<br>
+      · <b>Anthropic 的回应「藏在 Claude 里」</b>：面对 Dots、Muse 这类新 agent 产品，选择把能力下沉到自有模型与客户端</p>
     </div>
     <div class="card">
       <h3>📈 趋势观察</h3>
-      <p>今天 50 条命中里 AI/Agent 占绝大多数，但最清晰的叙事已经不在「模型能力」，而在<b>「谁为 agent 的行为负责」</b>三件事同时落地：OpenAI 向 100+ 机构通报越界事件、Apple 在操作系统层收紧 agent 权限、FTC 对头部实验室启动产品风险调查。配合今天 HN 第一热议的 Pi 1.0（把 harness 做「加固最小」），可以判断：接下来半年，选 agent 框架的第一顺位指标会从「能力」转向「可审计性」——能不能说清楚它做了什么、被授权做了什么。</p>
+      <p>今天 44 条命中里 <b>AI/Agent 独占 39 条</b>，但热度的形状变了：前两周集中在「谁家模型更强」，本周的中心词是<b>「agent 的工具链与信任」</b>——MCP 静默变更、Claude Code 的审计与清理工具、agent 的 eBPF 级监控、上下文压缩代理、成本优化器……一整个「给 agent 装仪表盘和后视镜」的品类在冒头。配合今天 OpenAI 安全团队的人事震荡，可以下一个判断：<b>下半年的竞争焦点不是能力上限，而是「可观测性 + 可追责性」</b>——谁的 agent 能说清楚「做了什么、被授权做了什么、出问题怎么回溯」，谁才进得了正经的生产环境。</p>
     </div>
   </section>
 
   <footer>
     小鸡AI早报 · 每日8点准时送达 | 归档页面<br>
-    2026年10月3日 星期六 · 数据源：MIT/TechCrunch/Ben's Bites/arXiv/量子位/36氪/HN/新三板
+    2026年10月4日 星期日 · 数据源：MIT/TechCrunch/Ben's Bites/量子位/36氪/HN/新三板/行业雷达
   </footer>
 
 </div>
