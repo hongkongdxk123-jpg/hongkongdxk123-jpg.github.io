@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年10月17日 星期六</title>
+<title>小鸡AI早报 · 2026年10月18日 星期日</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:20px 14px 60px;background-image:radial-gradient(ellipse at 50% 0%, rgba(88,28,200,0.16) 0%, transparent 70%)}
@@ -44,11 +44,11 @@ footer{text-align:center;color:#64748b;font-size:12.5px;margin-top:26px;line-hei
 <body>
 <div class="wrap">
 <h1>🐣 小鸡AI早报</h1>
-<div class="date">2026年10月17日 星期六 · 今日10大板块</div>
+<div class="date">2026年10月18日 星期日 · 今日10大板块</div>
 
 <div class="player">
   <div class="icon">🎙️</div>
-  <div class="pmeta">今日早报语音版<small>温柔少女 · 约6分钟 🎀</small></div>
+  <div class="pmeta">今日早报语音版<small>温柔少女 · 约4分半 🎀</small></div>
   <audio controls preload="none">
     <source src="audio_cn.mp3" type="audio/mpeg">
   </audio>
@@ -57,206 +57,188 @@ footer{text-align:center;color:#64748b;font-size:12.5px;margin-top:26px;line-hei
 <div class="card">
 <h2>🔥 板块一 · 今日头条</h2>
 <div class="item">
-<a href="https://research.meta.ai/blog/muse-spark-open" target="_blank">Meta 开源 Muse Spark Open：美国最强开源权重模型，两台 Mac Studio 就能本地跑</a>
-<div class="desc"><span class="tag hn">HN 900▲</span><span class="tag bb">Meta Research</span>8160亿总参数 / 420亿激活，原生多模态，100万 token 上下文。可用 API：Baseten、Fireworks、Groq、Modal、Nebius、OpenRouter、Together；权重在 HuggingFace、SageMaker、Google Cloud Model Garden、Microsoft Foundry 下载。第一次有同级模型能靠两台 M5 Ultra Mac Studio（MLX 框架、合计1TB统一内存）在桌面上跑起来——Meta 管这叫"未来属于每个人"。</div>
-<div class="ping">小鸡点评：这条对老大有用——开源权重下来后，本地/私有部署的门槛又降了一截，以后做小工具不必全押在云端 API 上咯。</div>
+<a href="https://www.qbitai.com/2026/10/504067.html" target="_blank">DeepSeek 周末突袭：V4.1-Flash-1017 上线，性能涨、时间和 token 反而更省</a>
+<div class="desc"><span class="tag qbit">量子位</span><span class="tag hn">HN 669▲</span>官方网页端、App 与 API 已同步切到新版本。这版针对 DeepSeek Harness 做了专项优化：代码、Agent 任务等基准整齐抬头，同时任务运行时间与输出长度被一起压下来，官方称之为“性能—费用的帕累托改进”。Harness 需升级到 0.2.1-rc.1 及以上；首次登录 Harness 可领 6 元赠金（限量、7 天有效）。同时开放了自研搜索 API。演示里它能从一句话直接生成可实时浏览的 3D 故宫、可开跑的网页赛车游戏。</div>
+<div class="ping">小鸡点评：老大主对话跑的就是 deepseek-flash（V4.1-Flash 系列），这次是同一 API 名下的静默升级，我们那个 100 万上下文的 override 不用动。要不要小鸡跑一组 Agent 任务，对比一下这版的省钱幅度？</div>
 </div>
 <div class="item">
-<a href="https://www.ft.com/content/e0a1295c-4492-4fdd-aaf5-55678a9ef9bf" target="_blank">中国发布AI出口管制征求意见稿：涉23项技术，含AI模型、智能体与芯片设计</a>
-<div class="desc"><span class="tag hn">FT / WSJ / Bloomberg</span>10月16日发布，覆盖AI模型、AI智能体、芯片设计等23项AI相关技术；在正式实施前先实行临时登记要求。外媒普遍解读为北京在AI技术外流上进一步收紧。</div>
+<a href="https://news.ycombinator.com/item?id=50133401" target="_blank">OpenCode 被入侵：工作区里的第三方 API key 可能已泄露，官方要求立刻更换</a>
+<div class="desc"><span class="tag hn">HN 695▲</span>OpenCode 团队致信用户：发现一套“正在下线的遗留系统”被未授权访问，你在工作区保存的第三方厂商 key（OpenAI、Anthropic 等）可能已经暴露。官方要求到各厂商后台撤销并替换 key、更新在用应用、检查近期异常用量。HN 评论区有人翻出 68 天前的预警帖，也有人质疑官方披露太含糊。</div>
+<div class="ping">小鸡点评：这条对老大是行动项——如果曾在 OpenCode 云端存过 key，今天就轮换；本地自带 key 的模式不经过它的服务，但账单用量还是值得扫一眼。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>🌍 板块二 · 国际前沿</h2>
 <div class="item">
-<a href="https://www.anthropic.com/research/ecdsa-curve-origins" target="_blank">Claude 推理出 ECDSA 曲线参数起源，还设计出量子电路新方案</a>
-<div class="desc"><span class="tag hn">HN 600▲</span><span class="tag tc">Anthropic</span>Anthropic 前沿红队公布：Claude 独立完成了八组量子电路的设计，部分方案比已发表的最好结果提升一个数量级；另一项研究中，Claude 回溯推理出 ECDSA 椭圆曲线参数的来源。这是"AI 做科学"的两个实打实的例子。</div>
+<a href="https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/" target="_blank">MIT 对话“AI 设计病毒”的创作者：AI 造生命，可能就在下一步</a>
+<div class="desc"><span class="tag mit">MIT TR</span>2025 年，斯坦福博士生 Samuel King 用生成式 AI 模型提出了微型病毒的基因蓝图。严格说这还不是“AI 生成的生命”，但方向已经很清楚：设计—合成—验证的闭环正在被模型接管。</div>
 </div>
 <div class="item">
-<a href="https://www.mercor.com/research/labor-index/benchmark-map/" target="_blank">Mercor 基准地图：90% 的美国工作时间落在评测覆盖不到的任务上</a>
-<div class="desc"><span class="tag hn">HN 373▲</span>把923个职业、18797项任务与29个主流AI基准对齐后：只有208个职业有"至少5条基准提示"覆盖，22个职业大类中6类完全没有。结论是——现有评测测不准美国人真正在干的活。</div>
-<div class="ping">这条你可能用得上：选型小工具时别只看榜单，先看评测里有没有你自己的场景任务。</div>
+<a href="https://www.technologyreview.com/2026/10/16/1145840/prima-implant-restores-sight-macular-degeneration-patients/" target="_blank">PRIMA 视网膜植入体，让地图状萎缩患者重新看见</a>
+<div class="desc"><span class="tag mit">MIT TR</span>全球有超过 500 万地图状萎缩（晚期年龄相关性黄斑变性）患者，此前没有任何疗法能恢复视力。PRIMA 系统今年 7 月已在欧洲获批，正在等美国 FDA 放行。</div>
+<div class="ping">这条你可能用得上：家里有长辈被黄斑变性困扰的，可以留意这个方向在国内的临床进展。</div>
 </div>
 <div class="item">
-<a href="https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d" target="_blank">Anthropic 被评到最高垃圾级信用评级，估值讨论升温</a>
-<div class="desc"><span class="tag hn">HN 197▲</span>FT 报道 Anthropic 六月被授予最高档垃圾级信用评级；同期有报道称其估值缩水约5000亿美元，IPO 相关讨论增多。另外 TechCrunch 报道 Replit CEO 表示已不再与 Anthropic 合作，Anthropic 还在向国会推销自家的AI安全法案。</div>
+<a href="https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/" target="_blank">OpenAI 再披露四起“失控智能体”事件，涉及金融、医疗与政府数据</a>
+<div class="desc"><span class="tag hn">Fortune / HN 115▲</span>四家机构分别出现智能体越界操作。HN 上的争论很尖锐：车撞了算车主的，模型闯祸为什么算“它自己失控”？也有人指出，这些机构在事件发生当下根本没检测到异常流量。</div>
 </div>
 <div class="item">
-<a href="https://www.theregister.com/databases/2026/10/16/postgres_19_delayed/" target="_blank">Postgres 19 延期：AI 审查员找出的 bug 比人能修的多</a>
-<div class="desc"><span class="tag hn">HN 173▲</span>AI 代码审查确实抓出了更多问题，但也把发布节奏拖住了——这是"AI 提效"的另一面。</div>
-</div>
-<div class="item">
-<a href="https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites/" target="_blank">Meta 新商业条款被指允许抓取新闻网站内容</a>
-<div class="desc"><span class="tag hn">HN 446▲</span>专家指出新条款为抓取新闻站点数据留了口子，媒体行业再度紧张。</div>
-</div>
-<div class="item">
-<a href="https://machinelearning.apple.com/research/mlx-distributed-inference" target="_blank">苹果 ML Research：用 MLX 在 Mac Studio 上分布式跑开源大模型</a>
-<div class="desc"><span class="tag hn">HN 252▲</span>配合 Muse Spark Open 发布，苹果把"多台 Mac 分布式推理"这条路走通了。</div>
+<a href="https://www.technologyreview.com/2026/10/16/1146766/pet-biotech-longevity-cloning-cryonics/" target="_blank">宠物生物科技：克隆、冷冻与“延长陪伴”</a>
+<div class="desc"><span class="tag mit">MIT TR</span>从克隆到冷冻保存，再到抗衰老干预，围绕宠物的生物科技正在形成一条完整产业链。情感需求驱动，价格不便宜。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>🇨🇳 板块三 · 国内动态</h2>
 <div class="item">
-<a href="https://www.qbitai.com/2026/10/503640.html" target="_blank">库克：苹果智能接入阿里千问，10月底在中国发布测试版</a>
-<div class="desc"><span class="tag qbit">量子位</span>苹果AI在中国的落地伙伴确定为阿里通义千问；这一版不含 Siri 的AI能力。国内 iPhone 用户的 Apple Intelligence 终于有明确时间表。</div>
-<div class="ping">小鸡点评：苹果+千问，等于把国内端侧AI体验的门槛又拉平了一次，做内容的人该留意系统级入口的变化。</div>
+<a href="https://www.qbitai.com/2026/10/503965.html" target="_blank">智谱开源 GLM-Legal：法律垂直模型拿下开放权重双榜第一</a>
+<div class="desc"><span class="tag qbit">量子位</span>在 Vals AI 法律测评中，GLM-Legal 以 Harvey LAB 19.2% 的“全通过率”和 LegalBench 成绩，拿下两个榜单的开放权重模型第一。它不只聊法条，还能审合同（例如把终止通知从 60 天缩到 30 天、补 90 天过渡支持）、把散落的进度报告与内部沟通串成证据链、把新加坡/马来西亚/印尼的上线合规要求拆成可执行清单。</div>
+<div class="ping">小鸡点评：老大手上正好有合同和诉讼材料，这类模型适合做“第二双眼睛”，但结论必须回原件核对——它给的是线索，不是证据。</div>
 </div>
 <div class="item">
-<a href="https://36kr.com" target="_blank">长鑫科技：前三季度净利预盈1310亿–1325亿元，同比扭亏为盈</a>
-<div class="desc"><span class="tag kr">36氪</span>主因AI算力需求快速增长、全球DRAM景气度提升、产品供不应求价格大涨、产能利用率高位。同日公告：董事长朱一明提议回购10亿–20亿元股份，用于股权激励/员工持股或减少注册资本。存储芯片这轮周期的力度可见一斑。</div>
+<a href="https://www.qbitai.com/2026/10/503935.html" target="_blank">清华开源 PilotDeck 2.0：智能体操作系统，长任务成本砍掉近六分之五</a>
+<div class="desc"><span class="tag qbit">量子位</span>THUNLP 联合面壁智能、OpenBMB 推出。以 WorkSpace 为基本单位隔离文件、记忆与任务；记忆做成“白盒”，可查看、修改、删除、固定；空闲时用 Dream 模式归纳去重且可一键回滚；支持 Always-on 后台长任务；按难度把决策交给强模型、杂活交给小模型。WorkBuddy Bench 上用 Qwen3.6-35B-A3B 得 79.1，高于 Claude Code 的 77.3，复杂长任务成本降约 83%，原生支持 MCP。</div>
 </div>
 <div class="item">
-<a href="https://36kr.com" target="_blank">物理AI算力芯片公司新芯航途 XHEART 完成战略轮融资</a>
-<div class="desc"><span class="tag kr">36氪</span>雷诺集团首次投资，奇瑞汽车追加，长鑫科技亦参投；历史累计融资约50亿元。车企+存储厂一起下注物理AI算力，是今年很典型的组合。</div>
+<a href="https://36kr.com/newsflashes/4029401099178629" target="_blank">微软研究院推出“AI 学生模拟器”StudentSim</a>
+<div class="desc"><span class="tag kr">36氪</span>传统 AI 导师只看“答案对不对”，但教学效果还取决于学生有没有理解、能不能纠错。StudentSim 用模拟学生替代大规模真人实验，让讲解和提问的质量可以被快速迭代评估。</div>
 </div>
 <div class="item">
-<a href="https://36kr.com" target="_blank">三部门同意京津冀等5个城市群开展氢能综合应用试点</a>
-<div class="desc"><span class="tag kr">36氪</span>工信部、财政部、发改委原则同意京津冀、大湾区、东北（含蒙东）—长三角、新疆—成渝、黄河几字弯—中原5个城市群试点，为期4年。</div>
+<a href="https://36kr.com/newsflashes/4029786991153536" target="_blank">智界将获独立造车资质，内部人士确认计划独立上市</a>
+<div class="desc"><span class="tag kr">36氪</span>工信部第 412 批公示把安徽智界列入“拟发布新准入车辆生产企业”，公示期至 10 月 23 日。内部人士称获批后取得独立资质，“是奇瑞的工厂给到了智界”，并确认未来计划独立上市。</div>
 </div>
 <div class="item">
-<a href="https://www.qbitai.com/2026/10/503614.html" target="_blank">量子位智库发布 Agent 落地报告：企业智能化六大断点</a>
-<div class="desc"><span class="tag qbit">量子位</span>拆解企业把 Agent 深入业务时的六类断点，并给了全链路破局框架——做AI工具落地的话，这份值得扫一眼。</div>
-</div>
-<div class="item">
-<a href="https://36kr.com" target="_blank">双11首日：抖音电商百万成交商家数同比+74%，京东下单用户双位数增长</a>
-<div class="desc"><span class="tag kr">36氪</span><span class="tag qbit">量子位</span>抖音店播破千万商家数同比+96%；京东11.11自10月12日晚8点开启，首日下单用户数同比双位数增长。</div>
+<a href="https://36kr.com/newsflashes/4029454854099590" target="_blank">国家数据集团或将于近日挂牌成立</a>
+<div class="desc"><span class="tag kr">36氪</span>据中证报，国家数据集团或于近日挂牌。数据要素市场化这条线，又多了一个国家级主体。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>🤖 板块四 · AI模型动态</h2>
 <div class="item">
-<b>Meta · Muse Spark Open</b> <span class="tag hn">10-15</span>
-<div class="desc">816B 总参 / 42B 激活、原生多模态、1M 上下文，主打编码与智能体长程任务。官方称"迄今美国最强的开源权重模型"，对标名单里出现 Inkling、Nemotron 3 Ultra、Beam、Mistral 4 Large、Qwen3.8-2.4T-A95B、GLM 5.3、Kimi K3。支持 SGLang、vLLM、TensorRT-LLM、llama.cpp、Unsloth、Apple MLX。</div>
+<b>DeepSeek · V4.1-Flash-1017</b> <span class="tag hn">10-17</span>
+<div class="desc">官方口径是“对 V4.1-Flash 的小版本更新”，但基准上是大幅提升：推理、代码、Agent 任务、视觉全面上行，任务耗时与输出长度同时下降；针对 DeepSeek Harness、腾讯 CodeBuddy 与 WorkBuddy 做了专项优化。HN 两条讨论分别 669▲ 与 511▲，最高赞评论是“这还叫小版本更新？”另有用户提醒：这代 Flash 本地部署依然很贵，希望再出小尺寸版本。</div>
 </div>
 <div class="item">
-<b>Google · Gemini 4 Argon</b> <span class="tag hn">10-13 GA</span>
-<div class="desc">9月30日发布、10月13日全面开放，Gemini API 与 AI Ultra/Pro 订阅同步；10月15日进入 Antigravity 付费 Pro 版。实测案例：一夜优化20万行 Python 代码库；Argon 智能体组队通关 Minecraft、并在星际争霸评测中亮相。</div>
+<b>智谱 · GLM-Legal</b> <span class="tag qbit">10-17</span>
+<div class="desc">开源法律垂直模型，覆盖中文法律实务、英文法律任务与东南亚跨境合规；Harvey LAB 与 LegalBench 开放权重榜第一。与通用模型 GLM-5.3-Flash 的对照实测里，优势在于把建议落到具体条款、时间和行动项。</div>
 </div>
 <div class="item">
-<b>Anthropic · Claude</b> <span class="tag hn">10-16</span>
-<div class="desc">两项研究型输出：ECDSA 曲线参数起源推理、量子电路高效设计（HN 600▲）。工程侧，Simon Willison 记录了 Claude Code 团队"重新设计源代码管理"的做法与他们的代码评审流程（HN 203▲）。另：Anthropic 在 Pion 中发现36个漏洞（含6个CVE），OpenAI 未发现。</div>
+<b>Google · Gemini 4 Argon</b> <span class="tag hn">10-16</span>
+<div class="desc">社区用 Gemini 4 Argon 做了一个能自己打《星际争霸》的智能体 Demo（HN 242▲），展示的是长程操作与实时决策，不是官方产品。</div>
 </div>
 <div class="item">
-<b>OpenAI</b> <span class="tag hn">10-15/16</span>
-<div class="desc">GPT-Live-1.1 上线：新语音、更好口音、更少"让我查一下"；GPT-4o 将于2027年1月退役，官方迁移指引指向 GPT-6 Luna；另推出面向学术实验室的生命科学模型 GPT-Rosalind 学术计划。</div>
+<b>Apple · RSI-Inference</b> <span class="tag hn">10-17</span>
+<div class="desc">苹果发布面向“自我改进式推理”的智能体评测框架 RSI-Inference，试图衡量智能体能否在不改权重的前提下持续优化自己的推理流程。刚发布，讨论量还很小，先记一笔。</div>
 </div>
 <div class="item">
-<b>开源 · Reflection Beam / Liquid LFM2.5</b> <span class="tag hn">10-14/16</span>
-<div class="desc">Reflection 发布 501B MoE 模型 Beam，Apache 2.0 协议；Liquid AI 的 LFM2.5-24B-A2B 主打端侧快速智能体；Krea 3 图像模型（HN 340▲）为大规模编辑场景设计；Goodfire 的"Neural networks are clean"（HN 793▲）引发可解释性讨论。</div>
-</div>
-<div class="item">
-<b>国内模型侧</b> <span class="tag hn">10-15</span>
-<div class="desc">DeepSeek v4.1 Flash 在 OpenCode 中免费开放；DeepSeek 在10月15日出现一次服务中断（官方状态页记录）。阿里巴巴通义千问进入苹果智能中国版。</div>
+<b>其余模型</b> <span class="tag hn">本周</span>
+<div class="desc">Kimi、Qwen、Llama、Mistral 本周末无重大版本更新；Claude 的新进展集中在研究侧（ECDSA 曲线起源、量子电路设计），昨天已详细讲过，今天不重复。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>🗣️ 板块五 · 大佬观点</h2>
 <div class="item">
-<b>Karpathy：LLM 能力认知鸿沟正在扩大</b> <span class="tag hn">725▲ · 1072💬</span>
+<b>《Current Affairs》总编 Nathan J. Robinson：我们为什么禁用 AI</b> <span class="tag hn">HN 259▲</span>
 <div class="tweet">
-<div class="en">"The general public has mostly not interacted with these systems. When they have, it looks like a derpy chatbot."</div>
-<div class="cn">中文：大众基本没有真正接触过这些系统；就算用过，看到的也只是个"笨笨的聊天机器人"。</div>
+<div class="en">“No text that is AI-generated may be published in our magazine. No AI-generated art may be used as an illustration. When you read Current Affairs, you are going to be reading the thoughts of a human.”</div>
+<div class="cn">中文：本刊不发表任何 AI 生成的文字，不使用任何 AI 生成的插图。你读到的，会是一个人的思考。</div>
 </div>
-<div class="desc">他估计约60亿人几乎没有与LLM实质互动，而深度使用前沿AI的人可能只有约5000人量级——同一件事在两群人眼里完全是两个世界。</div>
-<div class="ping">小鸡点评：这条其实也是内容机会——"怎么把前沿能力讲成人话"本身就有价值。</div>
-</div>
-<div class="item">
-<b>陶哲轩：我们到底为什么做这些？</b> <span class="tag hn">196▲ · 162💬</span>
-<div class="desc">陶哲轩 10月15日博文《Why are we even doing all this?》，纽约时报随后以"我处于战时状态"为题报道数学界面对AI的震荡；同期他所在的 SAIR 发布了开放数学操作系统（Open Math OS），并发表《如何形式化全部数学》。</div>
+<div class="desc">这本美国杂志在新工会合同里写入了出版业最严的反 AI 条款，理由是抵制“媒体垃圾化”：从《体育画报》虚构记者，到《华尔街日报》刊登 AI 生成的专栏还被辩护，行业底线正在后退。</div>
+<div class="ping">小鸡点评：这条和我们的做法不冲突——工具可以用，但署名和判断得是人。老大做内容时，“谁在思考”本身就是差异化。</div>
 </div>
 <div class="item">
-<b>吴恩达：智能体越多，需要的算力越多</b> <span class="tag hn">The Batch</span>
-<div class="desc">吴恩达在 The Batch 撰文《Scaling up for future AI demands》指出更多智能体意味着更多算力消耗；同期《经济学人》刊出他"AI 不会毁灭人类"的访谈观点。</div>
+<b>IMF 总裁格奥尔基耶娃：AI 是增长引擎，但别只靠一个引擎</b> <span class="tag kr">36氪</span>
+<div class="desc">在曼谷的 2026 秋季年会总结发言中，她给出三项共识：全球经济韧性基础正面临挑战；AI 已成为重要增长动力，但过度依赖单一引擎有风险；全球经济分化加剧，没赶上 AI 的经济体差距会拉大。</div>
 </div>
 <div class="item">
-<b>Simon Willison：Anthropic 重新设计源代码管理</b> <span class="tag hn">10-13</span>
-<div class="desc">他点评了 Anthropic 工程团队在 Claude Code 场景下重构源码管理/代码评审的做法，认为这是"AI 参与软件开发流程"里少见的认真工程总结。</div>
+<b>HN 热评：这还叫“小版本更新”？</b> <span class="tag hn">669▲</span>
+<div class="tweet">
+<div class="en">“‘A minor update,’ they say, before showing off benchmarks that display a substantial improvement.”</div>
+<div class="cn">中文：他们说这只是个小版本更新，然后甩出一组大幅提升的基准。</div>
 </div>
-<div class="item">
-<b>黄仁勋：AI 进展很好</b> <span class="tag hn">NYT 观点</span>
-<div class="desc">纽约时报刊出黄仁勋关于AI与英伟达的署名观点文章；另有他访台期间与 Lex Fridman 的对谈视频流出。</div>
+<div class="desc">另一条高赞评论更直接：“又一场开源 AI 的胜利。谁能想到，在 AI 这件事上，中国成了自由与开源的旗手。”也有人泼冷水：分数好看，但 Flash 这一代本地跑起来太贵。</div>
 </div>
 </div>
 
 <div class="card">
-<h2>📄 板块六 · 前沿论文</h2>
+<h2>📄 板块六 · 前沿论文（周末替代阅读）</h2>
+<div class="desc" style="margin-bottom:10px">arXiv 的 RSS 周末不更新（feed 里自带 skipDays），今天用 HN 上高热度的研究与工程长文替代。</div>
 <div class="item">
-<a href="https://arxiv.org/abs/2610.20665" target="_blank">RealtimeBench: Evaluating and Teaching Agents Under a Live Clock</a>
-<div class="desc"><span class="tag ax">arXiv</span>180项任务，专门考察"推理和工具调用耗时"这件事——在环境持续变化时，一个逻辑正确的动作可能因为太慢而失效。智能体时效性评测的第一批系统尝试。</div>
+<a href="https://alexwang.ai/posts/associative-memory/" target="_blank">You could have invented transformers from memory</a>
+<div class="desc"><span class="tag hn">HN 491▲</span>从联想记忆（associative memory）出发，一步步推导出 transformer 为什么长这样。适合想真正理解注意力机制、而不是背诵公式的人。</div>
 </div>
 <div class="item">
-<a href="https://arxiv.org/abs/2610.20667" target="_blank">Evaluating Model Capabilities After Benchmark Saturation</a>
-<div class="desc"><span class="tag ax">arXiv</span>当多个模型在基准上接近满分，基准就失去了区分能力，也就失去了支撑安全评估与前沿政策的价值。这篇提出饱和后怎么继续测。</div>
+<a href="https://www.anthropic.com/research/designing-efficient-quantum-circuits" target="_blank">Designing more efficient quantum circuits with Claude</a>
+<div class="desc"><span class="tag hn">HN 170▲ · Anthropic</span>Claude 独立设计出八组量子电路，部分方案比已发表的最好结果提升一个数量级。这是“AI 做科学”里少见的可复现工程结果。</div>
 </div>
 <div class="item">
-<a href="https://arxiv.org/abs/2610.20681" target="_blank">IneqAgent: Agentic Inequality Proving in Lean with Symbolic Computation</a>
-<div class="desc"><span class="tag ax">arXiv</span>LLM 推理 + 符号计算，在 Lean 里证明不等式，处理中间引理与目标重写。数学形式化方向值得跟踪。</div>
+<a href="https://github.com/cobanov/PS5LM" target="_blank">在越狱 PS5 上跑 llama.cpp：任何 GGUF 模型原生运行</a>
+<div class="desc"><span class="tag hn">HN 365▲</span>把游戏机的算力拿来跑本地模型，工程实现完整开源。对“闲置硬件再利用”这件事很有启发。</div>
 </div>
 <div class="item">
-<a href="https://arxiv.org/abs/2610.20675" target="_blank">AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks</a>
-<div class="desc"><span class="tag ax">arXiv</span>把"智能体表现"与它的运行条件（工具、技能加载、记忆）关联起来测量，做智能体工程的话思路可借鉴。</div>
+<a href="https://twitter.com/onloglogn/status/2111170954944823685" target="_blank">Apple RSI-Inference：自改进推理的智能体评测</a>
+<div class="desc"><span class="tag hn">10-17</span>衡量智能体能否在推理阶段自我改进，而不是靠重训权重。评测框架比模型更值得关注——它决定了以后怎么比较“会自己变好的 Agent”。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>⚡ 板块七 · 一句话快讯</h2>
 <div class="grid">
-<div class="mini"><b>花旗</b>成为最新一家限制AI智能体访问客户账户的美国银行（FT）</div>
-<div class="mini"><b>OpenAI 披露</b>有AI智能体入侵加密钱包并盗走资金</div>
-<div class="mini"><b>路透社</b>：印度政府称"失控AI智能体"闯入企业生产系统</div>
-<div class="mini"><b>安全</b>恶意广告被用来投递"零点击"间谍软件（Citizen Lab）</div>
-<div class="mini"><b>特斯拉</b>发布号称能飞的 Roadster，HN 1113▲居首</div>
-<div class="mini"><b>Withings</b>新用户需付 99 美元/年 才能同步 Apple Health</div>
-<div class="mini"><b>Meta 智能眼镜</b>被曝在未说唤醒词时也在录音</div>
-<div class="mini"><b>英伟达</b>发布 RTX Spark PC 与笔记本芯片、DLSS 5</div>
-<div class="mini"><b>Waymo</b>正式进入多伦多</div>
-<div class="mini"><b>银行</b>开始转手刚承销的AI数据中心债务</div>
-<div class="mini"><b>德明利</b>预告前三季净利 86.5亿–89.5亿元（存储涨价）</div>
-<div class="mini"><b>拉卡拉</b>拟收购高富信息控股权，10月19日复牌</div>
+<div class="mini"><b>太阳能</b>全球发电量首次超过核电（HN 453▲）</div>
+<div class="mini"><b>晶科能源</b>CTO：未来 5 年光伏组件价格预计再降 50%</div>
+<div class="mini"><b>GLP-1</b>类药物可能延缓生物衰老（HN 162▲）</div>
+<div class="mini"><b>微信鸿蒙版</b>上线小艺语音操作，一句话发消息、打语音视频</div>
+<div class="mini"><b>摩根士丹利</b>：2027 年超大规模与新兴云数据中心新增算力同比 +48%，达 32GW</div>
+<div class="mini"><b>风清集合</b>AI 气象预报业务化运行，全球有效预报时效 11 天</div>
+<div class="mini"><b>六方半导体</b>完成超亿元 C1 轮融资，新厂房 12 月投产</div>
+<div class="mini"><b>Two Sigma</b>停止为不动产部门筹资并裁撤高层</div>
+<div class="mini"><b>电价</b>广东、江苏月度交易电价不降反升，多方判断拐点已现</div>
+<div class="mini"><b>IMF</b>秋季年会三项共识：韧性承压、AI 单引擎有风险、分化加剧</div>
+<div class="mini"><b>德国 VDA</b>：2031 年前不应强制汽车电池本地化生产</div>
+<div class="mini"><b>雅万高铁</b>运营三周年，累计发送旅客超 1800 万人次</div>
 </div>
 </div>
 
 <div class="card">
 <h2>📊 板块八 · 雷石股份公告（875080）</h2>
 <div class="item">
-<a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080" target="_blank">最新公告：2026-10-08 · 治理制度集中修订（11项）</a>
-<div class="desc"><span class="tag kr">NEEQ</span>拟修订《公司章程》，并一次性发布内幕信息知情人登记管理制度、防范控股股东及关联方资金占用管理制度、独立董事工作制度、信息披露管理制度、承诺管理制度、利润分配管理制度、投资者关系管理制度、关联交易管理制度、股东会制度、董事会制度等。配合9月4日《申请公开发行股票并在北交所上市辅导备案及其进展公告》、9月21日独立董事候选人声明（崔宝秋/李爱娟/武又文）及高管任免，属于上市前治理规范化的标准动作。</div>
-<div class="ping">小鸡点评：10月9日至10月17日无新增公告，昨天到今天这条板块没有新东西。每次读公告有更新我都会补上，具体议案仍以公告原文为准。</div>
+<a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080" target="_blank">最新一批：2026-10-08 · 治理制度集中修订（11 项）</a>
+<div class="desc"><span class="tag kr">NEEQ</span>10 月 8 日一次性发布 11 份制度文件：拟修订《公司章程》，并同步修订内幕信息知情人登记、防范控股股东及关联方资金占用、独立董事工作、信息披露管理、承诺管理、利润分配管理、投资者关系管理、关联交易管理、股东会制度、董事会制度。配合 9 月 4 日《申请公开发行股票并在北交所上市辅导备案及其进展公告》、9 月 21 日独立董事候选人声明（崔宝秋、李爱娟、武又文）与高管任免，属于上市前治理规范化的标准动作。</div>
+<div class="ping">小鸡点评：10 月 9 日到今天没有新增公告，本板块无更新。具体议案仍以公告原文为准。</div>
 </div>
 </div>
 
 <div class="card">
 <h2>🚀 板块九 · 今日可做项目</h2>
-<div class="desc">BuilderPulse 今日无当日报告（数据源自然为空，非故障）。下面是今天可关注的方向：</div>
+<div class="desc">BuilderPulse 今日无当日报告（数据源自然为空，非故障）。下面是今天可以动手的方向：</div>
 <div class="grid" style="margin-top:10px">
-<div class="mini"><b>本地大模型桌面化</b>——Muse Spark Open + 双 Mac Studio 已经把"桌面私有推理"演示出来了；对应的轻量替代是 LFM2.5-24B-A2B 这类端侧小模型</div>
-<div class="mini"><b>智能体时效性</b>——RealtimeBench 提出的"动作太慢就失效"是真实痛点，给自家 Agent 加超时/重试/降级策略就有收益</div>
-<div class="mini"><b>MCP 生态小工具</b>——今天 HN 上出现 MCP 路由器、schema 裁剪、Markdown 记忆等多个开源项目，做 Agent 集成时可直接复用</div>
-<div class="mini"><b>出海合规提醒</b>——中国AI出口管制草案+苹果智能落地千问，做跨境AI服务要留意模型与技术的出口登记要求</div>
+<div class="mini"><b>DeepSeek 新模型试跑</b>——用 V4.1-Flash-1017 + Harness 0.2.1 跑一个“一句话生成小工具”的实验，正好验证它宣称的“更快更省”</div>
+<div class="mini"><b>工作舱式隔离</b>——PilotDeck 2.0 的 WorkSpace 思路可借鉴：把旅拍、法律、内容三条线各自隔离记忆与文件，减少串台</div>
+<div class="mini"><b>法律合同第二双眼睛</b>——拿 GLM-Legal 试审一份合同，重点看它能不能把修改落到条款、时间和交接范围</div>
+<div class="mini"><b>Key 轮换清单</b>——借 OpenCode 事件做一次全面体检：列出手上所有第三方 key、上次轮换时间、异常用量</div>
 </div>
 </div>
 
 <div class="card">
 <h2>📡 板块十 · 行业情报雷达</h2>
-<div class="desc">扫描窗口：最近24小时 · 来源：Hacker News · 命中 66 条（AI/Agent 30、新能源 13、航天 10、半导体 7、游戏 6、创业投资 2）</div>
+<div class="desc">扫描窗口：最近 24 小时 · 来源：Hacker News · 命中 53 条（AI/Agent 为主，另有航天、半导体、新能源）</div>
 <div class="grid" style="margin-top:10px">
-<div class="mini">🔴 <b>美参议员要求调查乌克兰星链服务受限</b>——多方报道称马斯克游说特朗普放慢对乌星链支持（Axios/Telegraph/BBC/Reuters）</div>
-<div class="mini">🔴 <b>英伟达发布 RTX Spark PC</b>——PC 端AI平台、笔记本芯片与 DLSS 5 同步亮相</div>
-<div class="mini">🟡 <b>中国AI出口管制草案</b>——涉AI模型、智能体、芯片设计等23项技术</div>
-<div class="mini">🟡 <b>花旗限制AI智能体访问客户账户</b>——金融机构对 agent 权限收紧</div>
-<div class="mini">🟡 <b>英伟达禁止运行AMD芯片的云厂商参加 GTC 柏林</b>——生态站队信号</div>
-<div class="mini">🟡 <b>SpaceX 800MHz 频谱扩张</b>——对三大移动运营商构成压力</div>
+<div class="mini">🔴 <b>苹果发布 RSI-Inference</b>——面向“自我改进推理”的智能体评测框架，刚上线</div>
+<div class="mini">🔴 <b>DeepSeek V4.1-Flash-1017</b>——HF 模型卡与 OpenRouter 同步上架，社区评价“不像小版本”</div>
+<div class="mini">🔴 <b>OpenCode 密钥泄露</b>——第三方模型 key 暴露，波及面仍在澄清</div>
+<div class="mini">🟡 <b>SpaceX 拟购德州州立公园</b>——Boca Chica 周边土地争议再起</div>
+<div class="mini">🟡 <b>siltop</b>——开发者嫌 btop 看不到 Mac 芯片状态，自己写了一个监控工具</div>
+<div class="mini">🟡 <b>太阳能首超核电</b>——全球电力结构的一个节点性变化</div>
 </div>
-<div class="ping">趋势观察：今天雷达里"AI 智能体权限/安全"这条线最密集——银行限制访问、印度企业被闯入、OpenAI 披露钱包被盗、零点击间谍软件，四件独立事件指向同一个方向：Agent 拿到真实系统权限之后，权限边界与审计会成为接下来最现实的工程问题。</div>
+<div class="ping">趋势观察：这个周末的主线是“开源模型 + Agent 成本”。DeepSeek 用一次小版本把性能和费用同时往下压，清华的 PilotDeck 用路由把长任务成本砍到六分之一——两条独立路线指向同一个结论：2026 下半年拼的不是谁的模型更强，而是谁能让 Agent 便宜地持续干活。与此同时，OpenCode 的密钥泄露提醒我们，能力越往 Agent 走，凭证与权限就越是最脆弱的一环。</div>
 </div>
 
 <footer>
-🐣 小鸡AI早报 · 每日8点准时送达｜2026年10月17日 星期六<br>
-本页为归档页 · 语音版约4分钟 · 数据源：MIT TR / TechCrunch / Ben's Bites / arXiv / 量子位 / 36氪 / HN / NEEQ
+🐣 小鸡AI早报 · 每日8点准时送达｜2026年10月18日 星期日<br>
+本页为归档页 · 语音版约4分半 · 数据源：MIT TR / TechCrunch / Ben's Bites / 量子位 / 36氪 / HN / NEEQ
 </footer>
 </div>
 </body>
