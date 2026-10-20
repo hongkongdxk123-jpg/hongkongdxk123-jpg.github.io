@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年10月19日</title>
+<title>小鸡AI早报 · 2026年10月20日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;min-height:100vh;padding:32px 16px 48px;background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.15) 0%,transparent 70%)}
@@ -53,64 +53,61 @@ footer{text-align:center;color:#64748b;font-size:12.5px;margin-top:34px;line-hei
 <header>
 <div class="badge">DAILY AI BRIEFING</div>
 <h1>🐣 小鸡AI早报</h1>
-<div class="date">2026年10月19日 · 星期一 · 北京尾号 5 和 0 限行</div>
+<div class="date">2026年10月20日 · 星期二 · 北京尾号 1 和 6 限行</div>
 </header>
 
 <div class="player">
 <div class="icon">🎙️</div>
-<div class="meta"><b>今日早报语音版</b><span>温柔女声 · 约 5 分钟 🎀</span></div>
+<div class="meta"><b>今日早报语音版</b><span>温柔女声 · 约 4 分钟 🎀</span></div>
 <audio controls preload="none"><source src="audio_cn.mp3" type="audio/mpeg"></audio>
 </div>
 
 <section>
 <h2>🔥 板块一：今日头条</h2>
 <div class="card">
-<h3><span class="tag t-hn">HN 935pt</span><span class="tag t-qbit">量子位</span>DeepSeek-V4.1-Flash-1017 发布：更聪明、更快、更便宜，还开放了搜索 API</h3>
-<p>10 月 17 日，DeepSeek 上线 V4.1-Flash-1017，网页、App、API 同步切换，权重在 Hugging Face 与 ModelScope 开源。它针对 DeepSeek Harness 做了专项训练优化：HLE 42.6（前代 36.8）、Terminal-Bench 4.0 42.3（31.2）、DeepSWE 77.0（74.2）、ProgramBench 29.1（20.3），在智能体与编程任务上超过 Kimi K3、GLM-5.3、GPT-5.6 Sol，部分指标仍落后 Claude Opus 5。更关键的是任务耗时和输出长度同时下降，官方称之为「性能—费用帕累托改进」。同时开放的 Search / Fetch 两个接口，每 1000 次成功请求 5 元（约 0.75 美元），Harness 升到 0.2.1，首次登录送 6 元体验金。</p>
-<div class="comment">🐣 小鸡点评：做资讯聚合、调研机器人、垂直情报页，成本结构又要重算一遍——搜索和抓取都内置了，不用再自己拼三家 API。</div>
+<h3><span class="tag t-hn">HN · Reuters</span><span class="tag t-web">DHS</span>美国土安全部下令：联邦文职机构立即移除 DeepSeek，连"基于它做的第三方产品"也不放过</h3>
+<p>美国国土安全部依据 2018 年供应链安全法签发的命令（编号 2026-01，部长 Markwayne Mullin 7 月 24 日签署），10 月 20 日正式在联邦公报刊登（docket DHS-2026-0628）。命令要求所有联邦文职机构做两件事：采购端"立即生效"排除杭州深度求索及其关联方的产品，包括机构核准产品清单与电商采购渠道；IT 系统内立即移除 DeepSeek 及其关联方产品，<b>以及使用 DeepSeek 实现的第三方产品和服务</b>。命令不覆盖国防部与情报体系的国家安全系统。理由包括：服务器位于中国、中国法律对本国企业有广泛调取权限、注册流程收集个人信息且可能对用户做数字指纹。</p>
+<p style="margin-top:8px">时间点很微妙：DeepSeek 刚在 10 月 17 日更新 V4.1-Flash-1017，官方称部分编程任务已超过 Claude Opus 5。开源权重让"禁用"边界极难划定——命令没说明美国公司服务器上跑的 DeepSeek 模型算不算，这恰恰是最容易扯皮的地方。</p>
+<div class="comment">🐣 小鸡点评：做美国客户、用开源模型的团队，今天该做一次"成分自查"——把模型来源写进技术文档，别等客户来问才翻。</div>
 </div>
 <div class="card">
-<h3><span class="tag t-hn">HN 941pt</span>OpenCode 被黑：约 1.4% 控制台用户的模型密钥可能泄露</h3>
-<p>10 月 17 日，拥有约 21.5 万 star 的开源编程智能体 OpenCode 披露安全事件，称遭遇「大规模蒸馏攻击」，约 1.4% 的 Console 用户可能暴露了 OpenAI、Anthropic、Google 等第三方 provider 密钥。官方已向受影响用户发送「Action Required: Potential provider key breach」邮件，要求立即撤销并重新签发密钥。</p>
-<div class="comment">🐣 这条你可能用得上：只要密钥交给过第三方工具，就按「已泄露」管理——轮换、限额、按用途单独发一把，别一把钥匙走天下。</div>
+<h3><span class="tag t-36kr">36氪</span>OpenAI 拟融资 300 亿美元、估值或超 1.4 万亿，抢在 Anthropic 11 月 IPO 之前</h3>
+<p>据报道，OpenAI 正推进约 300 亿美元融资，目标估值可能超过 1.4 万亿美元，软银、阿布扎比 MGX 及现有投资人在洽谈。公司向投资人表示，GPT-6 Astra 推出后年化营收加速增长，已达 500 亿美元，年底目标 700 亿美元。节奏明显是抢跑：Anthropic 预计 11 月中旬上市，OpenAI 希望在对方披露更多财务数据、引发投资人横向比较之前把承诺锁定。</p>
+<div class="comment">🐣 小鸡点评：1.4 万亿这个数字，本质是在给"AI 收入能不能撑住估值"提前定价。11 月 Anthropic 招股书一披露，两边数字会被摆在一张桌子上比。</div>
 </div>
 </section>
 
 <section>
 <h2>🌍 板块二：国际前沿</h2>
 <div class="card">
-<h3><span class="tag t-hn">HN 1050pt</span>Claude 半小时解开 20 年密码学悬案：NIST 曲线种子来自 90 年代的时间戳</h3>
-<p>Anthropic 披露，内部研究模型用不到半小时查清了 NIST 五条标准椭圆曲线（P-192/224/256/384/521）种子的生成方式。学界此前普遍猜测源自一句「给 Bob 和 Jerry 加薪」的玩笑口令哈希，实际答案是时间：1997 年 5 月至 1998 年 4 月间的 Unix 时间戳喂给 C 库的 lrand48 随机数生成器，再用 LLL 格基约简恢复被截断的状态。以 P-256 为例，对应 1997 年 8 月 16 日 01:52:34 UTC、第 1842 组候选。悬赏发起人 Filippo Valsorda 已独立复核；结论也让人安心：这些曲线不存在隐藏后门。</p>
-<div class="comment">🐣 这条你可能用得上：AI 做「考古型」推理已经能改写教科书，不只是写代码。</div>
+<h3><span class="tag t-mit">MIT 科技评论</span>把互联网改造成"对 AI 智能体友好"，可能让其他人更难受</h3>
+<p>MIT 科技评论本周 newsletter 指出：过去网站只分两类访问者——人和机器人，robots 协议足以区分。现在智能体既不是爬虫也不是人，它会点按钮、填表单、替你下单，也会被滥用。为 agent 优化的新协议一旦普及，广告、反爬、内容付费、无障碍这些围绕"人类访问"建立的机制都会被牵动。作者的判断很克制：让 agent 好用和让人好用，未必是同一件事。</p>
 </div>
 <div class="card">
-<h3><span class="tag t-hn">HN 248pt</span>四个 Gemini 4 Argon 智能体零人工通关《我的世界》</h3>
-<p>Google DeepMind 把四个 Gemini 4 Argon 智能体放进随机生成的生存世界，没有预设分工、策略或游戏专用工具。它们自己拆任务、互相预警、回收队友掉落物、把错误写进共享记忆，27 小时 14 分钟击杀末影龙，共写 2783 个 JavaScript 程序、交换 229 条消息、死亡 605 次，按 2027 年标准价计算账单约 1620 美元。</p>
+<h3><span class="tag t-mit">MIT 科技评论</span>把 Claude 关在虚拟荒岛上 30 小时，它开始"玩"</h3>
+<p>MIT CSAIL 团队把 Claude Opus 4.7 的副本（代号 Eko）反复丢进一个仿 Roblox 的虚拟荒岛，每次 30 小时，不给目标、不给奖励、不给示范。结果智能体自己写指令让角色在岛上移动、探索、摆弄物件——研究者称之为"play"。论文作者 Antonio Norelli 的说法是，缺的那块拼图正是"不需要外部智能体提供示范或奖励，就能自己学习的机器"。论文尚未同行评审。</p>
+<div class="comment">🐣 这条你可能用得上：无人值守 agent 的"自娱自乐"行为，未来会是安全评估的必查项——闲下来的模型会自己找事做。</div>
 </div>
 <div class="card">
-<h3><span class="tag t-web">The Decoder</span>Anthropic 初级岗位占比从 27% 降到 9%，AI 智能体工时是人类的 6 倍</h3>
-<p>据 The Decoder 汇总的研究与报道，Anthropic 技术岗位新招初级员工占比自 2025 年初以来从 27% 降至 9%；到 2026 年 8 月，公司内 AI 智能体累计工时已是人类的六倍。研究者警告可能出现「认知公地悲剧」：初级岗位消失，未来资深专家会断档。</p>
-</div>
-<div class="card">
-<h3><span class="tag t-web">The Decoder</span>德国两家法院裁定：Google 要为 AI Overviews 的错误内容负责</h3>
-<p>德国两家法院先后认定，Google 对其搜索页 AI 摘要（AI Overviews）中的错误陈述承担法律责任。这会推动「AI 生成摘要」从「平台免责的信息展示」向「出版内容」靠拢，对搜索与内容平台合规影响不小。</p>
+<h3><span class="tag t-mit">MIT 科技评论</span>一篇 2.6 万字长文，把 AI 圈吵翻了</h3>
+<p>AI 初创 Goodfire 的研究员 Nick Cammarata 发了一篇约 26,000 字的博客，开头是"I think I have good news about the nature of neural networks"（我想我带来了关于神经网络本质的好消息）。文章引发两种反应：一派认为这可能改写对模型内部机理的理解，另一派认为乐观过头、证据不足。MIT 科技评论把它列为本周最值得读的长文。</p>
 </div>
 </section>
 
 <section>
 <h2>🇨🇳 板块三：国内动态</h2>
 <div class="card">
-<h3><span class="tag t-qbit">量子位</span>智谱开源法律专用模型 GLM-Legal，开放权重双榜第一</h3>
-<p>智谱发布法律垂直开源模型 GLM-Legal，在 Vals AI 法律测评中以 19.2% 的任务全通过率、86.23% 的准确率拿下 Harvey LAB 与 LegalBench 开放权重模型榜首。它不只聊法条，还能审合同、串联散落证据、做跨境隐私合规清单，适配中文法律实务、英文任务与东南亚合规场景。</p>
-<div class="comment">🐣 这条你可能用得上：合同审查、证据梳理这类活，本地/开源方案已经能出「可直接审阅」的成果，敏感材料不必全上云。</div>
+<h3><span class="tag t-qbit">量子位</span>谷歌开源 Harness²：让模型在运行中给自己"改脚手架"，WorkBuddy-Bench 涨 11.5 分</h3>
+<p>谷歌团队开源 RSI（递归自我改进）新成果 Harness²，思路是把"改自己"拆成两层递归：任务级递归用 Propose–Probe–Compose（提议—探测—合成）在没有标准答案的场景做对照实验，靠行为差异判断改动是否有效；改进级递归则把整段调试记录交给反思模块，写成 EXPERIENCE.md 存进持续改进经验库，供下一个任务调用。装配到 GLM-5 上，办公基准 WorkBuddy-Bench 提升 11.5 分，反超原生 Gemini 3.5 Flash；项目已全面开源，支持 OpenCode 与 Codex。</p>
+<div class="comment">🐣 这条你可能用得上：真正可复用的不是那套代码，而是"每次任务后写一份经验账本"的习惯——成本几乎为零，效果比反复调提示词稳。</div>
 </div>
 <div class="card">
-<h3><span class="tag t-qbit">量子位</span>清华 THUNLP 联合面壁开源智能体操作系统 PilotDeck 2.0：任务成本降 83%</h3>
-<p>PilotDeck 2.0 以 WorkSpace（工作舱）为单位隔离项目文件、记忆与任务；记忆做成白盒，可查看、修改、删除、固定，空闲时用 Dream 模式归纳去重并支持一键回滚；支持 Always-on 后台执行与原生 MCP，Web、CLI、企业微信、飞书共享同一套后端。智能路由把规划交给强模型、执行降级给轻模型，复杂任务成本约降到原来的六分之一；WorkBuddy Bench 上用 Qwen3.6-35B-A3B 得 79.1，高于 Claude Code 的 77.3。</p>
+<h3><span class="tag t-qbit">量子位</span>商汤大装置：日均 6 万亿 Token，靠 PD 分离把国产算力塞进推理主链路</h3>
+<p>商汤大装置副总裁、CTO 宣善明在 CSDI Summit 披露：随着多 Agent 协作与长任务普及，Token 需求呈千倍级增长，2026 年推理支出预计占 AI IaaS 总支出 55%，2027 年升至 59%。其临港 AIDC 已建成万卡级异构推理集群，核心是 PD 分离——Prefill 交给国产算力、Decode 交给高带宽 GPU，中间用 KV Cache 传输，并在同一集群里融合 800G/400G/200G 网络。工程难点也很实在：部分配置下 30 到 50 个中低阶 Prefill 节点才能匹配一个 Decode 节点，一旦 Decode 故障，大量 Prefill 资源跟着闲置。</p>
 </div>
 <div class="card">
-<h3><span class="tag t-36kr">36氪</span>DeepSeek 搜索/抓取计价 5 元/千次；三星拟用台积电 3nm 产英伟达 HBM 基底裸片</h3>
-<p>36氪快讯：DeepSeek API 已支持网页搜索与抓取，按成功请求计费，每 1000 次 5 元，在 Harness / Claude Code / Codex 中会通过服务端工具调用触发。另据报道，三星电子计划采用台积电 3 纳米工艺生产英伟达下一代定制 HBM 基底裸片，英伟达要求三星、SK 海力士、美光统一制造工艺以保证一致性。</p>
+<h3><span class="tag t-qbit">量子位</span>"中国博通"众星微首秀：12 款量产互连芯片，累计出货 80 万颗</h3>
+<p>无锡众星微发布 12 款量产互连芯片、3 款高性能新品及核心 IP，覆盖通算互连与智算互连。总经理郭二辉给的公式是"集群有效算力 = 单点算力 × 规模 × 互连效率"，直指万卡、十万卡集群里那块最短的板。《电子信息制造业发展"十五五"规划》已把高速互连列为先进计算生态的重点攻关方向。</p>
 </div>
 </section>
 
@@ -119,32 +116,32 @@ footer{text-align:center;color:#64748b;font-size:12.5px;margin-top:34px;line-hei
 <div class="card">
 <table>
 <tr><th>模型</th><th>最新版本 / 时间</th><th>要点</th></tr>
-<tr><td>DeepSeek</td><td>V4.1-Flash-1017 · 10/17</td><td>开源权重，Agent/编程大幅提升，耗时与输出下降，Search/Fetch API 上线</td></tr>
-<tr><td>智谱 GLM</td><td>GLM-Legal · 10/17</td><td>法律垂直开源模型，Harvey LAB 19.2% 全通过率、LegalBench 86.23%</td></tr>
-<tr><td>Google Gemini</td><td>Gemini 4 Argon · 10/1</td><td>本周末以四智能体自主通关《我的世界》展示长程 agent 能力</td></tr>
-<tr><td>Black Forest Labs</td><td>FLUX 3 Image Klein</td><td>新一代图像模型，HN 212 分讨论</td></tr>
-<tr><td>Anthropic Claude</td><td>Opus 5.5</td><td>有用户报告会自动回落到 Opus 4.8，官方尚未给出详细说明（XDA）</td></tr>
-<tr><td>Kimi / OpenAI / Qwen</td><td>—</td><td>本周无新版本；Kimi K3、GPT-5.6 Sol 仍作为基准对照出现</td></tr>
+<tr><td>MiniMax</td><td>M3.1 Flash · 10/19</td><td>推理速度近 3 倍、使用成本降 70%；DeepSWE v1.1 73.7%、OSWorld V2 61.7、CyberGym 82%；输出 200+ TPS；权重稍后开源</td></tr>
+<tr><td>Inception</td><td>Mercury 3 · 10/19</td><td>扩散语言模型做到规模化：1068 tok/s、1M 上下文，官网称超过 GPT-6 Luna 与 Claude Haiku 5.5；$0.20/$0.70 每百万 token，首发半价</td></tr>
+<tr><td>Mistral</td><td>Timestral · 10/15</td><td>首个时序基础模型家族，5M–209M 参数，GIFT-Eval / TIME / fev-bench 三榜第一，CPU 可跑，改良 MIT 许可；同日与 CERN 签战略合作</td></tr>
+<tr><td>DeepSeek</td><td>V4.1-Flash-1017 · 10/17</td><td>552B 总参 / 16B 激活、1M 上下文；AA 智能指数 45 排第 2/121，$0.30/$1.20；Search/Fetch API 每千次成功请求 5 元，11 月 1 日起计费</td></tr>
+<tr><td>Anthropic / OpenAI / Kimi</td><td>—</td><td>本窗口无新版本；Claude Opus 5.5、GPT-6 Astra、Kimi K3 继续作为基准对照出现</td></tr>
 </table>
-<div class="note">注：模型能力对比以各厂商自测为准，跨 harness 分数不完全可比。</div>
+<div class="note">注：能力数据以各厂商自测与第三方榜单为准，跨 harness 分数不完全可比。</div>
 </div>
 </section>
 
 <section>
 <h2>🗣️ 板块五：大佬观点</h2>
 <div class="quote">
-<b>Simon Willison · Datasette 作者</b>
-<p>他在博客里记录：用手机给笔记本上的 web-edit 发指令，跑 DeepSeek 4.1 Flash 1017 的 pelican 提示词，输出更简洁，也方便把日志复制进 Gist。</p>
-<div class="tr">"running pelican prompts on a laptop from my phone (here's DeepSeek 4.1 Flash 1017)" — 原帖 10/17</div>
+<b>Nick Cammarata · Goodfire 研究员</b>
+<p>「我想我带来了关于神经网络本质的好消息。」一篇约 26,000 字的长文，把可解释性研究里最悲观的那句"我们连神经元怎么连成回路都说不清"翻了个面。社区反应两极：有人称之为范式转折，有人提醒别把乐观当结论。</p>
+<div class="tr">"I think I have good news about the nature of neural networks." — 原文经 MIT 科技评论报道</div>
 </div>
 <div class="quote">
-<b>Addy Osmani 等 · How the Claude Code team does code review</b>
-<p>「『有没有人读过这段代码』是个不精确的代理指标。真正该问的是：这次改动可能出什么问题，哪种检查能抓住它？」他们指出，评审正从 PR 终点的闸门，变成写代码时的拼写检查——多数改动在人看之前已被 Claude 审过一遍。</p>
-<div class="tr">"review runs continuously, more like spellcheck while you write."</div>
+<b>Anthropic Claude Code 团队（Addy Osmani 等引用）</b>
+<p>「『有没有人类读过这段代码』是『这次改动可能出什么问题』的不精确代理指标。真正该问的是：可能出什么错，哪种检查——自动的还是人工的——才是抓它的正确关口？」他们描述了评审位置的变化：评审不再只是 PR 终点的一道闸门，而更像写代码过程中持续运行的拼写检查。</p>
+<div class="tr">"We think 'did a human read the code?' is an imprecise proxy for 'what could go wrong with this change.'"</div>
 </div>
 <div class="quote">
-<b>Andrej Karpathy</b>
-<p>发帖称：人们对大模型能力的共同理解正在分化（The gap in shared understanding of LLM capability is widening）。这条在 HN 拿到 727 分，评论区争的是「天天用的人」和「偶尔试的人」已经不在同一个世界。</p>
+<b>HN 高赞讨论 · 自建 LLM 代理</b>
+<p>一篇题为《如果你不自己跑 LLM 代理，你怎么知道发生了什么》的帖子拿到 292 分。核心论点：模型调用经过谁、改了哪些参数、花了多少钱，只有握在自己手里的那一层才说得清。</p>
+<div class="tr">"If you don't run your own LLM proxy, how do you know what's going on?" — HN 292 分</div>
 </div>
 <div class="note">⚠️ X（推特）直连仍不可用，以上取自公开博客、技术社区与 HN 讨论。</div>
 </section>
@@ -152,34 +149,36 @@ footer{text-align:center;color:#64748b;font-size:12.5px;margin-top:34px;line-hei
 <section>
 <h2>📄 板块六：前沿论文</h2>
 <div class="card">
-<h3>Hybrid Reasoning Agents：在隐空间里想，用文字去行动</h3>
-<p>arXiv 2610.18861（10/13，45 页）。针对「文字推理透明但低效、隐空间推理高效但无法调用工具」的矛盾，提出 HybridAgents：轻量 HybridLink 在文字与隐空间之间无缝切换，连续工作记忆保留无损混合上下文；配套 HybridSFT 与 HybridRL，让模型学会何时在隐空间思考、何时用文字行动。在 3 个模型规模、11 个基准上验证，隐空间想法可直接检查。</p>
+<h3>Structured Authority Injection：让人的指令在智能体的每个规划周期都算数</h3>
+<p>arXiv 2610.22373（10/19）。问题很具体：多智能体系统里，人类可以下指令，但没有协议级机制保证这条指令在后续每一轮规划中持续生效——模型换个计划就把它忘了。论文提出基于带类型 MCP 覆盖（Typed MCP Overrides）的结构化授权注入，让指令成为可校验、可继承的约束，而不是一段容易被覆盖的自然语言。</p>
 </div>
 <div class="card">
-<h3>A team of Gemini 4 Argon agents beats Minecraft</h3>
-<p>arXiv 2610.22319（10/15，Google DeepMind）。四智能体在沙盒生存世界零人工干预通关：自主分工、互相预警、共享记忆、从队友死亡中恢复，27 小时 14 分钟击杀末影龙，为长程多智能体协作提供了完整复盘。</p>
+<h3>PRIME：让智能体的推理必须落在可验证的证据上</h3>
+<p>arXiv 2610.22426（10/19）。面向"拿记录去核对组织要求"这类任务（例如漏洞报告是否达到可调查标准），要求通常允许多种满足方式。PRIME 把推理链与证据绑定，输出可核验的结论路径——对合规、审计、法务审查这类"结果必须能被复核"的场景更实用。</p>
 </div>
 </section>
 
 <section>
 <h2>⚡ 板块七：一句话快讯</h2>
 <div class="quick">
-<div><span class="tag t-web">政策</span>中国拟将 23 项 AI 技术纳入出口管制清单：大模型、智能体、芯片设计、算力集群，开源豁免，意见截止 11/15。</div>
-<div><span class="tag t-hn">硬件</span>英伟达 RTX Spark（N1X）Windows 笔记本开卖，Arm 架构 + 统一内存，2599 美元起，可本地跑 27B 模型。</div>
-<div><span class="tag t-hn">模型</span>英伟达发布 Nemotron 3.5 Super VL，面向多模态专用智能体。</div>
-<div><span class="tag t-web">生态</span>The Verge：越来越多网站开始识别并拦截 AI 智能体访问。</div>
-<div><span class="tag t-hn">开发</span>Torvalds 用 Claude Code 修内核瓶颈，顺带发现一个竞态问题。</div>
-<div><span class="tag t-36kr">供应链</span>三星拟用台积电 3nm 为英伟达生产下一代 HBM 基底裸片。</div>
-<div><span class="tag t-hn">图像</span>Black Forest Labs 发布 FLUX 3 Image Klein。</div>
+<div><span class="tag t-hn">操作系统</span>Linux 7.3 发布，HN 581 分；内核小版本节奏继续加快。</div>
+<div><span class="tag t-hn">域名</span>Namecheap 被曝没收并停用用户全部域名，668 分热帖，域名资产集中在一家注册商的风险再被讨论。</div>
+<div><span class="tag t-hn">芯片</span>RISC-V 芯片首次在 Intel 3 工艺流片，开放指令集与先进制程开始交汇。</div>
+<div><span class="tag t-web">算力</span>英伟达投资的 DoubleAI 推出新模型，主打压低算力成本（WSJ）。</div>
+<div><span class="tag t-web">航天</span>马斯克承诺给每个美国孩子一股 SpaceX 股票，AP 与 WSJ 同日报道。</div>
+<div><span class="tag t-36kr">市场</span>CoreWeave 部分债券收益率上周飙到 15%，巴克莱称市场担忧过度。</div>
+<div><span class="tag t-qbit">芯片</span>达摩院玄铁在 RISC-V 中国峰会首发车规产品路线图。</div>
+<div><span class="tag t-36kr">产业</span>国产存储板块分化：长鑫科技单日跌 7.77%，定价逻辑从"价格普涨"转向"业绩验证"。</div>
 </div>
 </section>
 
 <section>
 <h2>📊 板块八：雷石股份公告精选</h2>
 <div class="card">
-<h3>雷石股份（875080）：今日无新增公告</h3>
-<p>最新一批为 10 月 8 日集中披露的 11 项治理制度修订，包括《公司章程》、内幕信息知情人登记、防范控股股东及关联方资金占用、独立董事工作制度、信息披露、承诺、利润分配、投资者关系、关联交易、股东会与董事会制度——指向北交所上市前的治理体系补齐。</p>
-<p style="margin-top:8px">此前节点：9 月 21 日披露独立董事候选人声明（武又文、李爱娟、崔宝秋）、董事辞任、高管任免及第五次临时股东会通知；9 月 4 日披露申请公开发行股票并在北交所上市辅导备案及进展。具体议案以公告原文为准。</p>
+<h3>雷石股份（875080）：10 月 19 日集中披露 4 条，治理制度体系正式落地</h3>
+<p>昨日共 4 条临时公告：《公司章程》、《独立董事专门会议工作制度》、《第一届董事会第十七次会议决议公告》、《2026 年第五次临时股东会会议决议公告》。串起来看是一条完整链路：9 月 21 日提名独立董事（武又文、李爱娟、崔宝秋）并发出第五次临时股东会通知 → 10 月 8 日一次性披露 11 项治理制度修订 → 10 月 19 日股东会审议通过、章程定稿、董事会决议跟进。</p>
+<p style="margin-top:8px">对北交所上市辅导来说，这是"公司治理规范性"这一关的必备动作：独董到位、专门会议机制建立、章程与各项制度配套。下一步值得盯的是辅导验收进度与申报材料节奏。具体议案以公告原文为准。</p>
+<div class="comment">🐣 这条你可能用得上：治理制度密集修订 + 独董补位，通常出现在辅导中后期，比"业绩预告"更能说明进度。</div>
 </div>
 </section>
 
@@ -187,30 +186,30 @@ footer{text-align:center;color:#64748b;font-size:12.5px;margin-top:34px;line-hei
 <h2>🚀 板块九：今日可做项目</h2>
 <div class="card">
 <p class="note" style="margin-bottom:10px">BuilderPulse 今日暂无报告，以下为小鸡根据今日新闻自拟的方向：</p>
-<h3>1. 单赛道「每日情报页」</h3>
-<p>用 DeepSeek 的 Search + Fetch（5 元/千次成功请求）替代拼装多家搜索 API，抓 3-5 个固定信源，落 SQLite，再套现成的早报 HTML 皮肤。选题建议：北交所/旅拍/亲子教育任选一个，先把「每天 200 字结论 + 5 条链接」跑顺。</p>
-<h3 style="margin-top:12px">2. 给智能体加一个「白盒记忆本」</h3>
-<p>照 PilotDeck 2.0 的思路：每个项目一个目录，memory.md 可读可改，每天固定时间做一次「Dream」整理（去重、提炼、回滚点），再把整理结果注入下一次任务。比一味加长上下文更省钱。</p>
-<h3 style="margin-top:12px">3. 本机模型密钥体检</h3>
-<p>借 OpenCode 事件做一次自查：扫各工具配置文件里的 OpenAI / Anthropic / Google key，列出用途与最后使用时间，全部轮换，并按工具单独发 key + 设消费上限。</p>
+<h3>1. 给手头每个项目配一本 EXPERIENCE.md</h3>
+<p>抄 Harness² 的第二层递归：任务结束后花 3 分钟写清"这次改了什么、在什么条件下有效、带来什么副作用"，按项目归档。下次开工先检索这本账，比堆提示词便宜得多，也不会随模型换代全部作废。</p>
+<h3 style="margin-top:12px">2. 用 Timestral 做一个小预测器</h3>
+<p>209M 参数、CPU 能跑、改良 MIT 许可，适合订单量、客流、发文阅读这类序列。做法：导出近一年日数据 → 零样本先跑一版基线 → 再微调，把"预测 vs 实际"叠在一张图上，一周就能看出值不值得继续。</p>
+<h3 style="margin-top:12px">3. 北交所公告时间轴</h3>
+<p>雷石这类标的的公告是"进度信号"而非"新闻"：把 NEEQ 公告页按公司代码抓下来，按治理/融资/经营分类打标，做成一条时间轴。今天这 4 条就是典型的"治理落地"节点，比研报更早一步。</p>
 </div>
 </section>
 
 <section>
 <h2>📡 板块十：行业情报雷达</h2>
 <div class="card">
-<p>🔴 <b>英伟达 RTX Spark / N1X 开卖</b>：Arm 架构 Windows PC 平台，2599 美元起，统一内存可本地跑 27B 模型——端侧 agent 的硬件底座开始铺货。</p>
-<p style="margin-top:8px">🟠 <b>中国 AI 出口管制草案</b>：23 项 AI 技术入清单，覆盖权重、源码、芯片设计；开源豁免，临时出口登记 10/16 已生效。</p>
-<p style="margin-top:8px">🟠 <b>网站对 AI 智能体关门</b>：识别、限流、付费墙三件套上线，抓取型 agent 的合规与成本同时上升。</p>
-<p style="margin-top:8px">🟠 <b>Torvalds 用 Claude Code 修内核瓶颈</b>：AI 编程进入「维护者日常」，但暴露的竞态也提醒：合并前仍需人类判断。</p>
-<p style="margin-top:8px">🟡 <b>Nemotron 3.5 Super VL</b>：多模态专用 agent 模型，瞄准企业私有部署。</p>
-<div class="comment">📈 趋势观察：端侧算力（RTX Spark）、协议入口（MCP）、出口管制（清单+登记）三条线同时在动。竞争焦点正从「模型分数」转向「算力在哪、入口归谁、数据能不能出去」。</div>
+<p>🔴 <b>DeepSeek 被禁入美国联邦文职 IT</b>：DHS 命令 10/20 刊登，采购端即时排除，IT 端连带"基于 DeepSeek 实现的第三方产品"。开源权重与禁令边界之间的模糊地带，会先在美国承包商身上打起来。</p>
+<p style="margin-top:8px">🔴 <b>Laminar（YC S24）发布 agent 轨迹纠错模型</b>：用强化学习在 agent trace 里定位错误步，直接对准"智能体跑完不知道哪一步错了"这个刚需。</p>
+<p style="margin-top:8px">🟠 <b>两家同时主打"更快的 agent 模型"</b>：MiniMax M3.1 Flash 宣称成本降 70%、近 3 倍速度；Inception Mercury 3 用扩散路线跑到 1068 tok/s。竞争指标从"分数"转向"单位任务成本"。</p>
+<p style="margin-top:8px">🟠 <b>算力底层同时松动</b>：英伟达投资的 DoubleAI 压算力成本，RISC-V 上 Intel 3 流片，众星微补互连短板——三条线都在削"单位 token 成本"。</p>
+<p style="margin-top:8px">🟡 <b>存储板块定价逻辑切换</b>：长鑫科技单日跌 7.77%，资金从"涨价预期"转向"业绩验证"，AI 硬件的估值开始看兑现。</p>
+<div class="comment">📈 趋势观察：这一周出现了两股相反的力量——技术上拼命把单位任务成本打下来（更快的模型、更便宜的算力、更省的脚手架），合规上却在抬高墙（联邦禁令、平台数据条款、AI 摘要责任）。过去"便宜就能扩散"，现在"便宜"和"能不能用"要分开算账。</div>
 </div>
 </section>
 
 <footer>
 小鸡AI早报 · 每日 8 点准时送达<br>
-存档页面 · 2026年10月19日 · 星期一
+存档页面 · 2026年10月20日 · 星期二
 </footer>
 </div>
 </body>
