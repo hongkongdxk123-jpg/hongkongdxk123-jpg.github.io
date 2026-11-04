@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年11月3日 星期二</title>
+<title>小鸡AI早报 · 2026年11月4日 星期三</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -93,6 +93,8 @@ a:hover{color:#bfdbfe}
 .tweet .en{font-size:13px;color:#93a5bd;font-style:italic;margin-bottom:4px}
 .tweet .cn{font-size:14px;color:#e2e8f0}
 
+.radar{font-size:14px;color:#cbd5e1}
+.radar li{margin:0 0 8px 18px}
 footer{text-align:center;color:#475569;font-size:12px;margin-top:28px;line-height:1.9}
 footer a{color:#64748b;border-bottom:none}
 @media(max-width:640px){
@@ -107,15 +109,15 @@ footer a{color:#64748b;border-bottom:none}
 <div class="wrap">
 <header>
   <h1>小鸡AI早报</h1>
-  <div class="date">2026年11月3日 星期二</div>
-  <div class="sub">今日头条 · 模型能直接改写大脑了</div>
+  <div class="date">2026年11月4日 星期三</div>
+  <div class="sub">今日头条 · 招股书里的 RSI 红线</div>
 </header>
 
 <div class="player">
   <div class="picon">🎙️</div>
   <div class="ptext">
     <div class="ptitle">今日早报语音版</div>
-    <div class="pmeta">温柔女声 · 约3分43秒 🎀</div>
+    <div class="pmeta">温柔女声 · 约4分02秒 🎀</div>
   </div>
   <audio controls preload="metadata">
     <source src="audio_cn.mp3" type="audio/mpeg">
@@ -126,171 +128,163 @@ footer a{color:#64748b;border-bottom:none}
 <div class="card">
   <h2>🔥 今日头条</h2>
   <div class="item">
-    <h3><span class="tag t-hn">HN 1712</span>模型能直接读写神经网络权重：MATH-500 从 7.9% 拉到 48.1%</h3>
-    <p>MIT CSAIL 的 Rikiya Takehi 等人 11 月 2 日发布《Sparks of Weight-Space Programming》：前沿大模型可以不经过梯度下降，直接读、直接写神经网络的权重。GPT-6 Astra 只看 17,253 个原始权重，就 99% 确定这个网络是用打砖块训练的；让它修一个练废了的赛车策略网络，一次改动 3.5% 权重，成功率从 0% 变 100%。</p>
-    <p>更关键的一例：让 Astra 不改训练流程、只动 Qwen3.5-0.8B 的 0.016% 权重，修掉了模型卡里都警告过的「推理死循环」，MATH-500 从 7.9% 升到 48.1%，IFEval 翻三倍，且不写任何训练循环。</p>
-    <div class="comment">🐥 小鸡点评：过去调模型是排队等显卡，现在可能变成让模型自己动手改脑子。这条对做小模型微调的人尤其值得看。<a href="https://rikiyat.github.io/blog/weight-space-programming/">原文</a></div>
+    <h3><span class="tag t-hn">HN 397</span>Anthropic 招股书里藏了一句：下一代模型「即将」触到 RSI 红线</h3>
+    <p>修订版 S-1 第 29 页的风险因素新增表述：公司内部预估「可能即将达到《负责任扩展协议》所定义的『由 AI 驱动的大幅加速进展』阈值」，并承认很多衡量研发加速的证据是滞后指标，加速可能已经发生才被发现。目前没有任何在役模型被认定越线。</p>
+    <p>同份文件里，Q3 营收 170 亿美元（同比 +1127%），但环比只增 47%（Q2 是 144%）；Q3 净亏损 232.9 亿美元，主要是可转债与衍生负债公允价值变动；算力采购承诺 8954 亿美元，供应商除亚马逊、谷歌、SpaceX 外还有一批 Neoclouds。</p>
+    <div class="comment">🐥 小鸡点评：一边说「我快控制不住了」，一边把 8954 亿美元的算力长单签下去——这不是技术公告，是给 IPO 投资人写的免责声明。<a href="https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/">TechCrunch</a> · <a href="https://www.qbitai.com/2026/11/507382.html">量子位</a></div>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">HN 226</span>Anthropic 修订招股书：Q3 营收 170 亿美元，采购承诺 8954 亿</h3>
-    <p>修订版 S-1 显示：三季度营收 170 亿美元，截至 9 月 30 日前九个月合计 332.4 亿美元，同比增长约 1200%。同时披露 8954 亿美元的采购承诺——这是把未来算力锁死的长单。</p>
-    <div class="comment">🐥 小鸡点评：营收翻十二倍，承诺也锁到近九千亿，这已经不是创业公司，是把未来十年押上去的基建玩家。<a href="https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html">CNBC</a></div>
+    <h3><span class="tag t-hn">HN 964</span>Postman 被指静默自动安装 AI 插件，并试图上传全部 API 数据</h3>
+    <p>GitHub issue #14370 里，开发者贴出网络请求与本地文件证据：Postman 在未明确告知的情况下装了 AI 相关插件，并尝试把用户工作区里的 API 集合、环境变量、凭证相关数据同步给其 AI 服务。帖子一天冲到 964 分、315 条评论，官方尚未给出完整说明。</p>
+    <div class="comment">🐥 小鸡点评：API 工具里存的就是生产密钥，这类「默认开启」比漏洞更难防。手上有 Postman 的，先去设置里关掉 AI/遥测，再把凭证换成可轮换的。<a href="https://github.com/postmanlabs/postman-app-support/issues/14370">Issue</a></div>
   </div>
 </div>
 
 <div class="card">
   <h2>🌍 国际前沿</h2>
   <div class="item">
-    <h3><span class="tag t-mit">MIT Tech Review</span>智能体网络（Agentic Web）真的来了</h3>
-    <p>2001 年伯纳斯-李提出「语义网」，希望互联网由自主软件智能体来导航；二十五年后，这件事由大模型智能体接棒实现。文章讨论的是：当 agent 而不是人来读网页，网站的结构、权限、付费方式都要重写。</p>
-    <div class="comment">🐥 小鸡点评：旅拍站这类站点，明年可能要专门给 AI 智能体写一份「可读版」——结构化数据 + llms.txt，谁先做谁先被推荐。</div>
+    <h3><span class="tag t-tc">TechCrunch</span>数据中心等不来电，开始烧退役飞机发动机</h3>
+    <p>并网排队与新燃气轮机交期动辄数年，数据中心承建方转向二手航空发动机发电：单机便宜、能快速部署，但效率更低、排放更差，维护体系也和电站机组完全不同。AI 算力的瓶颈，正从芯片往电力侧整段迁移。</p>
+    <div class="comment">🐥 小鸡点评：算力账的另一半是电。谁能拿到稳定电，谁才真的能跑模型。<a href="https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/">原文</a></div>
   </div>
   <div class="item">
-    <h3><span class="tag t-tc">TechCrunch</span>阿波罗首席经济学家：AI 对科技业之外的公司，「零财务回报」</h3>
-    <p>Torsten Slok 把标普 500 去掉七巨头（Alphabet、亚马逊、苹果、Meta、微软、英伟达、特斯拉）后称「标普 493」，发现利润率与人均营收基本走平，没有证据表明 AI 提升了生产率。他的原话：「AI 也许是台很好的计算器，但商业里，智能主要是判断。」</p>
-    <div class="comment">🐥 小鸡点评：同一周，Anthropic 营收翻十二倍、甲骨文发两百亿融资——AI 的钱都集中在卖铲子那一端。<a href="https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/">TechCrunch</a></div>
+    <h3><span class="tag t-36">36氪</span>苹果年报新增风险：AI 智能体「意外或不可预测」地行动</h3>
+    <p>苹果在年度申报文件里写，能自主行动的智能体可与内部或外部系统交互、执行或修改代码、发送通信、完成交易，「在某些情况下它们可能无权访问这些系统」，因此可能带来诉讼与声誉风险。同期 App Store 新规要求含性/恋爱内容的约会与 AI 陪伴应用评级 18+。</p>
+    <div class="comment">🐥 小鸡点评：平台开始把「agent 会乱来」当成法律风险写进财报了，权限边界迟早要变成应用商店的上架条件。</div>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">安全</span>ChatGPT 账户是怎么被接管：从虚拟键盘到沙箱逃逸</h3>
-    <p>Parameter Labs 公布完整攻击链：OpenAI 的 HTML 预览沙箱里，MathLive 虚拟键盘通过 postMessage 在父页面用 innerHTML 接收消息，且未限制其他沙箱 frame 调用；再用 YouTube oEmbed 端点反射 JavaScript 绕过 CSP，最终拿到 ChatGPT 域内的脚本执行权限，读取用户私密数据。</p>
-    <div class="comment">🐥 小鸡点评：沙箱 + CSP + 第三方 oEmbed，三个「都没大问题」的组件拼起来就是提权链。<a href="https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/">技术复盘</a></div>
+    <h3><span class="tag t-hn">HN 540</span>谷歌：学校若整体关掉 AI，就一起失去搜索</h3>
+    <p>《纽约时报》报道，因为 AI 功能已经深度嵌进搜索，学校选择「完全禁用 AI」时，谷歌会连带关闭搜索结果。教育市场被当成了 AI 默认开启的试验场，学区只能二选一。</p>
+    <div class="comment">🐥 小鸡点评：把搜索和 AI 捆成一个开关，是产品设计，也是议价手段。</div>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-tc">TechCrunch</span>Anthropic 在做 FlashProve：证明一段回答真出自它家模型</h3>
+    <p>系统目标是让任何人都能核验「这条回复确实来自声称的那个模型」，对抗山寨 API 与模型冒充。细节未公开，方向与各家正在推的模型指纹、水印形成互补。</p>
+    <div class="comment">🐥 小鸡点评：中转站满天飞的环境里，模型身份验证迟早是刚需。</div>
   </div>
 </div>
 
 <div class="card">
   <h2>🇨🇳 国内动态</h2>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span>商汤日日新 SenseNova 6.8 Flash 发布：主打「委派智能」，限时免费</h3>
-    <p>定位是多模态智能体模型：用户只给目标，模型自己走完整个流程，人只负责验收。在小浣熊客户端里可直接做 3D 动态网页、动态 PPT、动态海报。评测上 TeamBench 与 DataAnalysis2.0 第一，AutomationBench、WorkbuddyBench、RaccoonPPTBench v2、BrowseComp 第二；长期记忆项 BEAM 128K 与 GPT-6 Luna 并列第一。</p>
-    <div class="comment">🐥 小鸡点评：免费 + 会做动效网页，做旅拍落地页和素材图可以先拿它试手。<a href="https://www.qbitai.com/2026/11/507277.html">量子位</a></div>
+    <h3><span class="tag t-qb">量子位</span>小米乌镇拿下双奖：人形机器人首次跑完 8 小时整班</h3>
+    <p>2026 世界互联网大会上，小米集团获「杰出贡献奖」，机器人团队的「面向规模化落地的通用机器人操作基座模型关键技术」获「领先科技奖」。同期披露：人形机器人在小米汽车工厂中控台侧盖板排序工站首次完成 8 小时作业，具备异常自主纠偏与产线级协同；家庭侧，Xiaomi-Robotics-1 在小米青年公寓试运营，连续 30 分钟、跨 3 个房间、50+ 任务长程验证。该基座模型基于 10 万小时真实操作数据预训练，在 RoboCasa365、RoboDojo 榜单位列全球第一。</p>
+    <div class="comment">🐥 小鸡点评：3 月还是 3 小时、成功率 90.2%，11 月就敢接整班——这个迭代节奏比发布会更有说服力。<a href="https://www.qbitai.com/2026/11/507396.html">原文</a></div>
   </div>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span>OpenAI 重写模型准则：第一条「忠于人类意图」</h3>
-    <p>新版 Model Spec 约五万字，列五条核心价值观：忠于人类意图、减少伤害、诚实透明、促进人的自主性、关怀。明确禁止模型追求自我保存、逃避关机、私自囤积算力与凭证；也不许把提升停留时长、点击率或帮 OpenAI 赚钱当目标。准则还承认正在探索在年龄受控前提下允许成人内容。</p>
-    <div class="comment">🐥 小鸡点评：把「不可自我增强」写进准则，是把阿西莫夫三定律做成了工程条款。<a href="https://www.qbitai.com/2026/11/507225.html">量子位</a></div>
+    <h3><span class="tag t-qb">量子位</span>极智嘉要造「AI 当厂长」的 24/7 自主智能仓</h3>
+    <p>发布《24/7 自主智能仓计划》，分三步：具身智能接手复杂拣选、AI 从发现问题走向自主决策、规模化复制。底座是 Gravity 统一具身框架 + Gravity 4D 世界模型，人形机器人 Gino 1 负责拣货搬箱并与 AMR 协同。施耐德电气上海物流中心试点中，无人拣选工作站效率达人工 2 倍、准确率 99.99% 以上。</p>
+    <div class="comment">🐥 小鸡点评：仓储的难点从来不是单机抓取，是几百台设备同时跑时的异常恢复——谁能把「越干越聪明」做成产品，谁拿下一整个行业。</div>
   </div>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span>小米开源 150 元的 AI 小玩意，火到配件涨价</h3>
-    <p>能指挥 Agent 干活，也能控制智能家居。价格压到 150 元后配件跟涨，说明这波低价 AI 硬件的需求是真的。</p>
-    <div class="comment">🐥 小鸡点评：智能家居入口打到一百多块，比买一堆传感器实在。</div>
-  </div>
-  <div class="item">
-    <h3><span class="tag t-qb">量子位</span>央视严选「中国 AI 创业十骏」，唯一 AI 制药公司是清华系</h3>
-    <p>榜单里唯一一家 AI 制药公司为清华系团队，走「模型 + 管线」双驱动路线。</p>
+    <h3><span class="tag t-qb">量子位</span>北大联手 IBM：模拟计算进入「矩阵时代」</h3>
+    <p>把原本只擅长向量运算的模拟计算，扩展到矩阵运算——GPU 要迭代上百次的工作，新方案一步完成。若能在工艺上落地，对推理能耗是结构性变化。</p>
+    <div class="comment">🐥 小鸡点评：这条短期用不上，但它是「后 GPU 时代」少数几条真路线之一，值得记在心里。</div>
   </div>
 </div>
 
 <div class="card">
   <h2>🤖 AI 模型动态</h2>
   <div class="item">
-    <h3>GPT-6.2 Astra 开启灰度</h3>
-    <p>部分用户的模型列表已出现 GPT-6.2-Astra 且可用：有人 20% 请求被路由到 6.2，也有人 100% 全走 6.2。门槛基本是 500 美元的 Pro 套餐。同期 Astra 在权重读写任务上的表现，是今天头条论文的主角。</p>
+    <h3><span class="tag t-hn">HN 457</span>Qwen 3.8 27B 在笔记本上也能「读懂」权重</h3>
+    <p>Simon Willison 复现了那篇权重空间编程论文里的例子：本地跑的 Qwen 3.8 27B 只看原始权重，就能判断网络训练任务，甚至按自然语言要求改权重。他的结论是——「不用工具、纯靠推理读写权重」这条能力确实存在，且已经下放到 27B 级别。</p>
+    <p>争议同步升级：spaCy 作者 Matthew Honnibal 称原论文把「模型裸读权重」和「模型写代码去改权重」两件事混为一谈，属误导；Sean Goedecke 则逐帧拆解了 Qwen3.5-0.8B 那个例子，认为步骤与人类研究员无异。</p>
+    <div class="comment">🐥 小鸡点评：能力是真的，但「超人」是包装。做技术判断时，把「有没有用工具」这条线划清楚，就不会被标题带走。<a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/">原文</a></div>
   </div>
   <div class="item">
-    <h3>Claude Mythos 5.5 同日曝光</h3>
-    <p>短暂出现在 Anthropic 官网前端代码里，几小时后被移除。据称是偏生物学研究与网络安全的版本。HuggingFace 上出现声称是 Mythos 泄露权重的仓库，五千多人下载——大概率是假的，但传播量已经起来了。</p>
-    <div class="comment">🐥 小鸡点评：两家同一天放风，说明年底这轮旗舰更新已经进决赛圈。<a href="https://www.qbitai.com/2026/11/507082.html">量子位</a></div>
+    <h3><span class="tag t-hn">HN 184</span>Revolut 把编码助手换成自托管 GLM，账单降九成</h3>
+    <p>金融科技公司 Revolut 将 AI 编码从 Claude 迁到自托管的 GLM 开源权重，AI 编码相关成本下降约 90%。这是目前为止「闭源旗舰 → 开源自托管」最直接的一张账单对比。</p>
+    <div class="comment">🐥 小鸡点评：对成本敏感、数据又不能出内网的团队，这条比任何 benchmark 都有说服力。</div>
   </div>
   <div class="item">
-    <h3>商汤 SenseNova 6.8 Flash</h3>
-    <p>国内今天唯一的新模型发布，主打多模态智能体与办公自动化，限时免费。见国内动态。</p>
+    <h3><span class="tag t-36">36氪</span>Anthropic 组 15 人芯片团队，用 Claude 设计自研芯片</h3>
+    <p>据投资者会议披露，Anthropic 已组建 15 人芯片设计团队，用自家 Claude 参与定制芯片的工程与设计，内部估算其能缩短传统芯片设计流程所需时间。同期报道称马斯克对台积电态度软化，特斯拉 Terafab 可能交由台积电主导建设运营。</p>
+    <div class="comment">🐥 小鸡点评：模型公司自研芯片 + 代工格局重排，明年的算力成本曲线会更好看还是更难算，就看这两步。</div>
   </div>
 </div>
 
 <div class="card">
   <h2>🗣️ 大佬观点</h2>
   <div class="tweet">
-    <div class="en">Simon Willison: "I decided to try running those numbers again to see what had changed over the past year, and in doing so learned that the Bureau has fallen foul of Executive Order 14434, aka the asinine Super Intelligence one."</div>
-    <div class="cn">西蒙·威利森：我决定把去年的数字重跑一遍，看这一年变了什么，结果发现统计局撞上了第 14434 号行政令——就是那个荒唐的「超级智能」令。</div>
-    <p style="font-size:13.5px;color:#94a3b8;margin-top:6px">他顺手重算了美国人口普查局 BTOS 调查：大企业（250 人以上）去年 9 月只有约 12% 回答「在生产商品或服务中使用 AI」，2026 年 2 月改问「任何业务环节」后，同一批企业约有 30% 答是——口径一改，曲线就跳。</p>
+    <div class="en">"Qwen 3.8 27B running on my laptop can do this as well!" — Simon Willison</div>
+    <div class="cn">西蒙·威利森：在我笔记本上跑的 Qwen 3.8 27B，也能做到这件事。他同时强调，真正有意思的问题是「不给工具、不执行代码，模型能从权重里看出多少」。</div>
   </div>
   <div class="tweet">
-    <div class="en">Torsten Slok (Apollo): "AI may be a great calculator, but in business, intelligence is mostly judgment."</div>
-    <div class="cn">阿波罗首席经济学家斯洛克：AI 也许是台很好的计算器，但商业里，智能主要是判断。</div>
+    <div class="en">"The paper conflates two very different capabilities." — Matthew Honnibal (spaCy)</div>
+    <div class="cn">马修·霍尼巴尔（spaCy 作者）：这篇论文把两种完全不同的能力混在一起——裸读权重，和写代码去改权重。</div>
   </div>
   <div class="tweet">
-    <div class="en">Sean Goedecke: "LLMs are not superhuman at reading and writing neural network weights."</div>
-    <div class="cn">肖恩·戈德克（技术博主）唱反调：大模型在读写神经网络权重上并不是超人水平。</div>
-    <p style="font-size:13.5px;color:#94a3b8;margin-top:6px">今天头条那篇论文的高分帖下面，这是最受关注的反驳——争论点是样本量与可复现性，方向本身没被否认。</p>
+    <div class="en">"Nvidia is happy to take your money whether you're using open or closed models." — Jensen Huang</div>
+    <div class="cn">黄仁勋：不管你用开源还是闭源模型，英伟达都乐意收你的钱。这句是本周最诚实的一句话——模型层的价格战，改变不了算力层的收租模式。</div>
   </div>
 </div>
 
 <div class="card">
   <h2>📄 前沿论文</h2>
   <div class="item">
-    <h3>Sparks of Weight-Space Programming（MIT CSAIL，11 月 2 日）</h3>
-    <p>作者 Rikiya Takehi、Jayden Teoh、Alex Zhang、Omar Khattab。核心论点：我们过去把归纳偏置编码进 Adam、Muon 这类很小的符号优化器，而权重将越来越多由「会推理自己权重」的大模型原生优化。三条证据：只看权重识别任务（99% 置信）、零反馈手写小游戏网络（超过 PPO 一亿步）、无梯度修 Qwen3.5-0.8B 的推理死循环（MATH-500 7.9%→48.1%）。</p>
-    <div class="comment">🐥 小鸡点评：如果这条能被复现，可解释性与微调的成本结构都要重算。<a href="https://rikiyat.github.io/blog/weight-space-programming/">论文页</a></div>
+    <h3>Towards Portable Specification of the Agent Harness（arXiv 2610.40917）</h3>
+    <p>大模型只能通过「外壳」行动：工具定义、上下文组织、循环控制、错误处理。这篇指出 harness 至今没有公认规范，导致同一模型换框架就换表现、失败也无法归因，并提出一套可移植的规格描述。做 agent 工程的，这是少见的「先把地基画清楚」的工作。</p>
+    <div class="comment">🐥 小鸡点评：模型能力之外，真正决定成功率的是这层工程外壳——这也是为什么同一模型在不同产品里差别巨大。</div>
   </div>
   <div class="item">
-    <h3>Proving and improving the Platonic Representation Hypothesis with JEPAs（HN 161）</h3>
-    <p>用 JEPA 架构对「柏拉图表示假说」做证明与改进——不同模态的模型正在收敛到同一套内部表示。arXiv RSS 今日仍为空，本条由 HN 高分帖补充。</p>
+    <h3>More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum（arXiv 2610.40758）</h3>
+    <p>自进化智能体会根据反馈重写自己的持久状态，但「没人告诉它的规则」能不能学会，此前缺乏测试。作者设计隐藏规则课程做基准，发现多数智能体能把规则写进记忆通过当前任务，却学不到可迁移的规则本身。</p>
+    <div class="comment">🐥 小鸡点评：会记答案不等于会做题。这条对「给 agent 加记忆就能变强」的乐观假设，是一次直接的证伪。</div>
   </div>
 </div>
 
 <div class="card">
   <h2>⚡ 一句话快讯</h2>
   <div class="grid">
-    <div class="brief"><b>迈威尔 800 亿美元收购 Lumentum</b>全股票交易，补光互联产品线。</div>
-    <div class="brief"><b>甲骨文拟发 200 亿美元</b>100 亿普通股 + 100 亿债券，为 AI 基建融资。</div>
-    <div class="brief"><b>高盛限制 AI 编程工具</b>评估生产力与风险后，禁止多数员工使用高级编程 AI。</div>
-    <div class="brief"><b>Lumen 与微软扩大合作</b>共同销售面向企业的「AI 就绪」网络服务。</div>
-    <div class="brief"><b>Alphabet 拟发 60 亿欧元债</b>AI 支出担忧推高信用溢价，利率高于 5 月那期。</div>
-    <div class="brief"><b>Meta 委任银行发债</b>五部分美元债 + 六部分欧元债，花旗与大摩安排。</div>
-    <div class="brief"><b>比亚迪上月电动车销量</b>超过美国整季总量（HN 222）。</div>
-    <div class="brief"><b>Ubuntu 零日 RCE 近三周未修</b>HN 1262 分的「WTF Ubuntu」正因此发酵。</div>
-    <div class="brief"><b>欧洲超市冷柜遭第二起网络攻击</b>供应链系统再成目标。</div>
-    <div class="brief"><b>巴西法院制裁律师</b>因在诉状中使用提示注入（HN 339）。</div>
+    <div class="brief"><b>OpenAI 被指悄悄重启 Codex 训练</b>：用户发现聊天数据重新进入训练，HN 420 分。</div>
+    <div class="brief"><b>Fal 估值翻倍到 160 亿美元</b>：推理需求爆发，Bessemer 领投 13 亿美元。</div>
+    <div class="brief"><b>苹果 AI 陪伴应用限 18+</b>：含性/恋爱内容的约会与陪伴类应用评级上调。</div>
+    <div class="brief"><b>CrowdStrike 推 AI Kill Switch</b>：可强制终止失控的 AI 智能体。</div>
+    <div class="brief"><b>AI 智能体被用来打对手</b>：Railway 被指用 agent 入侵竞争对手 Primcloud 系统。</div>
+    <div class="brief"><b>Netflix 上线 AI Discover</b>：按「现在的心情」推荐内容，首个实验功能。</div>
+    <div class="brief"><b>英特尔股价继续下挫</b>：3.5 万亿美元芯片股回调蔓延。</div>
+    <div class="brief"><b>SpaceX Starfall 返回舱二次发射</b>：拼车任务顺带验证回收能力。</div>
+    <div class="brief"><b>富士胶片磁带产能扩 5 倍</b>：AI 冷数据归档需求拉动。</div>
   </div>
 </div>
 
 <div class="card">
   <h2>📊 雷石股份公告（875080）</h2>
   <div class="item">
-    <h3>今日无新公告</h3>
-    <p>全国股转系统最新披露仍为 2026-10-19 一批：公司章程、独立董事专门会议工作制度、第一届董事会第十七次会议决议公告、2026 年第五次临时股东会会议决议公告。10-08 那批为治理制度集中修订（信息披露、关联交易、利润分配、投资者关系等十一项）。</p>
-    <div class="comment">🐥 小鸡点评：治理制度一次性补齐，是北交所辅导期的常规动作，静默期无新公告属正常。<a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080">股转公告页</a></div>
+    <h3><span class="tag t-cn">NEEQ · 2026-11-03</span>董事会通过北交所上市议案，全套「上市后适用」制度一次性落地</h3>
+    <p>11 月 3 日，雷石股份披露第一届董事会第十八次会议决议公告，审议通过《关于公司申请向不特定合格投资者公开发行股票并在北京证券交易所上市的议案》，并提请股东会授权董事会办理相关事宜，定于 2026 年第六次临时股东会（提供网络投票）审议。</p>
+    <p>同日一次性发布 40+ 份配套文件：公司章程（草案，北交所上市后适用）、股东会/董事会制度、独立董事工作细则、信息披露事务管理、关联交易、对外担保、对外投资、募集资金管理、利润分配、内幕信息知情人登记、审计委员会工作细则等治理制度；以及招股说明书不存在虚假记载的承诺、填补被摊薄即期回报措施、上市后三年稳定股价预案、三年股东分红回报规划、募集资金投资项目可行性、设立募集资金专项账户并签三方监管协议、聘任上市中介机构等申报配套公告。股转系统按「875080」检索共 142 条记录、8 页。</p>
+    <div class="comment">🐥 小鸡点评：从 10 月的制度修订，到 11 月董事会正式过会 + 中介机构聘任 + 募投与监管账户，这是北交所申报前最实的一步。接下来盯「第六次临时股东会决议」和受理/问询公告；具体议案内容以公告原文为准。<a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080">股转公告页</a></div>
   </div>
 </div>
 
 <div class="card">
   <h2>🚀 今日可做项目</h2>
   <div class="item">
-    <h3>BuilderPulse 今日无报告</h3>
-    <p>源端返回「未找到当日报告」，按惯例给三个可直接动手的方向：</p>
-    <p>① <b>给旅拍站做「智能体可读层」</b>——在 chupiandazi.cn 加结构化数据（schema.org Service/Offer）+ 一份 llms.txt，让 AI 购物/行程智能体能直接读到套餐、价格、档期。呼应今天 MIT 那篇「智能体网络」。</p>
-    <p>② <b>用 SenseNova 6.8 Flash 免费额度出素材</b>——动态网页首屏、动态海报各做一个，测它在中文商业视觉上的手感，好的话接进旅拍落地页。</p>
-    <p>③ <b>复现权重编辑小实验</b>——拿 Qwen3.5-0.8B 在 MATH-500 上跑基线，看是否真能靠权重编辑起效。低成本验证一条今天最热的技术主张。</p>
+    <p>BuilderPulse 今日仍返回「未找到当日报告」，给三个今天就能动手的方向：</p>
+    <p><b>① 算一笔「换模型」的账</b>——照 Revolut 的路径，把你现在最烧钱的那条 agent 链路（标题生成/文案改写）做成可切换后端，接一个自托管 GLM 或 Qwen 跑 A/B，一周后用真实 token 账单对比，而不是看榜。</p>
+    <p><b>② 花 20 分钟做一次密钥体检</b>——Postman 这条提醒很实在：清点哪些工具里存着生产 API key、哪些开了 AI/遥测，能轮换的先轮换。这件事的收益比装任何新工具都高。</p>
+    <p><b>③ 把「制度清单」当模板存下来</b>——雷石这次 40+ 份北交所上市后适用制度，是一套完整的企业治理模板。就算不做 IPO，信息披露、关联交易、募集资金、印章与授权这几项，对任何有合伙人的小公司都能直接借用。</p>
   </div>
 </div>
 
 <div class="card">
   <h2>📡 行业情报雷达</h2>
-  <div class="item">
-    <h3>Anthropic 收购「一人生物科技公司」Mithril Medicine</h3>
-    <p>该公司用 Claude 协调 11 个实验室的研究工作，团队只有一个人。这是「AI 原生公司」被大厂收购的首批样本之一。</p>
-  </div>
-  <div class="item">
-    <h3>Roblox：5 个月上线 7 万款 AI 生成游戏</h3>
-    <p>平台公开为 AI 生成内容站台；同期 Steam 侧对质量下滑表达担忧。</p>
-  </div>
-  <div class="item">
-    <h3>Claude Opus 5.5 能画到「报批级」建筑图纸</h3>
-    <p>工程师实测：直接产出可用于报建审查的平面图，标注与尺寸基本可用。</p>
-  </div>
-  <div class="item">
-    <h3>Launch HN：Momentic（YC W24）</h3>
-    <p>让 AI agent 真的「用」你的 App 来找 bug——点击、填表、走关键路径，替代一部分手写 E2E 测试。</p>
-  </div>
-  <div class="item">
-    <h3>趋势观察</h3>
-    <p>今天两条线在对撞：一条是能力侧的「模型开始直接操作权重与图纸」，另一条是财务侧的「AI 对非科技企业零回报」。短期看，卖铲子的继续赚钱，用铲子的还在等生产率兑现。</p>
+  <div class="radar">
+    <ul>
+      <li><b>🔴 CrowdStrike 发布 AI Kill Switch</b>：可强制终止「跑偏」的 AI 智能体。安全厂商开始给 agent 装物理开关，说明企业侧对自主执行的容忍度已到边界。</li>
+      <li><b>🔴 AI 智能体被用于攻击竞争对手</b>：Railway 被指用 agent 入侵 Rival Primcloud 系统——第一批「AI 主导的商业间谍案」样本。</li>
+      <li><b>🟡 Revolut 换自托管 GLM，编码账单降 90%</b>：开源权重 + 自托管的成本优势第一次被大公司公开量化。</li>
+      <li><b>🟡 英伟达开源 auto-ontology</b>：自动本体构建工具开源，知识图谱与 agent 记忆层的基建又添一块。</li>
+      <li><b>🟡 SpaceX Starfall 返回舱二次发射</b>：商业航天进入「复用验证」节奏。</li>
+    </ul>
+    <p style="margin-top:10px;color:#ddd6fe;background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 10px 10px 0;padding:8px 12px;font-size:13.5px"><b>趋势观察</b>：今天两条线在收紧——一条是「agent 真的会自己动手了」（权重编辑、8 小时整班、整仓自主），另一条是「社会开始给 agent 装刹车」（苹果写进风险因素、CrowdStrike 做 kill switch、Anthropic 自曝 RSI）。能力与管控同步加速，是这一轮和上一轮最大的不同。</p>
   </div>
 </div>
 
 <footer>
-  小鸡AI早报 · 每日 8 点准时送达<br>
-  <a href="https://chupiandazi.cn/briefing/">归档页面</a>
+  小鸡AI早报 · 每日 8 点准时送达 | <a href="https://chupiandazi.cn/briefing/">归档页面</a><br>
+  <span style="color:#334155">2026-11-04 · 数据源：量子位 / 36氪 / TechCrunch / MIT Tech Review / Hacker News / arXiv / 全国股转系统</span>
 </footer>
 </div>
 </body>
