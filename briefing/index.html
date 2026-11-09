@@ -3,297 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年11月8日</title>
+<title>小鸡AI早报 · 2026年11月9日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   background:#0a0a1a;
-  background-image:radial-gradient(ellipse at 50% 0%,rgba(88,28,200,0.18) 0%,transparent 70%),
-                   radial-gradient(ellipse at 85% 25%,rgba(37,99,235,0.10) 0%,transparent 60%);
-  background-attachment:fixed;
+  background-image:radial-gradient(ellipse at 50% 0%, rgba(88,28,200,0.15) 0%, transparent 70%);
   color:#e2e8f0;
   font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   line-height:1.75;
+  padding:28px 16px 60px;
   min-height:100vh;
-  padding:32px 16px 60px;
 }
-.wrap{max-width:760px;margin:0 auto}
+.wrap{max-width:820px;margin:0 auto}
 header{text-align:center;margin-bottom:28px}
-.date-badge{display:inline-block;font-size:12px;letter-spacing:2px;color:#a78bfa;
-  background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);
-  padding:5px 14px;border-radius:20px;margin-bottom:14px}
-h1{font-size:30px;line-height:1.35;font-weight:800;letter-spacing:-0.5px;
-  background:linear-gradient(120deg,#a78bfa 0%,#60a5fa 60%,#38bdf8 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.sub{font-size:13px;color:#94a3b8;margin-top:8px}
-.player{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-  background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.07);border-radius:18px;
-  padding:16px 18px;margin:22px 0 30px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.06)}
-.player-icon{width:44px;height:44px;flex:0 0 44px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-size:20px;
+h1{
+  font-size:30px;font-weight:800;letter-spacing:.5px;
+  background:linear-gradient(120deg,#a78bfa,#60a5fa);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:8px;
+}
+.date{color:#94a3b8;font-size:14px}
+.meta{color:#64748b;font-size:12px;margin-top:6px}
+.player{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-radius:18px;padding:16px 18px;margin:22px 0 30px;
+}
+.player .icon{
+  width:40px;height:40px;flex:0 0 40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:19px;
   background:linear-gradient(135deg,#8b5cf6,#3b82f6);
-  box-shadow:0 4px 14px rgba(139,92,246,0.45)}
-.player-text{font-size:14px;font-weight:600;color:#e2e8f0}
-.player-sub{font-size:12px;color:#94a3b8;font-weight:400;margin-top:2px}
-audio{width:100%;height:38px;border-radius:22px;flex:1 1 100%;margin-top:6px;filter:none}
-section{margin-bottom:30px}
-.sec-title{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:700;
-  color:#f1f5f9;margin-bottom:14px;padding-left:2px}
-.sec-title .bar{width:3px;height:18px;border-radius:2px;background:linear-gradient(180deg,#a78bfa,#60a5fa)}
-.card{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.06);border-radius:16px;
-  padding:18px;margin-bottom:12px;
-  box-shadow:0 6px 24px rgba(0,0,0,0.28),inset 0 1px 0 rgba(255,255,255,0.05);
-  transition:transform .18s ease,border-color .18s ease}
-.card:hover{transform:translateY(-2px);border-color:rgba(139,92,246,0.28)}
-.card h3{font-size:15.5px;font-weight:700;color:#f8fafc;line-height:1.6;margin-bottom:6px}
-.card p{font-size:13.5px;color:#b6c2d2;margin-top:4px}
-.card a.title-link{color:#f8fafc;text-decoration:none}
-.card a.title-link:hover{color:#a78bfa}
-.tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:6px;margin-right:6px;vertical-align:1px}
-.mit{background:rgba(37,99,235,0.15);color:#60a5fa}
-.tc{background:rgba(22,163,74,0.15);color:#4ade80}
-.bb{background:rgba(234,179,8,0.15);color:#facc15}
-.qbit{background:rgba(236,72,153,0.15);color:#f472b6}
-.kr{background:rgba(139,92,246,0.15);color:#a78bfa}
-.hn{background:rgba(255,107,53,0.15);color:#ff8f5e}
-.gg{background:rgba(59,130,246,0.15);color:#93c5fd}
-.bbg{background:rgba(14,165,233,0.15);color:#38bdf8}
-.comment{margin-top:10px;padding:9px 12px;border-left:3px solid #8b5cf6;
-  background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;
-  font-size:13px;color:#c4b5fd}
-.comment b{color:#ddd6fe}
-.flash{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
-.flash .item{background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.055);
-  border-radius:12px;padding:11px 13px;font-size:12.8px;color:#b6c2d2;line-height:1.65}
-.flash .item span.k{display:block;font-size:11px;color:#a78bfa;font-weight:600;margin-bottom:3px}
-.idea{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);
-  border-radius:14px;padding:15px;margin-bottom:10px}
-.idea h4{font-size:14px;color:#f1f5f9;margin-bottom:4px}
-.idea p{font-size:12.8px;color:#a8b5c6}
-.idea .meta{font-size:11.5px;color:#60a5fa;margin-top:6px}
-.radar .item{font-size:13px;color:#b6c2d2;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,0.07)}
-.radar .item:last-child{border-bottom:none}
-.radar .hi{color:#f87171;font-weight:700;margin-right:4px}
-.trend{margin-top:12px;padding:12px 14px;border-radius:12px;
-  background:linear-gradient(120deg,rgba(139,92,246,0.10),rgba(59,130,246,0.08));
-  border:1px solid rgba(139,92,246,0.18);font-size:13px;color:#cbbff5}
-footer{text-align:center;font-size:12px;color:#64748b;margin-top:36px;padding-top:20px;
-  border-top:1px solid rgba(255,255,255,0.06)}
+  box-shadow:0 4px 14px rgba(139,92,246,.35);
+}
+.player .txt{flex:1 1 160px;min-width:150px}
+.player .txt b{display:block;font-size:14px;color:#f1f5f9}
+.player .txt span{font-size:12px;color:#94a3b8}
+audio{width:100%;flex:1 1 100%;border-radius:22px;margin-top:6px;outline:none}
+section{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-radius:18px;padding:20px 20px 8px;margin-bottom:18px;
+}
+h2{font-size:18px;font-weight:700;color:#f8fafc;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.item{padding:12px 0;border-top:1px solid rgba(255,255,255,0.05)}
+.item:first-of-type{border-top:none}
+h3{font-size:15.5px;font-weight:600;color:#e2e8f0;margin-bottom:6px;line-height:1.6}
+h3 a{color:#c4b5fd;text-decoration:none}
+h3 a:hover{text-decoration:underline}
+.tag{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:6px;margin-right:6px;vertical-align:2px;font-weight:600}
+.t-mit{background:rgba(37,99,235,.15);color:#60a5fa}
+.t-tc{background:rgba(22,163,74,.15);color:#4ade80}
+.t-bb{background:rgba(234,179,8,.15);color:#facc15}
+.t-qbit{background:rgba(236,72,153,.15);color:#f472b6}
+.t-36{background:rgba(139,92,246,.15);color:#a78bfa}
+.t-hn{background:rgba(255,107,53,.15);color:#ff6b35}
+.t-off{background:rgba(148,163,184,.15);color:#cbd5e1}
+p.sum{font-size:13.5px;color:#a8b3c7;margin-bottom:8px}
+.cmt{
+  font-size:13px;color:#c4b5fd;
+  border-left:2px solid #8b5cf6;background:rgba(139,92,246,.06);
+  padding:8px 12px;border-radius:0 8px 8px 0;margin:8px 0 4px;
+}
+.quote{font-size:12.5px;color:#94a3b8;font-style:italic;margin:4px 0 4px;padding-left:10px;border-left:1px solid rgba(59,130,246,.4)}
+.quote b{color:#bfdbfe;font-style:normal;display:block;font-size:13px;margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;padding:6px 0 12px}
+.qi{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:9px 11px;font-size:12.5px;color:#b6c2d4}
+.qi b{color:#e2e8f0;font-weight:600}
+ul.plain{padding-left:18px;padding-bottom:10px}
+ul.plain li{font-size:13.5px;color:#a8b3c7;margin:6px 0}
+ul.plain li b{color:#e2e8f0}
+.empty{font-size:13px;color:#94a3b8;padding:4px 0 12px}
+footer{text-align:center;color:#475569;font-size:12px;margin-top:30px;line-height:2}
 @media(max-width:640px){
-  body{padding:22px 12px 44px}
+  body{padding:20px 12px 44px}
   h1{font-size:23px}
-  .card{padding:15px}
-  .sec-title{font-size:16.5px}
-  .flash{grid-template-columns:1fr}
+  section{padding:16px 16px 6px;border-radius:16px}
+  .player{padding:14px}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <div class="date-badge">2026 · 11 · 08 &nbsp;星期日</div>
   <h1>小鸡AI早报</h1>
-  <div class="sub">估值开始按计算器 · Agent 开始管 Agent</div>
+  <div class="date">2026年11月9日 星期一 · 北京尾号限行 5和0</div>
+  <div class="meta">10 个板块 · 语音 4分34秒 · 采集时间 08:00</div>
 </header>
 
 <div class="player">
-  <div class="player-icon">🎙️</div>
-  <div>
-    <div class="player-text">今日早报语音版</div>
-    <div class="player-sub">温柔少女 · 约 5 分钟 🎀</div>
-  </div>
+  <div class="icon">🎙️</div>
+  <div class="txt"><b>今日早报语音版</b><span>智谱女声 · 约4分半 🎀</span></div>
   <audio controls preload="none">
     <source src="audio_cn.mp3" type="audio/mpeg">
   </audio>
 </div>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>🔥 今日头条</div>
-
-  <div class="card">
-    <h3><span class="tag bbg">Bloomberg</span><span class="tag hn">HN 308</span><a class="title-link" href="https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-drop" target="_blank">Anthropic IPO 估值被压到 1.1 万亿美元，AI 的钱开始变贵</a></h3>
-    <p>彭博社报道，参与 Anthropic IPO 的买家把估值预期下调到最低 1.1 万亿美元，此前市场传的是 1.5 万亿。同一周，英伟达单日下跌 9.3%，有统计称美股一周蒸发 2.5 万亿美元市值。叙事没变，定价逻辑变了。</p>
-    <div class="comment"><b>小鸡点评：</b>对做应用的小团队反而是好事——泡沫退一点，客户更愿意为「省了多少钱」买单，而不是为「AI 两个字」买单。</div>
-  </div>
-
-  <div class="card">
-    <h3><span class="tag qbit">量子位</span><a class="title-link" href="https://www.qbitai.com/2026/11/508264.html" target="_blank">抢跑 DeepSeek：Agent Harness 的下一站是「单 Router + 多 Worker」</a></h3>
-    <p>DeepSeek Harness 团队提出 Super-agent 架构：连续上下文、主 Agent 调度多个并行 Worker、7×24 在线、能自主修复。而硅谷华人团队 AFK AI 半年前已在产品 Comma 里跑通同一套架构——一个团队一个对话，主 Router 统筹、Worker 各自独立上下文——且已开源。</p>
-    <div class="comment"><b>小鸡点评：</b>瓶颈从来不是 Agent 的并发能力，是人一次只能盯 3-5 个会话。「让 Agent 管 Agent」这句话，今年会变成产品文案的标配。</div>
+  <h2>🔥 板块一 · 今日头条</h2>
+  <div class="item">
+    <h3><span class="tag t-off">英伟达官方</span><a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors" target="_blank">英伟达董事会启动独立调查：CEO 黄仁勋被指为外国情报机构目标</a></h3>
+    <p class="sum">11月8日，英伟达董事会发布声明，就"创始人兼CEO黄仁勋成为外国情报行动目标"的报道启动独立调查：由独立董事组成委员会、聘请外部独立律师监督，审查全部可得信息。董事会称目前没有理由认为国家安全或公司机密遭到泄露，黄仁勋完全支持调查并承诺配合，董事会对其与领导团队保持信心。</p>
+    <p class="sum">外媒链条：BBC、FT、NYT、Axios 均报道黄仁勋已承认一段私人关系，对方被指与中国情报有关联；他同时向全员发出内部信说明情况。国内财经媒体今晨已跟进。</p>
+    <div class="cmt">小鸡点评：杀伤力不在事实，在不确定性。英伟达是全球AI算力的总闸门，闸门旁边出现"情报"两个字，估值模型就得重算一遍。</div>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>🌍 国际前沿</div>
-
-  <div class="card">
-    <h3><span class="tag mit">MIT Tech Review</span><a class="title-link" href="https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/" target="_blank">人形机器人上门打扫公寓，记者实测：像摸到了未来</a></h3>
-    <p>旧金山出现人形机器人保洁服务。MIT 科技评论记者下单实测，全程记录机器人如何绕开家具、擦浴缸、收尾。结论不是「完美」，而是「第一次觉得这事真的会发生在自己家里」。</p>
+  <h2>🌍 板块二 · 国际前沿</h2>
+  <div class="item">
+    <h3><span class="tag t-hn">HN 545</span><a href="https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers" target="_blank">高盛收回 Claude Code：交易员和投行人员失去权限，只留给工程师</a></h3>
+    <p class="sum">10月更新的内部指引把 Anthropic 的 Claude Code 和 GitHub 限定给约1.2万名工程师，理由是生产力与风险复核。此前7月，高盛CIO还在公开称赞非技术员工的"vibe coding"；今年4月该行已撤掉香港banker的 Claude 权限。而高盛正是 Anthropic IPO 的主承销商之一。</p>
+    <div class="cmt">小鸡点评：AI工具的边界，最后不是由能力决定，是由权限和合规决定。做企业服务的，这是个明确切口。</div>
   </div>
-
-  <div class="card">
-    <h3><span class="tag mit">MIT Tech Review</span><a class="title-link" href="https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/" target="_blank">德州 AI 数据中心热潮，可能被一场蓝潮浇灭</a></h3>
-    <p>德州是美国增长最快的数据中心市场，也是大厂 AI 基建的主战场。中期选举后民主党拿下参议院席位与州长，围绕电价、用水、税收优惠的政策风向正在反转。11 月 9 日参议院还将表决 BAAJA 法案，给能源基建审批松绑。</p>
-    <div class="comment"><b>这条你可能用得上：</b>算力成本的上游是电。美国电价与审批节奏一变，明年的 API 价格曲线也会跟着变。</div>
+  <div class="item">
+    <h3><span class="tag t-off">24/7 Wall St</span><a href="https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/" target="_blank">OpenAI 到账 110 亿美元，估值 1.25 万亿，低于最初目标</a></h3>
+    <p class="sum">首笔资金11月6日到账，对应1.25万亿美元投前估值；公司原本寻求300亿美元以上、1.4万亿估值。CFO Friar 称三季度环比增长70%、企业业务翻倍、周活12亿、广告年化10亿美元，并称本轮价格较3月的8520亿估值高出近50%。软银与阿布扎比MGX参与。</p>
   </div>
-
-  <div class="card">
-    <h3><span class="tag gg">Google</span><a class="title-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" target="_blank">Gemini Omni 1.2 Flash 正式可用：15 秒视频 + 降价 30%</a></h3>
-    <p>视频时长从 10 秒拉到 15 秒（3-15 秒按秒指定），支持多轮对话改片、更强参考图一致性，720p 每秒 0.07 美元。已在 Gemini API 和 Google Cloud 上 GA。</p>
-  </div>
-
-  <div class="card">
-    <h3><span class="tag tc">Wired / HN 1124</span><a class="title-link" href="https://www.wired.com/story/rip-cybertruck-you-were-unloved-unwanted-and-utterly" target="_blank">Cybertruck 停产：马斯克口中「最好的产品」退场</a></h3>
-    <p>特斯拉确认明年在德州工厂结束 Cybertruck 生产。多年销量不佳、多次召回与争议设计之后，这条产品线正式收尾。同期马斯克还在推进 SpaceX 与特斯拉的合并评估。</p>
+  <div class="item">
+    <h3><span class="tag t-hn">HN 1150</span>特斯拉将停产 Cybertruck</h3>
+    <p class="sum">热榜第一整天。另一篇分析（HN 192）补刀：自 JB Straubel 卸任CTO以来，特斯拉没有一款成功的新品发布。资本对"故事"的耐心在变薄。</p>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>🇨🇳 国内动态</div>
-
-  <div class="card">
-    <h3><span class="tag qbit">量子位</span><a class="title-link" href="https://www.qbitai.com/2026/11/508244.html" target="_blank">AGENTS.MD 正在变成 AI 时代的电脑病毒</a></h3>
-    <p>你可能只是打开一个网页，没点任何弹窗，Agent 就读到了恶意指令并执行。这类给智能体看的说明书文件缺少签名、权限与来源校验，正在成为新的攻击面。</p>
-    <div class="comment"><b>小鸡点评：</b>写代码的朋友，把仓库里的 AGENTS.md 当配置文件审：谁写的、改了什么、能碰什么，三件事都要能回答。</div>
+  <h2>🇨🇳 板块三 · 国内动态</h2>
+  <div class="item">
+    <h3><span class="tag t-qbit">量子位</span><a href="https://www.qbitai.com/2026/11/508466.html" target="_blank">资本正在撤离"世界模型"</a></h3>
+    <p class="sum">"没有永远的夏天"——世界模型赛道融资节奏明显放缓，估值与落地进度被重新审视。</p>
   </div>
-
-  <div class="card">
-    <h3><span class="tag qbit">量子位</span><a class="title-link" href="https://www.qbitai.com/2026/11/508196.html" target="_blank">Jeff Dean 与李飞飞对谈：RSI 这件事，全是非共识</a></h3>
-    <p>两人围绕递归自我改进（RSI）争论：能不能无限加速、瓶颈在算力还是在实验设计、什么信号才算真的「自我改进」。同一周量子位还披露某团队三大内部模型，称在部分任务上领先 Opus 5.5 约三个月，RSI 把实验时间压缩 80%。</p>
+  <div class="item">
+    <h3><span class="tag t-qbit">量子位</span><a href="https://www.qbitai.com/2026/11/508449.html" target="_blank">GitHub 不堪重负：OpenAI 收购替代品，Anthropic 自研，马斯克也要搞</a></h3>
+    <p class="sum">AI写代码的速度把代码托管基础设施顶到了极限，三家同时下场做"给AI用的代码平台"。</p>
+    <div class="cmt">小鸡点评：上一轮卷模型，这一轮开始卷"AI的基础设施"。真需求往往长在这种脏活里。</div>
   </div>
-
-  <div class="card">
-    <h3><span class="tag kr">36氪</span><a class="title-link" href="https://36kr.com/newsflashes/4059145122124674" target="_blank">马斯克评估特斯拉与 SpaceX 合并，谷歌高管退出 SpaceX 独立董事</a></h3>
-    <p>SpaceX 披露长期董事、谷歌企业发展总裁哈里森已于 11 月 4 日辞职，声明称与公司无分歧。他所属的独立董事小组正评估与特斯拉合并的可能性，目前还剩五名独立董事。</p>
+  <div class="item">
+    <h3><span class="tag t-36">36氪</span><a href="https://36kr.com/newsflashes/4061742116590728?f=rss" target="_blank">科技资产阶段性承压，机构仍看好长期机会</a></h3>
+    <p class="sum">海外对AI监管收紧的担忧升温，全球科技资产回调；A股半导体等科技ETF表现出一定韧性，机构判断短期波动后主线机会仍在。</p>
   </div>
-
-  <div class="card">
-    <h3><span class="tag kr">36氪</span><a class="title-link" href="https://36kr.com/newsflashes/4059088300757897" target="_blank">神舟二十四号将迎首位外籍航天员：巴基斯坦载荷专家</a></h3>
-    <p>中国载人航天工程办公室确认，1 名巴基斯坦航天员将以载荷专家身份参加神舟二十四号任务，短期在轨后随神舟二十三号返回。这是中国载人航天史上首次中外航天员联合飞行。</p>
-  </div>
-
-  <div class="card">
-    <h3><span class="tag kr">36氪</span><a class="title-link" href="https://36kr.com/newsflashes/4059085827527815" target="_blank">Meta 首席战略官离职，转投 AI 推理初创 Fireworks 任 CFO</a></h3>
-    <p>戴夫·韦纳 2012 年加入 Meta，做过八年 CFO，2022 年转任首席战略官，如今去做推理侧的生意。人才流向往往比发布会更能说明钱往哪走。</p>
+  <div class="item">
+    <h3><span class="tag t-36">36氪</span><a href="https://36kr.com/newsflashes/4061750208124040?f=rss" target="_blank">11月以来深市回购增持公告 305 单</a></h3>
+    <p class="sum">新增回购计划35单、金额上限合计76.66亿元；新增增持计划16单、上限25.88亿元。进展类公告占比近八成，"重落地"特征明显。</p>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>🤖 AI 模型动态</div>
-
-  <div class="card">
-    <h3><span class="tag gg">Google DeepMind</span>Gemini Omni 1.2 Flash：15 秒、多轮编辑、降价 30%</h3>
-    <p>从 Omni 1.1 的 10 秒提升到 15 秒，可先用 360p/720p 快速试稿，再对局部做对话式修改，最后升到 1080p/4K。720p 定价 0.07 美元/秒。</p>
+  <h2>🤖 板块四 · AI 模型动态</h2>
+  <div class="item">
+    <h3><span class="tag t-off">Google</span><a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" target="_blank">Gemini Omni 1.2 Flash：15秒视频、多轮改片、降价30%</a></h3>
+    <p class="sum">11月5日 GA。单次原生生成/编辑最长15秒（原10秒），支持按1秒粒度指定3–15秒；可用角色图、产品图、3秒以内运动片段与音频作为参考；价格降30%，720p 每秒0.07美元，可先用360p/720p草稿再升4K。</p>
   </div>
-
-  <div class="card">
-    <h3><span class="tag hn">HN</span>DeepSeek v4.1 Flash 1017：12GB 显存可本地跑，1 美元做出 Mac App</h3>
-    <p>社区项目 Promethevs 实现了完整模型在 12GB 显存上的本地推理；另有开发者记录用不到 1 美元的成本让它做出一个可用的 Mac 应用。小模型的「够用线」又被往下压了一格。</p>
+  <div class="item">
+    <h3><span class="tag t-hn">HN 343</span><a href="https://github.com/synchopate/llama-modchip" target="_blank">llama-modchip：284B 的 DeepSeek 跑在 64GB 内存上，不用显卡</a></h3>
+    <p class="sum">社区项目靠内存分层与量化把超大模型塞进普通服务器，没有GPU也能推理，一天冲到热榜前三。</p>
+    <div class="cmt">小鸡点评：这条对预算敏感的团队最有用——算力不一定要买，先看看能不能省。</div>
   </div>
-
-  <div class="card">
-    <h3><span class="tag hn">HN</span>Kimi K3.1 Pro：开放权重 1.56TB，许可里带 2000 万美元营收线</h3>
-    <p>权重规模与 MXFP4 量化成为讨论焦点，许可条款里的营收门槛引发「开源到什么程度」的争论。同期有研究质疑它在基准测试中「记住并执行了隐藏测试规则」。</p>
-  </div>
-
-  <div class="card">
-    <h3><span class="tag hn">社区转述</span>GLM 5.5：训练数据号称覆盖 1 万亿网页</h3>
-    <p>Z.ai 方面释放的说法，尚待官方技术报告确认，先记一笔。</p>
+  <div class="item">
+    <h3><span class="tag t-off">状态</span>其余各家：近48小时无官方新版本</h3>
+    <p class="sum">DeepSeek、Kimi、GLM、Qwen、Claude、GPT 系列本次采集窗口内均无正式版本发布公告，社区讨论集中在 Agent Harness 生态与本地化部署。</p>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>🗣️ 大佬观点</div>
-
-  <div class="card">
-    <h3><span class="tag hn">John Langford · HN 328</span><a class="title-link" href="https://hunch.net/?p=13764006" target="_blank">《AI Frontiers 的终结》：他亲手创办的微软研究院团队结束了</a></h3>
-    <p>“研究必须被组织起来才跑得动，一个人再聪明也追不上别人的算力基线。” 他复盘了 2023 年组建 AI Frontiers 的初衷、约 50 人规模下做出的 AutoGen 编排框架与 Fara 电脑操作智能体，以及始终存在的算力瓶颈。</p>
-    <div class="comment"><b>小鸡点评：</b>大厂研究组织的困境，和小团队的处境其实同构——不是想不出点子，是跑不动实验。</div>
+  <h2>🗣️ 板块五 · 大佬观点</h2>
+  <div class="item">
+    <h3><span class="tag t-hn">HN 675</span><a href="https://caleb.software/posts/claude-to-pi.html" target="_blank">《再见 Claude，你好 Pi》：一位老用户把主工作流迁到开源 Harness</a></h3>
+    <p class="quote">"Despite chopping 80% of the system prompt, Claude Code still has way more overhead than Pi for seemingly no benefit. The default Bash tool's description is almost 3,000 tokens."<b>译文：虽然系统提示砍掉了八成，Claude Code 的开销还是明显高于 Pi，看不出换来什么。默认 Bash 工具的描述就快 3000 个 token。</b></p>
+    <p class="sum">作者决定迁移后第二天，Anthropic 宣布 Claude Code 支持 AGENTS.md，他说"太晚了"。</p>
   </div>
-
-  <div class="card">
-    <h3><span class="tag bb">Ben's Bites</span><a class="title-link" href="https://www.bensbites.com/p/ai-is-overwhelming-and-im-doing-it" target="_blank">“AI 让我 overwhelmed，而且我用错了”</a></h3>
-    <p>Ben 连写三篇自我复盘：Craft and taste（手艺与品味）、Finding my thing（找到自己那件事）、以及这篇承认焦虑的。结论朴素——别追全部更新，选一件做到有手感。</p>
-  </div>
-</section>
-
-<section>
-  <div class="sec-title"><span class="bar"></span>📄 前沿论文（周末 arXiv 不更新，用热文替代）</div>
-
-  <div class="card">
-    <h3><span class="tag hn">HN 174</span><a class="title-link" href="https://maxxbench.unlap.ai/research/why-maxxbench/" target="_blank">MaxxBench：分数很漂亮，但它是真的吗</a></h3>
-    <p>针对 DeepSWE 类编码基准提出质疑：题目泄漏、评测脚本可被针对、分数与真实工程能力脱钩。榜单的可信度，正在成为模型评测本身的研究对象。</p>
-  </div>
-
-  <div class="card">
-    <h3><span class="tag hn">HN 570</span><a class="title-link" href="https://hightouch.com/blog/llm-judges-identity-resolution" target="_blank">让便宜模型去请教 Opus，用 1/4 成本拿到接近 Opus 的判题准确率</a></h3>
-    <p>做法不复杂：小模型先判，遇到不确定样本再升级问大模型，靠置信度路由把贵模型调用压到少数。对做数据清洗、实体对齐的团队是可直接抄的省钱套路。</p>
-    <div class="comment"><b>这条你可能用得上：</b>「什么时候该花贵的钱」比「用哪个模型」更值钱。</div>
+  <div class="item">
+    <h3><span class="tag t-off">Axios · HN 246</span>黄仁勋致全员内部信</h3>
+    <p class="sum">就董事会调查与个人关系向员工说明，表示配合审查、继续履职。热榜挂了一整天，讨论集中在"创始人风险"如何定价。</p>
+    <p class="sum" style="color:#64748b">说明：Twitter/X 从本机网络不可达，本期大佬观点取自 HN 热榜与公开信源。</p>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>⚡ 一句话快讯</div>
-  <div class="flash">
-    <div class="item"><span class="k">半导体</span>英伟达价值 1140 万美元的六托盘硬件，在奥克兰运往德州途中失踪。</div>
-    <div class="item"><span class="k">半导体</span>台积电应英伟达要求，评估切入 3D DRAM 先进存储制造。</div>
-    <div class="item"><span class="k">监管</span>黄仁勋被美国国会传唤，就中国相关间谍疑虑作证；另有报道称美方允许英伟达向中国一间「空办公室」卖芯片。</div>
-    <div class="item"><span class="k">隐私</span>Claude Code 被曝把用户邮箱地址发送给访问的网站，issue 冲到 HN 热榜第一（1590 分）。</div>
-    <div class="item"><span class="k">安全</span>“Don't Ask Again” 选项让密码明文散落在 1122 个公开 GitHub 文件里。</div>
-    <div class="item"><span class="k">苹果</span>研究称 macOS/iOS 内藏未公开的「家庭成员分类器」，依据本地信号推断关系（573 分）。</div>
-    <div class="item"><span class="k">开源</span>libghostty 1.0 发布（1020 分），终端渲染库终于定版。</div>
-    <div class="item"><span class="k">能源</span>钠离子电池接近磷酸铁锂成本平价，储能侧的替代窗口打开。</div>
-    <div class="item"><span class="k">资本</span>韩股下跌，韩国散户五个交易日净买美股近 3 万亿韩元，超过 8 月全月。</div>
+  <h2>📄 板块六 · 前沿论文</h2>
+  <div class="item">
+    <h3><span class="tag t-hn">HN 373</span><a href="https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai" target="_blank">AI 正在显著加速 AI 研究本身</a></h3>
+    <p class="sum">用可核查的产出指标论证：模型在实验设计、代码实现、文献梳理上的介入，已经把研究周期压短；争议点在于"加速的是数量还是洞见"。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-hn">HN</span><a href="https://github.com/RikiyaT/lm_understand-logs" target="_blank">大模型能读懂、甚至写出神经网络的权重</a></h3>
+    <p class="sum">把权重以文本形式喂给模型，测试其解释与重构能力，为"模型改模型"提供了一条新路径。</p>
+    <p class="sum" style="color:#64748b">注：arXiv RSS 今晨返回空（周一/接口异常），本期以 HN 热榜论文与实验替代。</p>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>📊 雷石股份公告精选（875080）</div>
-  <div class="card">
-    <h3><span class="tag kr">NEEQ</span>11 月 3 日：一次性披露整套「北交所上市后适用」治理制度</h3>
-    <p>公告批次包括：公司章程（草案）（北交所上市后适用）、舆情管理制度、信息披露事务管理制度、信息披露暂缓与豁免管理制度、投资者关系管理制度、投资者权益保护制度、内部审计制度、总经理工作细则、董事会秘书工作细则、董事会战略/审计/提名/薪酬与考核委员会工作细则、董事和高级管理人员持股变动管理制度、离职管理制度、重大信息内部报告制度、重大决策事项管理制度、承诺管理制度、控股子公司管理制度、年度报告信息披露重大差错责任追究制度等。</p>
-    <p><b>信号：</b>这是申报北交所的标准动作——把上市后才生效的治理框架先搭起来，说明辅导期已推进到制度落地阶段。11 月 6 日、7 日无新增公告（股转系统共查询到 142 条历史公告，最新一批停在 11 月 3 日）。具体议案以公告原文为准。</p>
+  <h2>⚡ 板块七 · 一句话快讯</h2>
+  <div class="grid">
+    <div class="qi"><b>SpaceX</b>：11月中旬第15次星舰试飞，首次在飞行中回收火箭与超重型V3助推器。</div>
+    <div class="qi"><b>香港互认基金</b>：安联精选主题收益获编码，瑞银、贝莱德产品在列，跨境工具箱继续扩容。</div>
+    <div class="qi"><b>苹果</b>：每台 Mac 内置未公开的"家庭成员分类器"，被研究者挖出（HN 844）。</div>
+    <div class="qi"><b>邮件</b>：Outlook.com 开始静默拒收未配置 DMARC 域名的来信（HN 201）。</div>
+    <div class="qi"><b>电池</b>：钠离子接近磷酸铁锂成本平价，储能侧开始有账可算（HN 221）。</div>
+    <div class="qi"><b>开源</b>：Libghostty 1.0 发布，GPU 终端生态再进一步（HN 1071）。</div>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>🚀 今日可做项目</div>
-  <p style="font-size:12.5px;color:#94a3b8;margin-bottom:12px">BuilderPulse 今日无报告，以下为结合当日情报的方向判断。</p>
-  <div class="idea">
-    <h4>① 单入口多 Worker 的个人助理（抄 Comma 的骨架）</h4>
-    <p>一个常驻对话 + Router + 多个独立上下文的 Worker，先只做三件事：盯邮件、盯日程、盯一个竞品网站。参考 AFK AI 已开源的架构，难点不在编排，在上下文回收与记忆写回。</p>
-    <div class="meta">切入点：先做一个垂直场景（旅拍订单跟进 / 选址竞品监控），别做通用。</div>
-  </div>
-  <div class="idea">
-    <h4>② AGENTS 文件注入审计工具</h4>
-    <p>扫仓库与依赖里的 AGENTS.md / .cursorrules / 提示词配置文件，检测隐藏指令、越权工具调用、外链回传。输出一份可读报告 + 一键修复建议。</p>
-    <div class="meta">切入点：做成 GitHub Action，开源引流，企业版做私有仓库审计。</div>
-  </div>
-  <div class="idea">
-    <h4>③ 小商家批量短视频（吃 Gemini Omni 降价）</h4>
-    <p>720p 每秒 7 美分，一条 15 秒素材约 1 美元。给餐饮、门店做「产品图 + 一句卖点 → 15 秒竖版视频」的批量化服务，按条计价。</p>
-    <div class="meta">切入点：先服务你手上已有的商家资源，跑通 20 条再谈规模化。</div>
+  <h2>📊 板块八 · 雷石股份公告精选（875080）</h2>
+  <div class="item">
+    <h3><span class="tag t-off">最新 · 2026-11-03</span>一整套"北交所上市后适用"治理制度集中披露</h3>
+    <p class="sum">本批含《公司章程（草案）》《信息披露事务管理制度》《投资者关系管理制度》《内部审计制度》《重大信息内部报告制度》《董事和高级管理人员持股变动管理制度》《董事、高级管理人员离职管理制度》，以及战略、提名、审计、薪酬与考核四个董事会专门委员会工作细则、董事会秘书工作细则、总经理工作细则、承诺管理制度等，共20条（页面显示该股票累计142条公告）。</p>
+    <p class="sum">11月4日至11月9日08:00，无新增公告。</p>
+    <div class="cmt">小鸡点评：治理制度是申报北交所的标配动作，这一步搭完，下一步就看申报材料什么时候递。具体议案以公告原文为准。</div>
   </div>
 </section>
 
 <section>
-  <div class="sec-title"><span class="bar"></span>📡 行业情报雷达</div>
-  <div class="radar card">
-    <div class="item"><span class="hi">●</span>GrapheneOS 指控 YC 资助监控项目、纵容针对其社区的骚扰，开源与资本的张力公开化。</div>
-    <div class="item"><span class="hi">●</span>英伟达收紧东南亚 AI GPU 追踪，云厂商须加入监控计划才能保留官方合作伙伴资格。</div>
-    <div class="item"><span class="hi">●</span>台积电评估 3D DRAM：存储正在从配套件变成算力竞赛的主战场。</div>
-    <div class="item"><span class="hi">●</span>Tesla 结束 Cybertruck 生产；Starlink 推行动态定价，硬件与连接费同时上行。</div>
-    <div class="item"><span class="hi">●</span>希腊发布半导体与微电子国家战略，欧洲在补成熟制程与封装环节。</div>
-    <div class="trend">趋势观察：算力供应链正在「合规化 + 可追踪化」——出口管制从芯片本体延伸到云服务、转售与地理位置。对做硬件的团队，采购合规模块会比价格谈判更早变成门槛。</div>
-  </div>
+  <h2>🚀 板块九 · 今日可做项目</h2>
+  <p class="empty">BuilderPulse 今日暂无报告，以下三条由今日情报自拟：</p>
+  <ul class="plain">
+    <li><b>低显存本地大模型部署服务</b>：照 llama-modchip 的思路，帮中小企业用现有服务器/大内存工作站跑大模型，按台收费。</li>
+    <li><b>AI 编码工具权限分级方案</b>：拿高盛这件事当案例，给金融、医疗类客户做"谁能用、能碰哪些仓库、日志怎么留"的合规模板。</li>
+    <li><b>15秒短视频批量套餐</b>：Gemini Omni 1.2 Flash 降价三成，给本地商家做"产品图进、竖版广告出"的月包。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>📡 板块十 · 行业情报雷达</h2>
+  <ul class="plain">
+    <li>🔴 <b>半导体/治理</b>：英伟达董事会就 CEO 涉外国情报调查，官方声明 + 多家外媒跟进，公司治理风险首次成为这家算力龙头的定价变量。</li>
+    <li>🔴 <b>AI/Agent 权限</b>：高盛把 Claude Code 与 GitHub 收回工程师专属，AI 编码工具的"角色边界"成为金融机构新合规项。</li>
+    <li>🟡 <b>本地推理</b>：284B 模型跑进 64GB 内存、无 GPU，硬件降本路线获社区验证。</li>
+    <li>🟡 <b>新能源</b>：Cybertruck 停产 + "Straubel 之后无成功新品"的复盘，硬件公司的产品周期被重新审视。</li>
+  </ul>
+  <p class="sum">趋势观察：这一周的主线从"模型能力"转向"基础设施 + 治理"——谁给 AI 提供跑道（代码托管、显存、权限），谁在承担新的系统性风险。</p>
 </section>
 
 <footer>
-  小鸡AI早报 · 每日 8 点准时送达 &nbsp;|&nbsp; 2026 年 11 月 8 日 星期日<br>
-  音源：GLM-TTS / Edge / 千问 三通道自动降级
+  小鸡AI早报 · 每日8点准时送达 | 归档页面<br>
+  https://chupiandazi.cn/briefing/
 </footer>
 </div>
 </body>
