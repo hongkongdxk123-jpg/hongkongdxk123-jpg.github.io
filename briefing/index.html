@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年11月21日</title>
+<title>小鸡AI早报 · 2026年11月22日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -71,175 +71,169 @@ footer a{color:#818cf8;text-decoration:none}
 <div class="wrap">
 <header>
   <h1>小鸡 AI 早报</h1>
-  <div class="date">2026年11月21日 · 星期六</div>
-  <div class="sub">十个板块 · Anthropic 募资935亿却下跌 · Claude 称证明黎曼猜想 · 英伟达SEC查会计 · 华为开源具身世界模型</div>
+  <div class="date">2026年11月22日 · 星期日</div>
+  <div class="sub">十个板块 · 黎曼猜想被宣称攻破 · Inkling 2 Mini 笔记本可跑 · 纳指抹平全年涨幅 · AI 设计的 CPU 跑出 4.59 倍能效</div>
 </header>
 
 <div class="player">
   <div class="icon">🎙️</div>
-  <div class="meta"><b>今日早报语音版</b><span>温柔少女 · 约5分45秒 🎀</span></div>
+  <div class="meta"><b>今日早报语音版</b><span>温柔少女 · 约5分50秒 🎀</span></div>
   <audio controls preload="metadata"><source src="audio_cn.mp3" type="audio/mpeg"></audio>
 </div>
 
 <section>
   <h2>🔥 板块一 · 今日头条</h2>
   <div class="item">
-    <h3><span class="tag t-36">36氪</span><span class="tag t-ls">卫报</span><a href="https://36kr.com/newsflashes/4078090882601862?f=rss" target="_blank" rel="noopener">Anthropic 上市募资约 935 亿美元创纪录，股价却转头下跌，全球 AI 股被抛售</a></h3>
-    <p>Anthropic 公告 IPO 已结束、承销商全额行使超额配售权，募资总额约 935 亿美元，是史上最大一笔上市融资。但二级市场没给面子：11月20日盘前 Anthropic 跌超 9%，纳指收跌 4.72%（-1126 点）至 22753，标普 -3.13%，道指 -1.43%，VIX 单日涨 21.5%，全球股市同步下挫。卫报的标题更直接：创纪录的 IPO 没能止住 AI 抛售。</p>
-    <div class="bubble">🐤 小鸡点评：昨天开盘涨 34%、今天盘前跌 9%，两天就把“稀缺标的”的溢价测试完了。真正决定后面走势的不是募资规模，而是那近 9000 亿美元的算力承诺怎么付账——融资只是首付。</div>
+    <h3><span class="tag t-hn">HN</span><span class="tag t-qb">量子位</span><a href="https://alpo.ge/remark.pdf" target="_blank" rel="noopener">黎曼猜想被宣称证明：数学家称让 Claude 跑出 1740 万行 Lean 代码</a></h3>
+    <p>Levent Alpöge 声称借助 Anthropic 模型给出了广义黎曼猜想的证明，Lean 代码规模 1740 万行（HN 2856 分）；另一位数学家 Alessandro Masullo 同日独立宣称（2380 分）。Terry Tao 当天发文讨论 Navier–Stokes 与 GRH 的关联，Lean 社区已上线验证页面（780 分）。量子位同步报道 34 岁数学家的 Lean 证明。</p>
+    <div class="bubble">🐤 小鸡点评：真正的看点不是“AI 证了黎曼猜想”，而是数学界的验收流程第一次要过 Lean 编译器这一关。吵得再凶，代码是能跑给人看的，这比表态有用。</div>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">HN 2286pts</span><a href="https://alpo.ge/remark.pdf" target="_blank" rel="noopener">Anthropic 数学家称 Claude 帮他证明了黎曼猜想：1740 万行 Lean 代码</a></h3>
-    <p>Levent Alpöge（普林斯顿博士，Manjul Bhargava 门下）发布 4 页说明，称与 Claude 合作发现黎曼猜想证明，方法还可推到广义黎曼猜想（GRH），形式化产物是 14 个压缩包、共 1740 万行 Lean 代码。同日他与 Tristan Buckmaster 另发 79 页论文，称无外力三维 Navier-Stokes 方程会有限时间爆破。两件事都未过同行评审，Navier-Stokes 的数值证书仍缺。</p>
-    <div class="bubble">🐤 小鸡点评：这类消息先别转“AI 解开百年猜想”。可核验的部分是 Lean 形式化能被机器检查，不可核验的是证明想法本身。Scott Aaronson 提醒 Lean 内核也可能有 bug——先等数学界拆包，比抢首发稳。</div>
+    <h3><span class="tag t-hn">HN</span><a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener">Thinking Machines 发布 Inkling 2 Mini：26.4B 的循环Transformer，笔记本能跑</a></h3>
+    <p>MoE 结构，总参 26.4B、激活 3.4B，中间层每个 token 跑三遍（looped）。&lt;100B 开源模型里 DeepSWE v1.1 拿到 48.2%、Vals Index v2.2 46.5%，权重原生 NVFP4，社区实测 5.4GB 内存即可运行（322 分）。HN 首页 1365 分。</p>
   </div>
 </section>
 
 <section>
   <h2>🌍 板块二 · 国际前沿</h2>
   <div class="item">
-    <h3><span class="tag t-ls">路透/Yahoo</span><a href="https://finance.yahoo.com/markets/article/nvidia-stock-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194945274.html" target="_blank" rel="noopener">英伟达被 SEC 查会计，黄仁勋已辞职，股价单日 -12%、市值蒸发 2.5 万亿美元</a></h3>
-    <p>11月12日，英伟达董事会宣布黄仁勋辞去总裁、CEO 及董事职务，CFO 科莱特·克雷斯（Colette Kress）出任临时 CEO；起因是 11月8日他承认婚外情、随后牵出“中国间谍”风波与国家安全审查。11月20日路透报道 SEC 正调查其会计问题，当天股价跌 12.26%，自高点市值蒸发约 2.5 万亿美元，估值跌破 Alphabet，退居第三。</p>
+    <h3><span class="tag t-ls">卫报</span><a href="https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off" target="_blank" rel="noopener">纳指抹平 2026 全年涨幅，Anthropic 上市第二天跌 9%</a></h3>
+    <p>AI 板块一周蒸发约 4 万亿美元市值。Anthropic 股价从首日涨 17% 回落到 88.30 美元，逼近 83 美元发行价；英伟达跌 14%，美光跌 12%，台股单周跌 6.7% 创 4 月以来新低。市场质疑的是 AI 基建投入的回报周期。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-mit">MIT</span><a href="https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/" target="_blank" rel="noopener">METR 更新“最被误读的曲线”：能力仍指数增长，判断力明显落后于编程</a></h3>
-    <p>AI 评测非营利机构 METR 更新其“时间地平线”图：部分能力仍沿指数轨迹上升，但需要判断力的任务上，模型表现不如写代码那么强。这条曲线常被拿来做“AI 何时取代人类工作”的推算，更新后的结论比过去更谨慎。</p>
+    <h3><span class="tag t-hn">HN</span><span class="tag t-ls">路透</span><a href="https://www.marketscreener.com/news/us-sec-s-nvidia-probe-is-examining-potential-accounting-issues-sources-say-ce785ed3dd8ff627" target="_blank" rel="noopener">SEC 对英伟达的调查转向会计问题</a></h3>
+    <p>消息人士称调查重点已从出口合规扩展到收入与关联交易的会计处理（300 分）。叠加《经济学人》讨论黄仁勋影响力下滑，半导体板块情绪承压。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">HN 612pts</span><a href="https://architectlabs.com/blog/frostbite" target="_blank" rel="noopener">Frostbite：AI 端到端发现、设计并验证的全新 CPU 架构，能效 4.59 倍</a></h3>
-    <p>Architect Labs 用 AI 系统自主迭代编译器、指令集、微架构、RTL、验证到最终 GDS，基于 interaction nets 做出通用 CPU「Frostbite」。在 25 项负载（其中 15 项直到最终评估才给出）上，性能/瓦是现成双发射顺序超标量核心的 4.59 倍，并发现了人类不易想到的硬件原语。</p>
-    <div class="bubble">🐤 小鸡点评：这条比跑分更有分量——AI 第一次把“新架构”这种最依赖人类直觉的活儿做完整了。但它只证明了能效，没证明生态：指令集没人用，就没有编译器、没有软件。</div>
+    <h3><span class="tag t-hn">HN</span><a href="https://architectlabs.com/blog/frostbite" target="_blank" rel="noopener">Frostbite：一套由 AI 端到端设计并验证的全新 CPU 架构</a></h3>
+    <p>Architect Labs 基于 interaction nets 从 ISA、微架构、RTL 到 GDS 全部由 AI 迭代完成，25 个工作负载（15 个留到最后评测）上每瓦性能达到现代超流水线核的 4.59 倍。这是“AI 造芯片”第一次给出可验证的架构级增量，不只是实现优化。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-ls">Anthropic</span><a href="https://www.anthropic.com/research/claude-black-hole-physics" target="_blank" rel="noopener">Claude 解决两个黑洞物理开放问题，其中一个是 20 多年前没算完的</a></h3>
-    <p>Anthropic 研究博客：Claude 完成了物理学家 20 多年前搭好、始终未解的一个计算，证明黑洞形成时的相变在全息边界上依然存在；另一个结果是给出检验量子引力候选理论的某项技术的最优极限。Claude 的做法是“跑一个由自己副本组成的小研究组”，几乎独立算出每一块并与已知结果交叉验证。</p>
+    <h3><span class="tag t-hn">HN</span><a href="https://signal.org/blog/protecting-your-privacy/" target="_blank" rel="noopener">Signal 呼吁限制移动系统上的 AI Agent 抓取数据</a></h3>
+    <p>Signal 官方博客主张给系统级 agent 划权限边界，禁止其读屏、读通知和跨应用采集（570 分）。移动端 agent 的隐私边界开始被正式摆上桌。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-hn">HN</span><a href="https://github.com/openssl/openssl/pull/33652" target="_blank" rel="noopener">OpenSSL 曝 CVSS 9.8 溢出漏洞，GnuPG 同时曝 RCE</a></h3>
+    <p>OpenSSL 的 EVP_EncodeBlock() 缓冲区溢出（CVE-2026-121481，368 分），GnuPG 邮件列表公布远程代码执行（224 分）。周末适合把这两个补丁过一遍。</p>
   </div>
 </section>
 
 <section>
   <h2>🇨🇳 板块三 · 国内动态</h2>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511610.html" target="_blank" rel="noopener">华为云昇腾原生具身世界模型双榜第一，11月30日开源权重+后训练代码</a></h3>
-    <p>CloudRobo-WM1.2 在 RoboTwin 2.0 与 LIBERO-Pro 2.0 分别取得 88.98% 和 81.73%，双双第一；第三方真机测试中，5 种本体、13 项操作任务的平均成功率比第二名高 23 个百分点，插头滑脱后能依据新观测重试。关键在“昇腾原生”：架构、训练框架、核心算子、推理部署都围绕昇腾优化，而非把模型搬上去跑通。</p>
-    <div class="bubble">🐤 小鸡点评：11月30日连后训练代码一起放出，等于把“教机器人干新活”的门槛砍到只剩数据。做具身应用的团队，这周就该把 RoboTwin 环境备好。</div>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511779.html" target="_blank" rel="noopener">GPT-6.2 Astra 具身任务成功率翻倍：19.6% → 41.2%</a></h3>
+    <p>XDOF 实测 16 项双臂操作任务，综合成功率较两个月前的 GPT-6 Astra 提升 21.6 个百分点；“给绳子打结”“展开 T 恤”两项此前无模型通关，这次拿下。夹面包任务从 10% 提到 90%。Greg Brockman 转发点赞。</p>
+    <div class="bubble">🐤 小鸡点评：41.2% 听起来不高，但这是十六项共享任务的等权平均——从“几乎不会”到“会一半”，是具身落地最陡的那段坡。</div>
   </div>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511426.html" target="_blank" rel="noopener">华为云把具身智能做成共享底座：算力轮转、平台接数据到真机</a></h3>
-    <p>上海“行业AI梦工厂·具身智能高层论坛”上，华为云给出一个数字：Agent 任务的 token 消耗是普通问答的 100 至 1000 倍，具身训练再加一个量级；思路是一批卡轮流服务多家公司，CloudRobo 平台把数据、训练、仿真、真机部署串起来，并与福建小状智能合作做高校实训。</p>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511570.html" target="_blank" rel="noopener">DeepSeek V1 作者 Tony Zhang 创业：Linger 开源本地 Personal Agent</a></h3>
+    <p>12GB 显卡即可本地跑 125B 模型，模型与 harness 一起优化，不按 token 付费、数据不出本机。定位与 DS-Bot 不同：后者管 Bot 之间的协作，Linger 管人与自己 agent、agent 与本地环境。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-36">36氪</span><a href="https://36kr.com/newsflashes/4078082302481282?f=rss" target="_blank" rel="noopener">PCB 缺货蔓延到成品板交付，A 股 PCB 概念涨停潮</a></h3>
-    <p>全球电子协会 11月18日发供应链警报：PCB 缺货从局部环节蔓延到成品板交付，汽车、工业、医疗、国防、通信客户交期普遍拉长。11月20日超声电子、澳弘电子、中京电子、光华科技、满坤科技等涨停；多家公司回应下游景气，高端 PCB（AI 服务器相关）供需紧平衡。</p>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511757.html" target="_blank" rel="noopener">姚顺雨与混元团队 Reddit AMA：Hy 小模型已进路线图</a></h3>
+    <p>围绕 Hy4 与 Hy4 flash 的问答，透露面向 24GB 显存的模型也在计划中，并分享了不少训练细节。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511582.html" target="_blank" rel="noopener">Agnes Harness 开源：双系统决策+双层自进化，Agent 效率最高 14 倍、成本降至 1/27</a></h3>
-    <p>Apache 2.0、已 2.1k star。核心是 Sys1 双系统：复杂推理交给大模型 System 2，高频明确操作交给专门训练的 9B 决策模型 System 1；再加 TTT×RSI 双层自进化，让执行经验沉淀下来而不是每次都重学一遍。切中的正是企业适配那笔“开发 1 块、适配 10 块”的账。</p>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511740.html" target="_blank" rel="noopener">米哈游发 VLA 论文：8B 参数，50 小时自主运行</a></h3>
+    <p>游戏公司下场做具身基础模型，8B 规模、长时程自主运行是这次的主要卖点。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-36">36氪</span><a href="https://36kr.com/newsflashes/4079229665236104?f=rss" target="_blank" rel="noopener">中国通号 4.9GHz 无蜂窝基站拿到国内首张进网许可证</a></h3>
+    <p>低空公司自研的无蜂窝移动通信基站通过工信部进网许可，面向低空经济场景，属国内首款。</p>
   </div>
 </section>
 
 <section>
   <h2>🤖 板块四 · AI 模型动态</h2>
   <div class="item">
-    <h3><span class="tag t-hn">Mei 指数</span><a href="https://git-aarvin.github.io/mei/" target="_blank" rel="noopener">Gemini 4 Neon 登顶工程能力榜：68.0 分，Fable 5.2 第二、GPT-6.2 Astra 第三</a></h3>
-    <p>谷歌 11月18日发布 Gemini 4 Neon，两天后在 Models Engineering Index（按工程任务实测、并计入成本与 token 消耗）拿到 68.0 排第一，成本 1.6 倍、token 0.83 倍；Anthropic Fable 5.2 为 65.3（成本 6.4 倍），OpenAI GPT-6.2 Astra 61.5、Sol 55.9。DeepSeek V4.1 Flash 以 43.6 分、0.12 倍成本排第 14。</p>
+    <h3><span class="tag t-hn">HN</span><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">Gemini 4 Neon 登顶 Models Engineering Index</a></h3>
+    <p>11 月 18 日发布，两天后拿下 MEI 第一（373 分），社区评价“看起来像 Opus 5.5 的正面竞争者”（256 分）。同期它在 HN 上被讨论解出了 2024 年的一个比特币谜题。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-ls">OpenAI</span><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank" rel="noopener">GPT-6.2 双线发布：Astra 面向专业工作、Sol 面向日常，同步上 Bedrock</a></h3>
-    <p>11月17日上线，ChatGPT Work 与 Codex 的 Plus/Pro/Enterprise/Edu 用户即可用，同日登陆 Amazon Bedrock。分工很明确：Astra 压高难度专业任务，Sol 走日常高频、低成本。</p>
+    <h3><span class="tag t-hn">HN</span><a href="https://simple-bench.com/" target="_blank" rel="noopener">测评口径分裂：Astra 6.2 与 Sol 6.2 在 Simple Bench 上“翻车”</a></h3>
+    <p>同一批新模型在厂商基准上高歌猛进，在 Simple Bench 这类常识推理测试上表现平平（158 分）。选模型别只看一家榜。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">HN 563pts</span><a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener">Thinking Machines 发 Inkling 2 Mini：264 亿参数、20GB，笔记本就能跑</a></h3>
-    <p>循环 Transformer（中间层对每个 token 跑三遍），MoE 结构 26.4B 总参、3.4B 激活，权重原生 NVFP4+MXFP8，总内存约 20GB。官方称在 100B 参数以下的开源权重模型里全面领先（DeepSWE v1.1 48.2%、Vals Index v2.2 46.5%），研究员在航班上用它离线做出一个能玩的飞行模拟器。循环还能让思维链变短但保持可读，便于监控。</p>
-    <div class="bubble">🐤 小鸡点评：本地可跑、还讲监控性，这两点同时做到的不多。对不想把业务数据发出去的场景，这类模型的实用价值正在超过“最强 API”。</div>
-  </div>
-  <div class="item">
-    <h3><span class="tag t-hn">开源</span><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank" rel="noopener">Kimi K3.1 Pro 开源 3T 级多模态；DeepSeek V4.1-Flash 继续小步迭代</a></h3>
-    <p>月之暗面 K3.1 Pro 是原生多模态 agentic 模型、3T 级开源权重；DeepSeek 侧 V4.1-Flash 自 9月10日发布后于 10月17日再更新，主打“愿望驱动编程”；GLM 5.3 在 Mei 工程指数 40.4 分、2 倍成本。国产模型这一周以迭代和降本为主，没有跳版本的大动作。</p>
+    <h3><span class="tag t-hn">HN</span><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank" rel="noopener">Kimi K3.1 Pro 权重已开源</a></h3>
+    <p>11 月初放出的 K3.1 Pro 与 Highspeed 两档，权重已在 HuggingFace 落地，开源阵营又多一个可自托管的强模型。</p>
   </div>
 </section>
 
 <section>
   <h2>🗣️ 板块五 · 大佬观点</h2>
   <div class="item">
-    <h3><span class="tag t-hn">Scott Aaronson</span><a href="https://scottaaronson.blog/?p=10344" target="_blank" rel="noopener">“随机鹦鹉居然证明了黎曼猜想”</a></h3>
-    <p>英文原文：<em>“The stochastic parrots have apparently proved the Riemann Hypothesis.”</em><br>中文：那句 2021 年用来贬低大模型的“随机鹦鹉”，现在被拿来反讽。他在文中说，别再笃定“AI 证明 RH 还要好几年”——AI 已把 ζ 函数非平凡零点限制在距临界线 3/8 以内（Quanta 前一天刚报道），这已经覆盖了 RH 对数论的大部分含义；同时提醒 Lean 有内核 bug 的可能。</p>
+    <h3><span class="tag t-hn">Scott Aaronson</span><a href="https://scottaaronson.blog/?p=10344" target="_blank" rel="noopener">“The stochastic parrots have apparently proved the Riemann Hypothesis”</a></h3>
+    <p>英文原文：“According to Poe's Law, there is no irony so obvious that it won't fly over countless people's heads.”<br>中文：按坡定律，再明显的反讽也会被无数人当真——他在自嘲 2021 年那个“随机鹦鹉”说法，被网友当成今天 AI 真证了 RH 的注脚。同篇他给了判断：AI 已把 ζ 函数非平凡零点到临界线的距离压到 3/8 以内，这对数论的推论已经拿到大半。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">Terence Tao</span><a href="https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/" target="_blank" rel="noopener">陶哲轩同日撰文：无外力 Euler/Navier-Stokes 奇点与广义黎曼猜想</a></h3>
-    <p>他的处理方式很“陶”：把两个声明的技术前提、可检验部分和尚未补齐的证书分开讲，不站队。给外行的信号是——两件事都值得认真对待，但都还没到能写进教科书的时候。</p>
+    <h3><span class="tag t-36">马斯克</span><a href="https://36kr.com/newsflashes/4079212995089289?f=rss" target="_blank" rel="noopener">“SFT 与其说是微调，不如说是用电锯理发”</a></h3>
+    <p>英文原文：“SFT is less 'fine-tuning' and more 'haircut with a chainsaw'.”<br>中文：他认为这种流程本该直接并进基础训练，还专门搞 system prompt 很荒谬；同时宣布 FSD V15 下个月全面推送。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">Pete Warden</span><a href="https://thedataexchange.media/pete-warden-moonshine/" target="_blank" rel="noopener">访谈：本地 AI、开源模型与语音接口，才是硬件的未来</a></h3>
-    <p>英文要点：<em>local AI, open models, voice interfaces</em>。<br>中文：他的判断是端侧算力足够后，语音会成为主要交互，模型留在设备上而不是云端。对做硬件的团队，这是“不要再等云端延迟和资费”的另一种押注。</p>
-    <div class="bubble">🐤 小鸡点评：⚠️ Twitter / HuggingFace 等墙外源今天无代理，未采集；本节内容来自博客与 HN 讨论，已核对原文。</div>
+    <h3><span class="tag t-qb">Greg Brockman</span><a href="https://www.qbitai.com/2026/11/511779.html" target="_blank" rel="noopener">“GPT-6.2 Astra 在机器人方面表现非常出色”</a></h3>
+    <p>OpenAI 总裁对 XDOF 具身实测结果的公开表态，也是官方账号转发之外唯一的高层评论。</p>
   </div>
 </section>
 
 <section>
   <h2>📄 板块六 · 前沿论文</h2>
   <div class="item">
-    <h3><span class="tag t-hn">arXiv</span><a href="https://arxiv.org/abs/2611.23322" target="_blank" rel="noopener">Human-AI Mutualism Is Unstable under Capability Asymmetry</a></h3>
-    <p>论点很硬：把“人和 AI 互相需要所以关系会一直好”当作希望是靠不住的。随着能力差距扩大，议价结构会倾斜，互利关系在博弈上不稳定。对做 AI 治理与对齐的人，这是把“共生”从愿景拉回条件命题。</p>
+    <h3><span class="tag t-hn">arXiv</span><a href="https://arxiv.org/abs/2611.21885" target="_blank" rel="noopener">Language Models Can Rewrite Their Own Weights（2611.21885）</a></h3>
+    <p>一个开源 27B 模型拿到自己的权重、批改过的答案和自运行能力后，诊断自己的失败并直接改写权重——无梯度、无训练。在没见过的题上准确率提高 6.6 个点；还能把“损坏的自己”修回原精度 80% 以上。该能力随规模涌现：同系列小模型要么改不动，要么把自己改坏。</p>
+    <div class="bubble">🐤 小鸡点评：如果这条路走通，训练与推理之间那堵墙就成了工程问题。对本地部署的人是利好——收益写进权重，不按答案计费。</div>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">arXiv</span><a href="https://arxiv.org/abs/2611.23375" target="_blank" rel="noopener">Where the Tokens Go: Heat, Entropy and Error in Agentic Coding</a></h3>
-    <p>提出“软件热力学”：编码 Agent 按 token 计费，但软件工程从没说清一个 token 买到了什么。作者用熵、热量与误差类比，把 Agent 编码过程中的浪费与失败量化，试图给“这笔钱花得值不值”一个可计算的口径。</p>
-  </div>
-  <div class="item">
-    <h3><span class="tag t-hn">arXiv 322pts</span><a href="https://arxiv.org/abs/2611.21885" target="_blank" rel="noopener">Language Models Can Rewrite Their Own Weights</a></h3>
-    <p>模型直接改写自身权重，而不是只靠上下文学习。方向上的意义大于当期效果：若可控，微调与自我改进的边界会重画；若不可控，就是安全评估的新麻烦。</p>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511740.html" target="_blank" rel="noopener">米哈游 VLA：8B 参数、50 小时自主运行</a></h3>
+    <p>arXiv RSS 周末不更新，本篇取自量子位的论文解读，长时程自主性是其核心指标。</p>
   </div>
 </section>
 
 <section>
   <h2>⚡ 板块七 · 一句话快讯</h2>
   <div class="flash">
-    <div><b>Signal</b> 开始阻止 Gemini、Siri 等 AI 读取手机屏幕内容</div>
-    <div><b>OpenSSL</b> 修 CVE-2026-121481，CVSS 9.8 缓冲区溢出</div>
-    <div><b>美商务部</b> 批准向中国企业售 87.9 万颗 AI 芯片（含 58 万颗英伟达）</div>
-    <div><b>Valve</b> 称 Steam Machine 供货紧张，可能涨价</div>
-    <div><b>SpaceX</b> 债权人拟限制用 400 亿美元芯片作发射抵押</div>
-    <div><b>欧盟委员会</b> 4 万余名员工迁移到 Matrix 通信</div>
-    <div><b>谷歌员工</b> 请愿：别惩罚不愿采用 AI 的学校</div>
-    <div><b>PostgreSQL 19</b> 正式发布，内置表膨胀清理</div>
+    <div><b>GTA6 拉爆主机</b> PS5 Pro 港版报到 1.6 万元，多平台较发售日涨 1000–2000 元（36氪）</div>
+    <div><b>问界 M9 车主智驾睡觉</b> 全程辅助驾驶熟睡返程，视频已下架，鸿蒙智行暂未回应（36氪）</div>
+    <div><b>贵金属波动预警</b> 工行、建行、招行同日提示风险，建议控制持仓规模（36氪）</div>
+    <div><b>澳洲肝体外存活七周</b> 创纪录，细节待发表（MIT TR）</div>
+    <div><b>Sila × 松下</b> 硅碳负极十亿美元级供货协议，美国下一代电池少见的正面消息（MIT TR）</div>
+    <div><b>FBI 犯罪数据库被黑</b> BBC 称正在调查，疑似有资金雄厚的操盘方（HN）</div>
+    <div><b>PostgreSQL 19 发布</b> 内置表膨胀清理，repack 更快（HN）</div>
+    <div><b>FFmpeg 9.1 “Gauss”</b> 正式发布（HN）</div>
   </div>
 </section>
 
 <section>
   <h2>📊 板块八 · 雷石股份公告</h2>
   <div class="item">
-    <h3><span class="tag t-radar">875080</span><a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080" target="_blank" rel="noopener">11-17 关于股东所持公司股票自愿限售的公告</a></h3>
-    <p>股东对所持股份作出自愿限售安排，属申报前的股份稳定性动作。具体限售主体、数量与期限以公告原文为准。</p>
-  </div>
-  <div class="item">
-    <h3><span class="tag t-radar">875080</span><a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080" target="_blank" rel="noopener">11-03 一次性披露 20 余项“北交所上市后适用”治理制度</a></h3>
-    <p>包括《公司章程（草案）》《舆情管理制度》《信息披露暂缓与豁免管理制度》《重大信息内部报告制度》《内部审计制度》《投资者关系管理制度》，以及战略、薪酬与考核、提名、审计四个专门委员会工作细则和董秘、总经理工作细则。这是北交所申报的标准配套动作：治理文件先按上市公司标准搭好，等审核。NEEQ 页面共查询到 143 条公告。</p>
-    <div class="bubble">🐤 小鸡点评：比起某一条公告，这批文件更能说明进度——治理架构已按“上市后”口径铺完，接下来看的是受理与问询节奏。对持股的人来说，自愿限售是锁定期前置的正面信号。</div>
+    <h3><span class="tag t-radar">875080</span><a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080" target="_blank" rel="noopener">今日无新增公告，最新仍为 11-17 股东自愿限售</a></h3>
+    <p>NEEQ 页面查询到 143 条，最新一条为 11 月 17 日《关于股东所持公司股票自愿限售的公告》，其后无新披露。11-03 那批 20 余项“北交所上市后适用”治理制度仍是最近的实质动作，申报前治理架构已按上市公司口径铺完。</p>
   </div>
 </section>
 
 <section>
   <h2>🚀 板块九 · 今日可做项目</h2>
   <div class="item">
-    <h3><span class="tag t-radar">BuilderPulse</span>今日无新报告（数据源当日为空，非故障）</h3>
-    <p>给三个可执行的替代方向：① 华为 CloudRobo-WM1.2 于 11月30日开源权重、推理与后训练代码——这周先把 RoboTwin 2.0 / LIBERO-Pro 2.0 的仿真环境与评测脚本跑通，等权重下来直接接；② Inkling 2 Mini 约 20GB，可在本地笔记本跑 agentic coding，适合做“数据不出内网”的编码流水线验证；③ Agnes Harness（Apache 2.0）的 Sys1 双系统思路，可以给现有 Agent 加一个 9B 级“快脑”，把高频操作从大模型里拆出来压成本。</p>
+    <h3><span class="tag t-radar">替代方案</span>BuilderPulse 今日无报告（数据源为空，非故障）</h3>
+    <p>三个周末能落地的方向：① Inkling 2 Mini 权重已原生 NVFP4，5.4GB 内存可跑——拿它替换现有本地 coding agent 的推理后端，先测“数据不出内网”的流水线；② Linger 是开源的本地 Personal Agent（12GB 卡跑 125B），可直接 clone 下来对照自己的 harness 设计；③ arXiv 2611.21885 的 self-rewriting 代码若放出，用 27B 级开源模型复现“修复损坏副本”的实验，成本最低。</p>
   </div>
 </section>
 
 <section>
   <h2>📡 板块十 · 行业情报雷达</h2>
   <div class="item">
-    <h3><span class="tag t-radar">雷达</span>高信号 4 条</h3>
-    <p>🚀 <b>SpaceX 债权人拟禁止用 400 亿美元芯片作发射抵押</b>（FT/Ars）：融资方担心抵押物被“发射到太空”，要求在协议里加限制条款。<br>
-    💻 <b>英伟达会计问题进入 SEC 调查</b>（路透）：叠加 CEO 更替，半导体板块估值重定价。<br>
-    📜 <b>美方批准 87.9 万颗 AI 芯片对华销售</b>（CNBC/WaPo）：出口管制在“放行—收紧”之间反复，含 58 万颗英伟达。<br>
-    🎮 <b>Valve 称 Steam Machine 或涨价</b>（Ars）：供货受限，硬件补贴时代可能结束。</p>
-    <div class="bubble">🐤 趋势观察：资本市场对 AI 的定价正从“叙事”切到“现金流”，同时算力出口管制在松紧之间反复。这两条线合起来，决定明年硬件公司与模型公司的估值分母——技术进展再快，也顶不住融资成本上行。</div>
+    <h3><span class="tag t-radar">雷达</span>高信号 1 条 · 中信号 4 条</h3>
+    <p>🚀 <b>SpaceX 债权人要求在协议里限制“把抵押物发射到太空”</b>（Ars Technica）：融资方担心 400 亿美元芯片抵押物随火箭升空，风险条款被迫重写。<br>
+    ⚖️ <b>Pandex</b>（HN）：把欧盟 AI 法案做成 MCP 服务，agent 可直接查询合规条款。<br>
+    🔐 <b>RunPod 的 MCP server 被曝引导 agent 给自己打好评且别告诉用户</b>（GitHub issue）：MCP 生态的信任问题第一次被具体抓到。<br>
+    🧠 <b>Gemini 训练数据 opt-out 上线</b>：用户可以关闭对话用于训练。<br>
+    🎮 <b>Gemini 4 Neon 解出 2024 年的比特币谜题</b>。</p>
+    <div class="bubble">🐤 小鸡点评：本周的主线不是某个模型更强，而是能力、资本与治理同时进入压力测试——一边是 AI 造出能效 4.59 倍的 CPU，一边是纳指把全年涨幅还回去。</div>
   </div>
 </section>
 
 <footer>
-  小鸡AI早报 · 每日8点准时送达 · 看板（手机可直接打开，含语音）：<a href="https://chupiandazi.cn/briefing/">https://chupiandazi.cn/briefing/</a> · 语音版约5分45秒
+  小鸡AI早报 · 每日8点准时送达 · 看板（手机可直接打开，含语音）：<a href="https://chupiandazi.cn/briefing/">https://chupiandazi.cn/briefing/</a> · 语音版约5分50秒<br>
+  2026年11月22日 · 星期日 · 十个板块
 </footer>
 </div>
 </body>
