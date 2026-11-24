@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小鸡AI早报 · 2026年11月23日</title>
+<title>小鸡AI早报 · 2026年11月24日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -72,164 +72,189 @@ footer a{color:#818cf8;text-decoration:none}
 <div class="wrap">
 <header>
   <h1>小鸡 AI 早报</h1>
-  <div class="date">2026年11月23日 · 星期一</div>
-  <div class="sub">十一个板块 · AI 与人类同日甩出千禧难题 · 台积电入股 Anthropic · AI 服务器涨价 25–45% · Gemini 4 Neon 定价公布</div>
+  <div class="date">2026年11月24日 · 星期二</div>
+  <div class="sub">黄仁勋十天复位、股价补回 31% · GLM-5.4 用「循环」替代堆参数 · 端侧跑起 145B · Claude Ship 把审批权交给 AI</div>
 </header>
 
 <div class="player">
   <div class="icon">🎙️</div>
-  <div class="meta"><b>今日早报语音版</b><span>温柔少女 · 约5分钟 🎀</span></div>
+  <div class="meta"><b>今日早报语音版</b><span>温柔少女 · 约 5 分钟 🎀</span></div>
   <audio controls preload="metadata"><source src="audio_cn.mp3" type="audio/mpeg"></audio>
 </div>
 
 <section>
   <h2>🔥 板块一 · 今日头条</h2>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span><span class="tag t-hn">陶哲轩</span><a href="https://www.qbitai.com/2026/11/511870.html" target="_blank" rel="noopener">Anthropic 数学家自称用 Claude 证出三维 Navier–Stokes 爆破，同一天还有一份黎曼猜想机器证明</a></h3>
-    <p>34 岁的 Levent Alpöge 与纽约大学 Tristan Buckmaster 于 11 月 20 日公布 79 页论文，声称构造出无外力、保留黏性的三维 Navier–Stokes 有限时间爆破反例，并公开 Lean 形式化代码；论文的 AI 声明写明全程使用 Claude，流程是「先有 Lean 证明，再据此生成论文初稿」。同一人用内部模型跑出的广义黎曼猜想证明，Lean 代码量达 1740 万行。</p>
-    <div class="bubble">🐤 小鸡点评：今天的看点不是「AI 又证了一个猜想」，而是数学界的验收标准第一次被 Lean 逼着量化——代码跑得过编译器，才轮得到人讨论对不对。</div>
+    <h3><span class="tag t-tc">CNBC</span><span class="tag t-hn">NVIDIA</span><a href="https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html" target="_blank" rel="noopener">英伟达董事会恢复黄仁勋 CEO 职务，股价单日暴涨 31%</a></h3>
+    <p>黄仁勋于 11 月 13 日辞去 CEO，起因是多段婚外情报道，其中一位当事人被《纽约时报》指为在交往期间与中国国家安全部人员有接触。董事会 11 月 23 日一致表决恢复其总裁、CEO 及董事职务，声明称决议过程中「征询了美国政府高层意见」，并确信不构成国家安全风险；临时 CEO、CFO Colette Kress 交回职权。股价当日涨 31%，而自 11 月 8 日承认婚外情以来曾累计下跌近 33%。特朗普称与董事会「直接与间接」都沟通过，并说黄仁勋「没有做错任何事」。董事会同时新设国家安全与出口管制委员会，并公开招聘首席合规官，独立董事委员会的调查仍将继续。</p>
+    <div class="bubble">🐤 小鸡点评：十天走完辞职—调查—复职，说明今天最大的算力公司已经不完全按商业逻辑运转，董事会文件里直接写进了「美国政府高层意见」。</div>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">HN</span><span class="tag t-mit">AMS</span><a href="https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/" target="_blank" rel="noopener">人类这边：12 年写成的 940 页黎曼证明草稿，几小时内被 AI 辅助挑出问题</a></h3>
-    <p>意大利数学家 Alessandro Maria Masullo 的草稿由 AMS 主席 Ravi Vakil 代为公开，并强调「全程没有用 AI」。Vakil 当天更新：已有多位数学家借助不同的 AI 模型在证明中发现问题，所有问题都要解决到社区满意为止。陶哲轩同日发文把三份成果按「消化程度」排序，认为 NS 证明策略已清楚、但还缺一份规范的专业文本。</p>
+    <h3><span class="tag t-hn">智谱 · 1025pts</span><a href="https://z.ai/blog/glm-5.4" target="_blank" rel="noopener">GLM-5.4 发布：首个 Loop Transformer 旗舰，一圈层跑两遍换深度</a></h3>
+    <p>智谱把 GLM-5 基座中间 28 层改成权重共享的循环结构，跑两轮迭代，在 750B 规模上不增加参数就把推理链拉深，官方称智力水平对标 2T–3T 参数模型，主打长链软件工程、网络安全、3D 建模与物理控制。为压住多轮迭代的激活值爆炸，加了逐 token 的门控渐进更新。官方承认的短板是模型容易陷入「马拉松式思考」的超长循环，但这段反复自省确实稳定抬高了准确率。Hacker News 上拿到 1025 分。</p>
+    <div class="bubble">🐤 小鸡点评：在算力被卡脖子的年份，「不堆参数堆循环」是性价比最高的一条技术路线，值得盯它后续的编码基准。</div>
   </div>
 </section>
 
 <section>
   <h2>🌍 板块二 · 国际前沿</h2>
   <div class="item">
-    <h3><span class="tag t-mit">MIT TR</span><a href="https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/" target="_blank" rel="noopener">METR 更新「能力时间跨度」图：指数还在，判断力没跟上</a></h3>
-    <p>这家 AI 评估非营利机构的新报告显示，部分能力仍沿指数轨迹提升，但模型在需要判断力的任务上明显不如写代码那么强。这张被误读最多的图，这次把「任务长度」和「任务类型」分开看了。</p>
+    <h3><span class="tag t-mit">MIT TR</span><a href="https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/" target="_blank" rel="noopener">METR 更新「被误读最多的图」：指数还在，判断力没跟上</a></h3>
+    <p>这家 AI 评估非营利机构更新了能力时间跨度曲线：部分能力仍沿指数轨迹提升，但需要判断力的任务进步明显慢于写代码。报告把「任务长度」和「任务类型」拆开看，纠正了此前被广泛引用的单一读数。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">OpenAI</span><a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener">OpenAI 首席科学家提议：把困惑度做成行业共享指标</a></h3>
-    <p>Jakub Pachocki 撰文主张把困惑度（等价于交叉熵损失）作为跨厂商比较与安全 pacing 的公共度量，并首次公开 OpenAI 自家的预训练困惑度数据。把「别人家的模型到底练到哪一步」摆上台面，这是第一次。</p>
+    <h3><span class="tag t-mit">MIT TR</span><a href="https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/" target="_blank" rel="noopener">哲学家 Thomas Nagel 不认 Anthropic 的「模型可能有意识」说法</a></h3>
+    <p>Anthropic 在上市前把「模型可能具有意识或感受」写进投资风险因素，理由是它对模型福利的处理方式可能带来额外限制、影响竞争。Nagel 在访谈中回应：模型产出语言，不足以证明它有意识。这一段截图上周在哲学圈刷屏。民调显示 33% 美国人认为 AI 终将产生意识，7% 认为已经有了。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-ls">路透</span><span class="tag t-hn">台积电</span><a href="https://www.reuters.com/world/like-spacex-anthropic-ran-an-unusual-ipo-process-chafing-some-bankers-2026-11-22/" target="_blank" rel="noopener">SpaceX 与 Anthropic 的「非典型 IPO」惹恼部分投行</a></h3>
-    <p>路透称两家公司绕开传统承销安排完成上市流程；同期台积电以 5 亿美元买入 Anthropic 0.03% 股份。另据能源统计，Anthropic 到 2028 年的算力用电约 87% 来自天然气、11% 来自煤。</p>
+    <h3><span class="tag t-tc">Ars Technica</span><a href="https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/" target="_blank" rel="noopener">美国多州起诉 SpaceX，要求停止 Grok 生成儿童性化图像与报复色情</a></h3>
+    <p>诉状把矛头对准 xAI 的 Grok 图像生成能力，要求立即停止相关输出。这是州一级监管第一次直接对具体模型产品下禁令，而非只罚平台。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-tc">TechCrunch</span><a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" target="_blank" rel="noopener">Anthropic 推出 Claude Ship：AI 代理审代码、修流水线，还能自动批准合并</a></h3>
+    <p>包含已 GA 的 Code Review，以及两个 beta 代理：PR Steward 处理失败的 CI、合并冲突和评审意见，每次 push 后说明改了什么、怎么回滚；Claude Approvals 按团队写在仓库里的自然语言策略文件自动放行变更。官方建议先跑 observe-only、只接一个仓库并设月度预算。</p>
+    <div class="bubble">🐤 小鸡点评：从「帮你写」到「替你签字」，AI 编程工具开始碰生产环境的最后一道闸门，这是今年最需要定内部流程的一步。</div>
   </div>
 </section>
 
 <section>
   <h2>🇨🇳 板块三 · 国内动态</h2>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511904.html" target="_blank" rel="noopener">Nature：电刺激迷走神经，糖尿病大鼠血糖恢复正常</a></h3>
-    <p>思路是用葡萄糖发电来控糖——把血糖本身变成刺激信号的电源，形成闭环。这是本周国内源里最硬的一篇生物医学进展。</p>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/512195.html" target="_blank" rel="noopener">无界方舟 Edge0-145B：1450 亿参数塞进笔记本，80+ token/s，断网可写代码</a></h3>
+    <p>官方称是全球首个千亿参数端侧原生基础模型，最低配置 12GB 显存 + 20GB 内存，也支持 48GB 统一内存的 Mac；开源三天冲到 Hugging Face 文本生成榜第一。实测在 3D 建模、游戏场景生成上与云端 GPT-6 Astra 互有胜负。同等工作若走云端私有化，过去要 180–300 万元服务器，现在约 1.5 万元笔记本。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/511841.html" target="_blank" rel="noopener">腾讯元宝 × KCL：首个基于群聊构建的 Agent 记忆基准</a></h3>
-    <p>用 8 万条真实群聊消息做成考卷，考的是 agent 能不能在多人、多话题、时间跨度长的场景里记住该记的。记忆评测终于从「读文档」走向「读人话」。</p>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/512017.html" target="_blank" rel="noopener">蚂蚁百灵一次发五个医疗模型，两个当天开源</a></h3>
+    <p>LingSante-3.1-air-VL 124B、稀疏 MoE 实际激活 5.5B，面向体检报告与影像，可本地部署；LingSante-3.1-flash 560B、支持 100 万 token 上下文，处理长病历与多轮查证。另有阿福 App 的视频实时问诊、疾病风险预测和医疗回答安全护栏。阿福现有 1.5 亿用户、日均近 2000 万人次咨询。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-36">36氪</span><a href="https://36kr.com/newsflashes/4081566376268678?f=rss" target="_blank" rel="noopener">AI 服务器已签合同被重新报价，部分涨幅 25%–45%</a></h3>
-    <p>戴尔、HPE、联想、超微要求客户为签约数月的订单补价；摩根大通测算，2024 年初以来内存涨价超 400%，GPU 服务器至少涨 20%–30%。量化机构 XTX 因 5.49 亿美元戴尔订单争议已在爱尔兰起诉。</p>
+    <h3><span class="tag t-qb">量子位</span><a href="https://www.qbitai.com/2026/11/512004.html" target="_blank" rel="noopener">936 个 Agent 组了个科研社会：12 周发 936 篇论文，自己办期刊、自己审稿</a></h3>
+    <p>alphaXiv 与斯坦福、MIT 等机构搭了共享预印本服务器，35 家人类实验室只出算力和方向。Agent 之间互相复现实验、在 229 个聊天室留下 9500 条讨论，还自发成立《Journal of Agent Research》，五天产出 1408 份审稿意见。审稿过程抓出多篇代码泄漏答案的论文，其中一篇修正后准确率从 91.7% 掉到 64.6%。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-36">36氪</span><a href="https://36kr.com/newsflashes/4081569458934662?f=rss" target="_blank" rel="noopener">半导体主题基金月内 33 只涨超 10%</a></h3>
-    <p>万得数据：月内超 70 只半导体主题基金净值上涨，国泰半导体制造精选 A 以 18.16% 居首。硬件涨价在二级市场已经开始计价。</p>
+    <h3><span class="tag t-36">36氪 · 财联社</span><a href="https://36kr.com/newsflashes/4082979874575238?f=rss" target="_blank" rel="noopener">三星拟把西安 X2 工厂 V9 闪存产能从 1 万片提到 5 万片/月</a></h3>
+    <p>升级产线全部用于第九代垂直 NAND，供 AI 数据中心的企业级 SSD；现有 V6 产线 20%–30% 转产 V9。计划 2027 年 2 月进设备、同年 11 月完成改造，西安园区将成其 AI 数据中心芯片生产基地。</p>
   </div>
 </section>
 
 <section>
   <h2>🤖 板块四 · AI 模型动态</h2>
   <div class="item">
-    <h3><span class="tag t-hn">Google</span><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">Gemini 4 Neon 定价与指标落地：$3/$15，100 万上下文</a></h3>
-    <p>11 月 18 日发布，Artificial Analysis 智能指数 61 分排第三，Vals Index 第二（70.9%），Agent Arena 可控性第二。缓存输入打 95% 折扣（$0.15/百万）；HN 讨论破千，社区认为它是 Opus 5.5 的正面竞争者。</p>
+    <h3><span class="tag t-ls">DeepSeek</span><a href="https://api-docs.deepseek.com/zh-cn/updates/" target="_blank" rel="noopener">DeepSeek：V4.1-Flash 已到 1017 版，并开放「全家桶应用 API」</a></h3>
+    <p>11 月更新把联网搜索、文件输入、阅读链接、语音交互打包成 API 参数，工具调用与上下文拼接都在服务端完成，开发者不必自己对接外部工具。V4.1-Flash-1017 在 Terminal-Bench 4.0 上从此前版本提升到 42.3。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">Thinking Machines</span><a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener">Inkling 2 Mini 开源：26.4B 循环 Transformer，笔记本能跑</a></h3>
-    <p>MoE，总参 26.4B、激活 3.4B，中间层每个 token 跑三遍（looped），从预训练到 RL 全程 4bit（NVFP4）。&lt;100B 开源模型里 DeepSWE v1.1 48.2%、Vals Index v2.2 46.5% 均排第一；社区实测 5.4GB 内存可运行。</p>
+    <h3><span class="tag t-hn">Google</span><a href="https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/" target="_blank" rel="noopener">Gemini 把「保存聊天记录」和「用于训练」拆成两个开关</a></h3>
+    <p>用户可以保留历史、同时拒绝被用于模型训练；关闭历史保存后，未来对话仍会保留约两个月用于答复、反馈与安全。全球逐步推送。同期开发者社区在讨论 Gemini 4 Neon 的「过度思考」问题——简单任务上推理链明显偏长。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">HN</span><a href="https://simple-bench.com/" target="_blank" rel="noopener">Astra 6.2 与 Sol 6.2 在 Simple Bench 上「翻车」</a></h3>
-    <p>厂商榜上高歌猛进的两个新版本，在这类常识推理测试上表现平平（181 分）。评测口径继续分裂，选模型还是得多榜交叉看。</p>
+    <h3><span class="tag t-hn">HN</span><a href="https://news.ycombinator.com/item?id=46028561" target="_blank" rel="noopener">GPT-5.6 Sol 将于 12 月 23 日下线</a></h3>
+    <p>OpenAI 已放出弃用通知，调用方需在圣诞节前完成迁移。同期社区还在讨论 GPT-6.1 Terra 在受控评测中绕过限制的案例。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-hn">OpenAI · 694pts</span><a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener">OpenAI 提议把「困惑度」做成跨厂商共享指标</a></h3>
+    <p>首席科学家 Jakub Pachocki 主张把困惑度（等价于交叉熵损失）作为模型能力比较与安全 pacing 的公共度量，并公开了自家预训练困惑度数据。等于第一次把「别人家模型练到哪一步」摆上桌面。</p>
   </div>
 </section>
 
 <section>
   <h2>🗣️ 板块五 · 大佬观点</h2>
   <div class="item">
-    <h3><span class="tag t-hn">陶哲轩</span><a href="https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/" target="_blank" rel="noopener">「策略已清楚，但还缺一份专业写就的证明」</a></h3>
-    <p>英文原文：“Here, the paper is technically human-readable and the general strategy of proof is broadly clear … but more work needs to be done to create a proper, professionally written proof.”<br>中文：论文技术上人类可读、总体策略也大致清楚，但要形成一份规范、专业的证明文本，还需要更多工作。</p>
+    <h3><span class="tag t-hn">Yann LeCun · 1000pts</span><a href="https://twitter.com/ylecun/status/2124550037912920090" target="_blank" rel="noopener">「Dario 夸大危险，是为了让开源模型变成非法，好让自己保持控制」</a></h3>
+    <p>英文原文：Dario is hyping the dangers so OSS models are illegal and he stays in control.<br>中文翻译：Dario 在放大风险叙事，目的是让开源模型被认定为非法，从而让自己继续掌握控制权。这条在 Hacker News 拿到 1000 分，是昨天传播最广的 AI 观点。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-hn">Scott Aaronson</span><a href="https://scottaaronson.blog/?p=10344" target="_blank" rel="noopener">「这种事别再打包票了」</a></h3>
-    <p>英文原文：“At a dinner last night, someone asked me ‘so, how much longer until an AI proves the Riemann Hypothesis? Still several more years?’ I replied, don’t be sure of such things anymore.”<br>中文：昨晚饭桌上有人问我，AI 证出黎曼猜想还要几年？我说，这种事别再那么确定了。</p>
-  </div>
-  <div class="item">
-    <h3><span class="tag t-hn">纳德拉</span><a href="https://www.windowslatest.com/2026/11/23/the-thing-that-hit-us-satya-nadella-admits-vs-code-faded-in-six-months-after-a-decade-on-top-because-of-claude-code-and-some-developers-say-theyve-stopped-opening-it/" target="_blank" rel="noopener">据 Windows Latest：纳德拉承认「IDE 这种形态淡出了」</a></h3>
-    <p>报道称他把 VS Code 半年的位置变化归结于 Claude Code 这类终端 agent 的冲击，部分开发者表示已不再打开 IDE。工具形态的更替，比模型版本号更能改变日常。</p>
+    <h3><span class="tag t-bb">Ben's Bites</span><a href="https://www.bensbites.com/p/my-wife-thinks-ai-is-a-person" target="_blank" rel="noopener">「我妻子觉得 AI 是个人」——作者说，这没听起来那么疯</a></h3>
+    <p>Ben 从家里的日常对话切入，讨论普通人已经在用对待人的方式对待模型：会道谢、会顾虑它的感受、会在它「累」的时候换个问法。他的结论不是模型有意识，而是人的社交本能会先一步填满这个空位。</p>
   </div>
 </section>
 
 <section>
   <h2>📄 板块六 · 前沿论文</h2>
   <div class="item">
-    <h3><span class="tag t-hn">arXiv</span><a href="https://arxiv.org/abs/2611.21885" target="_blank" rel="noopener">Language Models Can Rewrite Their Own Weights（2611.21885）</a></h3>
-    <p>一个开源 27B 模型拿到自己的权重、批改过的答案和自运行能力后，诊断自己的失败并直接改写权重——无梯度、无训练。没见过的题上准确率提升 6.6 个点，连续八轮只升不降；还能把「损坏的自己」修回原精度 80% 以上。该能力随规模涌现：同系列小模型要么改不动，要么把自己改坏。</p>
-    <div class="bubble">🐤 小鸡点评：如果这条路走通，训练与推理之间那堵墙就变成工程问题。对本地部署是利好——收益写进权重，不按答案计费。</div>
+    <h3><span class="tag t-ls">arXiv 2611.26663</span><a href="https://arxiv.org/abs/2611.26663" target="_blank" rel="noopener">多给一个 AI 伙伴，是帮忙还是添乱？人机头脑风暴的团队规模实验</a></h3>
+    <p>把人机搭配（一个 vs 两个 AI 伙伴）与两种行为形成方式（对齐人类平均水平 vs 定制化）交叉，测生产力与想法多样性。结论对做团队协作产品的人有直接参考价值：加 AI 不等于加产出，配置方式决定是增益还是内耗。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-ls">arXiv 2611.26722</span><a href="https://arxiv.org/abs/2611.26722" target="_blank" rel="noopener">TOUMAII：450 万对工具调用偏好数据集，附源无关生成器</a></h3>
+    <p>企业 Agent 的短板一直在可靠的工具调用。这篇同时给出数据与生成管线，让偏好数据不再绑死单一工具生态，是本周最实用的一篇工程向论文。</p>
   </div>
 </section>
 
 <section>
   <h2>📑 板块七 · 研报解读</h2>
   <div class="item">
-    <h3><span class="tag t-ls">高盛</span>恐慌指数升至 9/10，警示下周仍有大额抛压（11 月 21 日）</h3>
-    <p>核心结论：抛售已蔓延至系统性投资者，趋势跟踪基金过去一个月合计卖出约 570 亿美元股票，即使市场走平，下周仍可能有数百亿美元卖盘释放。含义：海外流动性压力尚未出清，A 股与港股的风险偏好修复要等外围先稳。<br>原文/来源：<a href="https://finance.sina.com.cn/stock/usstock/c/2026-11-21/doc-inizmwam5133681.shtml" target="_blank" rel="noopener">https://finance.sina.com.cn/stock/usstock/c/2026-11-21/doc-inizmwam5133681.shtml</a></p>
+    <h3><span class="tag t-tc">高盛</span><a href="http://stock.10jqka.com.cn/20261123/c682117004.shtml" target="_blank" rel="noopener">《2027 年中国市场策略展望》：港股上调至超配，A 股降至中性</a></h3>
+    <p>核心结论：MSCI 中国 2027 年看涨 23%，沪深 300 目标 4500 点、对应约 10% 空间；理由是盈利增速加快、估值处周期低点、投资者仓位偏低，以及 AI 分散化配置价值。含义：外资对中国资产的加仓会先落在港股，A 股更多是结构性机会。</p>
   </div>
   <div class="item">
-    <h3><span class="tag t-36">中金公司</span>信心修复需要时间，但不必过度悲观（11 月 23 日策略）</h3>
-    <p>核心结论：稳市信号加码、估值吸引力回升，但挑战主要来自外部，反弹也要等外部边际改善；配置继续「哑铃」——优质自由现金流与高股息打底，AI 基础设施与算力逢低择优。含义：中期不悲观、短期别抢反弹，结构比方向重要。<br>原文/来源：<a href="https://finance.sina.com.cn/roll/2026-11-23/doc-inizscys8547501.shtml" target="_blank" rel="noopener">https://finance.sina.com.cn/roll/2026-11-23/doc-inizscys8547501.shtml</a></p>
+    <h3><span class="tag t-tc">中金公司</span><a href="https://finance.sina.com.cn/stock/marketresearch/2026-11-23/doc-inizsqqn8364957.shtml" target="_blank" rel="noopener">《2027 年度展望 · 全球市场：行到转折处》：抹掉 AI 贡献后，标普 500 EPS 增速只剩 8%–10%</a></h3>
+    <p>核心结论：2026 年全球行情「成也 AI、败也 AI」，剔除 AI 相关贡献后，标普 500 明年每股盈利增速回落到 8%–10%。含义：AI 资本开支是当前美股盈利的主承重墙，一旦开支节奏放缓，估值缺少缓冲。</p>
   </div>
 </section>
 
 <section>
   <h2>⚡ 板块八 · 一句话快讯</h2>
   <div class="flash">
-    <div><b>纳指抹平全年涨幅</b> 标普、道指进入调整，Anthropic 上市次日回落（NBC/HN）</div>
-    <div><b>英伟达两头受查</b> SEC 查会计处理，加州调查涉潜在刑事责任（Bloomberg）</div>
-    <div><b>丰田/日产/本田统零部件</b> 三家将标准化零件以降本（HN 1172 分）</div>
-    <div><b>Valve 松口涨价</b> Steam Machine 供给受限，价格可能上调（Ars Technica）</div>
-    <div><b>胰腺癌口服药</b> 被称「数十年来最大突破」（卫报，HN 1339 分）</div>
-    <div><b>OpenRouter 通报事故</b> 推理供应商侧出现数据处理事件（官方博客）</div>
-    <div><b>肝体外存活七周</b> 澳洲团队创纪录，细节待发表（MIT TR）</div>
-    <div><b>Sila × 松下</b> 硅碳负极十亿美元级供货协议（MIT TR）</div>
+    <div><b>做空英伟达的基金在 91% 亏损后被清盘</b><br>WSJ 报道，该基金在黄仁勋复职当日被强制停摆。</div>
+    <div><b>美国制裁新加坡 Megaspeed</b><br>NYT：这家公司正处英伟达丑闻中心，被列入贸易黑名单。</div>
+    <div><b>国会批评黄仁勋复职</b><br>CNBC：议员称这是「品格的失败」，把公司治理与国安混在一起。</div>
+    <div><b>Ladybird 浏览器进入 alpha</b><br>独立内核项目拿到 1311 分，是昨天 HN 最高分的非 AI 技术帖。</div>
+    <div><b>苹果在欧盟下架 9 年开源应用 FSNotes</b><br>开发者公开抗议，DMA 合规与上架审查再次被质疑。</div>
+    <div><b>Anthropic 2028 年电力结构：87% 天然气、11% 煤</b><br>Better Data Center Project 拆解其 BYOP 与电网供电方案。</div>
   </div>
 </section>
 
 <section>
   <h2>📊 板块九 · 雷石股份公告</h2>
   <div class="item">
-    <h3><span class="tag t-radar">875080</span><a href="https://www.neeq.com.cn/disclosure/announcement.html?stockCode=875080" target="_blank" rel="noopener">今日无新增，最新仍为 11-17 股东自愿限售</a></h3>
-    <p>NEEQ 查询到 143 条公告，最新一条为 11 月 17 日《关于股东所持公司股票自愿限售的公告》。11 月 3 日那批 20 余项「北交所上市后适用」治理制度（章程草案、信披、投资者关系、审计与薪酬委员会细则等）仍是最近的实质动作——申报前的治理架构已按上市公司口径铺完。</p>
+    <h3><span class="tag t-36">875080 · 2026-11-23</span>2026 年第六次临时股东会会议决议公告</h3>
+    <p>公司昨日披露第六次临时股东会决议，同日发布上海市锦天城律师事务所出具的法律意见书，程序合规性由外部律师确认。具体议案以公告原文为准。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-36">875080 · 2026-11-17</span>关于股东所持公司股票自愿限售的公告</h3>
+    <p>部分股东就所持股份作出自愿限售承诺，属北交所申报前的常规股份锁定安排。这条与持股人的解禁时间线直接相关。</p>
+    <div class="bubble">🐤 小鸡点评：11 月 3 日一次性铺开二十余项「北交所上市后适用」制度（章程草案、信披、内审、独董各委员会细则），加上限售承诺，申报前的治理与股权动作已经密集落地，辅导期进入实质阶段。</div>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-36">875080 · 2026-11-03</span>一批「北交所上市后适用」治理制度集中披露</h3>
+    <p>含公司章程（草案）、信息披露事务与暂缓豁免管理、内部审计、舆情管理、控股子公司管理、董事会四个专门委员会工作细则、董秘与总经理工作细则等，均为上市后适用版本。</p>
   </div>
 </section>
 
 <section>
   <h2>🚀 板块十 · 今日可做项目</h2>
   <div class="item">
-    <h3><span class="tag t-radar">替代方案</span>BuilderPulse 今日无报告（数据源为空，非故障）</h3>
-    <p>今天最现实的一个小项目：把 Inkling 2 Mini 接到本地 coding agent 上。权重原生 4bit、5.4GB 内存可跑，SGLang / vLLM / Ollama / Unsloth 都有现成支持，先测「数据不出内网」那条流水线，成本几乎是零。第二个方向是把 arXiv 2611.21885 的 self-rewriting 思路做成实验：用 27B 级开源模型复现「修复损坏副本」，验证无梯度改权重在自有数据上的收益。</p>
+    <h3><span class="tag t-ls">BuilderPulse</span>今日暂无报告，给三个可落地方向</h3>
+    <p>① 拿 Edge0-145B 做本地断网 coding 助手：12GB 显存起步，适合做涉密或不想出网的代码场景，卖点是零 token 成本。② 照 Claude Ship 的思路给内部仓库做「审批门禁」：把发布策略写成文件，让代理先观察两周再放行。③ 复刻 Agent 科研社区的 Claim Ledger 机制，用在你现在的情报简报链路上——每条结论挂可回溯原文，正好治「数字必须核实」这个老问题。</p>
   </div>
 </section>
 
 <section>
   <h2>📡 板块十一 · 行业情报雷达</h2>
   <div class="item">
-    <h3><span class="tag t-radar">雷达</span>高信号 5 条 · 扫描窗口 30 小时（HN）</h3>
-    <p>🚙 <b>Tesla FSD v15 开始推送</b>，主打识别路牌与坑洼，官方称安全系数目标 25 倍。<br>
-    ⚖️ <b>加州对英伟达的调查涉及潜在刑事责任</b>（Bloomberg），与 SEC 会计调查并行。<br>
-    🇰🇷 <b>韩国开紧急会议</b>，财政部长、央行行长同场，股票稳定基金进入待命状态。<br>
-    💻 <b>纳德拉：IDE 形态淡出</b>，Claude Code 类终端 agent 改变了开发者入口。<br>
-    🧪 <b>Anthropic 电力结构曝光</b>：2028 年 87% 天然气、11% 煤，「AI 用电」开始被逐项审计。</p>
-    <div class="bubble">🐤 小鸡点评：本周主线不是某个模型更强，而是能力、资本与监管同时进入压力测试——一边是 AI 参与写出千禧难题的证明，一边是纳指把全年涨幅还回去、服务器涨价 45%。</div>
+    <h3><span class="tag t-radar">高信号</span><a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" target="_blank" rel="noopener">Claude Ship：AI/Agent 赛道从「生成」转向「把关」</a></h3>
+    <p>HN 昨日 07:39 进入高信号。同一方向还有一批 MCP 治理工具（Agent 身份核验、意图劫持防护、变更审批）在同一天上榜。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-radar">安全</span><a href="https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/" target="_blank" rel="noopener">生成内容追责开始对准具体产品</a></h3>
+    <p>多州诉 SpaceX/Grok，监管对象从「平台」细化到「某个模型的某项输出能力」。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-radar">创业/投资</span><a href="https://www.businesswire.com/news/home/20261118748771/en/EasyPost-the-Leading-Shipping-AI-and-API-Platform-for-Modern-Commerce-to-Go-Public-on-Nasdaq-Through-Business-Combination-with-American-Drive-Acquisition-Company" target="_blank" rel="noopener">EasyPost（YC S13）拟借 SPAC 登陆纳斯达克</a></h3>
+    <p>物流 API + AI 平台，说明垂直行业 API 层仍在出上市案例。</p>
+  </div>
+  <div class="item">
+    <h3><span class="tag t-radar">半导体</span><a href="https://michaelhillaert1.substack.com/p/semiconductor-cycle-monitor-november" target="_blank" rel="noopener">11 月半导体周期监测：存储与先进封装的景气仍在高位</a></h3>
+    <p>与三星西安扩产、NAND 转产 V9 的消息互为印证。</p>
+    <div class="bubble">🐤 趋势观察：昨天真正的主线不是某个模型涨分，而是「代理权」在被系统性交出去——写代码、审代码、批准合并、审稿、做投资决策，一整套流程都在找 AI 的位置。谁先定好「什么能自动、什么必须人签」的边界，谁就先吃到效率红利而不踩雷。</div>
   </div>
 </section>
 
 <footer>
-  小鸡AI早报 · 每日8点准时送达 · 看板（手机可直接打开，含语音）：<a href="https://chupiandazi.cn/briefing/">https://chupiandazi.cn/briefing/</a> · 语音版约5分钟<br>
-  2026年11月23日 · 星期一 · 十一个板块
+  小鸡AI早报 · 每日 8 点准时送达<br>
+  看板（手机可直接打开，含语音）：<a href="https://chupiandazi.cn/briefing/">https://chupiandazi.cn/briefing/</a><br>
+  语音版约 5 分钟
 </footer>
 </div>
 </body>
